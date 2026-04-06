@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VU2CPL – Manoj Ramawarrier</title>
+<meta name="description" content="Amateur radio station VU2CPL – Manoj Ramawarrier, Bengaluru, India. Grid MK83TE. Licensed 1993. FLEX-6600, 9 BDXCC, DXpeditioner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0a1628; --navy2: #132040; --accent: #1a6bdb; --accent2: #3b82f6;
+    --text: #0f172a; --muted: #64748b; --border: rgba(0,0,0,0.1);
+    --card-bg: #ffffff; --bg: #f8fafc;
+    --serif: 'DM Serif Display', serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); }
+
+  /* NAV */
+  nav {
+    background: var(--navy); padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px; position: sticky; top: 0; z-index: 100;
+  }
+  .nav-logo { font-family: var(--mono); font-size: 18px; font-weight: 500; color: #fff; text-decoration: none; }
+  .nav-logo span { color: #60a5fa; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover { color: #fff; }
+
+  /* HERO */
+  .hero { background: var(--navy); padding: 5rem 2rem 4rem; }
+  .hero-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+  .hero-left { flex: 1; min-width: 280px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; font-weight: 500; color: #60a5fa; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
+  .hero-tag::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; display: inline-block; animation: blink 1.4s infinite; }
+  @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+  .hero h1 { font-family: var(--serif); font-size: 52px; color: #fff; line-height: 1.08; margin-bottom: 0.5rem; }
+  .hero h1 em { font-style: italic; color: #93c5fd; }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 2rem; font-family: var(--mono); letter-spacing: 0.04em; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; font-family: var(--mono); border: 1px solid; }
+  .badge-blue  { background: rgba(59,130,246,0.15); border-color: rgba(96,165,250,0.4); color: #93c5fd; }
+  .badge-green { background: rgba(34,197,94,0.1);   border-color: rgba(34,197,94,0.3);  color: #86efac; }
+  .badge-amber { background: rgba(217,119,6,0.15);  border-color: rgba(251,191,36,0.3); color: #fcd34d; }
+  .badge-pink  { background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.3); color: #f9a8d4; }
+  .hero-stats { display: flex; gap: 1.25rem; flex-direction: column; align-items: flex-end; }
+  .stat-card { background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.85rem 1.25rem; min-width: 145px; text-align: right; }
+  .stat-val { font-family: var(--mono); font-size: 18px; color: #fff; font-weight: 500; }
+  .stat-lbl { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; }
+
+  /* SECTIONS */
+  .divider { border: none; border-top: 0.5px solid var(--border); }
+  section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+  .section-label { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--accent2); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  h2 { font-family: var(--serif); font-size: 32px; color: var(--text); margin-bottom: 1.5rem; line-height: 1.15; }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .about-text p { font-size: 15px; line-height: 1.8; color: #334155; margin-bottom: 1rem; }
+  .about-details { display: flex; flex-direction: column; }
+  .detail-row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 0.5px solid var(--border); gap: 8px; }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-key { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); flex-shrink: 0; }
+  .detail-val { font-size: 13px; font-weight: 500; color: var(--text); font-family: var(--mono); text-align: right; }
+  .dxped-list { display: flex; flex-direction: column; gap: 10px; margin-top: 1.5rem; }
+  .dxped-item { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .dxped-call { font-family: var(--mono); font-weight: 500; font-size: 14px; color: var(--accent); }
+  .dxped-desc { font-size: 13px; color: #334155; flex: 1; }
+  .dxped-year { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .awards-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5rem; }
+  .award-badge { background: #eff6ff; border: 0.5px solid #bfdbfe; border-radius: 6px; padding: 4px 12px; font-family: var(--mono); font-size: 12px; font-weight: 500; color: #1e40af; }
+
+  /* STATION */
+  .station-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .equip-group { margin-bottom: 1.5rem; }
+  .equip-group-title { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 0.5px solid var(--border); }
+  .equip-item { padding: 7px 0; border-bottom: 0.5px solid var(--border); font-size: 14px; color: #334155; display: flex; align-items: flex-start; gap: 8px; }
+  .equip-item:last-child { border-bottom: none; }
+  .equip-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent2); flex-shrink: 0; margin-top: 6px; }
+
+  /* LOG */
+  .log-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .log-table thead th { text-align: left; font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; padding: 0 10px 10px 0; border-bottom: 0.5px solid var(--border); }
+  .log-table tbody tr { border-bottom: 0.5px solid var(--border); }
+  .log-table tbody tr:last-child { border-bottom: none; }
+  .log-table tbody tr:hover { background: #f1f5f9; }
+  .log-table tbody td { padding: 9px 10px 9px 0; font-family: var(--mono); color: #334155; }
+  .log-table tbody td:first-child { font-weight: 500; color: var(--accent); }
+  .band-pill { padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 500; }
+  .b15 { background: #fce7f3; color: #9d174d; }
+  .b17 { background: #fef3c7; color: #92400e; }
+  .b20 { background: #dcfce7; color: #166534; }
+  .b40 { background: #dbeafe; color: #1e40af; }
+  .qsl-note { margin-top: 1rem; padding: 0.75rem 1rem; background: #f8fafc; border: 0.5px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .qsl-note strong { color: var(--text); font-weight: 500; }
+
+  /* PROJECTS */
+  .project-list { display: flex; flex-direction: column; gap: 14px; }
+  .project-card { background: var(--card-bg); border: 0.5px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .project-name { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .proj-tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #f1f5f9; color: #475569; }
+  .status-badge { font-family: var(--mono); font-size: 11px; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
+  .status-active { background: #dcfce7; color: #166534; }
+  .yt-link { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #dc2626; margin-top: 6px; text-decoration: none; }
+  .yt-link:hover { text-decoration: underline; }
+
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 14px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 12px; }
+  .contact-icon { width: 36px; height: 36px; border-radius: 8px; background: #eff6ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); }
+  .contact-val { font-size: 14px; font-weight: 500; color: var(--text); margin-top: 1px; }
+  .contact-val a { color: var(--accent); text-decoration: none; }
+  .contact-val a:hover { text-decoration: underline; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; font-family: var(--mono); }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: 9px 12px; font-size: 14px; border: 0.5px solid var(--border);
+    border-radius: 8px; background: #fff; color: var(--text); font-family: var(--sans);
+    outline: none; transition: border-color 0.15s;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .btn-submit { background: var(--navy); color: #fff; border: none; border-radius: 8px; padding: 10px 24px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: var(--sans); transition: background 0.15s; }
+  .btn-submit:hover { background: var(--navy2); }
+
+  footer { background: var(--navy); padding: 2.5rem 2rem; text-align: center; font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.35); line-height: 2; }
+  footer span { color: rgba(255,255,255,0.6); }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: #fff; }
+
+  @media (max-width: 680px) {
+    .hero h1 { font-size: 36px; }
+    .hero-stats { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+    .about-grid, .station-cols, .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><span>VU2CPL</span> · Manoj</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#station">Station</a>
+    <a href="#log">Log</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">QRV · Bengaluru</div>
+      <h1>VU2CPL<br><em>Manoj Ramawarrier</em></h1>
+      <p class="hero-sub">MK83TE · Bengaluru, Karnataka · Licenced 1993</p>
+      <div class="hero-badges">
+        <span class="badge badge-blue">FLEX-6600 · RGO One · IC-705</span>
+        <span class="badge badge-green">9 BDXCC</span>
+        <span class="badge badge-amber">DXpeditioner</span>
+        <span class="badge badge-pink">Remote Ops</span>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card"><div class="stat-val">1.5 KFA</div><div class="stat-lbl">SPE Expert Amp</div></div>
+      <div class="stat-card"><div class="stat-val">9 BDXCC</div><div class="stat-lbl">Awards</div></div>
+      <div class="stat-card"><div class="stat-val">VU7T · AT5P</div><div class="stat-lbl">DXpeditions</div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">01 · About</div>
+  <h2>The Operator</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Located in the garden city of India, Bangalore. Licensed since 1993, I started operations in Thrissur, Kerala with a simple homebrew QRP rig following VU2VWN OM Vasanth (SK)'s circuit — the most popular design of those days.</p>
+      <p>Later graduated to SSB with the help of an old exciter originally made by VU2UCY Om Bhasi (SK). Went through different iterations of 807 tube QRO and some military surplus gear (Redifone GR 345) during the 1990s. Shifted to Bangalore in early 2003.</p>
+      <p>I travel extensively for work and mostly operate remote during free time. The shack runs a fully automated setup including remote antenna switching and lightning protection — see the Projects section for details.</p>
+
+      <div class="dxped-list">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">DXpeditions</div>
+        <div class="dxped-item">
+          <span class="dxped-call">VU7T / VU7MS</span>
+          <span class="dxped-desc">Kavaratti Is, Lakshadweep</span>
+          <span class="dxped-year">Oct 2017</span>
+        </div>
+        <div class="dxped-item">
+          <span class="dxped-call">AT5P</span>
+          <span class="dxped-desc">Rameshwaram Is, IOTA AS-173</span>
+          <span class="dxped-year">May 2015</span>
+        </div>
+        <div class="dxped-item">
+          <span class="dxped-call">ARSI Hilltop Contest</span>
+          <span class="dxped-desc">MJ89KT, Kulamavu, Idukki — HF/VHF/UHF team</span>
+          <span class="dxped-year">Feb 2023</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-details">
+      <div class="detail-row"><span class="detail-key">Callsign</span><span class="detail-val">VU2CPL</span></div>
+      <div class="detail-row"><span class="detail-key">Grid</span><span class="detail-val">MK83TE</span></div>
+      <div class="detail-row"><span class="detail-key">Location</span><span class="detail-val">Bengaluru, KA 562157</span></div>
+      <div class="detail-row"><span class="detail-key">Licenced</span><span class="detail-val">1993</span></div>
+      <div class="detail-row"><span class="detail-key">Modes</span><span class="detail-val">SSB · FT8 · CW</span></div>
+      <div class="detail-row"><span class="detail-key">Bands</span><span class="detail-val">160m – 6m incl. 60m</span></div>
+      <div class="detail-row"><span class="detail-key">QSL</span><span class="detail-val">LOTW · Clublog OQRS</span></div>
+      <div style="margin-top:1.25rem;">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Awards</div>
+        <div class="awards-row">
+          <span class="award-badge">5BDXCC</span>
+          <span class="award-badge">160m DXCC</span>
+          <span class="award-badge">30m DXCC</span>
+          <span class="award-badge">17m DXCC</span>
+          <span class="award-badge">12m DXCC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- STATION -->
+<section id="station">
+  <div class="section-label">02 · Station</div>
+  <h2>Equipment</h2>
+  <div class="station-cols">
+    <div>
+      <div class="equip-group">
+        <div class="equip-group-title">Radios</div>
+        <div class="equip-item"><span class="equip-dot"></span>FlexRadio FLEX-6600 (SDR)</div>
+        <div class="equip-item"><span class="equip-dot"></span>RGO One</div>
+        <div class="equip-item"><span class="equip-dot"></span>Icom IC-705</div>
+      </div>
+      <div class="equip-group">
+        <div class="equip-group-title">Amplifier</div>
+        <div class="equip-item"><span class="equip-dot"></span>SPE Expert 1.5 KFA</div>
+      </div>
+      <div class="equip-group">
+        <div class="equip-group-title">RX Antennas (Low Band)</div>
+        <div class="equip-item"><span class="equip-dot"></span>350 ft 2-wire reversible Beverage (N/S) — winters only</div>
+        <div class="equip-item"><span class="equip-dot"></span>N6RK Loop</div>
+        <div class="equip-item"><span class="equip-dot"></span>K9AY Loop</div>
+      </div>
+    </div>
+    <div>
+      <div class="equip-group">
+        <div class="equip-group-title">Antennas</div>
+        <div class="equip-item"><span class="equip-dot"></span>Hex beam — 20m to 6m</div>
+        <div class="equip-item"><span class="equip-dot"></span>Vertical — 30m</div>
+        <div class="equip-item"><span class="equip-dot"></span>Inverted Vee — 80m &amp; 40m</div>
+        <div class="equip-item"><span class="equip-dot"></span>Inverted L — 160m</div>
+        <div class="equip-item"><span class="equip-dot"></span>4 ele LFA Yagi — 6m</div>
+      </div>
+      <div class="equip-group">
+        <div class="equip-group-title">Band Allocation Notes</div>
+        <div class="equip-item"><span class="equip-dot"></span>80m: 3500–3700 kHz</div>
+        <div class="equip-item"><span class="equip-dot"></span>160m: 1800–1825 kHz</div>
+        <div class="equip-item"><span class="equip-dot"></span>60m: QRV from Dec 2018</div>
+        <div class="equip-item"><span class="equip-dot"></span>FT8: split needed within VU allocation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- LOG -->
+<section id="log">
+  <div class="section-label">03 · Logbook</div>
+  <h2>Recent Contacts</h2>
+  <table class="log-table">
+    <thead>
+      <tr>
+        <th>Callsign</th>
+        <th>Date (UTC)</th>
+        <th>Band</th>
+        <th>Mode</th>
+        <th>Entity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>OO6A</td>    <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Belgium</td></tr>
+      <tr><td>UX2QX</td>   <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Ukraine</td></tr>
+      <tr><td>UR5TOB</td>  <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Ukraine</td></tr>
+      <tr><td>RZ3AM</td>   <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>European Russia</td></tr>
+      <tr><td>IU1TKT</td>  <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Italy</td></tr>
+      <tr><td>W3UNX</td>   <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>United States</td></tr>
+      <tr><td>VE2FSB</td>  <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Canada</td></tr>
+      <tr><td>DL7PIP</td>  <td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Germany</td></tr>
+    </tbody>
+  </table>
+  <div class="qsl-note">
+    <strong>QSL Policy:</strong> Preferred route is LOTW or direct via Clublog OQRS. No bureau (stopped March 2019 due to unreliable VU buro). For VU7MS and VU7T QSLs, use Clublog OQRS only. No IRC accepted.
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">04 · Projects</div>
+  <h2>Automation &amp; Node-RED</h2>
+  <div class="project-list">
+    <div class="project-card">
+      <div>
+        <div class="project-name">FLEX-6600 State Monitor Dashboard</div>
+        <div class="project-desc">Real-time Node-RED dashboard tracking all four slice receivers via FlexRadio TCP API. Dual SmartSDR client support (AetherSDR + iPad). AngularJS UI with color-coded active slice indication — amber for RX, red for TX.</div>
+        <div class="project-tags">
+          <span class="proj-tag">Node-RED</span><span class="proj-tag">FlexRadio API</span><span class="proj-tag">AngularJS</span><span class="proj-tag">MQTT</span>
+        </div>
+        <a class="yt-link" href="https://youtu.be/6BkzOGnGM7U" target="_blank" rel="noopener">▶ YouTube demo</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">Lightning Antenna Protector</div>
+        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km. Dual source: Open-Meteo lightning_potential API (polled every 5 min) + AS3935 local sensor via MQTT. Leaflet/OSM map with storm overlay. 20-min auto-reconnect timer.</div>
+        <div class="project-tags">
+          <span class="proj-tag">Node-RED</span><span class="proj-tag">Open-Meteo</span><span class="proj-tag">Tasmota</span><span class="proj-tag">AS3935</span><span class="proj-tag">Leaflet</span>
+        </div>
+        <a class="yt-link" href="https://youtu.be/vq5DuG9_yD8" target="_blank" rel="noopener">▶ YouTube demo</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">Remote Shack Control</div>
+        <div class="project-desc">Full remote operation capability including antenna switching via Tasmota MQTT relays. Operates the FLEX-6600 via SmartSDR from anywhere. Integrated with the lightning protection system for safe unattended operation.</div>
+        <div class="project-tags">
+          <span class="proj-tag">Tasmota</span><span class="proj-tag">MQTT</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">Node-RED</span>
+        </div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">05 · Contact</div>
+  <h2>Get in Touch</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 16 16" fill="none" stroke="#1a6bdb" stroke-width="1.5" width="16" height="16">
+            <path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">QRZ</div>
+          <div class="contact-val"><a href="https://www.qrz.com/db/VU2CPL" target="_blank" rel="noopener">qrz.com/db/VU2CPL</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 16 16" fill="none" stroke="#1a6bdb" stroke-width="1.5" width="16" height="16">
+            <circle cx="8" cy="7" r="3"/>
+            <path d="M8 1C4.7 1 2 3.7 2 7c0 4.5 6 9 6 9s6-4.5 6-9c0-3.3-2.7-6-6-6z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">Tarabanahalli, Chikkajala PO<br>Bengaluru, KA 562157</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 16 16" fill="none" stroke="#1a6bdb" stroke-width="1.5" width="16" height="16">
+            <rect x="2" y="3" width="12" height="10" rx="1"/>
+            <path d="M5 7h6M5 10h4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Logbook</div>
+          <div class="contact-val"><a href="https://clublog.org/logsearch/VU2CPL" target="_blank" rel="noopener">Clublog · VU2CPL</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 16 16" fill="none" stroke="#1a6bdb" stroke-width="1.5" width="16" height="16">
+            <circle cx="8" cy="8" r="6"/>
+            <path d="M8 4v4l3 2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Photos</div>
+          <div class="contact-val"><a href="https://hamphotos.com" target="_blank" rel="noopener">hamphotos.com</a></div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-top:0.5rem;">
+        For sked requests, please email via QRZ or use WhatsApp. For QSL, use LOTW or Clublog OQRS — no bureau. 73 de VU2CPL.
+      </p>
+    </div>
+    <div>
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div class="form-group"><label>Callsign</label><input type="text" placeholder="e.g. W1AW"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select>
+          <option>QSL / Sked request</option>
+          <option>DXpedition QSL (VU7T / AT5P)</option>
+          <option>Technical / Node-RED discussion</option>
+          <option>Remote shack / automation</option>
+          <option>General</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="73, QSL via LOTW or..."></textarea></div>
+      <button class="btn-submit">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>VU2CPL · Manoj Ramawarrier</span> · Bengaluru, India · MK83TE<br>
+  Licenced 1993 &nbsp;·&nbsp;
+  <a href="https://www.qrz.com/db/VU2CPL">QRZ</a> &nbsp;·&nbsp;
+  <a href="https://clublog.org/logsearch/VU2CPL">Clublog</a> &nbsp;·&nbsp;
+  <a href="https://hamphotos.com">HamPhotos</a>
+  <br><br>73
+</footer>
+
+</body>
+</html>
