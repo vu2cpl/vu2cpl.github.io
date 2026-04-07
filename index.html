@@ -23,8 +23,8 @@
   nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
   .nav-logo { font-family: var(--mono); font-size: 18px; font-weight: 500; color: #fff; text-decoration: none; }
   .nav-logo span { color: #60a5fa; }
-  .nav-links { display: flex; gap: 1.5rem; }
-  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
   .nav-links a:hover { color: #fff; }
   .hero { background: var(--navy); padding: 5rem 2rem 4rem; }
   .hero-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
@@ -100,6 +100,27 @@
   .status-active { background: #dcfce7; color: #166534; }
   .yt-link { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #dc2626; margin-top: 6px; text-decoration: none; }
   .yt-link:hover { text-decoration: underline; }
+
+  /* WRITINGS */
+  .writings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .writing-card { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 10px; padding: 1.25rem; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.15s; }
+  .writing-card:hover { border-color: var(--accent2); }
+  .writing-cat { font-family: var(--mono); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 4px; display: inline-block; width: fit-content; }
+  .cat-topband { background: #dbeafe; color: #1e40af; }
+  .cat-dxped   { background: #dcfce7; color: #166534; }
+  .cat-contest { background: #fef3c7; color: #92400e; }
+  .cat-tech    { background: #f3e8ff; color: #6b21a8; }
+  .writing-title { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.35; }
+  .writing-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .writing-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+  .writing-date { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .writing-pdf { font-family: var(--mono); font-size: 11px; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+  .writing-pdf:hover { text-decoration: underline; }
+  .writing-stats { display: flex; gap: 12px; }
+  .wstat { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .wstat strong { color: var(--text); }
+
+  /* CONTACT */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
   .contact-info { display: flex; flex-direction: column; gap: 14px; }
   .contact-item { display: flex; align-items: flex-start; gap: 12px; }
@@ -127,8 +148,8 @@
     .hero-stats { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
     .about-grid, .station-cols, .contact-grid, .log-cols { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 11px; }
+    .nav-links { gap: 0.75rem; }
+    .nav-links a { font-size: 10px; }
   }
 </style>
 </head>
@@ -141,6 +162,7 @@
     <a href="#station">Station</a>
     <a href="#log">Log</a>
     <a href="#projects">Projects</a>
+    <a href="#writings">Writings</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -180,7 +202,9 @@
         <div style="font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">DXpeditions</div>
         <div class="dxped-item"><span class="dxped-call">VU7T / VU7MS</span><span class="dxped-desc">Kavaratti Is, Lakshadweep</span><span class="dxped-year">Oct 2017</span></div>
         <div class="dxped-item"><span class="dxped-call">AT5P</span><span class="dxped-desc">Rameshwaram Is, IOTA AS-173</span><span class="dxped-year">May 2015</span></div>
-        <div class="dxped-item"><span class="dxped-call">ARSI Hilltop Contest</span><span class="dxped-desc">MJ89KT, Kulamavu, Idukki — HF/VHF/UHF team</span><span class="dxped-year">Feb 2023</span></div>
+        <div class="dxped-item"><span class="dxped-call">AT3N · ARSI Hilltop</span><span class="dxped-desc">Nelliyampathy, Kerala — 4,417 QSOs, 261 DXCC</span><span class="dxped-year">Jan 2024</span></div>
+        <div class="dxped-item"><span class="dxped-call">ARSI Hilltop 2025</span><span class="dxped-desc">Vayalada Hills, Kozhikode MK71WM</span><span class="dxped-year">Jan 2025</span></div>
+        <div class="dxped-item"><span class="dxped-call">ARSI Hilltop 2023</span><span class="dxped-desc">Kulamavu, Idukki MJ89KT — HF/VHF/UHF</span><span class="dxped-year">Feb 2023</span></div>
       </div>
     </div>
     <div>
@@ -237,7 +261,7 @@
         <div class="equip-item"><span class="equip-dot"></span>Hex beam — 20m to 6m</div>
         <div class="equip-item"><span class="equip-dot"></span>Vertical — 30m</div>
         <div class="equip-item"><span class="equip-dot"></span>Inverted Vee — 80m &amp; 40m</div>
-        <div class="equip-item"><span class="equip-dot"></span>Inverted L — 160m</div>
+        <div class="equip-item"><span class="equip-dot"></span>Inverted L — 160m (hairpin matched, 2 elevated radials)</div>
         <div class="equip-item"><span class="equip-dot"></span>4 ele LFA Yagi — 6m</div>
       </div>
       <div class="equip-group">
@@ -327,8 +351,96 @@
 
 <hr class="divider">
 
+<!-- WRITINGS -->
+<section id="writings">
+  <div class="section-label">05 · Writings &amp; Field Reports</div>
+  <h2>Articles &amp; Contest Reports</h2>
+  <div class="writings-grid">
+
+    <div class="writing-card">
+      <span class="writing-cat cat-topband">Top Band</span>
+      <div class="writing-title">0–100 on 160m</div>
+      <div class="writing-desc">My journey exploring the Gentleman's band from scratch — inverted L antenna, hairpin matching, beverage antennas, and chasing 100 DXCC on 160m from Zone 22.</div>
+      <div class="writing-stats">
+        <span class="wstat"><strong>102</strong> countries worked</span>
+        <span class="wstat"><strong>29</strong> CQ zones</span>
+        <span class="wstat"><strong>1,622</strong> QSOs</span>
+      </div>
+      <div class="writing-meta">
+        <span class="writing-date">Jan 2019</span>
+        <a class="writing-pdf" href="0-100_on_160m.pdf" target="_blank">↓ PDF</a>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-dxped">DXpedition</span>
+      <div class="writing-title">VU7MS — Lakshadweep DXpedition</div>
+      <div class="writing-desc">Writeup of the VU7MS DXpedition to Kavaratti Island, Lakshadweep. Operations on HF with cubical quad and wire antennas from one of India's rarest DXCC entities.</div>
+      <div class="writing-meta">
+        <span class="writing-date">2016</span>
+        <span class="writing-pdf" style="color:var(--muted);font-family:var(--mono);font-size:11px;">Pages format</span>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-dxped">DXpedition</span>
+      <div class="writing-title">VU7T — A Sequel to VU7MS</div>
+      <div class="writing-desc">The follow-up DXpedition to Kavaratti Island, Lakshadweep in October 2017. Expanded operations including first steps towards 160m activation from this rare entity.</div>
+      <div class="writing-meta">
+        <span class="writing-date">Oct 2017</span>
+        <span class="writing-pdf" style="color:var(--muted);font-family:var(--mono);font-size:11px;">Pages format</span>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-contest">Contest Report</span>
+      <div class="writing-title">AT3N — ARSI Hilltop Contest 2024</div>
+      <div class="writing-desc">Field report from team AT3N operating from Nelliyampathy, Kerala at 1,380m ASL. Multi-band HF/VHF/UHF operation — 4,417 QSOs, 261 DXCC entities, Category C winners.</div>
+      <div class="writing-stats">
+        <span class="wstat"><strong>4,417</strong> QSOs</span>
+        <span class="wstat"><strong>261</strong> DXCC</span>
+      </div>
+      <div class="writing-meta">
+        <span class="writing-date">Jan 2024</span>
+        <a class="writing-pdf" href="AT3N_REPORT_FOR_ARSI_CPL.pdf" target="_blank">↓ PDF</a>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-contest">Contest Report</span>
+      <div class="writing-title">ARSI Hilltop Contest 2025</div>
+      <div class="writing-desc">Report from Vayalada Hills, Kozhikode (MK71WM). Smaller team, new location. 160m Inverted L and 90m reversible Beverage installed. Experimenting with 10m delta loop and CQ160 contest entries.</div>
+      <div class="writing-stats">
+        <span class="wstat"><strong>763</strong> QSOs</span>
+        <span class="wstat"><strong>148</strong> DXCC</span>
+      </div>
+      <div class="writing-meta">
+        <span class="writing-date">Jan 2025</span>
+        <a class="writing-pdf" href="ARSI_Hilltop_2025.pdf" target="_blank">↓ PDF</a>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-tech">Technical</span>
+      <div class="writing-title">Interfacing the PA2500 with Modern Radios</div>
+      <div class="writing-desc">How to interface the Furuno PA2500 linear amplifier with modern transceivers — Arduino band decoder customisation, direct LPF switching, ALC polarity conversion using LT7660, and automated 4:1 antenna switching.</div>
+      <div class="writing-meta">
+        <span class="writing-date">2015</span>
+        <a class="writing-pdf" href="Interfacing_PA2500_with_modern_radios.pdf" target="_blank">↓ PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p style="font-size:13px;color:var(--muted);margin-top:1.5rem;font-style:italic;">
+    Note: PDFs should be uploaded alongside index.html in the GitHub repository. VU7MS and VU7T writeups are in .pages format — convert to PDF and upload as <code style="font-size:12px;background:#f1f5f9;padding:1px 5px;border-radius:3px;">vu7ms_writeup.pdf</code> and <code style="font-size:12px;background:#f1f5f9;padding:1px 5px;border-radius:3px;">vu7t_writeup.pdf</code> then update the links above.
+  </p>
+</section>
+
+<hr class="divider">
+
 <section id="contact">
-  <div class="section-label">05 · Contact</div>
+  <div class="section-label">06 · Contact</div>
   <h2>Get in Touch</h2>
   <div class="contact-grid">
     <div class="contact-info">
@@ -351,7 +463,6 @@
       <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-top:0.5rem;">For sked requests, email via QRZ or WhatsApp. For QSL, use LOTW or Clublog OQRS — no bureau. 73 de VU2CPL.</p>
     </div>
     <div>
-      <!-- Replace mzdkogba with the ID from formspree.io after signing up -->
       <form id="contact-form" action="https://formspree.io/f/mzdkogba" method="POST">
         <div class="form-row">
           <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
@@ -365,6 +476,7 @@
             <option>DXpedition QSL (VU7T / AT5P)</option>
             <option>Technical / Node-RED discussion</option>
             <option>Remote shack / automation</option>
+            <option>160m / Low band discussion</option>
             <option>General</option>
           </select>
         </div>
