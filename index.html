@@ -280,37 +280,18 @@
 <section id="log">
   <div class="section-label">03 · Logbook</div>
   <h2>Recent Contacts</h2>
-  <div class="log-cols">
-    <div>
-      <table class="log-table">
-        <thead><tr><th>Callsign</th><th>Date (UTC)</th><th>Band</th><th>Mode</th><th>Entity</th></tr></thead>
-        <tbody>
-          <tr><td>OO6A</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Belgium</td></tr>
-          <tr><td>UX2QX</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Ukraine</td></tr>
-          <tr><td>UR5TOB</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Ukraine</td></tr>
-          <tr><td>RZ3AM</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Eur. Russia</td></tr>
-          <tr><td>IU1TKT</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Italy</td></tr>
-          <tr><td>W3UNX</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>United States</td></tr>
-          <tr><td>VE2FSB</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Canada</td></tr>
-          <tr><td>DL7PIP</td><td>2026-03-31</td><td><span class="band-pill b15">15m</span></td><td>FT8</td><td>Germany</td></tr>
-        </tbody>
-      </table>
-      <div class="qsl-note">
-        <strong>QSL Policy:</strong> Preferred route is LOTW or direct via Clublog OQRS. No bureau (stopped March 2019). For VU7MS and VU7T QSLs, use Clublog OQRS only. No IRC accepted.
-      </div>
+  <div class="clublog-wrap">
+    <div class="clublog-header">
+      <span class="clublog-title">Live log · Clublog</span>
+      <span class="clublog-live">Live</span>
     </div>
-    <div>
-      <div class="clublog-wrap">
-        <div class="clublog-header">
-          <span class="clublog-title">Live log · Clublog</span>
-          <span class="clublog-live">Live</span>
-        </div>
-        <iframe src="https://clublog.org/last10_iframe.php?call=VU2CPL&limit=15" height="380" scrolling="yes" title="VU2CPL recent QSOs from Clublog"></iframe>
-      </div>
-      <p style="font-size:11px;color:var(--muted);margin-top:8px;font-family:var(--mono);text-align:right;">
-        <a href="https://clublog.org/logsearch/VU2CPL" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Full log search on Clublog →</a>
-      </p>
+    <iframe src="https://clublog.org/last10_iframe.php?call=VU2CPL&limit=20" height="420" scrolling="yes" title="VU2CPL recent QSOs from Clublog"></iframe>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:1rem;flex-wrap:wrap;">
+    <div class="qsl-note" style="margin-top:0;flex:1;">
+      <strong>QSL Policy:</strong> Preferred route is LOTW or direct via Clublog OQRS. No bureau (stopped March 2019). For VU7MS and VU7T QSLs, use Clublog OQRS only. No IRC accepted.
     </div>
+    <a href="https://clublog.org/logsearch/VU2CPL" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap;">Full log search →</a>
   </div>
 </section>
 
@@ -318,14 +299,24 @@
 
 <section id="projects">
   <div class="section-label">04 · Projects</div>
-  <h2>Automation &amp; Node-RED</h2>
-  <div class="project-list">
+  <h2>Shack Automation &amp; Utilities</h2>
+
+  <div style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Node-RED Flows</div>
+  <div class="project-list" style="margin-bottom:2.5rem;">
     <div class="project-card">
       <div>
         <div class="project-name">FLEX-6600 State Monitor Dashboard</div>
         <div class="project-desc">Real-time Node-RED dashboard tracking all four slice receivers via FlexRadio TCP API. Dual SmartSDR client support (AetherSDR + iPad). AngularJS UI with color-coded active slice indication — amber for RX, red for TX.</div>
         <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">FlexRadio API</span><span class="proj-tag">AngularJS</span><span class="proj-tag">MQTT</span></div>
         <a class="yt-link" href="https://youtu.be/6BkzOGnGM7U" target="_blank" rel="noopener">▶ YouTube demo</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">DXCC Tracker &amp; DX Alert System</div>
+        <div class="project-desc">Pulls worked DXCC data from Club Log and monitors DX cluster spots via telnet. Compares each incoming spot against the worked log and alerts in real time — red for new DXCC entity, blue for new band, amber for new mode fill. Colour-coded dashboard panel with per-band and per-mode filtering. Club Log DXCC API integration with 24h refresh.</div>
+        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Club Log API</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">Telnet</span><span class="proj-tag">MQTT</span></div>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
@@ -343,6 +334,26 @@
         <div class="project-name">Remote Shack Control</div>
         <div class="project-desc">Full remote operation capability including antenna switching via Tasmota MQTT relays. Operates the FLEX-6600 via SmartSDR from anywhere. Integrated with the lightning protection system for safe unattended operation.</div>
         <div class="project-tags"><span class="proj-tag">Tasmota</span><span class="proj-tag">MQTT</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">Node-RED</span></div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+  </div>
+
+  <div style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Utilities &amp; Tools</div>
+  <div class="project-list">
+    <div class="project-card">
+      <div>
+        <div class="project-name">FT8 Cluster Aggregator</div>
+        <div class="project-desc">Standalone macOS application that aggregates spots from multiple FT8 sources and DX cluster nodes, then re-serves them through a built-in telnet server that mimics a standard DX cluster. User login is supported via RumLog and FlexRadio. Spots are filtered against the current worked DXCC chart pulled from Club Log and displayed in a colour-coded interface. Based on original work by Vinod VU3ESV, modernised and extended.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">FT8</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">Telnet server</span><span class="proj-tag">Club Log</span><span class="proj-tag">RumLog</span></div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">SPE Expert Amplifier Control &amp; Display</div>
+        <div class="project-desc">Web-based control and monitoring interface for the SPE Expert 1.5 KFA linear amplifier. A WebSocket server runs on a Raspberry Pi connected to the amplifier via USB, serving real-time data — power, SWR, temperature, band and operating state — to any browser on the network. Based on original work by OH2GEK, modernised and adapted for the Expert 1.5 KFA.</div>
+        <div class="project-tags"><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">Node.js</span></div>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
@@ -432,7 +443,9 @@
 
   </div>
 
-  
+  <p style="font-size:13px;color:var(--muted);margin-top:1.5rem;font-style:italic;">
+    All PDFs should be uploaded alongside index.html in the GitHub repository to enable downloads.
+  </p>
 </section>
 
 <hr class="divider">
