@@ -294,7 +294,8 @@ def generate_pdf(rows: list[dict], as_on_date: str, output_path: Path) -> None:
         f"Contains {len(rows)} VU callsigns sorted by max credits across band/mode columns "
         "(Mix, Ph, CW, Dig, Sat, 160\u20136\u00a0m), descending. "
         "Green background = maximum value in that column. "
-        "Data compiled from ARRL DXCC Standings published at arrl.org/dxcc-standings.",
+        "Data compiled from ARRL DXCC Standings published at arrl.org/dxcc-standings. "
+        "Table layout adapted from the original VU DXCC list template by VU2DCC.",
         notes_s,
     ))
     doc.build(elements)
