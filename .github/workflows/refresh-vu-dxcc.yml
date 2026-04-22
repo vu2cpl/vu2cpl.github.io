@@ -1,0 +1,53 @@
+name: Refresh VU DXCC list
+
+on:
+  schedule:
+    # 5th of each month at 06:00 UTC (~ARRL monthly publication cadence)
+    - cron: "0 6 5 * *"
+  workflow_dispatch: {}  # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # If the tool lives in a subdirectory of your site repo, set WORK_DIR
+    # below (e.g. "dxcc") to match. Leave it as "." if vudxcc.py is at repo root.
+    env:
+      WORK_DIR: dxcc
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ${{ env.WORK_DIR }}/requirements.txt
+
+      - name: Install dependencies
+        working-directory: ${{ env.WORK_DIR }}
+        run: pip install -r requirements.txt
+
+      - name: Generate VU DXCC PDF + JSON
+        working-directory: ${{ env.WORK_DIR }}
+        run: |
+          python vudxcc.py \
+            --output VUDXCC-latest.pdf \
+            --json data.json \
+            --no-cache
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${WORK_DIR}/VUDXCC-latest.pdf" "${WORK_DIR}/data.json"
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Refresh VU DXCC list ($(date -u +%Y-%m-%d))"
+            git push
+          fi
