@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VU DXCC Credits — VU2CPL</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --border: #d7dce3;
+    --text: #1f2933;
+    --muted: #5c6773;
+    --accent: #1a56db;
+    --accent-hover: #143fb3;
+    --row-alt: #f9fafc;
+    --row-hover: #eef2ff;
+    --max-bg: #c6e8b0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+  }
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+  .btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn:hover { background: var(--accent-hover); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .btn-secondary:hover { background: var(--row-hover); }
+  input[type="search"] {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    width: 180px;
+  }
+  main {
+    padding: 14px 20px 40px;
+  }
+  .meta {
+    display: flex;
+    gap: 24px;
+    padding: 6px 0 12px;
+    color: var(--muted);
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .meta strong { color: var(--text); }
+  .status {
+    padding: 16px;
+    color: var(--muted);
+    text-align: center;
+  }
+  .status.error { color: #b30000; }
+  .table-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: auto;
+    max-height: calc(100vh - 200px);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+  th, td {
+    padding: 6px 10px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  th:nth-child(1), th:nth-child(2),
+  td:nth-child(1), td:nth-child(2) {
+    text-align: left;
+  }
+  thead th {
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 2px solid var(--border);
+    z-index: 1;
+  }
+  thead th:hover { background: var(--row-hover); color: var(--text); }
+  thead th.sorted-asc::after { content: " ▲"; color: var(--accent); }
+  thead th.sorted-desc::after { content: " ▼"; color: var(--accent); }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:hover { background: var(--row-hover); }
+  td.callsign { font-family: "SF Mono", Monaco, Consolas, monospace; font-weight: 600; }
+  td.empty { color: #c4cad4; }
+  td.col-max { background: var(--max-bg); }
+  footer {
+    padding: 14px 20px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>VU DXCC Credits</h1>
+    <div class="subtitle">ARRL DXCC standings for Indian hams · bands 160–6 m · compiled by VU2CPL</div>
+  </div>
+  <div class="controls">
+    <input type="search" id="search" placeholder="Filter callsign…" />
+    <a class="btn" id="download-pdf" href="VUDXCC-latest.pdf" download>Download PDF</a>
+  </div>
+</header>
+
+<main>
+  <div id="meta" class="meta"></div>
+  <div id="status" class="status">Loading latest data…</div>
+  <div id="table-wrap" class="table-wrap" hidden>
+    <table id="dxcc-table">
+      <thead><tr id="thead-row"></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  Data sourced from <a href="https://www.arrl.org/dxcc-standings" target="_blank" rel="noopener">ARRL DXCC Standings</a>.
+  Auto-refreshed monthly via GitHub Actions. <a href="VUDXCC-latest.pdf" download>Download printable PDF</a>.
+</footer>
+
+<script>
+  const FIXED_COLS = [
+    { key: "sno",      label: "#",        type: "num" },
+    { key: "callsign", label: "Callsign", type: "str" },
+  ];
+
+  const statusEl = document.getElementById("status");
+  const metaEl = document.getElementById("meta");
+  const tableWrap = document.getElementById("table-wrap");
+  const theadRow = document.getElementById("thead-row");
+  const tbody = document.getElementById("tbody");
+  const searchInput = document.getElementById("search");
+
+  let columns = [];           // full column list (FIXED_COLS + data columns)
+  let dataColumns = [];       // data columns only
+  let rows = [];
+  let sortKey = "sno";
+  let sortDir = "asc";
+  let filterText = "";
+  let columnMax = {};         // cat_key -> max value (for highlighting)
+
+  function setStatus(msg, isError = false) {
+    if (!msg) { statusEl.hidden = true; return; }
+    statusEl.hidden = false;
+    statusEl.textContent = msg;
+    statusEl.classList.toggle("error", isError);
+  }
+
+  function buildHead() {
+    theadRow.innerHTML = "";
+    for (const col of columns) {
+      const th = document.createElement("th");
+      th.textContent = col.label;
+      th.dataset.key = col.key;
+      th.title = `Click to sort by ${col.label}`;
+      th.addEventListener("click", () => {
+        if (sortKey === col.key) {
+          sortDir = sortDir === "asc" ? "desc" : "asc";
+        } else {
+          sortKey = col.key;
+          sortDir = col.type === "num" ? "desc" : "asc";
+        }
+        render();
+      });
+      theadRow.appendChild(th);
+    }
+  }
+
+  function render() {
+    for (const th of theadRow.children) {
+      th.classList.remove("sorted-asc", "sorted-desc");
+      if (th.dataset.key === sortKey) {
+        th.classList.add(sortDir === "asc" ? "sorted-asc" : "sorted-desc");
+      }
+    }
+
+    const q = filterText.trim().toUpperCase();
+    let view = rows;
+    if (q) view = rows.filter(r => (r.callsign || "").toUpperCase().includes(q));
+
+    const col = columns.find(c => c.key === sortKey) || columns[0];
+    view = [...view].sort((a, b) => {
+      const av = a[sortKey], bv = b[sortKey];
+      if (col.type === "num") {
+        const an = (av == null || av === "") ? -Infinity : Number(av);
+        const bn = (bv == null || bv === "") ? -Infinity : Number(bv);
+        return sortDir === "asc" ? an - bn : bn - an;
+      }
+      const as = (av ?? "").toString();
+      const bs = (bv ?? "").toString();
+      return sortDir === "asc" ? as.localeCompare(bs) : bs.localeCompare(as);
+    });
+
+    tbody.innerHTML = "";
+    const frag = document.createDocumentFragment();
+    for (const r of view) {
+      const tr = document.createElement("tr");
+      for (const c of columns) {
+        const td = document.createElement("td");
+        const v = r[c.key];
+        if (v == null || v === "") {
+          td.classList.add("empty");
+          td.textContent = "";
+        } else {
+          td.textContent = v;
+          if (columnMax[c.key] != null && v === columnMax[c.key]) {
+            td.classList.add("col-max");
+          }
+        }
+        if (c.key === "callsign") td.classList.add("callsign");
+        tr.appendChild(td);
+      }
+      frag.appendChild(tr);
+    }
+    tbody.appendChild(frag);
+
+    const bits = [];
+    if (window._asOn) bits.push(`<span><strong>As on:</strong> ${window._asOn}</span>`);
+    if (window._generatedAt) bits.push(`<span><strong>Refreshed:</strong> ${window._generatedAt}</span>`);
+    bits.push(`<span><strong>Callsigns:</strong> ${rows.length}</span>`);
+    if (q) bits.push(`<span><strong>Showing:</strong> ${view.length}</span>`);
+    metaEl.innerHTML = bits.join("");
+  }
+
+  async function load() {
+    try {
+      const resp = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const data = await resp.json();
+
+      rows = data.rows;
+      dataColumns = (data.columns || []).map((key, i) => ({
+        key,
+        label: (data.column_labels && data.column_labels[i]) || key,
+        type: "num",
+      }));
+      columns = [...FIXED_COLS, ...dataColumns];
+
+      columnMax = {};
+      for (const col of dataColumns) {
+        const vals = rows.map(r => r[col.key]).filter(v => v != null && v !== "");
+        if (vals.length) columnMax[col.key] = Math.max(...vals.map(Number));
+      }
+
+      window._asOn = data.as_on;
+      if (data.generated_at) {
+        const d = new Date(data.generated_at);
+        if (!isNaN(d)) window._generatedAt = d.toISOString().replace("T", " ").slice(0, 16) + " UTC";
+      }
+
+      buildHead();
+      setStatus("");
+      tableWrap.hidden = false;
+      render();
+    } catch (err) {
+      console.error(err);
+      setStatus(`Could not load data.json: ${err.message}`, true);
+    }
+  }
+
+  searchInput.addEventListener("input", e => {
+    filterText = e.target.value;
+    if (rows.length) render();
+  });
+
+  load();
+</script>
+
+</body>
+</html>
