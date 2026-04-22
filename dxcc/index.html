@@ -16,6 +16,8 @@
     --row-alt: #f9fafc;
     --row-hover: #eef2ff;
     --max-bg: #c6e8b0;
+    --changed-bg: #ffe0e0;
+    --new-bg: #ffd0d0;
   }
   * { box-sizing: border-box; }
   body {
@@ -161,6 +163,37 @@
   td.callsign { font-family: "SF Mono", Monaco, Consolas, monospace; font-weight: 600; }
   td.empty { color: #c4cad4; }
   td.col-max { background: var(--max-bg); }
+  td.changed { background: var(--changed-bg); }
+  td.is-new  { background: var(--new-bg); }
+  .legend {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    margin: 0 0 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--text);
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-label { color: var(--muted); }
+  .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    display: inline-block;
+  }
+  .swatch.changed { background: var(--changed-bg); }
+  .swatch.new     { background: var(--new-bg); }
+  .swatch.max     { background: var(--max-bg); }
   footer {
     padding: 14px 20px;
     color: var(--muted);
@@ -186,6 +219,7 @@
 
 <main>
   <div id="meta" class="meta"></div>
+  <div id="legend" class="legend" hidden></div>
   <div id="status" class="status">Loading latest data…</div>
   <div id="table-wrap" class="table-wrap" hidden>
     <table id="dxcc-table">
@@ -210,6 +244,7 @@
 
   const statusEl = document.getElementById("status");
   const metaEl = document.getElementById("meta");
+  const legendEl = document.getElementById("legend");
   const tableWrap = document.getElementById("table-wrap");
   const theadRow = document.getElementById("thead-row");
   const tbody = document.getElementById("tbody");
@@ -279,6 +314,7 @@
     const frag = document.createDocumentFragment();
     for (const r of view) {
       const tr = document.createElement("tr");
+      const changedSet = new Set(r.changes || []);
       for (const c of columns) {
         const td = document.createElement("td");
         const v = r[c.key];
@@ -291,7 +327,12 @@
             td.classList.add("col-max");
           }
         }
-        if (c.key === "callsign") td.classList.add("callsign");
+        if (c.key === "callsign") {
+          td.classList.add("callsign");
+          if (r.is_new) td.classList.add("is-new");
+        } else if (changedSet.has(c.key)) {
+          td.classList.add("changed");
+        }
         tr.appendChild(td);
       }
       frag.appendChild(tr);
@@ -304,6 +345,23 @@
     bits.push(`<span><strong>Callsigns:</strong> ${rows.length}</span>`);
     if (q) bits.push(`<span><strong>Showing:</strong> ${view.length}</span>`);
     metaEl.innerHTML = bits.join("");
+
+    const legendBits = [
+      `<span class="legend-item"><span class="swatch max"></span>`
+      + `<span><strong>Green</strong> <span class="legend-label">— leader in each category</span></span></span>`,
+    ];
+    if (window._previousAsOn) {
+      const nChanges = rows.reduce((n, r) => n + ((r.changes || []).length), 0);
+      const nNew = rows.filter(r => r.is_new).length;
+      legendBits.push(
+        `<span class="legend-item"><span class="swatch changed"></span>`
+        + `<span><strong>Red</strong> <span class="legend-label">— changes from last list`
+        + ` (${nChanges} cell${nChanges === 1 ? "" : "s"}${nNew ? `, ${nNew} new callsign` + (nNew === 1 ? "" : "s") : ""}`
+        + `, vs ${window._previousAsOn})</span></span></span>`
+      );
+    }
+    legendEl.innerHTML = legendBits.join("");
+    legendEl.hidden = false;
   }
 
   async function load() {
@@ -327,6 +385,7 @@
       }
 
       window._asOn = data.as_on;
+      window._previousAsOn = data.previous_as_on || null;
       if (data.generated_at) {
         const d = new Date(data.generated_at);
         if (!isNaN(d)) window._generatedAt = d.toISOString().replace("T", " ").slice(0, 16) + " UTC";

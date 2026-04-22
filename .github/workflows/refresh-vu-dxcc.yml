@@ -32,19 +32,30 @@ jobs:
         working-directory: ${{ env.WORK_DIR }}
         run: pip install -r requirements.txt
 
+      - name: Snapshot previous data.json
+        working-directory: ${{ env.WORK_DIR }}
+        run: |
+          if [ -f data.json ]; then
+            cp data.json data.previous.json
+            echo "Preserved previous snapshot."
+          else
+            echo "No prior data.json — first-run, no diff baseline."
+          fi
+
       - name: Generate VU DXCC PDF + JSON
         working-directory: ${{ env.WORK_DIR }}
         run: |
           python vudxcc.py \
             --output VUDXCC-latest.pdf \
             --json data.json \
+            --previous data.previous.json \
             --no-cache
 
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "${WORK_DIR}/VUDXCC-latest.pdf" "${WORK_DIR}/data.json"
+          git add "${WORK_DIR}/VUDXCC-latest.pdf" "${WORK_DIR}/data.json" "${WORK_DIR}/data.previous.json"
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else

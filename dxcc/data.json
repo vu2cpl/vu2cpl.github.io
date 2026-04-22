@@ -1,7 +1,8 @@
 {
   "as_on": "22 Apr 2026",
+  "previous_as_on": null,
   "date_token": "20260422",
-  "generated_at": "2026-04-22T07:08:47+00:00",
+  "generated_at": "2026-04-22T07:46:42+00:00",
   "columns": [
     "Mix",
     "Ph",
@@ -77,7 +78,9 @@
       "10": 298,
       "6": null,
       "Chal": 2320,
-      "Hon": 340
+      "Hon": 340,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 2,
@@ -98,7 +101,9 @@
       "10": 187,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 3,
@@ -119,7 +124,9 @@
       "10": 299,
       "6": 136,
       "Chal": 2481,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 4,
@@ -140,7 +147,9 @@
       "10": 252,
       "6": null,
       "Chal": 1761,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 5,
@@ -161,7 +170,9 @@
       "10": 258,
       "6": 113,
       "Chal": 2314,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 6,
@@ -182,7 +193,9 @@
       "10": 272,
       "6": 119,
       "Chal": 1856,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 7,
@@ -203,7 +216,9 @@
       "10": 233,
       "6": 111,
       "Chal": 1742,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 8,
@@ -224,7 +239,9 @@
       "10": 231,
       "6": null,
       "Chal": 1723,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 9,
@@ -245,7 +262,9 @@
       "10": 229,
       "6": null,
       "Chal": 1559,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 10,
@@ -266,7 +285,9 @@
       "10": 221,
       "6": 114,
       "Chal": 2015,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 11,
@@ -287,7 +308,9 @@
       "10": 197,
       "6": 108,
       "Chal": 1768,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 12,
@@ -308,7 +331,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 13,
@@ -329,7 +354,9 @@
       "10": 146,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 14,
@@ -350,7 +377,9 @@
       "10": 201,
       "6": null,
       "Chal": 1238,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 15,
@@ -371,7 +400,9 @@
       "10": 149,
       "6": null,
       "Chal": 1142,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 16,
@@ -392,7 +423,9 @@
       "10": 132,
       "6": null,
       "Chal": 1346,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 17,
@@ -413,7 +446,9 @@
       "10": 172,
       "6": null,
       "Chal": 1038,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 18,
@@ -434,7 +469,9 @@
       "10": 134,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 19,
@@ -455,7 +492,9 @@
       "10": 179,
       "6": null,
       "Chal": 1410,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 20,
@@ -476,7 +515,9 @@
       "10": 109,
       "6": null,
       "Chal": 1004,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 21,
@@ -497,7 +538,9 @@
       "10": 120,
       "6": null,
       "Chal": 1173,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 22,
@@ -518,7 +561,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 23,
@@ -539,7 +584,9 @@
       "10": 103,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 24,
@@ -560,7 +607,9 @@
       "10": 126,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 25,
@@ -581,7 +630,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 26,
@@ -602,7 +653,9 @@
       "10": 102,
       "6": null,
       "Chal": 1012,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 27,
@@ -623,7 +676,9 @@
       "10": 123,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 28,
@@ -644,7 +699,9 @@
       "10": 125,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 29,
@@ -665,7 +722,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 30,
@@ -686,7 +745,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 31,
@@ -707,7 +768,9 @@
       "10": 102,
       "6": null,
       "Chal": 1000,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 32,
@@ -728,7 +791,9 @@
       "10": 111,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 33,
@@ -749,7 +814,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 34,
@@ -770,7 +837,9 @@
       "10": 118,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 35,
@@ -791,7 +860,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 36,
@@ -812,7 +883,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 37,
@@ -833,7 +906,9 @@
       "10": 108,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 38,
@@ -854,7 +929,9 @@
       "10": 105,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 39,
@@ -875,7 +952,9 @@
       "10": 109,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 40,
@@ -896,7 +975,9 @@
       "10": 101,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 41,
@@ -917,7 +998,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 42,
@@ -938,7 +1021,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 43,
@@ -959,7 +1044,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 44,
@@ -980,7 +1067,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 45,
@@ -1001,7 +1090,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 46,
@@ -1022,7 +1113,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 47,
@@ -1043,7 +1136,9 @@
       "10": 100,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 48,
@@ -1064,7 +1159,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 49,
@@ -1085,7 +1182,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 50,
@@ -1106,7 +1205,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 51,
@@ -1127,7 +1228,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 52,
@@ -1148,7 +1251,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 53,
@@ -1169,7 +1274,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 54,
@@ -1190,7 +1297,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 55,
@@ -1211,7 +1320,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 56,
@@ -1232,7 +1343,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 57,
@@ -1253,7 +1366,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 58,
@@ -1274,7 +1389,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 59,
@@ -1295,7 +1412,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 60,
@@ -1316,7 +1435,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 61,
@@ -1337,7 +1458,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 62,
@@ -1358,7 +1481,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 63,
@@ -1379,7 +1504,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 64,
@@ -1400,7 +1527,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 65,
@@ -1421,7 +1550,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 66,
@@ -1442,7 +1573,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 67,
@@ -1463,7 +1596,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 68,
@@ -1484,7 +1619,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 69,
@@ -1505,7 +1642,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 70,
@@ -1526,7 +1665,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 71,
@@ -1547,7 +1688,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 72,
@@ -1568,7 +1711,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 73,
@@ -1589,7 +1734,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 74,
@@ -1610,7 +1757,9 @@
       "10": null,
       "6": 103,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 75,
@@ -1631,7 +1780,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 76,
@@ -1652,7 +1803,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 77,
@@ -1673,7 +1826,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 78,
@@ -1694,7 +1849,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 79,
@@ -1715,7 +1872,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 80,
@@ -1736,7 +1895,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 81,
@@ -1757,7 +1918,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 82,
@@ -1778,7 +1941,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 83,
@@ -1799,7 +1964,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 84,
@@ -1820,7 +1987,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 85,
@@ -1841,7 +2010,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 86,
@@ -1862,7 +2033,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 87,
@@ -1883,7 +2056,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 88,
@@ -1904,7 +2079,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 89,
@@ -1925,7 +2102,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 90,
@@ -1946,7 +2125,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 91,
@@ -1967,7 +2148,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 92,
@@ -1988,7 +2171,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 93,
@@ -2009,7 +2194,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 94,
@@ -2030,7 +2217,9 @@
       "10": null,
       "6": null,
       "Chal": null,
-      "Hon": null
+      "Hon": null,
+      "changes": [],
+      "is_new": false
     }
   ]
 }

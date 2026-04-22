@@ -6,6 +6,8 @@ Usage:
     python3 vudxcc.py --date 20260422          # specific snapshot date
     python3 vudxcc.py --output out.pdf         # custom output path
     python3 vudxcc.py --json data.json         # also emit machine-readable JSON
+    python3 vudxcc.py --previous prev.json     # diff against a prior snapshot
+                                               #   (changed cells highlighted in PDF/JSON)
     python3 vudxcc.py --no-cache               # force re-download
 """
 from __future__ import annotations
@@ -215,9 +217,59 @@ def aggregate(all_results: dict[str, dict[str, int]]) -> list[dict]:
     return rows
 
 
+# ---------- diff against previous snapshot ----------
+
+def load_previous(path: Path) -> dict:
+    """Load a prior data.json and return a lookup: {callsign: {col_key: value_or_None}}."""
+    try:
+        payload = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"  (previous snapshot unreadable — {exc}; skipping diff)", file=sys.stderr)
+        return {}
+    lookup: dict[str, dict[str, int | None]] = {}
+    cat_keys = [c[0] for c in CATEGORIES]
+    for r in payload.get("rows", []):
+        call = r.get("callsign")
+        if not call:
+            continue
+        lookup[call] = {k: r.get(k) for k in cat_keys}
+    return {"rows": lookup, "as_on": payload.get("as_on")}
+
+
+def annotate_diffs(rows: list[dict], previous: dict) -> None:
+    """Mutate each row in-place, adding `_changes` (list of changed col keys) and
+    `_is_new` (bool) based on comparison with the previous snapshot.
+
+    A cell is considered "changed" if its value differs from the prior one,
+    including transitions between a number and None (new entry, dropped entry).
+    """
+    prev_rows: dict[str, dict] = previous.get("rows", {}) if previous else {}
+    for r in rows:
+        if not prev_rows:
+            r["_changes"] = []
+            r["_is_new"] = False
+            continue
+        call = r["callsign"]
+        prev = prev_rows.get(call)
+        if prev is None:
+            r["_is_new"] = True
+            r["_changes"] = [k for k, _, _, _ in CATEGORIES if r.get(k) is not None]
+        else:
+            r["_is_new"] = False
+            r["_changes"] = [
+                k for k, _, _, _ in CATEGORIES
+                if (r.get(k) or None) != (prev.get(k) or None)
+            ]
+
+
 # ---------- output PDF ----------
 
-def generate_pdf(rows: list[dict], as_on_date: str, output_path: Path) -> None:
+def generate_pdf(
+    rows: list[dict],
+    as_on_date: str,
+    output_path: Path,
+    previous_as_on: str | None = None,
+) -> None:
     pagesize = landscape(A4)
     doc = SimpleDocTemplate(
         str(output_path), pagesize=pagesize,
@@ -287,17 +339,36 @@ def generate_pdf(rows: list[dict], as_on_date: str, output_path: Path) -> None:
             if r[k] == mx:
                 style_cmds.append(("BACKGROUND", (col_idx, ri + 1), (col_idx, ri + 1), colors.HexColor("#c6e8b0")))
 
+    # Changed-since-last-snapshot highlight (takes precedence over green max BG)
+    change_bg = colors.HexColor("#ffe0e0")
+    new_row_bg = colors.HexColor("#ffd0d0")
+    cat_col_index = {k: 2 + i for i, (k, _, _, _) in enumerate(CATEGORIES)}
+    for ri, r in enumerate(rows):
+        changes = r.get("_changes") or []
+        if r.get("_is_new"):
+            style_cmds.append(("BACKGROUND", (1, ri + 1), (1, ri + 1), new_row_bg))
+        for k in changes:
+            ci = cat_col_index[k]
+            style_cmds.append(("BACKGROUND", (ci, ri + 1), (ci, ri + 1), change_bg))
+
     elements.append(Table(data, colWidths=col_widths, repeatRows=1, style=TableStyle(style_cmds)))
     elements.append(Spacer(1, 4))
-    elements.append(Paragraph(
-        "<b>Notes:</b> "
+    notes_bits = [
+        "<b>Notes:</b>",
         f"Contains {len(rows)} VU callsigns sorted by max credits across band/mode columns "
-        "(Mix, Ph, CW, Dig, Sat, 160\u20136\u00a0m), descending. "
-        "Green background = maximum value in that column. "
+        "(Mix, Ph, CW, Dig, Sat, 160\u20136\u00a0m), descending.",
+        "Green background = maximum value in that column.",
+    ]
+    if previous_as_on:
+        notes_bits.append(
+            f"Light red background = changed since previous snapshot ({previous_as_on}); "
+            "darker red on a callsign cell = entry is new."
+        )
+    notes_bits.append(
         "Data compiled from ARRL DXCC Standings published at arrl.org/dxcc-standings. "
-        "Table layout adapted from the original VU DXCC list template by VU2DCC.",
-        notes_s,
-    ))
+        "Table layout adapted from the original VU DXCC list template by VU2DCC."
+    )
+    elements.append(Paragraph(" ".join(notes_bits), notes_s))
     doc.build(elements)
 
 
@@ -314,9 +385,16 @@ def pretty_date(date_str: str) -> str:
         return date_str
 
 
-def write_json(rows: list[dict], date_str: str, as_on: str, output_path: Path) -> None:
+def write_json(
+    rows: list[dict],
+    date_str: str,
+    as_on: str,
+    output_path: Path,
+    previous_as_on: str | None = None,
+) -> None:
     payload = {
         "as_on": as_on,
+        "previous_as_on": previous_as_on,
         "date_token": date_str,
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "columns": [c[0] for c in CATEGORIES],
@@ -327,6 +405,8 @@ def write_json(rows: list[dict], date_str: str, as_on: str, output_path: Path) -
                 "sno": r["sno"],
                 "callsign": r["callsign"],
                 **{k: r[k] for k, _, _, _ in CATEGORIES},
+                "changes": r.get("_changes") or [],
+                "is_new": bool(r.get("_is_new")),
             }
             for r in rows
         ],
@@ -339,6 +419,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--date", default=None, help="ARRL standings date as YYYYMMDD (default: today)")
     ap.add_argument("--output", default=None, help="Output PDF path")
     ap.add_argument("--json", dest="json_path", default=None, help="Also write JSON data to this path")
+    ap.add_argument("--previous", dest="previous_path", default=None,
+                    help="Path to a prior data.json; enables diff highlighting")
     ap.add_argument("--cache-dir", default=None, help="Cache dir for downloaded ARRL PDFs")
     ap.add_argument("--no-cache", action="store_true", help="Force re-download (ignore cache)")
     args = ap.parse_args(argv)
@@ -376,12 +458,30 @@ def main(argv: list[str] | None = None) -> int:
         print("No VU callsigns found — aborting PDF generation.", file=sys.stderr)
         return 1
 
-    generate_pdf(rows, pretty_date(date_str), output_path)
+    previous_payload: dict = {}
+    previous_as_on: str | None = None
+    if args.previous_path:
+        prev_path = Path(args.previous_path)
+        if prev_path.exists():
+            previous_payload = load_previous(prev_path)
+            previous_as_on = previous_payload.get("as_on")
+            print(f"Diffing against previous snapshot: {prev_path} (as on {previous_as_on})")
+        else:
+            print(f"No previous snapshot at {prev_path}; skipping diff.")
+    annotate_diffs(rows, previous_payload)
+
+    n_changed = sum(1 for r in rows if r.get("_changes"))
+    n_new = sum(1 for r in rows if r.get("_is_new"))
+    if previous_payload:
+        print(f"Changes vs previous: {n_changed} row(s) with updates, {n_new} new callsign(s).")
+
+    generate_pdf(rows, pretty_date(date_str), output_path, previous_as_on=previous_as_on)
     print(f"Wrote: {output_path}")
 
     if args.json_path:
         json_path = Path(args.json_path)
-        write_json(rows, date_str, pretty_date(date_str), json_path)
+        write_json(rows, date_str, pretty_date(date_str), json_path,
+                   previous_as_on=previous_as_on)
         print(f"Wrote: {json_path}")
 
     return 0
