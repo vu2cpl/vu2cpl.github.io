@@ -161,6 +161,8 @@
   tbody tr:nth-child(even) { background: var(--row-alt); }
   tbody tr:hover { background: var(--row-hover); }
   td.callsign { font-family: "SF Mono", Monaco, Consolas, monospace; font-weight: 600; }
+  td.callsign a { color: var(--accent); text-decoration: none; }
+  td.callsign a:hover { text-decoration: underline; }
   td.empty { color: #c4cad4; }
   td.col-max { background: var(--max-bg); }
   td.changed { background: var(--changed-bg); }
@@ -318,7 +320,17 @@
       for (const c of columns) {
         const td = document.createElement("td");
         const v = r[c.key];
-        if (v == null || v === "") {
+        if (c.key === "callsign") {
+          td.classList.add("callsign");
+          if (r.is_new) td.classList.add("is-new");
+          const a = document.createElement("a");
+          a.href = `https://www.qrz.com/db/${encodeURIComponent(v)}`;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.title = `View ${v} on QRZ.com`;
+          a.textContent = v;
+          td.appendChild(a);
+        } else if (v == null || v === "") {
           td.classList.add("empty");
           td.textContent = "";
         } else {
@@ -326,12 +338,9 @@
           if (columnMax[c.key] != null && v === columnMax[c.key]) {
             td.classList.add("col-max");
           }
-        }
-        if (c.key === "callsign") {
-          td.classList.add("callsign");
-          if (r.is_new) td.classList.add("is-new");
-        } else if (changedSet.has(c.key)) {
-          td.classList.add("changed");
+          if (changedSet.has(c.key)) {
+            td.classList.add("changed");
+          }
         }
         tr.appendChild(td);
       }
