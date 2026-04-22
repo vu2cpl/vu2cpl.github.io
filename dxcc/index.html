@@ -37,6 +37,23 @@
     top: 0;
     z-index: 10;
   }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .back-link:hover {
+    background: var(--row-hover);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
   h1 {
     margin: 0;
     font-size: 18px;
@@ -156,6 +173,7 @@
 <body>
 
 <header>
+  <a class="back-link" href="/" title="Back to VU2CPL home">← VU2CPL</a>
   <div>
     <h1>VU DXCC Credits</h1>
     <div class="subtitle">ARRL DXCC standings for Indian hams · bands 160–6 m · compiled by VU2CPL</div>
