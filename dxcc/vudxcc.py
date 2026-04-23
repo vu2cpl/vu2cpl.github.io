@@ -315,8 +315,8 @@ def generate_pdf(
     style_cmds: list = [
         ("FONT", (0, 0), (-1, -1), "Helvetica", 7),
         ("FONT", (0, 0), (-1, 0), "Helvetica-Bold", 7),
-        ("ALIGN", (0, 0), (1, -1), "LEFT"),
-        ("ALIGN", (2, 0), (-1, -1), "RIGHT"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("ALIGN", (1, 0), (1, -1), "LEFT"),
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
         ("GRID", (0, 0), (-1, -1), 0.25, colors.HexColor("#bcc3ce")),
         ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#1a56db")),
