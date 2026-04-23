@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+# Don't run concurrently with the daily Clublog refresh (same repo target).
+concurrency:
+  group: dxcc-refresh
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest

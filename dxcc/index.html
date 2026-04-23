@@ -56,6 +56,39 @@
     color: var(--accent);
     border-color: var(--accent);
   }
+  .tabs {
+    display: flex;
+    gap: 2px;
+    padding: 12px 20px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .tab {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: pointer;
+    margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active {
+    color: var(--accent);
+    background: var(--card);
+    border-color: var(--border);
+    border-bottom-color: var(--card);
+  }
+  .tab-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-left: 4px;
+  }
   h1 {
     margin: 0;
     font-size: 18px;
@@ -211,7 +244,7 @@
   <a class="back-link" href="/" title="Back to VU2CPL home">← VU2CPL</a>
   <div>
     <h1>VU DXCC Credits</h1>
-    <div class="subtitle">ARRL DXCC standings for Indian hams · bands 160–6 m · compiled by VU2CPL</div>
+    <div class="subtitle" id="page-subtitle">ARRL + Clublog DXCC standings for Indian hams · compiled by VU2CPL</div>
   </div>
   <div class="controls">
     <input type="search" id="search" placeholder="Filter callsign…" />
@@ -219,7 +252,18 @@
   </div>
 </header>
 
-<main>
+<div class="tabs" role="tablist">
+  <button class="tab active" id="tab-lotw"    data-source="lotw"
+          role="tab" aria-selected="true"  aria-controls="tab-panel">
+    LoTW <span class="tab-subtitle">· ARRL · monthly</span>
+  </button>
+  <button class="tab" id="tab-clublog" data-source="clublog"
+          role="tab" aria-selected="false" aria-controls="tab-panel">
+    Clublog <span class="tab-subtitle">· Asia Top-2000 · daily</span>
+  </button>
+</div>
+
+<main id="tab-panel" role="tabpanel">
   <div id="meta" class="meta"></div>
   <div id="legend" class="legend" hidden></div>
   <div id="status" class="status">Loading latest data…</div>
@@ -232,8 +276,9 @@
 </main>
 
 <footer>
-  Data sourced from <a href="https://www.arrl.org/dxcc-standings" target="_blank" rel="noopener">ARRL DXCC Standings</a>.
-  Auto-refreshed monthly via GitHub Actions. <a href="VUDXCC-latest.pdf" download>Download printable PDF</a>.
+  LoTW tab: <a href="https://www.arrl.org/dxcc-standings" target="_blank" rel="noopener">ARRL DXCC Standings</a> (refreshed monthly).
+  Clublog tab: <a href="https://clublog.org/league.php" target="_blank" rel="noopener">Clublog DXCC League</a> — Asia, Confirmed (refreshed daily).
+  Click any callsign to view its <a href="https://www.qrz.com/" target="_blank" rel="noopener">QRZ.com</a> profile.
   <br>
   Table layout adapted from the original VU DXCC list template by <strong>VU2DCC</strong>.
 </footer>
@@ -373,9 +418,35 @@
     legendEl.hidden = false;
   }
 
-  async function load() {
+  const SOURCES = {
+    lotw: {
+      json: "data.json",
+      pdf:  "VUDXCC-latest.pdf",
+      label: "LoTW",
+      subtitle: "ARRL DXCC standings · monthly refresh · 17 bands/modes + Challenge + Honor Roll",
+      emptyMessage: "Could not load LoTW data (data.json).",
+    },
+    clublog: {
+      json: "clublog.json",
+      pdf:  "VUDXCC-clublog-latest.pdf",
+      label: "Clublog",
+      subtitle: "Clublog Asia Top-2000 Confirmed · daily refresh · Indian prefixes (VU / AT / AU)",
+      emptyMessage: "Could not load Clublog data (clublog.json).",
+    },
+  };
+
+  let currentSource = "lotw";
+
+  async function load(sourceKey) {
+    const src = SOURCES[sourceKey] || SOURCES.lotw;
+    currentSource = sourceKey;
+    document.getElementById("page-subtitle").textContent = src.subtitle;
+    document.getElementById("download-pdf").href = src.pdf;
+    tableWrap.hidden = true;
+    legendEl.hidden = true;
+    setStatus(`Loading ${src.label} data…`);
     try {
-      const resp = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
+      const resp = await fetch(`./${src.json}?t=${Date.now()}`, { cache: "no-store" });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const data = await resp.json();
 
@@ -395,10 +466,15 @@
 
       window._asOn = data.as_on;
       window._previousAsOn = data.previous_as_on || null;
+      window._generatedAt = null;
       if (data.generated_at) {
         const d = new Date(data.generated_at);
         if (!isNaN(d)) window._generatedAt = d.toISOString().replace("T", " ").slice(0, 16) + " UTC";
       }
+
+      // Reset sort when switching sources — sno ascending is the published order.
+      sortKey = "sno";
+      sortDir = "asc";
 
       buildHead();
       setStatus("");
@@ -406,16 +482,48 @@
       render();
     } catch (err) {
       console.error(err);
-      setStatus(`Could not load data.json: ${err.message}`, true);
+      setStatus(`${src.emptyMessage} (${err.message})`, true);
     }
   }
+
+  // Tab wiring
+  const tabButtons = document.querySelectorAll(".tab");
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("active")) return;
+      tabButtons.forEach(b => {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      const src = btn.dataset.source;
+      history.replaceState(null, "", `#${src}`);
+      try { localStorage.setItem("vu-dxcc-tab", src); } catch { /* ignore */ }
+      load(src);
+    });
+  });
 
   searchInput.addEventListener("input", e => {
     filterText = e.target.value;
     if (rows.length) render();
   });
 
-  load();
+  // Pick initial tab: URL hash > localStorage > lotw default
+  function pickInitialTab() {
+    const hash = (location.hash || "").replace(/^#/, "");
+    if (hash in SOURCES) return hash;
+    try {
+      const saved = localStorage.getItem("vu-dxcc-tab");
+      if (saved && saved in SOURCES) return saved;
+    } catch { /* ignore */ }
+    return "lotw";
+  }
+  const initial = pickInitialTab();
+  tabButtons.forEach(b => {
+    const on = b.dataset.source === initial;
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-selected", on ? "true" : "false");
+  });
+  load(initial);
 </script>
 
 </body>
