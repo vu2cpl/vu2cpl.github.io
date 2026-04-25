@@ -98,6 +98,7 @@
   .proj-tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #f1f5f9; color: #475569; }
   .status-badge { font-family: var(--mono); font-size: 11px; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
   .status-active { background: #dcfce7; color: #166534; }
+  .status-wip { background: #fef3c7; color: #92400e; }
   .yt-link { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #dc2626; margin-top: 6px; text-decoration: none; }
   .yt-link:hover { text-decoration: underline; }
 
@@ -344,17 +345,41 @@
   <div class="project-list">
     <div class="project-card">
       <div>
-        <div class="project-name">FT8 Cluster Aggregator</div>
-        <div class="project-desc">Standalone macOS application that aggregates spots from multiple FT8 sources and DX cluster nodes, then re-serves them through a built-in telnet server that mimics a standard DX cluster. User login is supported via RumLog and FlexRadio. Spots are filtered against the current worked DXCC chart pulled from Club Log and displayed in a colour-coded interface. Based on original work by Vinod VU3ESV, modernised and extended.</div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">FT8</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">Telnet server</span><span class="proj-tag">Club Log</span><span class="proj-tag">RumLog</span></div>
+        <div class="project-name">spe-remote — SPE Expert remote control server</div>
+        <div class="project-desc">Modern Python 3 remote-control server for SPE Expert HF amplifiers (1.3K-FA / 1.5K-FA / 2K-FA). Runs on a Raspberry Pi over USB serial and serves both a built-in web dashboard and a WebSocket API. Implements the full SPE Application Programmer's Guide Rev 1.1 plus the undocumented RCU command set, so the amplifier's LCD can be mirrored frame-by-frame. Mixed-client broadcast — text JSON for browsers, binary RCU frames for the MacExpert companion app — over the same socket. Threaded reader + async writer survive the USB-serial poll glitches that crash naive serial_asyncio setups. Based on original work by OH2GEK, rewritten and extended.</div>
+        <div class="project-tags"><span class="proj-tag">Python 3</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU protocol</span></div>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">SPE Expert Amplifier Control &amp; Display</div>
-        <div class="project-desc">Web-based control and monitoring interface for the SPE Expert 1.5 KFA linear amplifier. A WebSocket server runs on a Raspberry Pi connected to the amplifier via USB, serving real-time data — power, SWR, temperature, band and operating state — to any browser on the network. Based on original work by OH2GEK, modernised and adapted for the Expert 1.5 KFA.</div>
-        <div class="project-tags"><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">Node.js</span></div>
+        <div class="project-name">MacExpert — native SPE Expert control app for macOS</div>
+        <div class="project-desc">Swift / SwiftUI macOS app that mirrors and controls SPE Expert HF amplifiers over either local USB serial or remote WebSocket (via spe-remote). Two-way live mirror of the amp's LCD using RCU 0x6A frames — every sub-menu (CAT, CONFIG, TEMP/FANS, RX ANT, TUN ANT &rarr; PORT, ALARMS LOG, MANUAL TUNE, ANTENNA matrix, YAESU / TEN-TEC pickers, STANDBY banner) tracked with cursor-accurate state. Auto-detects the model (1.3K / 1.5K / 2K) from the status frame, auto-scales the power display to the LOW/MID/HIGH level, and offers tap-to-cycle status chips for STATUS / BAND / ANT / IN / LEVEL / MODE / CAT. Universal binary (Apple Silicon + Intel).</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU</span><span class="proj-tag">USB serial</span><span class="proj-tag">WebSocket</span></div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">DX Cluster Aggregator</div>
+        <div class="project-desc">Native macOS app (universal binary) that merges spots from multiple WSJT-X / JTDX UDP sources and several DX cluster telnet nodes into one unified feed, and re-serves it on a built-in telnet cluster server (port 7300) so loggers like Logger32, N1MM+, Log4OM, and DXKeeper can pick it up. ClubLog integration highlights New DXCC / New Slot / New Band / New Mode in real time; LoTW uploaders are flagged with a green dot from ARRL's user list. NCDXF/IBP and national beacon detection avoids false alerts. Telegram + macOS notifications with per-callsign cooldown. Live filters, sortable resizable columns, auto-clear with disk log, menu-bar background mode. Major rewrite of the original FT8 Cluster Aggregator concept by Vinod VU3ESV — now covers all DX cluster sources, not just FT8.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">Telnet server</span><span class="proj-tag">Club Log</span><span class="proj-tag">WSJT-X / JTDX</span><span class="proj-tag">PSK Reporter</span><span class="proj-tag">Telegram</span></div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">SkimServer Mac</div>
+        <div class="project-desc">Native macOS multi-band, multi-mode skimmer for CW + FT8 + FT4, built directly against the HPSDR / Hermes Protocol 1 over UDP. Tested with a Red Pitaya running Pavel Demin's HPSDR-compatible firmware. Up to 8 DDC receivers run in parallel with their own decode pipelines: a CW path (FFT &rarr; per-bin peak detect &rarr; envelope + Bayesian beam Morse decoder + Patt3Ch.lst callsign validator with confirm-before-emit) and FT8 / FT4 paths (NCO down-conversion &rarr; resample to 12 kHz &rarr; ft8_lib decode on UTC-aligned slots). Spots feed a built-in DX-cluster telnet server on port 7300, plus uploads to RBN (telnet) and PSK Reporter (UDP). SwiftUI menu-bar UI with live stats. Handles Pavel firmware quirks (rx-count in C4, frequency addressing offset, IQ sign, per-rx sample-rate sharing).</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">HPSDR</span><span class="proj-tag">Red Pitaya</span><span class="proj-tag">CW skimmer</span><span class="proj-tag">FT8</span><span class="proj-tag">FT4</span><span class="proj-tag">RBN</span><span class="proj-tag">PSK Reporter</span><span class="proj-tag">ft8_lib</span></div>
+      </div>
+      <span class="status-badge status-wip">Work in progress</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">NanoVNASaver — packaged macOS .app</div>
+        <div class="project-desc">Self-contained NanoVNASaver v0.7.3 .app bundle for Apple Silicon. Upstream NanoVNASaver only ships Windows and Raspberry Pi binaries, so this build wraps a Python 3.12 virtual-environment with PySide6 / Qt and the NanoVNASaver package, behind a small bash launcher in <code>Contents/MacOS/</code>. Slimmed from ~1.3 GB to 253 MB by stripping unused Qt frameworks, qml, translations, metatypes, and lipo-thinning every Mach-O binary to arm64. Logs to <code>~/Library/Logs/NanoVNASaver/nanovnasaver.log</code> for easy support.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">.app bundle</span><span class="proj-tag">PySide6 / Qt</span><span class="proj-tag">Apple Silicon</span><span class="proj-tag">NanoVNA</span><span class="proj-tag">VNA</span></div>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
