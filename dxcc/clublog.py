@@ -110,6 +110,25 @@ def _clean_callsign(raw: str) -> str | None:
     return m.group(1) if m else None
 
 
+def _parse_callsign_cell(cell_html: str) -> tuple[str | None, int, str | None, bool]:
+    """Decode a Clublog league "Callsign" <td>. Returns:
+
+    - bare callsign (e.g. "VU2PTT")
+    - linked_count: the "+N" suffix Clublog shows beside callsigns whose
+      logs are linked across multiple operator-owned calls (0 if none)
+    - operator name from the <a title="…"> attribute (None if missing)
+    - whether the row is served as a "-LINKED" combined record
+      (i.e. Clublog already aggregated the operator's calls)
+    """
+    name_m = re.search(r'title=["\']([^"\']+)["\']', cell_html)
+    op_name = name_m.group(1).strip() if name_m else None
+    is_linked = "-LINKED" in cell_html.upper()
+    plus_m = re.search(r"\+(\d+)", _strip_tags(cell_html))
+    linked_count = int(plus_m.group(1)) if plus_m else 0
+    call = _clean_callsign(_strip_tags(cell_html))
+    return call, linked_count, op_name, is_linked
+
+
 def parse_league_page(html: str) -> list[dict]:
     """Return a list of row dicts for this page. No filtering applied."""
     m = re.search(r"<th>\s*Rank\s*</th>.*?</table>", html, re.DOTALL | re.IGNORECASE)
@@ -128,7 +147,7 @@ def parse_league_page(html: str) -> list[dict]:
             rank = int(vals[0])
         except ValueError:
             continue
-        call = _clean_callsign(vals[1])
+        call, linked_count, op_name, is_linked = _parse_callsign_cell(tds[1])
         if not call:
             continue
 
@@ -142,7 +161,13 @@ def parse_league_page(html: str) -> list[dict]:
         slots_val = to_int(vals[14]) if len(vals) > 14 else None
         years_raw = vals[15] if len(vals) > 15 else ""
 
-        row = {"rank": rank, "callsign": call}
+        row = {
+            "rank": rank,
+            "callsign": call,
+            "linked_count": linked_count,
+            "is_linked": is_linked,
+            "op_name": op_name,
+        }
         for k, v in zip(BAND_KEYS, per_band_vals):
             row[k] = v
         row["total"] = total_val
@@ -217,7 +242,12 @@ def generate_pdf(rows: list[dict], as_on: str, output_path: Path,
     headers = ["#", "Callsign"] + [label for _, label in CATEGORIES]
     data: list[list] = [headers]
     for i, r in enumerate(rows, 1):
-        row = [i, r["callsign"]]
+        # Append a "+N" suffix to flag operators with N additional linked
+        # callsigns; the row's per-band stats are the combined linked total.
+        call_label = r["callsign"]
+        if r.get("linked_count"):
+            call_label = f"{call_label} (+{r['linked_count']})"
+        row = [i, call_label]
         for k, _ in CATEGORIES:
             v = r.get(k)
             row.append(v if v is not None else "")
@@ -277,10 +307,13 @@ def generate_pdf(rows: list[dict], as_on: str, output_path: Path,
     elements.append(Table(data, colWidths=col_widths, repeatRows=1, style=TableStyle(style_cmds)))
     elements.append(Spacer(1, 4))
 
+    n_linked = sum(1 for r in rows if r.get("linked_count"))
     notes_bits = [
         "<b>Notes:</b>",
         f"Contains {len(rows)} Indian callsigns (VU / AT / AU) found in Clublog's Asia Top-2000 "
         "Confirmed league, sorted by Total DXCC descending.",
+        f"Stats are Clublog's linked-call combined totals — {n_linked} of these operators "
+        "have additional callsigns linked under their account, shown as a (+N) suffix on the callsign.",
         "Green background = column maximum. ",
     ]
     if previous_as_on:
@@ -315,6 +348,9 @@ def write_json(rows: list[dict], as_on: str, output_path: Path,
                 "callsign": r["callsign"],
                 **{k: r.get(k) for k, _ in CATEGORIES},
                 "years": r.get("years", ""),
+                "linked_count": r.get("linked_count", 0),
+                "is_linked": bool(r.get("is_linked")),
+                "op_name": r.get("op_name"),
                 "changes": r.get("_changes") or [],
                 "is_new": bool(r.get("_is_new")),
             }

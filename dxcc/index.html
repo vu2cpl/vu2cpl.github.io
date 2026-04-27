@@ -204,6 +204,19 @@
     text-decoration-color: var(--accent);
     text-decoration-thickness: 1.5px;
   }
+  td.callsign .linked-badge {
+    margin-left: 4px;
+    font-family: "SF Mono", Monaco, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: #5c6773;
+    background: #eef2ff;
+    border: 1px solid #d7dce3;
+    border-radius: 8px;
+    padding: 0 5px;
+    vertical-align: middle;
+    cursor: help;
+  }
   td.empty { color: #c4cad4; }
   td.col-max { background: var(--max-bg); }
   td.changed { background: var(--changed-bg); }
@@ -380,9 +393,21 @@
           a.href = `https://www.qrz.com/db/${encodeURIComponent(v)}`;
           a.target = "_blank";
           a.rel = "noopener";
-          a.title = `View ${v} on QRZ.com`;
+          a.title = r.op_name ? `${r.op_name} — view ${v} on QRZ.com` : `View ${v} on QRZ.com`;
           a.textContent = v;
           td.appendChild(a);
+          // Clublog "+N linked" badge — N additional callsigns the operator
+          // has linked together; the row's stats are the combined total.
+          const linkedN = Number(r.linked_count || 0);
+          if (linkedN > 0) {
+            const badge = document.createElement("span");
+            badge.className = "linked-badge";
+            badge.textContent = `+${linkedN}`;
+            badge.title =
+              `${v} has ${linkedN} additional callsign${linkedN === 1 ? "" : "s"} linked` +
+              ` on Clublog. The stats in this row are the combined total across all linked calls.`;
+            td.appendChild(badge);
+          }
         } else if (v == null || v === "") {
           td.classList.add("empty");
           td.textContent = "";
@@ -438,7 +463,7 @@
       json: "clublog.json",
       pdf:  "VUDXCC-clublog-latest.pdf",
       label: "Clublog",
-      subtitle: "Clublog Asia Top-2000 Confirmed · daily refresh · Indian prefixes (VU / AT / AU)",
+      subtitle: "Clublog Asia Top-2000 Confirmed · daily refresh · stats are linked-call combined totals · Indian prefixes (VU / AT / AU)",
       emptyMessage: "Could not load Clublog data (clublog.json).",
     },
   };
