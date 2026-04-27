@@ -194,8 +194,16 @@
   tbody tr:nth-child(even) { background: var(--row-alt); }
   tbody tr:hover { background: var(--row-hover); }
   td.callsign { font-family: "SF Mono", Monaco, Consolas, monospace; font-weight: 600; }
-  td.callsign a { color: var(--accent); text-decoration: none; }
-  td.callsign a:hover { text-decoration: underline; }
+  td.callsign a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 86, 219, 0.35);
+    text-underline-offset: 2px;
+  }
+  td.callsign a:hover {
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 1.5px;
+  }
   td.empty { color: #c4cad4; }
   td.col-max { background: var(--max-bg); }
   td.changed { background: var(--changed-bg); }
