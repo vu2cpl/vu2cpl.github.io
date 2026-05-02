@@ -99,6 +99,7 @@
   .status-badge { font-family: var(--mono); font-size: 11px; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
   .status-active { background: #dcfce7; color: #166534; }
   .status-wip { background: #fef3c7; color: #92400e; }
+  .status-planned { background: #e0e7ff; color: #3730a3; }
   .yt-link { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #dc2626; margin-top: 6px; text-decoration: none; }
   .yt-link:hover { text-decoration: underline; }
 
@@ -369,11 +370,27 @@
     </div>
     <div class="project-card">
       <div>
+        <div class="project-name">MSHV-Mac — native macOS port of LZ2HV/MSHV</div>
+        <div class="project-desc">Native macOS port of LZ2HV's MSHV multi-mode weak-signal program (FT8 / FT4 / Q65 / MSK144 / JT9 / JT65 etc.). Apple Silicon and Intel; verified end-to-end against a FlexRadio 6000-series via AetherSDR's TCI bridge for both RX and TX, with WSJT-X-compatible UDP broadcast feeding RUMlogNG's DXSpots window. Self-contained .app bundle: PortAudio audio backend with Float32/Int24/Int16 fallbacks, FlexRadio CommonRadioAudio + DAX support, real <code>host_processor_info</code> CPU sensor, in-bundle settings/log/wav directories, dark theme, app icon, font defaults. Patches sit on a <code>_MACOS_</code>-conditional <code>macos-port</code> branch on top of upstream <code>main</code>, so Linux and Windows builds remain untouched and new LZ2HV releases merge cleanly.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Qt5</span><span class="proj-tag">PortAudio</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">MSK144</span><span class="proj-tag">FlexRadio</span><span class="proj-tag">TCI</span><span class="proj-tag">WSJT-X UDP</span></div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
         <div class="project-name">SkimServer Mac</div>
         <div class="project-desc">Native macOS multi-band, multi-mode skimmer for CW + FT8 + FT4, built directly against the HPSDR / Hermes Protocol 1 over UDP. Tested with a Red Pitaya running Pavel Demin's HPSDR-compatible firmware. Up to 8 DDC receivers run in parallel with their own decode pipelines: a CW path (FFT &rarr; per-bin peak detect &rarr; envelope + Bayesian beam Morse decoder + Patt3Ch.lst callsign validator with confirm-before-emit) and FT8 / FT4 paths (NCO down-conversion &rarr; resample to 12 kHz &rarr; ft8_lib decode on UTC-aligned slots). Spots feed a built-in DX-cluster telnet server on port 7300, plus uploads to RBN (telnet) and PSK Reporter (UDP). SwiftUI menu-bar UI with live stats. Handles Pavel firmware quirks (rx-count in C4, frequency addressing offset, IQ sign, per-rx sample-rate sharing).</div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">HPSDR</span><span class="proj-tag">Red Pitaya</span><span class="proj-tag">CW skimmer</span><span class="proj-tag">FT8</span><span class="proj-tag">FT4</span><span class="proj-tag">RBN</span><span class="proj-tag">PSK Reporter</span><span class="proj-tag">ft8_lib</span></div>
       </div>
       <span class="status-badge status-wip">Work in progress</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">ESP32 GPS-disciplined NTP server</div>
+        <div class="project-desc">Always-on GPS-disciplined NTP server for the shack LAN, on an ESP32 with a u-blox NEO-M8N (GPS + GLONASS + Galileo). PPS on a GPIO interrupt drives the second-edge for sub-microsecond time, with a clean fallback to NMEA-only timing (and honest stratum 2) when the PPS lock drops. Built so the Mac shack — and SkimServer Mac in particular — sits on a correct UTC tick for FT8 / FT4 / Q65 slot alignment without depending on internet NTP reachability. PlatformIO base; optional SSD1306 OLED for at-a-glance sat count, fix and PPS-lock status.</div>
+        <div class="project-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">NTP</span><span class="proj-tag">GPS</span><span class="proj-tag">u-blox NEO-M8N</span><span class="proj-tag">PPS</span><span class="proj-tag">PlatformIO</span><span class="proj-tag">Stratum 1</span></div>
+      </div>
+      <span class="status-badge status-planned">Planned</span>
     </div>
     <div class="project-card">
       <div>
