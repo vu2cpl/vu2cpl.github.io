@@ -69,11 +69,57 @@
   .shack-gallery { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media (max-width: 720px) { .shack-gallery { grid-template-columns: 1fr; } }
   .shack-gallery figure { margin: 0; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); background: var(--card-bg); }
+  .shack-gallery a.shack-zoom { display: block; cursor: zoom-in; position: relative; }
+  .shack-gallery a.shack-zoom::after {
+    content: "⤢";
+    position: absolute; top: 8px; right: 10px;
+    font-size: 14px; line-height: 1;
+    width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; background: rgba(10, 22, 40, 0.55);
+    border-radius: 50%;
+    opacity: 0; transition: opacity 0.15s;
+  }
+  .shack-gallery a.shack-zoom:hover::after { opacity: 1; }
   .shack-gallery img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
   .shack-gallery figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border); }
   .shack-credit { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; letter-spacing: 0.04em; }
   .shack-credit a { color: var(--muted); text-decoration: none; border-bottom: 0.5px dotted var(--muted); }
   .shack-credit a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* Inline lightbox — single shared overlay, no external JS library */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(10, 22, 40, 0.92);
+    display: none; align-items: center; justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 100%; max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+  .lightbox-close {
+    position: absolute; top: 16px; right: 20px;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff; font-size: 22px; line-height: 1;
+    border: none; border-radius: 50%;
+    cursor: pointer;
+  }
+  .lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
+  .lightbox-caption {
+    position: absolute; bottom: 18px; left: 0; right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+    pointer-events: none;
+  }
   .station-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
   .equip-group { margin-bottom: 1.5rem; }
   .equip-group-title { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 0.5px solid var(--border); }
@@ -236,11 +282,17 @@
       </div>
       <div class="shack-gallery">
         <figure>
-          <img src="shack-desk.jpg" alt="VU2CPL operating position — curved monitor, FlexRadio, audio chain, mic boom">
+          <a class="shack-zoom" href="shack-desk.jpg"
+             data-caption="Operating position — FLEX-6600, audio chain, mic boom">
+            <img src="shack-desk.jpg" alt="VU2CPL operating position — curved monitor, FlexRadio, audio chain, mic boom">
+          </a>
           <figcaption>Operating position — FLEX-6600, audio chain, mic boom</figcaption>
         </figure>
         <figure>
-          <img src="shack-workbench.jpg" alt="VU2CPL workbench — FlexRadio Maestro, BatteryInc Li-ion pack, microscope, pegboard tools">
+          <a class="shack-zoom" href="shack-workbench.jpg"
+             data-caption="Workbench — Maestro, Li-ion pack, microscope, tools">
+            <img src="shack-workbench.jpg" alt="VU2CPL workbench — FlexRadio Maestro, BatteryInc Li-ion pack, microscope, pegboard tools">
+          </a>
           <figcaption>Workbench — Maestro, Li-ion pack, microscope, tools</figcaption>
         </figure>
       </div>
@@ -591,6 +643,50 @@ form.addEventListener('submit', async function(e) {
     else { btn.disabled=false; btn.textContent='Send Message'; alert('Problem sending. Please try again or contact via QRZ.'); }
   } catch(err) { btn.disabled=false; btn.textContent='Send Message'; alert('Problem sending. Please try again or contact via QRZ.'); }
 });
+</script>
+
+<!-- Lightbox: click any .shack-zoom anchor to open at full resolution -->
+<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" aria-label="Photo viewer">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img alt="">
+  <div class="lightbox-caption"></div>
+</div>
+<script>
+(function() {
+  const lb       = document.getElementById('lightbox');
+  if (!lb) return;
+  const lbImg    = lb.querySelector('img');
+  const lbCap    = lb.querySelector('.lightbox-caption');
+  const lbClose  = lb.querySelector('.lightbox-close');
+
+  function open(href, caption, alt) {
+    lbImg.src = href;
+    lbImg.alt = alt || '';
+    lbCap.textContent = caption || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('a.shack-zoom').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const img = a.querySelector('img');
+      open(a.getAttribute('href'), a.dataset.caption || '', img ? img.alt : '');
+    });
+  });
+  lbClose.addEventListener('click', close);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) close();
+  });
+})();
 </script>
 
 </body>
