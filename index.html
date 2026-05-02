@@ -66,6 +66,14 @@
   .shack-photo-wrap { margin-top: 1.5rem; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); }
   .shack-photo-wrap img { width: 100%; display: block; max-height: 280px; object-fit: cover; object-position: center top; }
   .shack-photo-cap { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border); }
+  .shack-gallery { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 720px) { .shack-gallery { grid-template-columns: 1fr; } }
+  .shack-gallery figure { margin: 0; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); background: var(--card-bg); }
+  .shack-gallery img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
+  .shack-gallery figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border); }
+  .shack-credit { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; letter-spacing: 0.04em; }
+  .shack-credit a { color: var(--muted); text-decoration: none; border-bottom: 0.5px dotted var(--muted); }
+  .shack-credit a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   .station-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
   .equip-group { margin-bottom: 1.5rem; }
   .equip-group-title { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 0.5px solid var(--border); }
@@ -226,9 +234,18 @@
           <span class="award-badge">5BDXCC</span><span class="award-badge">160m DXCC</span><span class="award-badge">30m DXCC</span><span class="award-badge">17m DXCC</span><span class="award-badge">12m DXCC</span>
         </div>
       </div>
-      <div class="shack-photo-wrap">
-        <img src="shack.jpg" onerror="this.parentElement.style.display='none'" alt="VU2CPL Shack, Bengaluru">
-        <div class="shack-photo-cap">The shack — Bengaluru · FLEX-6600, SPE Expert 1.5 KFA</div>
+      <div class="shack-gallery">
+        <figure>
+          <img src="shack-desk.jpg" alt="VU2CPL operating position — curved monitor, FlexRadio, audio chain, mic boom">
+          <figcaption>Operating position — FLEX-6600, audio chain, mic boom</figcaption>
+        </figure>
+        <figure>
+          <img src="shack-workbench.jpg" alt="VU2CPL workbench — FlexRadio Maestro, BatteryInc Li-ion pack, microscope, pegboard tools">
+          <figcaption>Workbench — Maestro, Li-ion pack, microscope, tools</figcaption>
+        </figure>
+      </div>
+      <div class="shack-credit">
+        Photos by Girish, VU2KGB · <a href="https://www.hamphotos.com" target="_blank" rel="noopener">hamphotos.com</a>
       </div>
     </div>
   </div>
