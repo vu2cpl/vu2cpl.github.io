@@ -56,38 +56,68 @@
     color: var(--accent);
     border-color: var(--accent);
   }
-  .tabs {
-    display: flex;
-    gap: 2px;
-    padding: 12px 20px 0;
-    background: var(--bg);
+  .tabs-wrap {
+    background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
     border-bottom: 1px solid var(--border);
+    padding: 18px 20px 16px;
+  }
+  .tabs-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .tabs {
+    display: inline-flex;
+    background: var(--card);
+    border: 1.5px solid var(--accent);
+    border-radius: 10px;
+    padding: 4px;
+    gap: 4px;
+    box-shadow: 0 2px 6px rgba(26, 86, 219, 0.12);
   }
   .tab {
-    padding: 8px 16px;
+    padding: 10px 22px;
     font-size: 14px;
-    font-weight: 500;
-    color: var(--muted);
-    background: transparent;
-    border: 1px solid transparent;
-    border-bottom: none;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    cursor: pointer;
-    margin-bottom: -1px;
-  }
-  .tab:hover { color: var(--text); }
-  .tab.active {
+    font-weight: 600;
     color: var(--accent);
-    background: var(--card);
-    border-color: var(--border);
-    border-bottom-color: var(--card);
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, transform 0.05s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
+  .tab:hover { background: var(--row-hover); }
+  .tab:active { transform: translateY(1px); }
+  .tab.active {
+    color: #fff;
+    background: var(--accent);
+    box-shadow: 0 1px 3px rgba(26, 86, 219, 0.35);
+  }
+  .tab.active:hover { background: var(--accent-hover); }
+  .tab-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.6;
+  }
+  .tab.active .tab-dot { opacity: 1; }
   .tab-subtitle {
     font-size: 11px;
-    color: var(--muted);
+    color: inherit;
+    opacity: 0.75;
     font-weight: 400;
     margin-left: 4px;
+  }
+  @media (max-width: 520px) {
+    .tab { padding: 8px 14px; font-size: 13px; }
+    .tab-subtitle { display: none; }
   }
   h1 {
     margin: 0;
@@ -273,15 +303,20 @@
   </div>
 </header>
 
-<div class="tabs" role="tablist">
-  <button class="tab active" id="tab-lotw"    data-source="lotw"
-          role="tab" aria-selected="true"  aria-controls="tab-panel">
-    LoTW <span class="tab-subtitle">· ARRL · monthly</span>
-  </button>
-  <button class="tab" id="tab-clublog" data-source="clublog"
-          role="tab" aria-selected="false" aria-controls="tab-panel">
-    Clublog <span class="tab-subtitle">· Asia Top-2000 · daily</span>
-  </button>
+<div class="tabs-wrap">
+  <span class="tabs-label">Choose data source — switch between two views:</span>
+  <div class="tabs" role="tablist">
+    <button class="tab active" id="tab-lotw"    data-source="lotw"
+            role="tab" aria-selected="true"  aria-controls="tab-panel">
+      <span class="tab-dot" aria-hidden="true"></span>
+      LoTW <span class="tab-subtitle">· ARRL · monthly</span>
+    </button>
+    <button class="tab" id="tab-clublog" data-source="clublog"
+            role="tab" aria-selected="false" aria-controls="tab-panel">
+      <span class="tab-dot" aria-hidden="true"></span>
+      Clublog <span class="tab-subtitle">· Asia Top-2000 · daily</span>
+    </button>
+  </div>
 </div>
 
 <main id="tab-panel" role="tabpanel">
