@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "04 May 2026",
-  "previous_as_on": "03 May 2026",
-  "generated_at": "2026-05-04T05:47:07+00:00",
+  "as_on": "05 May 2026",
+  "previous_as_on": "04 May 2026",
+  "generated_at": "2026-05-05T05:26:10+00:00",
   "columns": [
     "160",
     "80",
@@ -153,18 +153,21 @@
       "40": 204,
       "30": 195,
       "20": 294,
-      "17": 240,
+      "17": 241,
       "15": 296,
       "12": 245,
       "10": 275,
       "6": 119,
       "total": 316,
-      "slots": 1873,
+      "slots": 1874,
       "years": "43 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [],
+      "changes": [
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -172,23 +175,29 @@
       "rank": 384,
       "callsign": "VU2WJ",
       "160": 1,
-      "80": 83,
+      "80": 85,
       "60": 0,
       "40": 219,
-      "30": 194,
+      "30": 195,
       "20": 299,
-      "17": 246,
-      "15": 227,
+      "17": 247,
+      "15": 228,
       "12": 196,
       "10": 178,
       "6": 1,
       "total": 311,
-      "slots": 1644,
+      "slots": 1649,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [],
+      "changes": [
+        "80",
+        "30",
+        "17",
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -380,11 +389,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "20",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -413,21 +418,21 @@
     },
     {
       "sno": 16,
-      "rank": 805,
+      "rank": 816,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 63,
       "60": 7,
-      "40": 98,
-      "30": 124,
-      "20": 113,
-      "17": 141,
-      "15": 127,
-      "12": 88,
+      "40": 97,
+      "30": 122,
+      "20": 110,
+      "17": 140,
+      "15": 126,
+      "12": 85,
       "10": 105,
       "6": 49,
-      "total": 231,
-      "slots": 916,
+      "total": 230,
+      "slots": 905,
       "years": "9 yrs",
       "linked_count": 0,
       "is_linked": false,
@@ -439,7 +444,6 @@
         "17",
         "15",
         "12",
-        "10",
         "total",
         "slots"
       ],
@@ -514,11 +518,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "40",
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -571,7 +571,7 @@
     },
     {
       "sno": 22,
-      "rank": 1145,
+      "rank": 1144,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -595,7 +595,7 @@
     },
     {
       "sno": 23,
-      "rank": 1179,
+      "rank": 1178,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -643,7 +643,7 @@
     },
     {
       "sno": 25,
-      "rank": 1506,
+      "rank": 1505,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -667,7 +667,7 @@
     },
     {
       "sno": 26,
-      "rank": 1603,
+      "rank": 1602,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
