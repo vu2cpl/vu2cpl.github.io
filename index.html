@@ -69,8 +69,8 @@
   .shack-gallery { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media (max-width: 720px) { .shack-gallery { grid-template-columns: 1fr; } }
   .shack-gallery figure { margin: 0; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); background: var(--card-bg); }
-  .shack-gallery a.shack-zoom { display: block; cursor: zoom-in; position: relative; }
-  .shack-gallery a.shack-zoom::after {
+  a.shack-zoom { display: block; cursor: zoom-in; position: relative; }
+  a.shack-zoom::after {
     content: "⤢";
     position: absolute; top: 8px; right: 10px;
     font-size: 14px; line-height: 1;
@@ -80,12 +80,14 @@
     border-radius: 50%;
     opacity: 0; transition: opacity 0.15s;
   }
-  .shack-gallery a.shack-zoom:hover::after { opacity: 1; }
+  a.shack-zoom:hover::after { opacity: 1; }
   .shack-gallery img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
   .shack-gallery figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border); }
   .shack-credit { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; letter-spacing: 0.04em; }
   .shack-credit a { color: var(--muted); text-decoration: none; border-bottom: 0.5px dotted var(--muted); }
   .shack-credit a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .qsl-banner { margin: 1.25rem auto 2rem; max-width: 720px; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); box-shadow: 0 1px 3px rgba(10,22,40,0.06); }
+  .qsl-banner img { width: 100%; display: block; }
 
   /* Inline lightbox — single shared overlay, no external JS library */
   .lightbox {
@@ -263,6 +265,11 @@
 <section id="about">
   <div class="section-label">01 · About</div>
   <h2>The Operator</h2>
+  <div class="qsl-banner">
+    <a class="shack-zoom" href="qslcard.jpg" data-caption="QSL card · VU2CPL">
+      <img src="qslcard.jpg" alt="VU2CPL QSL card — Taj Mahal, India" loading="lazy">
+    </a>
+  </div>
   <div class="about-grid">
     <div class="about-text">
       <p>Located in the garden city of India, Bangalore. Licensed since 1993, I started operations in Thrissur, Kerala with a simple homebrew QRP rig following VU2VWN OM Vasanth (SK)'s circuit — the most popular design of those days.</p>
