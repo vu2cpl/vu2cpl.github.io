@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "05 May 2026",
-  "previous_as_on": "04 May 2026",
-  "generated_at": "2026-05-05T05:26:10+00:00",
+  "as_on": "06 May 2026",
+  "previous_as_on": "05 May 2026",
+  "generated_at": "2026-05-06T05:41:13+00:00",
   "columns": [
     "160",
     "80",
@@ -49,7 +49,7 @@
   "rows": [
     {
       "sno": 1,
-      "rank": 179,
+      "rank": 178,
       "callsign": "VU2PTT",
       "160": 26,
       "80": 119,
@@ -97,26 +97,36 @@
     },
     {
       "sno": 3,
-      "rank": 309,
+      "rank": 300,
       "callsign": "VU2CDP",
       "160": 3,
-      "80": 68,
+      "80": 69,
       "60": 0,
-      "40": 215,
+      "40": 216,
       "30": 175,
-      "20": 269,
-      "17": 254,
-      "15": 291,
-      "12": 248,
-      "10": 253,
+      "20": 270,
+      "17": 255,
+      "15": 292,
+      "12": 249,
+      "10": 254,
       "6": 1,
-      "total": 320,
-      "slots": 1777,
+      "total": 321,
+      "slots": 1784,
       "years": "21 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [],
+      "changes": [
+        "80",
+        "40",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -164,10 +174,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -191,13 +198,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [
-        "80",
-        "30",
-        "17",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -232,20 +233,25 @@
       "80": 155,
       "60": 2,
       "40": 255,
-      "30": 238,
+      "30": 239,
       "20": 279,
-      "17": 252,
+      "17": 253,
       "15": 270,
-      "12": 249,
+      "12": 250,
       "10": 224,
       "6": 115,
       "total": 307,
-      "slots": 2042,
+      "slots": 2045,
       "years": "10 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Adersh",
-      "changes": [],
+      "changes": [
+        "30",
+        "17",
+        "12",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -370,7 +376,7 @@
     },
     {
       "sno": 14,
-      "rank": 734,
+      "rank": 735,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -394,7 +400,7 @@
     },
     {
       "sno": 15,
-      "rank": 797,
+      "rank": 799,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 45,
@@ -418,7 +424,7 @@
     },
     {
       "sno": 16,
-      "rank": 816,
+      "rank": 817,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 63,
@@ -437,21 +443,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sajeev Sukumar",
-      "changes": [
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 17,
-      "rank": 853,
+      "rank": 854,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -475,7 +472,7 @@
     },
     {
       "sno": 18,
-      "rank": 1024,
+      "rank": 1025,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -499,7 +496,7 @@
     },
     {
       "sno": 19,
-      "rank": 1044,
+      "rank": 1045,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -523,7 +520,7 @@
     },
     {
       "sno": 20,
-      "rank": 1115,
+      "rank": 1116,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -547,7 +544,7 @@
     },
     {
       "sno": 21,
-      "rank": 1131,
+      "rank": 1132,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -571,7 +568,7 @@
     },
     {
       "sno": 22,
-      "rank": 1144,
+      "rank": 1145,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -595,7 +592,7 @@
     },
     {
       "sno": 23,
-      "rank": 1178,
+      "rank": 1179,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -619,7 +616,7 @@
     },
     {
       "sno": 24,
-      "rank": 1380,
+      "rank": 1381,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -643,7 +640,7 @@
     },
     {
       "sno": 25,
-      "rank": 1505,
+      "rank": 1506,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -667,7 +664,7 @@
     },
     {
       "sno": 26,
-      "rank": 1602,
+      "rank": 1604,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -691,7 +688,7 @@
     },
     {
       "sno": 27,
-      "rank": 1792,
+      "rank": 1793,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -715,7 +712,7 @@
     },
     {
       "sno": 28,
-      "rank": 1833,
+      "rank": 1834,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
