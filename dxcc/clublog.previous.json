@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "06 May 2026",
-  "previous_as_on": "05 May 2026",
-  "generated_at": "2026-05-06T05:41:13+00:00",
+  "as_on": "07 May 2026",
+  "previous_as_on": "06 May 2026",
+  "generated_at": "2026-05-07T05:43:47+00:00",
   "columns": [
     "160",
     "80",
@@ -116,17 +116,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [
-        "80",
-        "40",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -179,7 +169,7 @@
     },
     {
       "sno": 6,
-      "rank": 384,
+      "rank": 385,
       "callsign": "VU2WJ",
       "160": 1,
       "80": 85,
@@ -203,7 +193,7 @@
     },
     {
       "sno": 7,
-      "rank": 386,
+      "rank": 387,
       "callsign": "VU2YYF",
       "160": 1,
       "80": 52,
@@ -227,7 +217,7 @@
     },
     {
       "sno": 8,
-      "rank": 410,
+      "rank": 411,
       "callsign": "VU24DX",
       "160": 3,
       "80": 155,
@@ -246,17 +236,12 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Adersh",
-      "changes": [
-        "30",
-        "17",
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 9,
-      "rank": 421,
+      "rank": 422,
       "callsign": "VU2IBI",
       "160": 0,
       "80": 47,
@@ -280,7 +265,7 @@
     },
     {
       "sno": 10,
-      "rank": 420,
+      "rank": 421,
       "callsign": "VU2LBW",
       "160": 0,
       "80": 102,
@@ -304,7 +289,7 @@
     },
     {
       "sno": 11,
-      "rank": 504,
+      "rank": 505,
       "callsign": "VU2DED",
       "160": 1,
       "80": 115,
@@ -400,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 799,
+      "rank": 801,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 45,
@@ -424,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 817,
+      "rank": 818,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 63,
@@ -502,7 +487,7 @@
       "80": 2,
       "60": 0,
       "40": 102,
-      "30": 64,
+      "30": 65,
       "20": 123,
       "17": 81,
       "15": 124,
@@ -510,12 +495,15 @@
       "10": 126,
       "6": 0,
       "total": 190,
-      "slots": 706,
+      "slots": 707,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [],
+      "changes": [
+        "30",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -712,7 +700,7 @@
     },
     {
       "sno": 28,
-      "rank": 1834,
+      "rank": 1833,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
