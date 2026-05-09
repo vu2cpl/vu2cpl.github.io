@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "08 May 2026",
-  "previous_as_on": "07 May 2026",
-  "generated_at": "2026-05-08T05:13:56+00:00",
+  "as_on": "09 May 2026",
+  "previous_as_on": "08 May 2026",
+  "generated_at": "2026-05-09T05:31:52+00:00",
   "columns": [
     "160",
     "80",
@@ -68,10 +68,7 @@
       "linked_count": 8,
       "is_linked": true,
       "op_name": "Prasad Rajagopal",
-      "changes": [
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -364,7 +361,7 @@
     },
     {
       "sno": 14,
-      "rank": 735,
+      "rank": 734,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -388,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 801,
+      "rank": 800,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 45,
@@ -412,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 818,
+      "rank": 817,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 63,
@@ -436,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 854,
+      "rank": 853,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -460,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1026,
+      "rank": 1025,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -484,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1044,
+      "rank": 1043,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -503,15 +500,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 20,
-      "rank": 1117,
+      "rank": 1115,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -535,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1133,
+      "rank": 1131,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -559,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1147,
+      "rank": 1145,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -583,7 +577,7 @@
     },
     {
       "sno": 23,
-      "rank": 1180,
+      "rank": 1178,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -607,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1382,
+      "rank": 1379,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -631,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1501,
+      "rank": 1500,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -650,17 +644,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [
-        "17",
-        "15",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 26,
-      "rank": 1606,
+      "rank": 1603,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -684,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1795,
+      "rank": 1792,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -708,7 +697,7 @@
     },
     {
       "sno": 28,
-      "rank": 1834,
+      "rank": 1831,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
