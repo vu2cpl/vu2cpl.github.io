@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "09 May 2026",
-  "previous_as_on": "08 May 2026",
-  "generated_at": "2026-05-09T05:31:52+00:00",
+  "as_on": "10 May 2026",
+  "previous_as_on": "09 May 2026",
+  "generated_at": "2026-05-10T05:47:26+00:00",
   "columns": [
     "160",
     "80",
@@ -169,7 +169,7 @@
     },
     {
       "sno": 6,
-      "rank": 385,
+      "rank": 384,
       "callsign": "VU2WJ",
       "160": 1,
       "80": 85,
@@ -193,7 +193,7 @@
     },
     {
       "sno": 7,
-      "rank": 387,
+      "rank": 386,
       "callsign": "VU2YYF",
       "160": 1,
       "80": 52,
@@ -217,7 +217,7 @@
     },
     {
       "sno": 8,
-      "rank": 411,
+      "rank": 410,
       "callsign": "VU24DX",
       "160": 3,
       "80": 155,
@@ -241,7 +241,7 @@
     },
     {
       "sno": 9,
-      "rank": 422,
+      "rank": 421,
       "callsign": "VU2IBI",
       "160": 0,
       "80": 47,
@@ -265,7 +265,7 @@
     },
     {
       "sno": 10,
-      "rank": 421,
+      "rank": 420,
       "callsign": "VU2LBW",
       "160": 0,
       "80": 102,
@@ -289,6 +289,43 @@
     },
     {
       "sno": 11,
+      "rank": 489,
+      "callsign": "VU2MSA",
+      "160": 1,
+      "80": 140,
+      "60": 30,
+      "40": 225,
+      "30": 227,
+      "20": 233,
+      "17": 240,
+      "15": 241,
+      "12": 185,
+      "10": 201,
+      "6": 104,
+      "total": 294,
+      "slots": 1827,
+      "years": "15 yrs",
+      "linked_count": 0,
+      "is_linked": false,
+      "op_name": "Sajeev Sukumar",
+      "changes": [
+        "80",
+        "60",
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "6",
+        "total",
+        "slots"
+      ],
+      "is_new": false
+    },
+    {
+      "sno": 12,
       "rank": 505,
       "callsign": "VU2DED",
       "160": 1,
@@ -312,7 +349,7 @@
       "is_new": false
     },
     {
-      "sno": 12,
+      "sno": 13,
       "rank": 564,
       "callsign": "VU2MB",
       "160": 58,
@@ -336,8 +373,8 @@
       "is_new": false
     },
     {
-      "sno": 13,
-      "rank": 671,
+      "sno": 14,
+      "rank": 672,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -360,8 +397,8 @@
       "is_new": false
     },
     {
-      "sno": 14,
-      "rank": 734,
+      "sno": 15,
+      "rank": 735,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -384,8 +421,8 @@
       "is_new": false
     },
     {
-      "sno": 15,
-      "rank": 800,
+      "sno": 16,
+      "rank": 801,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 45,
@@ -404,30 +441,6 @@
       "linked_count": 4,
       "is_linked": true,
       "op_name": "Thampi VM",
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 16,
-      "rank": 817,
-      "callsign": "VU2MSA",
-      "160": 1,
-      "80": 63,
-      "60": 7,
-      "40": 97,
-      "30": 122,
-      "20": 110,
-      "17": 140,
-      "15": 126,
-      "12": 85,
-      "10": 105,
-      "6": 49,
-      "total": 230,
-      "slots": 905,
-      "years": "9 yrs",
-      "linked_count": 0,
-      "is_linked": false,
-      "op_name": "Sajeev Sukumar",
       "changes": [],
       "is_new": false
     },
@@ -697,7 +710,7 @@
     },
     {
       "sno": 28,
-      "rank": 1831,
+      "rank": 1833,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
