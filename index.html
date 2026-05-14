@@ -430,6 +430,46 @@
     </div>
   </div>
 
+  <div style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Shack Firmware &amp; Field Devices</div>
+  <div class="project-list" style="margin-bottom:2.5rem;">
+    <div class="project-card">
+      <div>
+        <div class="project-name">Pi GPS NTP Server — shack stratum-1 timeserver</div>
+        <div class="project-desc">Stratum-1 GPS-disciplined NTP server on a Raspberry Pi 3B with a u-blox NEO-M8N. Kernel <code>pps-gpio</code> + chrony pulls PPS error down to ±171 ns — well below anything a userland NTP implementation can match. Publishes chrony status, satellite count and fix quality over MQTT to the shack dashboard, with an LWT offline marker. Production timeserver for the LAN.</div>
+        <div class="project-tags"><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">GPS</span><span class="proj-tag">NTP</span><span class="proj-tag">chrony</span><span class="proj-tag">kernel PPS</span><span class="proj-tag">u-blox NEO-M8N</span><span class="proj-tag">MQTT</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/pi-gps-ntp-server" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">ESP8266 GPS-disciplined NTP server</div>
+        <div class="project-desc">PPS-disciplined NTP server on a NodeMCU ESP8266 with a Quectel L89 GPS. Captures the PPS edge on a GPIO interrupt for sub-microsecond second alignment, holds stratum 1 across short PPS dropouts via holdover logic, and falls back to NMEA-only timing (honest stratum 2) on full lock loss. Publishes status over MQTT with the same schema as the Pi NTP server and an LWT offline marker. WiFiManager captive-portal config — no compile-time secrets.</div>
+        <div class="project-tags"><span class="proj-tag">ESP8266</span><span class="proj-tag">PlatformIO</span><span class="proj-tag">GPS</span><span class="proj-tag">NTP</span><span class="proj-tag">PPS</span><span class="proj-tag">Quectel L89</span><span class="proj-tag">MQTT</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/esp8266-gps-ntp" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">vu2cpl-as3935-bridge — outdoor lightning sensor</div>
+        <div class="project-desc">ESP32 firmware bridging an outdoor AS3935 lightning sensor to the shack MQTT broker. Moving the sensor outdoors — battery + solar, IP65 enclosure — recovers the chip's rated ~40 km range that an indoor I²C bus eats. The full AS3935 register surface is exposed over an MQTT command channel, so noise floor, watchdog threshold and TUN_CAP calibration can be tuned live from the dashboard without opening the enclosure. WiFiManager captive portal for first-time setup.</div>
+        <div class="project-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">PlatformIO</span><span class="proj-tag">AS3935</span><span class="proj-tag">MQTT</span><span class="proj-tag">Lightning</span><span class="proj-tag">Battery + solar</span><span class="proj-tag">I²C</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-as3935-bridge" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+  </div>
+
   <div style="font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Utilities &amp; Tools</div>
   <div class="project-list">
     <div class="project-card">
@@ -458,10 +498,42 @@
     </div>
     <div class="project-card">
       <div>
+        <div class="project-name">LP-700-Server — Telepost LP-700 WebSocket bridge</div>
+        <div class="project-desc">Go WebSocket bridge for the Telepost LP-500 / LP-700 USB-HID power and SWR meter. Owns the meter's HID handle and fans live telemetry out to many concurrent clients — browsers, phones, logging PCs — while routing control verbs back. Cross-compiles to Linux (arm64 / armv7) and macOS; ships a systemd unit and udev rules for headless Raspberry Pi deployment. LAN-only, zero auth.</div>
+        <div class="project-tags"><span class="proj-tag">Go</span><span class="proj-tag">WebSocket</span><span class="proj-tag">USB HID</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">LP-700</span><span class="proj-tag">Telepost</span><span class="proj-tag">systemd</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/LP-700-Server" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">LP-700-App — native macOS client for the LP-700</div>
+        <div class="project-desc">Native SwiftUI macOS client that talks to LP-700-Server over WebSocket. Live power / SWR / channel / alarm display, full control-verb support, settings persistence, a menu-bar glance-view, and macOS notifications for alarm states. Pairs with LP-700-Server so a single HID-attached meter drives operating positions, logging PCs and phones simultaneously.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">WebSocket</span><span class="proj-tag">LP-700</span><span class="proj-tag">Telepost</span><span class="proj-tag">menu-bar</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/LP-700-App" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">SO2R Box — macOS controller for the YCCC SO2R Box Plus</div>
+        <div class="project-desc">Native macOS controller for the YCCC SO2R Box Plus contesting switch. USB-HID to the box; live front-panel mirror in the SwiftUI UI (TX/RX, footswitch, speed pot) using the YCCC HID protocol — reverse-engineered and documented. Hosts OTRSP and Winkeyer TCP servers, so N1MM+, Win-Test, WriteLog and TR4W see it as a standard SO2R interface. Supports the default 2-radio SO2R mode and the 4-radio SO2R+ mode.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">USB HID</span><span class="proj-tag">OTRSP</span><span class="proj-tag">Winkeyer</span><span class="proj-tag">YCCC</span><span class="proj-tag">SO2R</span><span class="proj-tag">Contesting</span></div>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
         <div class="project-name">DX Cluster Aggregator</div>
         <div class="project-desc">Native macOS app (universal binary) that merges spots from multiple WSJT-X / JTDX UDP sources and several DX cluster telnet nodes into one unified feed, and re-serves it on a built-in telnet cluster server (port 7300) so loggers like Logger32, N1MM+, Log4OM, and DXKeeper can pick it up. ClubLog integration highlights New DXCC / New Slot / New Band / New Mode in real time; LoTW uploaders are flagged with a green dot from ARRL's user list. NCDXF/IBP and national beacon detection avoids false alerts. Telegram + macOS notifications with per-callsign cooldown. Live filters, sortable resizable columns, auto-clear with disk log, menu-bar background mode. Major rewrite of the original FT8 Cluster Aggregator concept by Vinod VU3ESV — now covers all DX cluster sources, not just FT8.</div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">Telnet server</span><span class="proj-tag">Club Log</span><span class="proj-tag">WSJT-X / JTDX</span><span class="proj-tag">PSK Reporter</span><span class="proj-tag">Telegram</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/FT8ClusterAggregator-macOS" target="_blank" rel="noopener">
+        <a class="repo-btn" href="https://github.com/vu2cpl/DXClusterAggregator-macOS" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -490,11 +562,15 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">ESP32 GPS-disciplined NTP server</div>
-        <div class="project-desc">Always-on GPS-disciplined NTP server for the shack LAN, on an ESP32 with a u-blox NEO-M8N (GPS + GLONASS + Galileo). PPS on a GPIO interrupt drives the second-edge for sub-microsecond time, with a clean fallback to NMEA-only timing (and honest stratum 2) when the PPS lock drops. Built so the Mac shack — and SkimServer Mac in particular — sits on a correct UTC tick for FT8 / FT4 / Q65 slot alignment without depending on internet NTP reachability. PlatformIO base; optional SSD1306 OLED for at-a-glance sat count, fix and PPS-lock status.</div>
-        <div class="project-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">NTP</span><span class="proj-tag">GPS</span><span class="proj-tag">u-blox NEO-M8N</span><span class="proj-tag">PPS</span><span class="proj-tag">PlatformIO</span><span class="proj-tag">Stratum 1</span></div>
+        <div class="project-name">TimeSync — clock-drift watcher for macOS</div>
+        <div class="project-desc">Menu-bar macOS app showing system-clock drift against NTP servers and an attached USB GPS, with a one-click "step the clock now" via chrony. Built for digital-mode operators where ~1 s alignment matters and the LAN may not always reach an upstream NTP source. An optional bundled <code>gpsd</code> + chrony stack turns the Mac itself into a stratum-2 NTP server for the rest of the shack; a small privileged helper daemon lets the app talk to chrony without sudo each time.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">NTP</span><span class="proj-tag">GPS</span><span class="proj-tag">chrony</span><span class="proj-tag">gpsd</span><span class="proj-tag">menu-bar</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/timesync-mac" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
       </div>
-      <span class="status-badge status-planned">Planned</span>
+      <span class="status-badge status-active">Active</span>
     </div>
     <div class="project-card">
       <div>
