@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "17 May 2026",
-  "previous_as_on": "16 May 2026",
-  "generated_at": "2026-05-17T05:58:37+00:00",
+  "as_on": "18 May 2026",
+  "previous_as_on": "17 May 2026",
+  "generated_at": "2026-05-18T06:35:35+00:00",
   "columns": [
     "160",
     "80",
@@ -332,11 +332,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sajeev Sukumar",
-      "changes": [
-        "40",
-        "30",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -437,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 854,
+      "rank": 855,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -461,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1027,
+      "rank": 1028,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -485,26 +481,30 @@
     },
     {
       "sno": 19,
-      "rank": 1040,
+      "rank": 1041,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
       "60": 0,
       "40": 102,
       "30": 66,
-      "20": 124,
-      "17": 82,
+      "20": 125,
+      "17": 83,
       "15": 125,
       "12": 85,
       "10": 126,
       "6": 0,
       "total": 191,
-      "slots": 712,
+      "slots": 714,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [],
+      "changes": [
+        "20",
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -533,7 +533,7 @@
     },
     {
       "sno": 21,
-      "rank": 1132,
+      "rank": 1133,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -629,7 +629,7 @@
     },
     {
       "sno": 25,
-      "rank": 1500,
+      "rank": 1489,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -638,17 +638,21 @@
       "30": 1,
       "20": 71,
       "17": 17,
-      "15": 80,
+      "15": 81,
       "12": 25,
       "10": 98,
       "6": 1,
-      "total": 130,
-      "slots": 316,
+      "total": 131,
+      "slots": 317,
       "years": "14 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [],
+      "changes": [
+        "15",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -677,7 +681,7 @@
     },
     {
       "sno": 27,
-      "rank": 1795,
+      "rank": 1796,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -701,7 +705,7 @@
     },
     {
       "sno": 28,
-      "rank": 1832,
+      "rank": 1831,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
