@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "18 May 2026",
-  "previous_as_on": "17 May 2026",
-  "generated_at": "2026-05-18T06:35:35+00:00",
+  "as_on": "19 May 2026",
+  "previous_as_on": "18 May 2026",
+  "generated_at": "2026-05-19T06:30:47+00:00",
   "columns": [
     "160",
     "80",
@@ -241,7 +241,7 @@
     },
     {
       "sno": 9,
-      "rank": 420,
+      "rank": 419,
       "callsign": "VU2IBI",
       "160": 0,
       "80": 47,
@@ -265,7 +265,7 @@
     },
     {
       "sno": 10,
-      "rank": 419,
+      "rank": 418,
       "callsign": "VU2LBW",
       "160": 0,
       "80": 102,
@@ -289,7 +289,7 @@
     },
     {
       "sno": 11,
-      "rank": 503,
+      "rank": 502,
       "callsign": "VU2DED",
       "160": 1,
       "80": 115,
@@ -313,13 +313,13 @@
     },
     {
       "sno": 12,
-      "rank": 510,
+      "rank": 509,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 130,
       "60": 30,
       "40": 208,
-      "30": 218,
+      "30": 217,
       "20": 223,
       "17": 233,
       "15": 233,
@@ -327,12 +327,15 @@
       "10": 190,
       "6": 101,
       "total": 290,
-      "slots": 1740,
+      "slots": 1739,
       "years": "15 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sajeev Sukumar",
-      "changes": [],
+      "changes": [
+        "30",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -361,7 +364,7 @@
     },
     {
       "sno": 14,
-      "rank": 673,
+      "rank": 672,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -385,7 +388,7 @@
     },
     {
       "sno": 15,
-      "rank": 735,
+      "rank": 736,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -500,11 +503,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "20",
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -581,7 +580,7 @@
     },
     {
       "sno": 23,
-      "rank": 1180,
+      "rank": 1181,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -605,7 +604,7 @@
     },
     {
       "sno": 24,
-      "rank": 1380,
+      "rank": 1381,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -629,7 +628,7 @@
     },
     {
       "sno": 25,
-      "rank": 1489,
+      "rank": 1490,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -648,11 +647,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [
-        "15",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
