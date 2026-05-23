@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "21 May 2026",
-  "previous_as_on": "20 May 2026",
-  "generated_at": "2026-05-21T06:31:28+00:00",
+  "as_on": "22 May 2026",
+  "previous_as_on": "21 May 2026",
+  "generated_at": "2026-05-22T06:29:39+00:00",
   "columns": [
     "160",
     "80",
@@ -289,28 +289,27 @@
     },
     {
       "sno": 11,
-      "rank": 468,
+      "rank": 454,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 130,
       "60": 30,
-      "40": 211,
+      "40": 212,
       "30": 217,
       "20": 226,
-      "17": 235,
+      "17": 236,
       "15": 233,
       "12": 173,
       "10": 190,
       "6": 101,
-      "total": 298,
-      "slots": 1747,
+      "total": 300,
+      "slots": 1749,
       "years": "15 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sajeev Sukumar",
       "changes": [
         "40",
-        "20",
         "17",
         "total",
         "slots"
@@ -487,7 +486,7 @@
     },
     {
       "sno": 19,
-      "rank": 1039,
+      "rank": 1038,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -497,16 +496,19 @@
       "20": 125,
       "17": 84,
       "15": 125,
-      "12": 85,
+      "12": 86,
       "10": 126,
       "6": 0,
       "total": 191,
-      "slots": 715,
+      "slots": 716,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [],
+      "changes": [
+        "12",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -583,7 +585,7 @@
     },
     {
       "sno": 23,
-      "rank": 1179,
+      "rank": 1180,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -631,7 +633,7 @@
     },
     {
       "sno": 25,
-      "rank": 1491,
+      "rank": 1492,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -746,10 +748,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     }
   ]
