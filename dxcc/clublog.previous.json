@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "24 May 2026",
-  "previous_as_on": "23 May 2026",
-  "generated_at": "2026-05-24T06:13:25+00:00",
+  "as_on": "25 May 2026",
+  "previous_as_on": "24 May 2026",
+  "generated_at": "2026-05-25T06:49:44+00:00",
   "columns": [
     "160",
     "80",
@@ -223,20 +223,24 @@
       "80": 155,
       "60": 2,
       "40": 255,
-      "30": 240,
+      "30": 241,
       "20": 279,
       "17": 253,
       "15": 270,
-      "12": 251,
+      "12": 252,
       "10": 224,
       "6": 115,
       "total": 307,
-      "slots": 2047,
+      "slots": 2049,
       "years": "10 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Adersh",
-      "changes": [],
+      "changes": [
+        "30",
+        "12",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -489,20 +493,19 @@
       "40": 102,
       "30": 66,
       "20": 125,
-      "17": 85,
+      "17": 86,
       "15": 126,
       "12": 86,
       "10": 126,
       "6": 0,
       "total": 191,
-      "slots": 718,
+      "slots": 719,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
       "changes": [
         "17",
-        "15",
         "slots"
       ],
       "is_new": false
@@ -557,7 +560,7 @@
     },
     {
       "sno": 22,
-      "rank": 1145,
+      "rank": 1146,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -624,22 +627,8 @@
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [
-        "160",
-        "80",
-        "60",
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "6",
-        "total",
-        "slots"
-      ],
-      "is_new": true
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 25,
@@ -739,7 +728,7 @@
     },
     {
       "sno": 29,
-      "rank": 1830,
+      "rank": 1831,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
@@ -782,11 +771,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "10",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     }
   ]
