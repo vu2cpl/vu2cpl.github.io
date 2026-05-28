@@ -397,9 +397,21 @@
   <div class="project-list" style="margin-bottom:2.5rem;">
     <div class="project-card">
       <div>
+        <div class="project-name">Shack Dashboard — Vue 3 SPA</div>
+        <div class="project-desc">Unified single-page dashboard for the whole shack, built in Vue 3 and served from Node-RED via uibuilder — replacing the legacy AngularJS <code>/ui</code> board. Twelve collapsible cards (FlexRadio, LP-700, SPE amplifier, rotator, lightning protection, power control, solar conditions, DXCC tracker, RBN skimmer, Raspberry Pi fleet, internet health, GPS NTP) lay out in a responsive masonry grid that adapts from phone to desktop with no build step. Each card polls flow context every 1–5 s, shows a colour-coded collapsed summary and expands for full telemetry. Top bar carries the callsign, a live/offline connectivity pill and four clocks (UTC / IST / sunrise / sunset). PWA-installable on iPad and iPhone via "Add to Home Screen".</div>
+        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Vue 3</span><span class="proj-tag">uibuilder</span><span class="proj-tag">PWA</span><span class="proj-tag">MQTT</span><span class="proj-tag">Responsive</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
         <div class="project-name">FLEX-6600 State Monitor Dashboard</div>
-        <div class="project-desc">Real-time Node-RED dashboard tracking all four slice receivers via FlexRadio TCP API. Dual SmartSDR client support (AetherSDR + iPad). AngularJS UI with color-coded active slice indication — amber for RX, red for TX.</div>
-        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">FlexRadio API</span><span class="proj-tag">AngularJS</span><span class="proj-tag">MQTT</span></div>
+        <div class="project-desc">Real-time Node-RED flow tracking all four slice receivers via the FlexRadio TCP API, with dual SmartSDR client support (AetherSDR + iPad). Colour-coded active-slice indication — amber for RX, red for TX — now surfaced as the FlexRadio card in the Vue 3 shack dashboard above, and still on the legacy AngularJS <code>/ui</code> board.</div>
+        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">FlexRadio API</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">MQTT</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
@@ -422,8 +434,8 @@
     <div class="project-card">
       <div>
         <div class="project-name">Lightning Antenna Protector</div>
-        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km. Dual source: Open-Meteo lightning_potential API (polled every 5 min) + AS3935 local sensor via MQTT. Leaflet/OSM map with storm overlay. 20-min auto-reconnect timer.</div>
-        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Open-Meteo</span><span class="proj-tag">Tasmota</span><span class="proj-tag">AS3935</span><span class="proj-tag">Leaflet</span></div>
+        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km. Dual source: Open-Meteo lightning_potential API (polled every 5 min) + AS3935 local sensor via MQTT. Leaflet/OSM map with storm overlay. 20-min auto-reconnect timer. On disconnect it also sends a <code>transmit set inhibit=1</code> command to the FLEX-6600 over the SmartSDR API, so the rig can't key up into a disconnected antenna — SmartSDR shows a red TX-Inhibit indicator and a Telegram alert fires. The inhibit clears automatically on reconnect, manual override or bypass; the radio stays powered and RX-capable throughout.</div>
+        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Open-Meteo</span><span class="proj-tag">Tasmota</span><span class="proj-tag">AS3935</span><span class="proj-tag">SmartSDR API</span><span class="proj-tag">TX inhibit</span><span class="proj-tag">Leaflet</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
