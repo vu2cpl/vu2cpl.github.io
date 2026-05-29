@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "27 May 2026",
-  "previous_as_on": "26 May 2026",
-  "generated_at": "2026-05-27T06:42:44+00:00",
+  "as_on": "28 May 2026",
+  "previous_as_on": "27 May 2026",
+  "generated_at": "2026-05-28T06:35:15+00:00",
   "columns": [
     "160",
     "80",
@@ -164,10 +164,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -175,24 +172,26 @@
       "rank": 384,
       "callsign": "VU2WJ",
       "160": 1,
-      "80": 85,
+      "80": 87,
       "60": 0,
       "40": 219,
       "30": 195,
       "20": 299,
       "17": 247,
-      "15": 229,
+      "15": 230,
       "12": 196,
-      "10": 178,
+      "10": 179,
       "6": 1,
       "total": 311,
-      "slots": 1650,
+      "slots": 1654,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
       "changes": [
+        "80",
         "15",
+        "10",
         "slots"
       ],
       "is_new": false
@@ -506,13 +505,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "30",
-        "20",
-        "17",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -565,7 +558,7 @@
     },
     {
       "sno": 22,
-      "rank": 1147,
+      "rank": 1148,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -608,16 +601,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "vu2eei",
-      "changes": [
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -766,28 +750,27 @@
     },
     {
       "sno": 30,
-      "rank": 1936,
+      "rank": 1928,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 22,
+      "20": 23,
       "17": 0,
       "15": 11,
       "12": 0,
       "10": 78,
       "6": 0,
-      "total": 85,
-      "slots": 114,
+      "total": 86,
+      "slots": 115,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
         "20",
-        "15",
         "total",
         "slots"
       ],
