@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "29 May 2026",
-  "previous_as_on": "28 May 2026",
-  "generated_at": "2026-05-29T06:35:23+00:00",
+  "as_on": "30 May 2026",
+  "previous_as_on": "29 May 2026",
+  "generated_at": "2026-05-30T05:58:43+00:00",
   "columns": [
     "160",
     "80",
@@ -289,26 +289,36 @@
     },
     {
       "sno": 11,
-      "rank": 455,
+      "rank": 462,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 130,
       "60": 30,
-      "40": 212,
-      "30": 218,
-      "20": 227,
-      "17": 237,
-      "15": 234,
-      "12": 174,
-      "10": 191,
+      "40": 211,
+      "30": 217,
+      "20": 226,
+      "17": 236,
+      "15": 233,
+      "12": 173,
+      "10": 190,
       "6": 101,
-      "total": 300,
-      "slots": 1755,
+      "total": 299,
+      "slots": 1748,
       "years": "15 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sajeev Sukumar",
-      "changes": [],
+      "changes": [
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -404,11 +414,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "15",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -485,7 +491,7 @@
     },
     {
       "sno": 19,
-      "rank": 1039,
+      "rank": 1040,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -768,10 +774,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     }
   ]
