@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "31 May 2026",
-  "previous_as_on": "30 May 2026",
-  "generated_at": "2026-05-31T06:37:05+00:00",
+  "as_on": "01 Jun 2026",
+  "previous_as_on": "31 May 2026",
+  "generated_at": "2026-06-01T07:26:12+00:00",
   "columns": [
     "160",
     "80",
@@ -103,7 +103,7 @@
       "80": 69,
       "60": 0,
       "40": 216,
-      "30": 175,
+      "30": 176,
       "20": 270,
       "17": 255,
       "15": 292,
@@ -111,12 +111,15 @@
       "10": 254,
       "6": 1,
       "total": 321,
-      "slots": 1784,
+      "slots": 1785,
       "years": "21 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [],
+      "changes": [
+        "30",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -393,18 +396,23 @@
       "40": 184,
       "30": 35,
       "20": 178,
-      "17": 165,
+      "17": 166,
       "15": 158,
-      "12": 119,
-      "10": 137,
+      "12": 120,
+      "10": 139,
       "6": 23,
       "total": 245,
-      "slots": 1045,
+      "slots": 1049,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "17",
+        "12",
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -457,7 +465,7 @@
     },
     {
       "sno": 18,
-      "rank": 1029,
+      "rank": 1030,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -553,7 +561,7 @@
     },
     {
       "sno": 22,
-      "rank": 1149,
+      "rank": 1150,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -577,7 +585,7 @@
     },
     {
       "sno": 23,
-      "rank": 1155,
+      "rank": 1157,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -601,7 +609,7 @@
     },
     {
       "sno": 24,
-      "rank": 1207,
+      "rank": 1208,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -745,7 +753,7 @@
     },
     {
       "sno": 30,
-      "rank": 1932,
+      "rank": 1921,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -754,18 +762,19 @@
       "30": 0,
       "20": 23,
       "17": 0,
-      "15": 16,
+      "15": 17,
       "12": 0,
       "10": 78,
       "6": 0,
-      "total": 86,
-      "slots": 120,
+      "total": 87,
+      "slots": 121,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
         "15",
+        "total",
         "slots"
       ],
       "is_new": false
