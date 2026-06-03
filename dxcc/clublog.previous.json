@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "01 Jun 2026",
-  "previous_as_on": "31 May 2026",
-  "generated_at": "2026-06-01T07:26:12+00:00",
+  "as_on": "02 Jun 2026",
+  "previous_as_on": "01 Jun 2026",
+  "generated_at": "2026-06-02T07:01:18+00:00",
   "columns": [
     "160",
     "80",
@@ -116,10 +116,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [
-        "30",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -298,20 +295,28 @@
       "80": 130,
       "60": 30,
       "40": 211,
-      "30": 217,
-      "20": 226,
-      "17": 236,
-      "15": 233,
-      "12": 173,
-      "10": 190,
+      "30": 218,
+      "20": 227,
+      "17": 237,
+      "15": 234,
+      "12": 174,
+      "10": 191,
       "6": 101,
       "total": 299,
-      "slots": 1748,
+      "slots": 1754,
       "years": "15 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sajeev Sukumar",
-      "changes": [],
+      "changes": [
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -407,12 +412,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "17",
-        "12",
-        "10",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -489,7 +489,7 @@
     },
     {
       "sno": 19,
-      "rank": 1040,
+      "rank": 1041,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -497,18 +497,23 @@
       "40": 102,
       "30": 67,
       "20": 126,
-      "17": 87,
+      "17": 89,
       "15": 127,
-      "12": 86,
-      "10": 126,
+      "12": 87,
+      "10": 127,
       "6": 0,
       "total": 191,
-      "slots": 723,
+      "slots": 727,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [],
+      "changes": [
+        "17",
+        "12",
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -561,7 +566,7 @@
     },
     {
       "sno": 22,
-      "rank": 1150,
+      "rank": 1151,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -657,7 +662,7 @@
     },
     {
       "sno": 26,
-      "rank": 1494,
+      "rank": 1493,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -665,18 +670,22 @@
       "40": 21,
       "30": 1,
       "20": 71,
-      "17": 17,
+      "17": 18,
       "15": 81,
       "12": 25,
-      "10": 98,
+      "10": 99,
       "6": 1,
       "total": 131,
-      "slots": 317,
+      "slots": 319,
       "years": "14 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [],
+      "changes": [
+        "17",
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -705,7 +714,7 @@
     },
     {
       "sno": 28,
-      "rank": 1799,
+      "rank": 1798,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -753,27 +762,29 @@
     },
     {
       "sno": 30,
-      "rank": 1921,
+      "rank": 1911,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 23,
+      "20": 27,
       "17": 0,
-      "15": 17,
+      "15": 34,
       "12": 0,
-      "10": 78,
+      "10": 79,
       "6": 0,
-      "total": 87,
-      "slots": 121,
+      "total": 88,
+      "slots": 143,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
+        "20",
         "15",
+        "10",
         "total",
         "slots"
       ],
