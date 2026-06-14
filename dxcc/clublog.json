@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "13 Jun 2026",
-  "previous_as_on": "12 Jun 2026",
-  "generated_at": "2026-06-13T06:35:09+00:00",
+  "as_on": "14 Jun 2026",
+  "previous_as_on": "13 Jun 2026",
+  "generated_at": "2026-06-14T07:00:59+00:00",
   "columns": [
     "160",
     "80",
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 731,
+      "rank": 733,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -433,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 855,
+      "rank": 856,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -457,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1034,
+      "rank": 1035,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -476,15 +476,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 19,
-      "rank": 1030,
+      "rank": 1031,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -508,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1117,
+      "rank": 1118,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -532,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1132,
+      "rank": 1133,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -556,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1149,
+      "rank": 1150,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -580,7 +577,7 @@
     },
     {
       "sno": 23,
-      "rank": 1156,
+      "rank": 1157,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -604,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1201,
+      "rank": 1202,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -628,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1384,
+      "rank": 1385,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -652,7 +649,7 @@
     },
     {
       "sno": 26,
-      "rank": 1483,
+      "rank": 1485,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -700,7 +697,7 @@
     },
     {
       "sno": 28,
-      "rank": 1794,
+      "rank": 1793,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -724,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1835,
+      "rank": 1834,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
@@ -748,27 +745,27 @@
     },
     {
       "sno": 30,
-      "rank": 1854,
+      "rank": 1853,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 33,
+      "20": 34,
       "17": 0,
       "15": 49,
       "12": 0,
       "10": 79,
       "6": 0,
       "total": 93,
-      "slots": 164,
+      "slots": 165,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
-        "15",
+        "20",
         "slots"
       ],
       "is_new": false
