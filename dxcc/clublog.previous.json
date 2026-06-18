@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "16 Jun 2026",
-  "previous_as_on": "15 Jun 2026",
-  "generated_at": "2026-06-16T08:23:54+00:00",
+  "as_on": "17 Jun 2026",
+  "previous_as_on": "16 Jun 2026",
+  "generated_at": "2026-06-17T07:30:46+00:00",
   "columns": [
     "160",
     "80",
@@ -73,7 +73,7 @@
     },
     {
       "sno": 2,
-      "rank": 285,
+      "rank": 284,
       "callsign": "VU2NXO",
       "160": 40,
       "80": 42,
@@ -97,7 +97,7 @@
     },
     {
       "sno": 3,
-      "rank": 299,
+      "rank": 298,
       "callsign": "VU2CDP",
       "160": 3,
       "80": 69,
@@ -121,7 +121,7 @@
     },
     {
       "sno": 4,
-      "rank": 316,
+      "rank": 315,
       "callsign": "VU2CPL",
       "160": 109,
       "80": 203,
@@ -145,7 +145,7 @@
     },
     {
       "sno": 5,
-      "rank": 344,
+      "rank": 343,
       "callsign": "VU2DCC",
       "160": 0,
       "80": 5,
@@ -169,7 +169,7 @@
     },
     {
       "sno": 6,
-      "rank": 383,
+      "rank": 382,
       "callsign": "VU2WJ",
       "160": 1,
       "80": 87,
@@ -188,15 +188,12 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 7,
-      "rank": 385,
+      "rank": 384,
       "callsign": "VU2YYF",
       "160": 1,
       "80": 52,
@@ -220,7 +217,7 @@
     },
     {
       "sno": 8,
-      "rank": 410,
+      "rank": 409,
       "callsign": "VU24DX",
       "160": 3,
       "80": 155,
@@ -244,7 +241,7 @@
     },
     {
       "sno": 9,
-      "rank": 418,
+      "rank": 417,
       "callsign": "VU2IBI",
       "160": 0,
       "80": 47,
@@ -268,7 +265,7 @@
     },
     {
       "sno": 10,
-      "rank": 417,
+      "rank": 416,
       "callsign": "VU2LBW",
       "160": 0,
       "80": 102,
@@ -292,7 +289,7 @@
     },
     {
       "sno": 11,
-      "rank": 461,
+      "rank": 460,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 130,
@@ -316,7 +313,7 @@
     },
     {
       "sno": 12,
-      "rank": 502,
+      "rank": 501,
       "callsign": "VU2DED",
       "160": 1,
       "80": 115,
@@ -388,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 675,
+      "rank": 674,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -412,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 734,
+      "rank": 733,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -436,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 856,
+      "rank": 855,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -460,12 +457,12 @@
     },
     {
       "sno": 18,
-      "rank": 1035,
+      "rank": 1034,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
       "60": 0,
-      "40": 103,
+      "40": 104,
       "30": 67,
       "20": 131,
       "17": 89,
@@ -474,17 +471,20 @@
       "10": 127,
       "6": 0,
       "total": 192,
-      "slots": 736,
+      "slots": 737,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [],
+      "changes": [
+        "40",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 19,
-      "rank": 1031,
+      "rank": 1030,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -508,7 +508,7 @@
     },
     {
       "sno": 20,
-      "rank": 1120,
+      "rank": 1119,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -532,7 +532,7 @@
     },
     {
       "sno": 21,
-      "rank": 1134,
+      "rank": 1133,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -556,7 +556,7 @@
     },
     {
       "sno": 22,
-      "rank": 1151,
+      "rank": 1150,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -580,7 +580,7 @@
     },
     {
       "sno": 23,
-      "rank": 1158,
+      "rank": 1157,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -604,28 +604,27 @@
     },
     {
       "sno": 24,
-      "rank": 1198,
+      "rank": 1201,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
       "60": 0,
       "40": 57,
       "30": 31,
-      "20": 149,
+      "20": 147,
       "17": 22,
       "15": 144,
       "12": 3,
       "10": 133,
       "6": 2,
-      "total": 169,
-      "slots": 542,
+      "total": 168,
+      "slots": 540,
       "years": "3 yrs",
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
       "changes": [
         "20",
-        "15",
         "total",
         "slots"
       ],
@@ -760,19 +759,22 @@
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 34,
+      "20": 35,
       "17": 0,
       "15": 50,
       "12": 0,
       "10": 79,
       "6": 0,
       "total": 94,
-      "slots": 166,
+      "slots": 167,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "20",
+        "slots"
+      ],
       "is_new": false
     }
   ]
