@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "17 Jun 2026",
-  "previous_as_on": "16 Jun 2026",
-  "generated_at": "2026-06-17T07:30:46+00:00",
+  "as_on": "18 Jun 2026",
+  "previous_as_on": "17 Jun 2026",
+  "generated_at": "2026-06-18T07:14:04+00:00",
   "columns": [
     "160",
     "80",
@@ -476,10 +476,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -508,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1119,
+      "rank": 1120,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -517,17 +514,20 @@
       "30": 0,
       "20": 160,
       "17": 129,
-      "15": 135,
+      "15": 136,
       "12": 0,
       "10": 0,
       "6": 0,
       "total": 179,
-      "slots": 515,
+      "slots": 516,
       "years": "8 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [],
+      "changes": [
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -611,28 +611,28 @@
       "60": 0,
       "40": 57,
       "30": 31,
-      "20": 147,
+      "20": 146,
       "17": 22,
-      "15": 144,
+      "15": 142,
       "12": 3,
       "10": 133,
       "6": 2,
       "total": 168,
-      "slots": 540,
+      "slots": 537,
       "years": "3 yrs",
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
       "changes": [
         "20",
-        "total",
+        "15",
         "slots"
       ],
       "is_new": false
     },
     {
       "sno": 25,
-      "rank": 1385,
+      "rank": 1384,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -656,7 +656,7 @@
     },
     {
       "sno": 26,
-      "rank": 1488,
+      "rank": 1487,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 2,
@@ -680,7 +680,7 @@
     },
     {
       "sno": 27,
-      "rank": 1605,
+      "rank": 1606,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -771,10 +771,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     }
   ]
