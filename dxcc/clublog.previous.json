@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "19 Jun 2026",
-  "previous_as_on": "18 Jun 2026",
-  "generated_at": "2026-06-19T07:34:13+00:00",
+  "as_on": "20 Jun 2026",
+  "previous_as_on": "19 Jun 2026",
+  "generated_at": "2026-06-20T06:44:01+00:00",
   "columns": [
     "160",
     "80",
@@ -236,10 +236,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Adersh",
-      "changes": [
-        "10",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -671,11 +668,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [
-        "80",
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -759,19 +752,23 @@
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 35,
+      "20": 37,
       "17": 0,
-      "15": 50,
+      "15": 51,
       "12": 0,
       "10": 79,
       "6": 0,
       "total": 94,
-      "slots": 167,
+      "slots": 170,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "20",
+        "15",
+        "slots"
+      ],
       "is_new": false
     }
   ]
