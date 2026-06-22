@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "20 Jun 2026",
-  "previous_as_on": "19 Jun 2026",
-  "generated_at": "2026-06-20T06:44:01+00:00",
+  "as_on": "21 Jun 2026",
+  "previous_as_on": "20 Jun 2026",
+  "generated_at": "2026-06-21T07:13:48+00:00",
   "columns": [
     "160",
     "80",
@@ -145,7 +145,7 @@
     },
     {
       "sno": 5,
-      "rank": 343,
+      "rank": 344,
       "callsign": "VU2DCC",
       "160": 0,
       "80": 5,
@@ -169,7 +169,7 @@
     },
     {
       "sno": 6,
-      "rank": 382,
+      "rank": 383,
       "callsign": "VU2WJ",
       "160": 1,
       "80": 87,
@@ -177,23 +177,27 @@
       "40": 219,
       "30": 195,
       "20": 299,
-      "17": 247,
-      "15": 229,
+      "17": 249,
+      "15": 230,
       "12": 196,
       "10": 179,
       "6": 1,
       "total": 311,
-      "slots": 1653,
+      "slots": 1656,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [],
+      "changes": [
+        "17",
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 7,
-      "rank": 384,
+      "rank": 385,
       "callsign": "VU2YYF",
       "160": 1,
       "80": 52,
@@ -409,7 +413,7 @@
     },
     {
       "sno": 16,
-      "rank": 733,
+      "rank": 732,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -433,7 +437,7 @@
     },
     {
       "sno": 17,
-      "rank": 855,
+      "rank": 854,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -457,7 +461,7 @@
     },
     {
       "sno": 18,
-      "rank": 1035,
+      "rank": 1034,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -481,7 +485,7 @@
     },
     {
       "sno": 19,
-      "rank": 1031,
+      "rank": 1030,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -505,31 +509,36 @@
     },
     {
       "sno": 20,
-      "rank": 1120,
+      "rank": 1111,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 91,
       "30": 0,
-      "20": 160,
+      "20": 161,
       "17": 129,
-      "15": 136,
+      "15": 137,
       "12": 0,
       "10": 0,
       "6": 0,
-      "total": 179,
-      "slots": 516,
+      "total": 180,
+      "slots": 518,
       "years": "8 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [],
+      "changes": [
+        "20",
+        "15",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 21,
-      "rank": 1133,
+      "rank": 1132,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -553,7 +562,7 @@
     },
     {
       "sno": 22,
-      "rank": 1150,
+      "rank": 1148,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -577,7 +586,7 @@
     },
     {
       "sno": 23,
-      "rank": 1158,
+      "rank": 1156,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -601,7 +610,7 @@
     },
     {
       "sno": 24,
-      "rank": 1202,
+      "rank": 1200,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -625,7 +634,7 @@
     },
     {
       "sno": 25,
-      "rank": 1384,
+      "rank": 1382,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -673,7 +682,7 @@
     },
     {
       "sno": 27,
-      "rank": 1607,
+      "rank": 1605,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -697,7 +706,7 @@
     },
     {
       "sno": 28,
-      "rank": 1796,
+      "rank": 1793,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -721,7 +730,7 @@
     },
     {
       "sno": 29,
-      "rank": 1837,
+      "rank": 1834,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
@@ -745,7 +754,7 @@
     },
     {
       "sno": 30,
-      "rank": 1844,
+      "rank": 1841,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -764,11 +773,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     }
   ]

@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "21 Jun 2026",
-  "previous_as_on": "20 Jun 2026",
-  "generated_at": "2026-06-21T07:13:48+00:00",
+  "as_on": "22 Jun 2026",
+  "previous_as_on": "21 Jun 2026",
+  "generated_at": "2026-06-22T07:45:19+00:00",
   "columns": [
     "160",
     "80",
@@ -188,11 +188,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [
-        "17",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -461,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1034,
+      "rank": 1035,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -485,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1030,
+      "rank": 1031,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -528,12 +524,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [
-        "20",
-        "15",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -634,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1382,
+      "rank": 1381,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -658,7 +649,7 @@
     },
     {
       "sno": 26,
-      "rank": 1487,
+      "rank": 1486,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -730,6 +721,34 @@
     },
     {
       "sno": 29,
+      "rank": 1838,
+      "callsign": "VU27MJ",
+      "160": 0,
+      "80": 0,
+      "60": 0,
+      "40": 3,
+      "30": 0,
+      "20": 38,
+      "17": 0,
+      "15": 51,
+      "12": 0,
+      "10": 79,
+      "6": 0,
+      "total": 95,
+      "slots": 171,
+      "years": "0 yrs",
+      "linked_count": 0,
+      "is_linked": false,
+      "op_name": "Manojit Nag",
+      "changes": [
+        "20",
+        "total",
+        "slots"
+      ],
+      "is_new": false
+    },
+    {
+      "sno": 30,
       "rank": 1834,
       "callsign": "VU2KPH",
       "160": 0,
@@ -749,30 +768,6 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Krishna Pratap Rana",
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 30,
-      "rank": 1841,
-      "callsign": "VU27MJ",
-      "160": 0,
-      "80": 0,
-      "60": 0,
-      "40": 3,
-      "30": 0,
-      "20": 37,
-      "17": 0,
-      "15": 51,
-      "12": 0,
-      "10": 79,
-      "6": 0,
-      "total": 94,
-      "slots": 170,
-      "years": "0 yrs",
-      "linked_count": 0,
-      "is_linked": false,
-      "op_name": "Manojit Nag",
       "changes": [],
       "is_new": false
     }
