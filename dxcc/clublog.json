@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "22 Jun 2026",
-  "previous_as_on": "21 Jun 2026",
-  "generated_at": "2026-06-22T07:45:19+00:00",
+  "as_on": "23 Jun 2026",
+  "previous_as_on": "22 Jun 2026",
+  "generated_at": "2026-06-23T06:30:34+00:00",
   "columns": [
     "160",
     "80",
@@ -178,17 +178,21 @@
       "30": 195,
       "20": 299,
       "17": 249,
-      "15": 230,
+      "15": 231,
       "12": 196,
-      "10": 179,
+      "10": 181,
       "6": 1,
       "total": 311,
-      "slots": 1656,
+      "slots": 1659,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [],
+      "changes": [
+        "15",
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -337,7 +341,7 @@
     },
     {
       "sno": 13,
-      "rank": 564,
+      "rank": 565,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 60,
@@ -361,7 +365,7 @@
     },
     {
       "sno": 14,
-      "rank": 567,
+      "rank": 568,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -409,7 +413,7 @@
     },
     {
       "sno": 16,
-      "rank": 732,
+      "rank": 733,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -433,7 +437,7 @@
     },
     {
       "sno": 17,
-      "rank": 854,
+      "rank": 855,
       "callsign": "VU2ZH",
       "160": 0,
       "80": 0,
@@ -457,7 +461,7 @@
     },
     {
       "sno": 18,
-      "rank": 1035,
+      "rank": 1036,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -481,7 +485,7 @@
     },
     {
       "sno": 19,
-      "rank": 1031,
+      "rank": 1032,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -505,7 +509,7 @@
     },
     {
       "sno": 20,
-      "rank": 1111,
+      "rank": 1112,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -529,7 +533,7 @@
     },
     {
       "sno": 21,
-      "rank": 1132,
+      "rank": 1134,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -553,7 +557,7 @@
     },
     {
       "sno": 22,
-      "rank": 1148,
+      "rank": 1150,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -577,7 +581,7 @@
     },
     {
       "sno": 23,
-      "rank": 1156,
+      "rank": 1158,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -601,7 +605,7 @@
     },
     {
       "sno": 24,
-      "rank": 1200,
+      "rank": 1202,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -625,7 +629,7 @@
     },
     {
       "sno": 25,
-      "rank": 1381,
+      "rank": 1384,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -649,7 +653,7 @@
     },
     {
       "sno": 26,
-      "rank": 1486,
+      "rank": 1489,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -658,22 +662,25 @@
       "30": 1,
       "20": 73,
       "17": 18,
-      "15": 82,
+      "15": 83,
       "12": 25,
       "10": 99,
       "6": 1,
       "total": 132,
-      "slots": 323,
+      "slots": 324,
       "years": "14 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [],
+      "changes": [
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 27,
-      "rank": 1605,
+      "rank": 1609,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -697,7 +704,7 @@
     },
     {
       "sno": 28,
-      "rank": 1793,
+      "rank": 1796,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -721,27 +728,28 @@
     },
     {
       "sno": 29,
-      "rank": 1838,
+      "rank": 1829,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 38,
+      "20": 39,
       "17": 0,
-      "15": 51,
+      "15": 54,
       "12": 0,
       "10": 79,
       "6": 0,
-      "total": 95,
-      "slots": 171,
+      "total": 96,
+      "slots": 175,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
         "20",
+        "15",
         "total",
         "slots"
       ],
@@ -749,7 +757,7 @@
     },
     {
       "sno": 30,
-      "rank": 1834,
+      "rank": 1838,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
