@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "23 Jun 2026",
-  "previous_as_on": "22 Jun 2026",
-  "generated_at": "2026-06-23T06:30:34+00:00",
+  "as_on": "24 Jun 2026",
+  "previous_as_on": "23 Jun 2026",
+  "generated_at": "2026-06-24T06:26:57+00:00",
   "columns": [
     "160",
     "80",
@@ -188,11 +188,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [
-        "15",
-        "10",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -365,7 +361,7 @@
     },
     {
       "sno": 14,
-      "rank": 568,
+      "rank": 569,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -437,31 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 855,
-      "callsign": "VU2ZH",
-      "160": 0,
-      "80": 0,
-      "60": 0,
-      "40": 50,
-      "30": 15,
-      "20": 158,
-      "17": 128,
-      "15": 180,
-      "12": 91,
-      "10": 133,
-      "6": 1,
-      "total": 223,
-      "slots": 756,
-      "years": "38 yrs",
-      "linked_count": 1,
-      "is_linked": true,
-      "op_name": "Amateur Radio Society of India",
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 18,
-      "rank": 1036,
+      "rank": 1035,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -484,8 +456,8 @@
       "is_new": false
     },
     {
-      "sno": 19,
-      "rank": 1032,
+      "sno": 18,
+      "rank": 1031,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -508,8 +480,8 @@
       "is_new": false
     },
     {
-      "sno": 20,
-      "rank": 1112,
+      "sno": 19,
+      "rank": 1111,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -532,8 +504,8 @@
       "is_new": false
     },
     {
-      "sno": 21,
-      "rank": 1134,
+      "sno": 20,
+      "rank": 1133,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -556,8 +528,8 @@
       "is_new": false
     },
     {
-      "sno": 22,
-      "rank": 1150,
+      "sno": 21,
+      "rank": 1149,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -580,7 +552,7 @@
       "is_new": false
     },
     {
-      "sno": 23,
+      "sno": 22,
       "rank": 1158,
       "callsign": "VU2EEI",
       "160": 0,
@@ -604,8 +576,8 @@
       "is_new": false
     },
     {
-      "sno": 24,
-      "rank": 1202,
+      "sno": 23,
+      "rank": 1201,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -628,8 +600,8 @@
       "is_new": false
     },
     {
-      "sno": 25,
-      "rank": 1384,
+      "sno": 24,
+      "rank": 1383,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -652,8 +624,8 @@
       "is_new": false
     },
     {
-      "sno": 26,
-      "rank": 1489,
+      "sno": 25,
+      "rank": 1487,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -672,14 +644,11 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
-      "sno": 27,
+      "sno": 26,
       "rank": 1609,
       "callsign": "VU2ABE",
       "160": 0,
@@ -703,8 +672,8 @@
       "is_new": false
     },
     {
-      "sno": 28,
-      "rank": 1796,
+      "sno": 27,
+      "rank": 1794,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -727,37 +696,35 @@
       "is_new": false
     },
     {
-      "sno": 29,
-      "rank": 1829,
+      "sno": 28,
+      "rank": 1827,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 39,
+      "20": 40,
       "17": 0,
       "15": 54,
       "12": 0,
       "10": 79,
       "6": 0,
       "total": 96,
-      "slots": 175,
+      "slots": 176,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
         "20",
-        "15",
-        "total",
         "slots"
       ],
       "is_new": false
     },
     {
-      "sno": 30,
-      "rank": 1838,
+      "sno": 29,
+      "rank": 1836,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
