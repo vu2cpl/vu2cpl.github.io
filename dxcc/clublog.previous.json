@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "24 Jun 2026",
-  "previous_as_on": "23 Jun 2026",
-  "generated_at": "2026-06-24T06:26:57+00:00",
+  "as_on": "25 Jun 2026",
+  "previous_as_on": "24 Jun 2026",
+  "generated_at": "2026-06-25T06:29:41+00:00",
   "columns": [
     "160",
     "80",
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 733,
+      "rank": 732,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -433,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 1035,
+      "rank": 1036,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -457,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1031,
+      "rank": 1032,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -481,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1111,
+      "rank": 1112,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -505,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1133,
+      "rank": 1134,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -529,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1149,
+      "rank": 1150,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -553,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1158,
+      "rank": 1159,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -577,7 +577,7 @@
     },
     {
       "sno": 23,
-      "rank": 1201,
+      "rank": 1202,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -601,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1383,
+      "rank": 1384,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -625,31 +625,35 @@
     },
     {
       "sno": 25,
-      "rank": 1487,
+      "rank": 1486,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
       "60": 0,
       "40": 21,
       "30": 1,
-      "20": 73,
+      "20": 74,
       "17": 18,
-      "15": 83,
+      "15": 84,
       "12": 25,
       "10": 99,
       "6": 1,
       "total": 132,
-      "slots": 324,
+      "slots": 326,
       "years": "14 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [],
+      "changes": [
+        "20",
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 26,
-      "rank": 1609,
+      "rank": 1608,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -716,10 +720,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
