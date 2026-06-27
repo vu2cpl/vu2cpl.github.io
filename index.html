@@ -550,6 +550,30 @@
     </div>
     <div class="project-card">
       <div>
+        <div class="project-name">Amateur Radio Suite — macOS plugin host</div>
+        <div class="project-desc">Single macOS container app that hosts independent amateur-radio control apps as <em>plugins</em> in one window — switchable between a vertical sidebar and horizontal tabs. Each plugin stays in its own repo and ships as a standalone <code>.app</code>; the suite loads it through the <a href="https://github.com/VU3ESV/RadioPluginKit" target="_blank" rel="noopener" style="color:var(--accent);">RadioPluginKit</a> contract — the host links only the contract, never compiles a plugin in. Plugins are discovered at runtime (browse a catalog or sideload a <code>.radioplugin</code>) and run out-of-process as sandboxed ExtensionKit extensions, so crash isolation is real and adding one never requires rebuilding the suite. Ships with an empty catalog: published plugins today are LP-700, LP-100A, Band Pass Filter and Antenna Switch; SPE amplifier (MacExpert) and SO2R Box are next. Notarized release pipeline, macOS 14+.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">ExtensionKit</span><span class="proj-tag">Plugin host</span><span class="proj-tag">RadioPluginKit</span><span class="proj-tag">Notarized</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/AmateurRadioSuite" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">rotator-remote — Rotor-EZ WebSocket gateway</div>
+        <div class="project-desc">Python WebSocket gateway that owns the Idiom Press Rotor-EZ (Hy-Gain DCU-1 compatible) FTDI serial port on the shack Raspberry Pi and fans azimuth out to any number of clients — Node-RED, a built-in web UI, future Mac apps. The third shack USB device lifted into a gateway service alongside spe-remote and LP-700-Server: same threaded-reader + asyncio-writer pattern, so the serial port has a single owner and clients no longer have to restart Node-RED to free it. Self-contained web UI on port 8090 — large heading readout, click-to-slew compass dial, preset bearings (N/NE/E/SE/S/SW/W/NW), prominent STOP, and LP/+180° long-path. JSON <code>state</code> + <code>heartbeat</code> events over <code>/ws</code>, <code>/healthz</code> endpoint, all writes serialised through one lock so poll queries and client commands never interleave on the wire.</div>
+        <div class="project-tags"><span class="proj-tag">Python</span><span class="proj-tag">Tornado</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">FTDI</span><span class="proj-tag">Rotor-EZ</span><span class="proj-tag">Hy-Gain DCU-1</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/rotator-remote" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
         <div class="project-name">SO2R Box — macOS controller for the YCCC SO2R Box Plus</div>
         <div class="project-desc">Native macOS controller for the YCCC SO2R Box Plus contesting switch. USB-HID to the box; live front-panel mirror in the SwiftUI UI (TX/RX, footswitch, speed pot) using the YCCC HID protocol — reverse-engineered and documented. Hosts OTRSP and Winkeyer TCP servers, so N1MM+, Win-Test, WriteLog and TR4W see it as a standard SO2R interface. Supports the default 2-radio SO2R mode and the 4-radio SO2R+ mode.</div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">USB HID</span><span class="proj-tag">OTRSP</span><span class="proj-tag">Winkeyer</span><span class="proj-tag">YCCC</span><span class="proj-tag">SO2R</span><span class="proj-tag">Contesting</span></div>
