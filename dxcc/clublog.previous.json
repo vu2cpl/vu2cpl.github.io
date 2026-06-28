@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "26 Jun 2026",
-  "previous_as_on": "25 Jun 2026",
-  "generated_at": "2026-06-26T06:32:17+00:00",
+  "as_on": "27 Jun 2026",
+  "previous_as_on": "26 Jun 2026",
+  "generated_at": "2026-06-27T06:05:36+00:00",
   "columns": [
     "160",
     "80",
@@ -505,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1136,
+      "rank": 1137,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -577,7 +577,7 @@
     },
     {
       "sno": 23,
-      "rank": 1204,
+      "rank": 1205,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
