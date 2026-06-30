@@ -26,6 +26,9 @@
   .nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
   .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
   .nav-links a:hover { color: #fff; }
+  .nav-links a.nav-live { color: #f87171; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
+  .nav-links a.nav-live::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block; animation: blink 1.4s infinite; }
+  .nav-links a.nav-live:hover { color: #fca5a5; }
   .hero { background: var(--navy); padding: 5rem 2rem 4rem; }
   .hero-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
   .hero-left { flex: 1; min-width: 280px; }
@@ -235,6 +238,7 @@
     <a href="#projects">Projects</a>
     <a href="#writings">Writings</a>
     <a href="/dxcc/">VU DXCC</a>
+    <a href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" class="nav-live" title="Listen live on VU2CPL's RX-888 + LZ1AQ active loop WebSDR">WebSDR</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -638,9 +642,9 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">WebSDR — live RX-888 receiver on the shack antennas</div>
-        <div class="project-desc">Public web-based SDR receiver running on a self-hosted <a href="https://github.com/madpsy/ka9q_ubersdr" target="_blank" rel="noopener" style="color:var(--accent);">UberSDR</a> instance — drag-tune the HF spectrum waterfall in the browser, switch between LSB / USB / CW / AM / FM / digital modes, adjust the filter, zoom the waterfall, and listen to the off-air audio with no install. The default deep-link below opens at 7.150 MHz LSB so you land mid-40m phone band ready to listen. Hardware is an RX-888 MkII front-end on the shack antennas; reachable via UberSDR's zero-config tunnel at <code>vu2cpl.tunnel.ubersdr.org</code>. UberSDR by M9PSY (madpsy), built on Phil Karn KA9Q's <a href="https://github.com/ka9q/ka9q-radio" target="_blank" rel="noopener" style="color:var(--accent);">ka9q-radio</a> engine.</div>
-        <div class="project-tags"><span class="proj-tag">WebSDR</span><span class="proj-tag">RX-888 MkII</span><span class="proj-tag">UberSDR</span><span class="proj-tag">ka9q-radio</span><span class="proj-tag">HF</span><span class="proj-tag">Live receiver</span><span class="proj-tag">Self-hosted</span></div>
+        <div class="project-name">WebSDR — live RX-888 receiver on an LZ1AQ active loop</div>
+        <div class="project-desc">Public web-based SDR receiver running on a self-hosted <a href="https://github.com/madpsy/ka9q_ubersdr" target="_blank" rel="noopener" style="color:var(--accent);">UberSDR</a> instance — drag-tune the HF spectrum waterfall in the browser, switch between LSB / USB / CW / AM / FM / digital modes, adjust the filter, zoom the waterfall, and listen to the off-air audio with no install. The default deep-link below opens at 7.150 MHz LSB so you land mid-40m phone band ready to listen. Hardware is an RX-888 MkII front-end fed by an LZ1AQ wideband active loop (0–30 MHz HF coverage); reachable via UberSDR's zero-config tunnel at <code>vu2cpl.tunnel.ubersdr.org</code>. UberSDR by M9PSY (madpsy), built on Phil Karn KA9Q's <a href="https://github.com/ka9q/ka9q-radio" target="_blank" rel="noopener" style="color:var(--accent);">ka9q-radio</a> engine; the receive antenna is Chavdar Levkov LZ1AQ's active loop design.</div>
+        <div class="project-tags"><span class="proj-tag">WebSDR</span><span class="proj-tag">RX-888 MkII</span><span class="proj-tag">LZ1AQ active loop</span><span class="proj-tag">UberSDR</span><span class="proj-tag">ka9q-radio</span><span class="proj-tag">HF 0–30 MHz</span><span class="proj-tag">Live receiver</span><span class="proj-tag">Self-hosted</span></div>
         <a class="yt-link" href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" style="color:var(--accent);">Open live WebSDR →</a>
       </div>
       <span class="status-badge status-active">Active</span>
