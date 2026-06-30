@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "28 Jun 2026",
-  "previous_as_on": "27 Jun 2026",
-  "generated_at": "2026-06-28T06:39:55+00:00",
+  "as_on": "29 Jun 2026",
+  "previous_as_on": "28 Jun 2026",
+  "generated_at": "2026-06-29T07:10:38+00:00",
   "columns": [
     "160",
     "80",
@@ -433,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 1037,
+      "rank": 1036,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -457,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1033,
+      "rank": 1032,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -481,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1113,
+      "rank": 1112,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -505,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1136,
+      "rank": 1135,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -529,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1151,
+      "rank": 1150,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -553,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1160,
+      "rank": 1159,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -577,7 +577,7 @@
     },
     {
       "sno": 23,
-      "rank": 1204,
+      "rank": 1203,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -601,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1386,
+      "rank": 1388,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -697,26 +697,30 @@
     },
     {
       "sno": 28,
-      "rank": 1829,
+      "rank": 1820,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 40,
+      "20": 41,
       "17": 0,
       "15": 54,
       "12": 0,
       "10": 79,
       "6": 0,
-      "total": 96,
-      "slots": 176,
+      "total": 97,
+      "slots": 177,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "20",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
