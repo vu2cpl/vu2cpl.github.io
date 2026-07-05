@@ -2,7 +2,7 @@
   "as_on": "05 Jul 2026",
   "previous_as_on": "05 Jul 2026",
   "date_token": "20260705",
-  "generated_at": "2026-07-05T11:03:25+00:00",
+  "generated_at": "2026-07-05T11:24:45+00:00",
   "columns": [
     "Mix",
     "Ph",
@@ -78,9 +78,9 @@
       "10": 299,
       "6": null,
       "Chal": 2326,
-      "Hon": 340,
+      "Hon": 336,
       "changes": [
-        "12"
+        "Hon"
       ],
       "is_new": false
     },
@@ -127,9 +127,7 @@
       "6": 136,
       "Chal": 2481,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -152,9 +150,7 @@
       "6": null,
       "Chal": 1761,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -177,9 +173,7 @@
       "6": 113,
       "Chal": 2314,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -202,9 +196,7 @@
       "6": 119,
       "Chal": 1875,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -250,10 +242,7 @@
       "6": 111,
       "Chal": 1742,
       "Hon": null,
-      "changes": [
-        "Sat",
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -276,9 +265,7 @@
       "6": null,
       "Chal": 1723,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -301,9 +288,7 @@
       "6": null,
       "Chal": 1559,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -326,9 +311,7 @@
       "6": 114,
       "Chal": 2015,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -351,9 +334,7 @@
       "6": 108,
       "Chal": 1768,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -376,9 +357,7 @@
       "6": null,
       "Chal": 1258,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -447,9 +426,7 @@
       "6": null,
       "Chal": 1142,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -472,9 +449,7 @@
       "6": null,
       "Chal": 1346,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -543,9 +518,7 @@
       "6": null,
       "Chal": 1410,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -591,9 +564,7 @@
       "6": null,
       "Chal": 1173,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -639,9 +610,7 @@
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -664,9 +633,7 @@
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -712,9 +679,7 @@
       "6": null,
       "Chal": 1012,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -829,9 +794,7 @@
       "6": null,
       "Chal": 1000,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -900,9 +863,7 @@
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [
-        "12"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -1500,10 +1461,8 @@
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [
-        "Sat"
-      ],
-      "is_new": true
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 62,
@@ -2123,10 +2082,8 @@
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [
-        "Sat"
-      ],
-      "is_new": true
+      "changes": [],
+      "is_new": false
     },
     {
       "sno": 89,
