@@ -2,7 +2,7 @@
   "as_on": "05 Jul 2026",
   "previous_as_on": "05 Jul 2026",
   "date_token": "20260705",
-  "generated_at": "2026-07-05T11:24:45+00:00",
+  "generated_at": "2026-07-05T11:30:19+00:00",
   "columns": [
     "Mix",
     "Ph",
@@ -78,7 +78,7 @@
       "10": 299,
       "6": null,
       "Chal": 2326,
-      "Hon": 336,
+      "Hon": 334,
       "changes": [
         "Hon"
       ],
