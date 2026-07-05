@@ -191,70 +191,45 @@ def parse_hr_pdf(data: bytes, section: str = "Mixed") -> dict[str, int]:
     "CW", "Digital") as subsections keyed by the operator's *current*
     DXCC count (340, 339, 338, …). Each callsign under a subsection is
     printed as ``CALL/OVERALL_TOTAL`` where the /number is the total
-    including deleted-entity credits — for someone with 340 current +
-    55 deleted entities the row reads ``4X4DK/395``.
+    including deleted-entity credits — for an op with 340 current + 55
+    deleted-entity credits the row reads ``4X4DK/395``.
 
-    We record the SUBSECTION count (current-only), not the /number. The
-    subsection and section markers live in column 0 (x0 ≈ 54); callsigns
-    in columns 1–5 that visually sit above a count transition on the
-    same page must still be attributed to the subsection they visually
-    belong to, so callsigns are placed by y-position relative to the
-    column-0 markers rather than by column-major reading order.
+    We record the SUBSECTION count (current-only), not the /number.
+    Subsection headers can appear in any of the 6 columns, wherever
+    the previous subsection happens to run out. Reading is column-major
+    with continuation across columns and pages, mirroring how the
+    per-band PDFs are laid out — the count in effect for a callsign is
+    the most recent count marker seen in reading order, and section
+    changes reset it until the next count marker (which is always the
+    next line — ARRL puts "340" immediately after each mode header).
     """
     result: dict[str, int] = {}
     with pdfplumber.open(io.BytesIO(data)) as pdf:
-        # State carried across pages when col-0 has no marker on this page.
         current_section: str | None = None
         current_count: int | None = None
         for page in pdf.pages:
             body = _page_body(page)
             if not body:
                 continue
-            # Column-0 markers give y-anchored zone boundaries for this page.
-            markers: list[tuple[float, str, str | int]] = []
-            for w in body:
-                if w["x0"] > 90:  # column 0 only
-                    continue
+            cols = cluster_columns(body, n_cols=6)
+            reading_order = [w for col in cols for w in col]
+            for w in reading_order:
                 t = w["text"].strip()
                 if t in ("Mixed", "Phone", "CW", "Digital"):
-                    markers.append((w["top"], "section", t))
-                elif t.isdigit() and 100 <= int(t) <= 400:
-                    markers.append((w["top"], "count", int(t)))
-            markers.sort()
-
-            def zone_at(y: float) -> tuple[str | None, int | None]:
-                sec, cnt = current_section, current_count
-                for my, kind, val in markers:
-                    if my > y:
-                        break
-                    if kind == "section":
-                        sec = val  # type: ignore[assignment]
-                        cnt = None  # section change resets the count
-                    else:
-                        cnt = val  # type: ignore[assignment]
-                return sec, cnt
-
-            for w in body:
-                t = w["text"].strip()
-                if "/" not in t:
+                    current_section = t
+                    current_count = None
+                    continue
+                if t.isdigit() and 100 <= int(t) <= 400:
+                    current_count = int(t)
+                    continue
+                if "/" not in t or current_section != section or current_count is None:
                     continue
                 call, _, _ = t.rpartition("/")  # discard total-with-deleted
                 if not VU_RE.match(call):
                     continue
-                sec, cnt = zone_at(w["top"])
-                if sec != section or cnt is None:
-                    continue
                 call_base = _clean_call(call)
-                if call_base not in result or cnt > result[call_base]:
-                    result[call_base] = cnt
-
-            # Carry final section/count of this page forward to the next.
-            for _, kind, val in markers:
-                if kind == "section":
-                    current_section = val  # type: ignore[assignment]
-                    current_count = None
-                else:
-                    current_count = val  # type: ignore[assignment]
+                # Each call appears once per section; write-through is fine.
+                result[call_base] = current_count
     return result
 
 
