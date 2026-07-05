@@ -18,6 +18,7 @@ import io
 import json
 import re
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -73,15 +74,37 @@ def url_for(token: str, date_str: str) -> str:
     return f"{ARRL_BASE}/DXCC-{token}-{date_str}-USLetter.pdf"
 
 
-def download_pdf(url: str, dest: Path, use_cache: bool = True) -> bytes:
+def download_pdf(
+    url: str, dest: Path, use_cache: bool = True,
+    attempts: int = 4, backoff: float = 3.0,
+) -> bytes:
+    """Fetch `url` to `dest`, retrying on transient errors.
+
+    ARRL's server occasionally slow-serves individual DXCC PDFs; a single
+    read-timeout on one category used to silently zero that category's
+    data. Retrying with exponential backoff makes a whole run resilient to
+    per-category flakes without adding hand-holding at the caller.
+    """
     if use_cache and dest.exists() and dest.stat().st_size > 1024:
         return dest.read_bytes()
     req = Request(url, headers={"User-Agent": "vudxcc-tool/1.0"})
-    with urlopen(req, timeout=60) as resp:
-        data = resp.read()
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_bytes(data)
-    return data
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            with urlopen(req, timeout=60) as resp:
+                data = resp.read()
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(data)
+            return data
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            if attempt < attempts:
+                delay = backoff * (2 ** (attempt - 1))
+                print(f" [retry {attempt}/{attempts - 1} after {exc}, sleeping {delay:.0f}s]",
+                      end="", flush=True)
+                time.sleep(delay)
+    assert last_exc is not None
+    raise last_exc
 
 
 # ---------- parsing ----------
@@ -234,6 +257,40 @@ def load_previous(path: Path) -> dict:
             continue
         lookup[call] = {k: r.get(k) for k in cat_keys}
     return {"rows": lookup, "as_on": payload.get("as_on")}
+
+
+def check_no_regressions(rows: list[dict], previous: dict) -> list[str]:
+    """Return a list of human-readable messages for any cell whose new value
+    is smaller than — or has vanished from — the previous snapshot.
+
+    DXCC credits are monotonic per callsign per category: an operator's
+    confirmed-entity count for a band/mode can only grow or hold steady
+    over time. A drop (or a value becoming None where it used to be a
+    number) indicates upstream data corruption — the July 2026 incident
+    where an ARRL 17M PDF timed out and every VU's 17m count silently
+    went to None is the canonical example. Treat any regression as a
+    hard-abort signal rather than committing the bad snapshot.
+    """
+    prev_rows: dict[str, dict] = previous.get("rows", {}) if previous else {}
+    if not prev_rows:
+        return []
+    problems: list[str] = []
+    cat_keys = [c[0] for c in CATEGORIES]
+    for r in rows:
+        call = r.get("callsign")
+        prev = prev_rows.get(call)
+        if prev is None:
+            continue
+        for k in cat_keys:
+            old = prev.get(k)
+            new = r.get(k)
+            if old is None:
+                continue
+            if new is None:
+                problems.append(f"{call} {k}: {old} → None (value lost)")
+            elif new < old:
+                problems.append(f"{call} {k}: {old} → {new} (regressed)")
+    return problems
 
 
 def annotate_diffs(rows: list[dict], previous: dict) -> None:
@@ -423,6 +480,9 @@ def main(argv: list[str] | None = None) -> int:
                     help="Path to a prior data.json; enables diff highlighting")
     ap.add_argument("--cache-dir", default=None, help="Cache dir for downloaded ARRL PDFs")
     ap.add_argument("--no-cache", action="store_true", help="Force re-download (ignore cache)")
+    ap.add_argument("--allow-regression", action="store_true",
+                    help="Skip the 'no cell may be lower than previous snapshot' safety check. "
+                         "Use only when a genuine ARRL correction removes credits.")
     args = ap.parse_args(argv)
 
     date_str = args.date or today_token()
@@ -468,6 +528,24 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Diffing against previous snapshot: {prev_path} (as on {previous_as_on})")
         else:
             print(f"No previous snapshot at {prev_path}; skipping diff.")
+    regressions = check_no_regressions(rows, previous_payload)
+    if regressions:
+        msg = (
+            f"Refusing to publish: {len(regressions)} cell(s) regressed vs previous snapshot. "
+            "DXCC credits are monotonic per callsign — a decrease or vanished value usually "
+            "means an upstream fetch/parse failure, not a real change."
+        )
+        print(msg, file=sys.stderr)
+        for line in regressions[:20]:
+            print(f"  {line}", file=sys.stderr)
+        if len(regressions) > 20:
+            print(f"  … and {len(regressions) - 20} more", file=sys.stderr)
+        if not args.allow_regression:
+            print("Pass --allow-regression to override (e.g. genuine ARRL correction).",
+                  file=sys.stderr)
+            return 2
+        print("--allow-regression set; proceeding despite the above.", file=sys.stderr)
+
     annotate_diffs(rows, previous_payload)
 
     n_changed = sum(1 for r in rows if r.get("_changes"))
