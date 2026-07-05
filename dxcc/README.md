@@ -39,18 +39,23 @@ Live at **[vu2cpl.com/dxcc/](https://vu2cpl.com/dxcc/)**.
   groups callsigns under subsection headers keyed by the operator's
   current-entity total (340, 339, 338, …). The `/NNN` suffix on each
   entry is the operator's overall total including deleted entities;
-  we deliberately ignore it and record the subsection header, so an
-  op with 340 current + 4 deleted entities shows as 340 in Hon, not
-  344.
-- **Mix / Ph / CW / Dig / Sat / 160–6 m / Chal** — ARRL's per-band and
-  per-mode standings PDFs list a single number per operator: the total
-  credited entities (or slots for Chal) which **includes deleted-entity
-  credits**. ARRL doesn't publish current-only per-band/mode
-  breakdowns, so these columns can be slightly inflated for ops who
-  worked entities like Yugoslavia, East Germany, Czechoslovakia, etc.
-  before they were deleted from the DXCC list. Example: VU2PTT's
-  Mix = 340 includes 4 deleted-entity credits — his current-only
-  Mixed count is 336 (visible in Hon).
+  we deliberately ignore it and record the subsection header.
+- **Mix / Ph / CW / Dig** — **current-only** for ops in the Honor Roll
+  list for that mode (i.e. within 9 of the current-entity ceiling —
+  today ≥ 331). ARRL's per-mode standings PDFs publish a single
+  total-with-deleted number per operator, but the Honor Roll PDF
+  breaks HR-listed ops into current-only subsections. We overlay the
+  HR subsection number onto the standings value for those ops, so
+  their Mix/Ph/CW/Dig cells reflect current entities only. Non-HR ops
+  (below 331 in that mode) keep the standings number, which still
+  includes deleted-entity credits — ARRL doesn't publish a current-only
+  breakdown for them, so we can't strip them out. Example: VU2PTT's
+  Mix drops from 340 to 334 because his Mixed HR subsection is 334;
+  most other VU ops are below the HR threshold on every mode, so their
+  Mix/Ph/CW/Dig columns still bundle any deleted-entity credit they hold.
+- **Sat / 160–6 m / Chal** — no per-band Honor Roll exists, so these
+  columns show ARRL's published totals which include deleted-entity
+  credits. There is no ARRL data source that separates them out.
 
 The legend bar above the table shows the total number of changed cells and new
 callsigns, plus the previous snapshot's date, whenever a diff baseline exists.
