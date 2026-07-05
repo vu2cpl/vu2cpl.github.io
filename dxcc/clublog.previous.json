@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "03 Jul 2026",
-  "previous_as_on": "02 Jul 2026",
-  "generated_at": "2026-07-03T06:06:25+00:00",
+  "as_on": "04 Jul 2026",
+  "previous_as_on": "03 Jul 2026",
+  "generated_at": "2026-07-04T05:56:55+00:00",
   "columns": [
     "160",
     "80",
@@ -116,10 +116,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -436,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 1039,
+      "rank": 1038,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -460,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1035,
+      "rank": 1034,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -484,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1114,
+      "rank": 1113,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -508,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1137,
+      "rank": 1136,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -532,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1153,
+      "rank": 1152,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -556,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1162,
+      "rank": 1161,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -580,7 +577,7 @@
     },
     {
       "sno": 23,
-      "rank": 1204,
+      "rank": 1203,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -604,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1389,
+      "rank": 1388,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -628,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1481,
+      "rank": 1480,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -647,13 +644,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [
-        "20",
-        "17",
-        "12",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
