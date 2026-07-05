@@ -3,7 +3,7 @@
 Live VU DXCC standings page with two tabs:
 
 - **LoTW** — from the [ARRL DXCC Standings](https://www.arrl.org/dxcc-standings),
-  refreshed **monthly** (5th of each month).
+  refreshed **monthly** (1st of each month).
 - **Clublog** — Indian callsigns (VU / AT / AU) found in the
   [Clublog Asia Top-2000 Confirmed league](https://clublog.org/league.php),
   refreshed **daily** (02:30 UTC / 08:00 IST).
@@ -40,16 +40,21 @@ callsigns, plus the previous snapshot's date, whenever a diff baseline exists.
 
 ### LoTW (monthly)
 
-`.github/workflows/refresh-vu-dxcc.yml` runs on the **5th of each month**
+`.github/workflows/refresh-vu-dxcc.yml` runs on the **1st of each month**
 (and on manual dispatch). It:
 
 1. Copies the current `data.json` → `data.previous.json` for diff baseline.
 2. Downloads the 17 ARRL DXCC Standings PDFs (Mixed, Phone, CW, Digital,
-   Satellite, each band 160–6 m, Challenge, Honor Roll).
+   Satellite, each band 160–6 m, Challenge, Honor Roll). Each download
+   retries up to 4× with exponential backoff on transient timeouts.
 3. Parses every PDF and collects every callsign starting with `VU`.
-4. Flags cells that changed + newly-added callsigns vs the previous snapshot.
-5. Writes `data.json` (with change flags) and `VUDXCC-latest.pdf`.
-6. Commits the regenerated files back to the repo.
+4. **Refuses to publish** if any cell would regress vs the previous
+   snapshot — DXCC counts are monotonic per callsign; a decrease
+   (or a value going to `null`) means an upstream fetch/parse failure,
+   not real news. Pass `--allow-regression` for genuine ARRL corrections.
+5. Flags cells that changed + newly-added callsigns vs the previous snapshot.
+6. Writes `data.json` (with change flags) and `VUDXCC-latest.pdf`.
+7. Commits the regenerated files back to the repo.
 
 ### Clublog (daily)
 
@@ -67,7 +72,7 @@ callsigns, plus the previous snapshot's date, whenever a diff baseline exists.
 Both workflows share a concurrency group (`dxcc-refresh`) so they never
 collide on the same push.
 
-To force a refresh before the 5th: **Actions → Refresh VU DXCC list →
+To force a refresh before the 1st: **Actions → Refresh VU DXCC list →
 Run workflow**.
 
 ## Running locally
@@ -89,8 +94,11 @@ python -m http.server 8000
 
 Options (`vudxcc.py`):
 - `--date YYYYMMDD` — fetch a specific ARRL snapshot date.
-- `--previous PATH` — diff against a prior `data.json` (enables red highlighting).
+- `--previous PATH` — diff against a prior `data.json` (enables red highlighting
+  and the no-regression safety check).
 - `--no-cache` — force re-download (default caches under `cache/`).
+- `--allow-regression` — bypass the no-regression check; only use for a
+  documented ARRL correction that genuinely removes credits.
 
 Options (`clublog.py`):
 - `--previous PATH` — diff against a prior `clublog.json`.
