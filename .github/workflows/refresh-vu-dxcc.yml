@@ -2,8 +2,8 @@ name: Refresh VU DXCC list
 
 on:
   schedule:
-    # 1st of each month at 06:00 UTC (~ARRL monthly publication cadence)
-    - cron: "0 6 1 * *"
+    # 1st of each month at 00:00 UTC (~ARRL monthly publication cadence)
+    - cron: "0 0 1 * *"
   workflow_dispatch:
     inputs:
       allow_regression:
