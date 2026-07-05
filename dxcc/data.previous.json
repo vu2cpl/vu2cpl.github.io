@@ -1,8 +1,8 @@
 {
-  "as_on": "05 May 2026",
-  "previous_as_on": "23 Apr 2026",
-  "date_token": "20260505",
-  "generated_at": "2026-05-05T08:14:51+00:00",
+  "as_on": "05 Jun 2026",
+  "previous_as_on": "05 May 2026",
+  "date_token": "20260605",
+  "generated_at": "2026-06-05T09:55:59+00:00",
   "columns": [
     "Mix",
     "Ph",
@@ -79,18 +79,7 @@
       "6": null,
       "Chal": 2326,
       "Hon": 340,
-      "changes": [
-        "Ph",
-        "CW",
-        "Dig",
-        "40",
-        "30",
-        "20",
-        "17",
-        "12",
-        "10",
-        "Chal"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
