@@ -185,35 +185,76 @@ def parse_band_pdf(data: bytes) -> dict[str, int]:
 
 
 def parse_hr_pdf(data: bytes, section: str = "Mixed") -> dict[str, int]:
-    """Parse ARRL Honor Roll PDF. Returns {call: count} for the requested section.
+    """Parse ARRL Honor Roll PDF, returning **current-only** DXCC counts.
 
-    Format: sections labelled "Mixed" / "Phone" / "CW" / "Digital".
-    Entries look like "4X4DK/395".
+    ARRL's Honor Roll PDF lays out each mode section ("Mixed", "Phone",
+    "CW", "Digital") as subsections keyed by the operator's *current*
+    DXCC count (340, 339, 338, …). Each callsign under a subsection is
+    printed as ``CALL/OVERALL_TOTAL`` where the /number is the total
+    including deleted-entity credits — for someone with 340 current +
+    55 deleted entities the row reads ``4X4DK/395``.
+
+    We record the SUBSECTION count (current-only), not the /number. The
+    subsection and section markers live in column 0 (x0 ≈ 54); callsigns
+    in columns 1–5 that visually sit above a count transition on the
+    same page must still be attributed to the subsection they visually
+    belong to, so callsigns are placed by y-position relative to the
+    column-0 markers rather than by column-major reading order.
     """
     result: dict[str, int] = {}
     with pdfplumber.open(io.BytesIO(data)) as pdf:
+        # State carried across pages when col-0 has no marker on this page.
         current_section: str | None = None
+        current_count: int | None = None
         for page in pdf.pages:
             body = _page_body(page)
             if not body:
                 continue
-            cols = cluster_columns(body, n_cols=6)
-            reading_order = [w for col in cols for w in col]
-            for w in reading_order:
+            # Column-0 markers give y-anchored zone boundaries for this page.
+            markers: list[tuple[float, str, str | int]] = []
+            for w in body:
+                if w["x0"] > 90:  # column 0 only
+                    continue
                 t = w["text"].strip()
                 if t in ("Mixed", "Phone", "CW", "Digital"):
-                    current_section = t
+                    markers.append((w["top"], "section", t))
+                elif t.isdigit() and 100 <= int(t) <= 400:
+                    markers.append((w["top"], "count", int(t)))
+            markers.sort()
+
+            def zone_at(y: float) -> tuple[str | None, int | None]:
+                sec, cnt = current_section, current_count
+                for my, kind, val in markers:
+                    if my > y:
+                        break
+                    if kind == "section":
+                        sec = val  # type: ignore[assignment]
+                        cnt = None  # section change resets the count
+                    else:
+                        cnt = val  # type: ignore[assignment]
+                return sec, cnt
+
+            for w in body:
+                t = w["text"].strip()
+                if "/" not in t:
                     continue
-                if "/" not in t or current_section != section:
+                call, _, _ = t.rpartition("/")  # discard total-with-deleted
+                if not VU_RE.match(call):
                     continue
-                call, _, count_s = t.rpartition("/")
-                if not count_s.isdigit():
+                sec, cnt = zone_at(w["top"])
+                if sec != section or cnt is None:
                     continue
-                if VU_RE.match(call):
-                    call_base = _clean_call(call)
-                    n = int(count_s)
-                    if call_base not in result or n > result[call_base]:
-                        result[call_base] = n
+                call_base = _clean_call(call)
+                if call_base not in result or cnt > result[call_base]:
+                    result[call_base] = cnt
+
+            # Carry final section/count of this page forward to the next.
+            for _, kind, val in markers:
+                if kind == "section":
+                    current_section = val  # type: ignore[assignment]
+                    current_count = None
+                else:
+                    current_count = val  # type: ignore[assignment]
     return result
 
 

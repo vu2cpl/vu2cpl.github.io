@@ -4,7 +4,12 @@ on:
   schedule:
     # 1st of each month at 06:00 UTC (~ARRL monthly publication cadence)
     - cron: "0 6 1 * *"
-  workflow_dispatch: {}  # allow manual runs from the Actions tab
+  workflow_dispatch:
+    inputs:
+      allow_regression:
+        description: "Pass --allow-regression to vudxcc.py (bypass the no-cell-may-decrease safety check). Only for genuine ARRL corrections or when the parser's definition of a cell has intentionally changed."
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -49,12 +54,14 @@ jobs:
 
       - name: Generate VU DXCC PDF + JSON
         working-directory: ${{ env.WORK_DIR }}
+        env:
+          ALLOW_REGRESSION: ${{ inputs.allow_regression && '--allow-regression' || '' }}
         run: |
           python vudxcc.py \
             --output VUDXCC-latest.pdf \
             --json data.json \
             --previous data.previous.json \
-            --no-cache
+            --no-cache $ALLOW_REGRESSION
 
       - name: Commit and push if changed
         run: |

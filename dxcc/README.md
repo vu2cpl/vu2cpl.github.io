@@ -33,6 +33,25 @@ Live at **[vu2cpl.com/dxcc/](https://vu2cpl.com/dxcc/)**.
 | Light red | Cell value changed vs the previous snapshot |
 | Darker red (on callsign) | Brand-new callsign since the previous snapshot |
 
+## What the numbers mean (current vs deleted entities)
+
+- **Hon (Honor Roll)** — **current-only** DXCC count. The Honor Roll PDF
+  groups callsigns under subsection headers keyed by the operator's
+  current-entity total (340, 339, 338, …). The `/NNN` suffix on each
+  entry is the operator's overall total including deleted entities;
+  we deliberately ignore it and record the subsection header, so an
+  op with 340 current + 4 deleted entities shows as 340 in Hon, not
+  344.
+- **Mix / Ph / CW / Dig / Sat / 160–6 m / Chal** — ARRL's per-band and
+  per-mode standings PDFs list a single number per operator: the total
+  credited entities (or slots for Chal) which **includes deleted-entity
+  credits**. ARRL doesn't publish current-only per-band/mode
+  breakdowns, so these columns can be slightly inflated for ops who
+  worked entities like Yugoslavia, East Germany, Czechoslovakia, etc.
+  before they were deleted from the DXCC list. Example: VU2PTT's
+  Mix = 340 includes 4 deleted-entity credits — his current-only
+  Mixed count is 336 (visible in Hon).
+
 The legend bar above the table shows the total number of changed cells and new
 callsigns, plus the previous snapshot's date, whenever a diff baseline exists.
 
