@@ -520,37 +520,10 @@ def main(argv: list[str] | None = None) -> int:
             size_kb = len(data) / 1024
             if parser_type == "band":
                 vu = parse_band_pdf(data)
-                all_results[key] = vu
-                print(f"  {size_kb:6.1f} kB  →  {len(vu):3d} VU")
             else:
-                # ARRL Honor Roll PDF carries current-only per-mode
-                # subsections (Mixed / Phone / CW / Digital). Hon uses
-                # Mixed. The same subsection numbers also override the
-                # standings-PDF totals for the Mix / Ph / CW / Dig columns
-                # of every HR-listed op, giving current-only figures where
-                # ARRL publishes them; non-HR ops keep their standings
-                # numbers (which still include deleted-entity credits).
-                hr_per_section = {
-                    sec: parse_hr_pdf(data, section=sec)
-                    for sec in ("Mixed", "Phone", "CW", "Digital")
-                }
-                vu = hr_per_section["Mixed"]
-                all_results[key] = vu
-                overlay_counts: list[str] = []
-                for hr_sec, col_key in (
-                    ("Mixed", "Mix"), ("Phone", "Ph"),
-                    ("CW", "CW"), ("Digital", "Dig"),
-                ):
-                    if col_key not in all_results:
-                        continue
-                    n = 0
-                    for call, cnt in hr_per_section[hr_sec].items():
-                        if call in all_results[col_key]:
-                            all_results[col_key][call] = cnt
-                            n += 1
-                    overlay_counts.append(f"{col_key}:{n}")
-                print(f"  {size_kb:6.1f} kB  →  {len(vu):3d} VU  "
-                      f"[overlay {' '.join(overlay_counts)}]")
+                vu = parse_hr_pdf(data, section="Mixed")
+            all_results[key] = vu
+            print(f"  {size_kb:6.1f} kB  →  {len(vu):3d} VU")
         except Exception as exc:  # noqa: BLE001
             print(f"  FAILED: {exc}")
             all_results[key] = {}
