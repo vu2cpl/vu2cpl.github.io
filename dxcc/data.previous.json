@@ -1,8 +1,8 @@
 {
-  "as_on": "05 Jun 2026",
-  "previous_as_on": "05 May 2026",
-  "date_token": "20260605",
-  "generated_at": "2026-06-05T09:55:59+00:00",
+  "as_on": "05 Jul 2026",
+  "previous_as_on": "05 Jun 2026",
+  "date_token": "20260705",
+  "generated_at": "2026-07-05T08:57:05+00:00",
   "columns": [
     "Mix",
     "Ph",
@@ -72,14 +72,16 @@
       "40": 290,
       "30": 290,
       "20": 334,
-      "17": 316,
+      "17": null,
       "15": 314,
       "12": 303,
       "10": 299,
       "6": null,
       "Chal": 2326,
       "Hon": 340,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
@@ -118,14 +120,16 @@
       "40": 304,
       "30": 309,
       "20": 324,
-      "17": 311,
+      "17": null,
       "15": 315,
       "12": 308,
       "10": 299,
       "6": 136,
       "Chal": 2481,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
@@ -141,14 +145,16 @@
       "40": 214,
       "30": 173,
       "20": 267,
-      "17": 252,
+      "17": null,
       "15": 289,
       "12": 247,
       "10": 252,
       "6": null,
       "Chal": 1761,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
@@ -164,14 +170,16 @@
       "40": 256,
       "30": 239,
       "20": 303,
-      "17": 294,
+      "17": null,
       "15": 287,
       "12": 255,
       "10": 258,
       "6": 113,
       "Chal": 2314,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
@@ -180,25 +188,59 @@
       "Mix": 316,
       "Ph": 251,
       "CW": 276,
-      "Dig": 291,
+      "Dig": 292,
       "Sat": null,
       "160": null,
       "80": null,
-      "40": 202,
-      "30": 192,
-      "20": 291,
-      "17": 238,
+      "40": 204,
+      "30": 195,
+      "20": 294,
+      "17": null,
       "15": 296,
-      "12": 241,
-      "10": 272,
+      "12": 246,
+      "10": 274,
       "6": 119,
-      "Chal": 1856,
+      "Chal": 1875,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "Dig",
+        "40",
+        "30",
+        "20",
+        "17",
+        "12",
+        "10",
+        "Chal"
+      ],
       "is_new": false
     },
     {
       "sno": 7,
+      "callsign": "VU2WJ",
+      "Mix": 311,
+      "Ph": null,
+      "CW": null,
+      "Dig": null,
+      "Sat": null,
+      "160": null,
+      "80": null,
+      "40": null,
+      "30": null,
+      "20": null,
+      "17": null,
+      "15": null,
+      "12": null,
+      "10": null,
+      "6": null,
+      "Chal": null,
+      "Hon": null,
+      "changes": [
+        "Mix"
+      ],
+      "is_new": true
+    },
+    {
+      "sno": 8,
       "callsign": "VU2LBW",
       "Mix": 310,
       "Ph": 185,
@@ -210,18 +252,20 @@
       "40": 160,
       "30": 220,
       "20": 241,
-      "17": 244,
+      "17": null,
       "15": 235,
       "12": 205,
       "10": 233,
       "6": 111,
       "Chal": 1742,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 8,
+      "sno": 9,
       "callsign": "VU2IBI",
       "Mix": 307,
       "Ph": 203,
@@ -233,18 +277,20 @@
       "40": 195,
       "30": 202,
       "20": 278,
-      "17": 248,
+      "17": null,
       "15": 280,
       "12": 204,
       "10": 231,
       "6": null,
       "Chal": 1723,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 9,
+      "sno": 10,
       "callsign": "VU2YYF",
       "Mix": 307,
       "Ph": 258,
@@ -256,18 +302,20 @@
       "40": 194,
       "30": 130,
       "20": 281,
-      "17": 239,
+      "17": null,
       "15": 258,
       "12": 175,
       "10": 229,
       "6": null,
       "Chal": 1559,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 10,
+      "sno": 11,
       "callsign": "VU24DX",
       "Mix": 306,
       "Ph": 217,
@@ -279,18 +327,20 @@
       "40": 253,
       "30": 234,
       "20": 277,
-      "17": 249,
+      "17": null,
       "15": 267,
       "12": 248,
       "10": 221,
       "6": 114,
       "Chal": 2015,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 11,
+      "sno": 12,
       "callsign": "VU2MSA",
       "Mix": 295,
       "Ph": null,
@@ -302,18 +352,52 @@
       "40": 216,
       "30": 223,
       "20": 231,
-      "17": 238,
+      "17": null,
       "15": 237,
       "12": 179,
       "10": 197,
       "6": 108,
       "Chal": 1768,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 12,
+      "sno": 13,
+      "callsign": "VU2TMP",
+      "Mix": 284,
+      "Ph": null,
+      "CW": 281,
+      "Dig": null,
+      "Sat": null,
+      "160": null,
+      "80": null,
+      "40": 145,
+      "30": 116,
+      "20": 233,
+      "17": null,
+      "15": 216,
+      "12": 127,
+      "10": 204,
+      "6": null,
+      "Chal": 1258,
+      "Hon": null,
+      "changes": [
+        "Mix",
+        "CW",
+        "30",
+        "20",
+        "17",
+        "15",
+        "10",
+        "Chal"
+      ],
+      "is_new": false
+    },
+    {
+      "sno": 14,
       "callsign": "VU2TTC",
       "Mix": 280,
       "Ph": 257,
@@ -336,7 +420,7 @@
       "is_new": false
     },
     {
-      "sno": 13,
+      "sno": 15,
       "callsign": "VU3DJQ",
       "Mix": 273,
       "Ph": 265,
@@ -348,41 +432,20 @@
       "40": 120,
       "30": 107,
       "20": 247,
-      "17": 111,
+      "17": null,
       "15": 171,
       "12": null,
       "10": 146,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 14,
-      "callsign": "VU2TMP",
-      "Mix": 264,
-      "Ph": null,
-      "CW": 262,
-      "Dig": null,
-      "Sat": null,
-      "160": null,
-      "80": null,
-      "40": 145,
-      "30": 115,
-      "20": 224,
-      "17": 160,
-      "15": 212,
-      "12": 127,
-      "10": 201,
-      "6": null,
-      "Chal": 1238,
-      "Hon": null,
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 15,
+      "sno": 16,
       "callsign": "VU2NXM",
       "Mix": 258,
       "Ph": 134,
@@ -394,18 +457,20 @@
       "40": 154,
       "30": 127,
       "20": 172,
-      "17": 156,
+      "17": null,
       "15": 188,
       "12": 150,
       "10": 149,
       "6": null,
       "Chal": 1142,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 16,
+      "sno": 17,
       "callsign": "VU2ABS",
       "Mix": 256,
       "Ph": 161,
@@ -417,18 +482,20 @@
       "40": 209,
       "30": 154,
       "20": 207,
-      "17": 165,
+      "17": null,
       "15": 183,
       "12": 133,
       "10": 132,
       "6": null,
       "Chal": 1346,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 17,
+      "sno": 18,
       "callsign": "VU2SWS",
       "Mix": null,
       "Ph": 256,
@@ -440,18 +507,20 @@
       "40": 126,
       "30": null,
       "20": 191,
-      "17": 155,
+      "17": null,
       "15": 181,
       "12": null,
       "10": 172,
       "6": null,
       "Chal": 1038,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 18,
+      "sno": 19,
       "callsign": "VU2XE",
       "Mix": 251,
       "Ph": 189,
@@ -463,18 +532,20 @@
       "40": 107,
       "30": null,
       "20": 193,
-      "17": 121,
+      "17": null,
       "15": 174,
       "12": null,
       "10": 134,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 19,
+      "sno": 20,
       "callsign": "VU3CAU",
       "Mix": 251,
       "Ph": null,
@@ -486,18 +557,20 @@
       "40": 137,
       "30": 163,
       "20": 207,
-      "17": 196,
+      "17": null,
       "15": 200,
       "12": 182,
       "10": 179,
       "6": null,
       "Chal": 1410,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 20,
+      "sno": 21,
       "callsign": "VU2AE",
       "Mix": 237,
       "Ph": 153,
@@ -509,18 +582,20 @@
       "40": 146,
       "30": 119,
       "20": 208,
-      "17": 164,
+      "17": null,
       "15": 172,
       "12": null,
       "10": 109,
       "6": null,
       "Chal": 1004,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 21,
+      "sno": 22,
       "callsign": "VU2DED",
       "Mix": 233,
       "Ph": 164,
@@ -532,18 +607,20 @@
       "40": 172,
       "30": 132,
       "20": 184,
-      "17": 138,
+      "17": null,
       "15": 167,
       "12": 105,
       "10": 120,
       "6": null,
       "Chal": 1173,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 22,
+      "sno": 23,
       "callsign": "VU2NTA",
       "Mix": 231,
       "Ph": null,
@@ -566,7 +643,7 @@
       "is_new": false
     },
     {
-      "sno": 23,
+      "sno": 24,
       "callsign": "VU2OY",
       "Mix": 223,
       "Ph": 100,
@@ -578,18 +655,20 @@
       "40": 186,
       "30": null,
       "20": 167,
-      "17": 148,
+      "17": null,
       "15": 142,
       "12": 100,
       "10": 103,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 24,
+      "sno": 25,
       "callsign": "VU3RGB",
       "Mix": 221,
       "Ph": 118,
@@ -601,18 +680,20 @@
       "40": 112,
       "30": 103,
       "20": 165,
-      "17": 163,
+      "17": null,
       "15": 153,
       "12": 120,
       "10": 126,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 25,
+      "sno": 26,
       "callsign": "VU2JJQ",
       "Mix": null,
       "Ph": 217,
@@ -635,7 +716,7 @@
       "is_new": false
     },
     {
-      "sno": 26,
+      "sno": 27,
       "callsign": "VU2OT",
       "Mix": 216,
       "Ph": 143,
@@ -647,18 +728,20 @@
       "40": 149,
       "30": 113,
       "20": 172,
-      "17": 129,
+      "17": null,
       "15": 137,
       "12": 101,
       "10": 102,
       "6": null,
       "Chal": 1012,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 27,
+      "sno": 28,
       "callsign": "VU2MUD",
       "Mix": 211,
       "Ph": 154,
@@ -670,18 +753,20 @@
       "40": null,
       "30": null,
       "20": 144,
-      "17": 117,
+      "17": null,
       "15": 171,
       "12": null,
       "10": 123,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 28,
+      "sno": 29,
       "callsign": "VU2SGW",
       "Mix": 210,
       "Ph": 203,
@@ -704,7 +789,7 @@
       "is_new": false
     },
     {
-      "sno": 29,
+      "sno": 30,
       "callsign": "VU2IT",
       "Mix": 206,
       "Ph": 119,
@@ -716,18 +801,20 @@
       "40": 133,
       "30": null,
       "20": 155,
-      "17": 127,
+      "17": null,
       "15": 111,
       "12": null,
       "10": null,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 30,
+      "sno": 31,
       "callsign": "VU2BMS",
       "Mix": null,
       "Ph": 188,
@@ -750,7 +837,7 @@
       "is_new": false
     },
     {
-      "sno": 31,
+      "sno": 32,
       "callsign": "VU2MB",
       "Mix": 188,
       "Ph": null,
@@ -762,18 +849,20 @@
       "40": 140,
       "30": 124,
       "20": 154,
-      "17": 122,
+      "17": null,
       "15": 119,
       "12": 106,
       "10": 102,
       "6": null,
       "Chal": 1000,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 32,
+      "sno": 33,
       "callsign": "VU2BGG",
       "Mix": 186,
       "Ph": null,
@@ -796,7 +885,7 @@
       "is_new": false
     },
     {
-      "sno": 33,
+      "sno": 34,
       "callsign": "VU2JXL",
       "Mix": 184,
       "Ph": null,
@@ -808,18 +897,20 @@
       "40": null,
       "30": null,
       "20": 162,
-      "17": 113,
+      "17": null,
       "15": null,
       "12": null,
       "10": null,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 34,
+      "sno": 35,
       "callsign": "VU3WUA",
       "Mix": 178,
       "Ph": null,
@@ -831,18 +922,20 @@
       "40": null,
       "30": null,
       "20": null,
-      "17": 116,
+      "17": null,
       "15": null,
       "12": 123,
       "10": 118,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 35,
+      "sno": 36,
       "callsign": "VU2OR",
       "Mix": 176,
       "Ph": null,
@@ -854,18 +947,20 @@
       "40": 111,
       "30": null,
       "20": 166,
-      "17": 108,
+      "17": null,
       "15": null,
       "12": null,
       "10": null,
       "6": null,
       "Chal": null,
       "Hon": null,
-      "changes": [],
+      "changes": [
+        "17"
+      ],
       "is_new": false
     },
     {
-      "sno": 36,
+      "sno": 37,
       "callsign": "VU2BQN",
       "Mix": 170,
       "Ph": 131,
@@ -888,7 +983,7 @@
       "is_new": false
     },
     {
-      "sno": 37,
+      "sno": 38,
       "callsign": "VU2TUM",
       "Mix": 169,
       "Ph": null,
@@ -911,7 +1006,7 @@
       "is_new": false
     },
     {
-      "sno": 38,
+      "sno": 39,
       "callsign": "VU3GDS",
       "Mix": 166,
       "Ph": 118,
@@ -934,7 +1029,7 @@
       "is_new": false
     },
     {
-      "sno": 39,
+      "sno": 40,
       "callsign": "VU2RCT",
       "Mix": null,
       "Ph": 165,
@@ -957,7 +1052,7 @@
       "is_new": false
     },
     {
-      "sno": 40,
+      "sno": 41,
       "callsign": "VU2RMS",
       "Mix": 160,
       "Ph": null,
@@ -980,7 +1075,7 @@
       "is_new": false
     },
     {
-      "sno": 41,
+      "sno": 42,
       "callsign": "VU2YVK",
       "Mix": 155,
       "Ph": 155,
@@ -1003,7 +1098,7 @@
       "is_new": false
     },
     {
-      "sno": 42,
+      "sno": 43,
       "callsign": "VU2XO",
       "Mix": 150,
       "Ph": 108,
@@ -1026,7 +1121,7 @@
       "is_new": false
     },
     {
-      "sno": 43,
+      "sno": 44,
       "callsign": "VU2UR",
       "Mix": 147,
       "Ph": null,
@@ -1049,7 +1144,7 @@
       "is_new": false
     },
     {
-      "sno": 44,
+      "sno": 45,
       "callsign": "VU3SIO",
       "Mix": null,
       "Ph": 145,
@@ -1072,7 +1167,7 @@
       "is_new": false
     },
     {
-      "sno": 45,
+      "sno": 46,
       "callsign": "VU3TPW",
       "Mix": 143,
       "Ph": 134,
@@ -1095,7 +1190,7 @@
       "is_new": false
     },
     {
-      "sno": 46,
+      "sno": 47,
       "callsign": "VU2ORO",
       "Mix": 142,
       "Ph": null,
@@ -1118,7 +1213,7 @@
       "is_new": false
     },
     {
-      "sno": 47,
+      "sno": 48,
       "callsign": "VU2XJ",
       "Mix": 134,
       "Ph": null,
@@ -1141,7 +1236,7 @@
       "is_new": false
     },
     {
-      "sno": 48,
+      "sno": 49,
       "callsign": "VU2RTF",
       "Mix": 127,
       "Ph": null,
@@ -1164,7 +1259,7 @@
       "is_new": false
     },
     {
-      "sno": 49,
+      "sno": 50,
       "callsign": "VU3NPI",
       "Mix": 124,
       "Ph": 114,
@@ -1187,7 +1282,7 @@
       "is_new": false
     },
     {
-      "sno": 50,
+      "sno": 51,
       "callsign": "VU2RCK",
       "Mix": 120,
       "Ph": null,
@@ -1210,7 +1305,7 @@
       "is_new": false
     },
     {
-      "sno": 51,
+      "sno": 52,
       "callsign": "VU2DPD",
       "Mix": null,
       "Ph": 117,
@@ -1233,7 +1328,7 @@
       "is_new": false
     },
     {
-      "sno": 52,
+      "sno": 53,
       "callsign": "VU2DIG",
       "Mix": null,
       "Ph": 116,
@@ -1256,7 +1351,7 @@
       "is_new": false
     },
     {
-      "sno": 53,
+      "sno": 54,
       "callsign": "VU2HFR",
       "Mix": 114,
       "Ph": null,
@@ -1279,7 +1374,7 @@
       "is_new": false
     },
     {
-      "sno": 54,
+      "sno": 55,
       "callsign": "VU2KWJ",
       "Mix": 114,
       "Ph": 104,
@@ -1302,7 +1397,7 @@
       "is_new": false
     },
     {
-      "sno": 55,
+      "sno": 56,
       "callsign": "VU2SDU",
       "Mix": null,
       "Ph": 113,
@@ -1325,7 +1420,7 @@
       "is_new": false
     },
     {
-      "sno": 56,
+      "sno": 57,
       "callsign": "VU2CVS",
       "Mix": 111,
       "Ph": null,
@@ -1348,7 +1443,7 @@
       "is_new": false
     },
     {
-      "sno": 57,
+      "sno": 58,
       "callsign": "VU2FWW",
       "Mix": null,
       "Ph": null,
@@ -1371,7 +1466,7 @@
       "is_new": false
     },
     {
-      "sno": 58,
+      "sno": 59,
       "callsign": "VU2FOT",
       "Mix": null,
       "Ph": 110,
@@ -1394,7 +1489,7 @@
       "is_new": false
     },
     {
-      "sno": 59,
+      "sno": 60,
       "callsign": "VU2MRG",
       "Mix": 110,
       "Ph": null,
@@ -1417,7 +1512,7 @@
       "is_new": false
     },
     {
-      "sno": 60,
+      "sno": 61,
       "callsign": "VU2DPN",
       "Mix": null,
       "Ph": null,
@@ -1440,7 +1535,7 @@
       "is_new": false
     },
     {
-      "sno": 61,
+      "sno": 62,
       "callsign": "VU2ABU",
       "Mix": 108,
       "Ph": null,
@@ -1463,7 +1558,7 @@
       "is_new": false
     },
     {
-      "sno": 62,
+      "sno": 63,
       "callsign": "VU2OXX",
       "Mix": 108,
       "Ph": null,
@@ -1486,7 +1581,7 @@
       "is_new": false
     },
     {
-      "sno": 63,
+      "sno": 64,
       "callsign": "VU2GSW",
       "Mix": 107,
       "Ph": null,
@@ -1509,7 +1604,7 @@
       "is_new": false
     },
     {
-      "sno": 64,
+      "sno": 65,
       "callsign": "VU2KFC",
       "Mix": 107,
       "Ph": null,
@@ -1532,7 +1627,7 @@
       "is_new": false
     },
     {
-      "sno": 65,
+      "sno": 66,
       "callsign": "VU2SJV",
       "Mix": null,
       "Ph": null,
@@ -1555,7 +1650,7 @@
       "is_new": false
     },
     {
-      "sno": 66,
+      "sno": 67,
       "callsign": "VU2LOC",
       "Mix": 105,
       "Ph": 105,
@@ -1578,7 +1673,7 @@
       "is_new": false
     },
     {
-      "sno": 67,
+      "sno": 68,
       "callsign": "VU3NSF",
       "Mix": 105,
       "Ph": null,
@@ -1601,7 +1696,7 @@
       "is_new": false
     },
     {
-      "sno": 68,
+      "sno": 69,
       "callsign": "VU2DM",
       "Mix": 104,
       "Ph": null,
@@ -1624,7 +1719,7 @@
       "is_new": false
     },
     {
-      "sno": 69,
+      "sno": 70,
       "callsign": "VU2EEI",
       "Mix": 104,
       "Ph": null,
@@ -1647,7 +1742,7 @@
       "is_new": false
     },
     {
-      "sno": 70,
+      "sno": 71,
       "callsign": "VU2NFJ",
       "Mix": null,
       "Ph": null,
@@ -1670,7 +1765,7 @@
       "is_new": false
     },
     {
-      "sno": 71,
+      "sno": 72,
       "callsign": "VU2POL",
       "Mix": 104,
       "Ph": null,
@@ -1693,7 +1788,7 @@
       "is_new": false
     },
     {
-      "sno": 72,
+      "sno": 73,
       "callsign": "VU2GMN",
       "Mix": 103,
       "Ph": 103,
@@ -1716,7 +1811,7 @@
       "is_new": false
     },
     {
-      "sno": 73,
+      "sno": 74,
       "callsign": "VU2RC",
       "Mix": 103,
       "Ph": null,
@@ -1739,7 +1834,7 @@
       "is_new": false
     },
     {
-      "sno": 74,
+      "sno": 75,
       "callsign": "VU2ZAP",
       "Mix": 103,
       "Ph": null,
@@ -1762,7 +1857,7 @@
       "is_new": false
     },
     {
-      "sno": 75,
+      "sno": 76,
       "callsign": "VU2EOJ",
       "Mix": 102,
       "Ph": null,
@@ -1785,7 +1880,7 @@
       "is_new": false
     },
     {
-      "sno": 76,
+      "sno": 77,
       "callsign": "VU2PEB",
       "Mix": null,
       "Ph": 102,
@@ -1808,7 +1903,7 @@
       "is_new": false
     },
     {
-      "sno": 77,
+      "sno": 78,
       "callsign": "VU2ATB",
       "Mix": 101,
       "Ph": null,
@@ -1831,7 +1926,7 @@
       "is_new": false
     },
     {
-      "sno": 78,
+      "sno": 79,
       "callsign": "VU2SBJ",
       "Mix": 101,
       "Ph": null,
@@ -1854,7 +1949,7 @@
       "is_new": false
     },
     {
-      "sno": 79,
+      "sno": 80,
       "callsign": "VU2SDN",
       "Mix": null,
       "Ph": 101,
@@ -1877,7 +1972,7 @@
       "is_new": false
     },
     {
-      "sno": 80,
+      "sno": 81,
       "callsign": "VU2WE",
       "Mix": null,
       "Ph": 101,
@@ -1900,7 +1995,7 @@
       "is_new": false
     },
     {
-      "sno": 81,
+      "sno": 82,
       "callsign": "VU2AMW",
       "Mix": 100,
       "Ph": null,
@@ -1923,7 +2018,7 @@
       "is_new": false
     },
     {
-      "sno": 82,
+      "sno": 83,
       "callsign": "VU2FI",
       "Mix": 100,
       "Ph": null,
@@ -1946,7 +2041,7 @@
       "is_new": false
     },
     {
-      "sno": 83,
+      "sno": 84,
       "callsign": "VU2GGL",
       "Mix": 100,
       "Ph": null,
@@ -1969,7 +2064,7 @@
       "is_new": false
     },
     {
-      "sno": 84,
+      "sno": 85,
       "callsign": "VU2HOT",
       "Mix": null,
       "Ph": 100,
@@ -1992,7 +2087,7 @@
       "is_new": false
     },
     {
-      "sno": 85,
+      "sno": 86,
       "callsign": "VU2IVV",
       "Mix": 100,
       "Ph": 100,
@@ -2015,7 +2110,7 @@
       "is_new": false
     },
     {
-      "sno": 86,
+      "sno": 87,
       "callsign": "VU2JAW",
       "Mix": 100,
       "Ph": null,
@@ -2038,7 +2133,7 @@
       "is_new": false
     },
     {
-      "sno": 87,
+      "sno": 88,
       "callsign": "VU2JII",
       "Mix": null,
       "Ph": null,
@@ -2061,7 +2156,7 @@
       "is_new": false
     },
     {
-      "sno": 88,
+      "sno": 89,
       "callsign": "VU2JO",
       "Mix": 100,
       "Ph": null,
@@ -2084,7 +2179,7 @@
       "is_new": false
     },
     {
-      "sno": 89,
+      "sno": 90,
       "callsign": "VU2NSL",
       "Mix": 100,
       "Ph": null,
@@ -2107,7 +2202,7 @@
       "is_new": false
     },
     {
-      "sno": 90,
+      "sno": 91,
       "callsign": "VU2UCR",
       "Mix": 100,
       "Ph": null,
@@ -2130,7 +2225,7 @@
       "is_new": false
     },
     {
-      "sno": 91,
+      "sno": 92,
       "callsign": "VU3ESV",
       "Mix": 100,
       "Ph": null,
@@ -2153,7 +2248,7 @@
       "is_new": false
     },
     {
-      "sno": 92,
+      "sno": 93,
       "callsign": "VU3KBU",
       "Mix": 100,
       "Ph": null,
@@ -2176,7 +2271,7 @@
       "is_new": false
     },
     {
-      "sno": 93,
+      "sno": 94,
       "callsign": "VU3OBP",
       "Mix": 100,
       "Ph": null,
@@ -2199,7 +2294,7 @@
       "is_new": false
     },
     {
-      "sno": 94,
+      "sno": 95,
       "callsign": "VU3OUM",
       "Mix": 100,
       "Ph": null,
