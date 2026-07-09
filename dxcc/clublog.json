@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "08 Jul 2026",
-  "previous_as_on": "07 Jul 2026",
-  "generated_at": "2026-07-08T05:33:27+00:00",
+  "as_on": "09 Jul 2026",
+  "previous_as_on": "08 Jul 2026",
+  "generated_at": "2026-07-09T06:24:05+00:00",
   "columns": [
     "160",
     "80",
@@ -500,10 +500,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -676,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1809,
+      "rank": 1810,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -700,7 +697,7 @@
     },
     {
       "sno": 28,
-      "rank": 1802,
+      "rank": 1803,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -724,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1846,
+      "rank": 1847,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,

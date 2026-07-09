@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "07 Jul 2026",
-  "previous_as_on": "06 Jul 2026",
-  "generated_at": "2026-07-07T06:27:09+00:00",
+  "as_on": "08 Jul 2026",
+  "previous_as_on": "07 Jul 2026",
+  "generated_at": "2026-07-08T05:33:27+00:00",
   "columns": [
     "160",
     "80",
@@ -452,10 +452,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -492,18 +489,21 @@
       "40": 91,
       "30": 0,
       "20": 161,
-      "17": 129,
+      "17": 130,
       "15": 137,
       "12": 0,
       "10": 0,
       "6": 0,
       "total": 180,
-      "slots": 518,
+      "slots": 519,
       "years": "8 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [],
+      "changes": [
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -676,7 +676,7 @@
     },
     {
       "sno": 27,
-      "rank": 1808,
+      "rank": 1809,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -724,7 +724,7 @@
     },
     {
       "sno": 29,
-      "rank": 1845,
+      "rank": 1846,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
