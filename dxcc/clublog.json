@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "11 Jul 2026",
-  "previous_as_on": "10 Jul 2026",
-  "generated_at": "2026-07-11T05:24:00+00:00",
+  "as_on": "12 Jul 2026",
+  "previous_as_on": "11 Jul 2026",
+  "generated_at": "2026-07-12T05:40:22+00:00",
   "columns": [
     "160",
     "80",
@@ -481,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1113,
+      "rank": 1114,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -505,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1136,
+      "rank": 1137,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -601,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1387,
+      "rank": 1388,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -625,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1479,
+      "rank": 1480,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -644,10 +644,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Sreevathsa",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -676,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1800,
+      "rank": 1802,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -700,7 +697,7 @@
     },
     {
       "sno": 28,
-      "rank": 1802,
+      "rank": 1804,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -724,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1845,
+      "rank": 1846,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
