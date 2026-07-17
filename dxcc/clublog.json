@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "16 Jul 2026",
-  "previous_as_on": "15 Jul 2026",
-  "generated_at": "2026-07-16T05:22:15+00:00",
+  "as_on": "17 Jul 2026",
+  "previous_as_on": "16 Jul 2026",
+  "generated_at": "2026-07-17T05:24:40+00:00",
   "columns": [
     "160",
     "80",
@@ -337,7 +337,7 @@
     },
     {
       "sno": 13,
-      "rank": 564,
+      "rank": 565,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 60,
@@ -361,7 +361,7 @@
     },
     {
       "sno": 14,
-      "rank": 568,
+      "rank": 569,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -385,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 672,
+      "rank": 673,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -433,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 1036,
+      "rank": 1037,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -457,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1032,
+      "rank": 1033,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -481,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1112,
+      "rank": 1113,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -553,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1159,
+      "rank": 1160,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -601,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1384,
+      "rank": 1385,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -673,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1800,
+      "rank": 1781,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -682,17 +682,21 @@
       "30": 0,
       "20": 44,
       "17": 0,
-      "15": 59,
+      "15": 60,
       "12": 0,
       "10": 80,
       "6": 0,
-      "total": 100,
-      "slots": 186,
+      "total": 101,
+      "slots": 187,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "15",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {

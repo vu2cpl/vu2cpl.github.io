@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "15 Jul 2026",
-  "previous_as_on": "14 Jul 2026",
-  "generated_at": "2026-07-15T05:12:00+00:00",
+  "as_on": "16 Jul 2026",
+  "previous_as_on": "15 Jul 2026",
+  "generated_at": "2026-07-16T05:22:15+00:00",
   "columns": [
     "160",
     "80",
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 732,
+      "rank": 733,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -505,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1135,
+      "rank": 1136,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -529,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1152,
+      "rank": 1153,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -601,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1386,
+      "rank": 1384,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -625,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1479,
+      "rank": 1477,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -649,7 +649,7 @@
     },
     {
       "sno": 26,
-      "rank": 1611,
+      "rank": 1610,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -673,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1802,
+      "rank": 1800,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -692,15 +692,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 28,
-      "rank": 1804,
+      "rank": 1803,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -724,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1845,
+      "rank": 1844,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
