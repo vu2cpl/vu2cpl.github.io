@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "19 Jul 2026",
-  "previous_as_on": "18 Jul 2026",
-  "generated_at": "2026-07-19T05:34:07+00:00",
+  "as_on": "20 Jul 2026",
+  "previous_as_on": "19 Jul 2026",
+  "generated_at": "2026-07-20T05:51:38+00:00",
   "columns": [
     "160",
     "80",
@@ -452,10 +452,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "30",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -604,7 +601,7 @@
     },
     {
       "sno": 24,
-      "rank": 1386,
+      "rank": 1387,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -628,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1479,
+      "rank": 1480,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -652,7 +649,7 @@
     },
     {
       "sno": 26,
-      "rank": 1612,
+      "rank": 1613,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -676,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1774,
+      "rank": 1775,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -695,15 +692,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 28,
-      "rank": 1804,
+      "rank": 1805,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -727,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1845,
+      "rank": 1846,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,

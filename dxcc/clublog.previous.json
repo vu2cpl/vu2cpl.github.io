@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "18 Jul 2026",
-  "previous_as_on": "17 Jul 2026",
-  "generated_at": "2026-07-18T05:07:13+00:00",
+  "as_on": "19 Jul 2026",
+  "previous_as_on": "18 Jul 2026",
+  "generated_at": "2026-07-19T05:34:07+00:00",
   "columns": [
     "160",
     "80",
@@ -73,7 +73,7 @@
     },
     {
       "sno": 2,
-      "rank": 284,
+      "rank": 285,
       "callsign": "VU2NXO",
       "160": 40,
       "80": 42,
@@ -97,7 +97,7 @@
     },
     {
       "sno": 3,
-      "rank": 299,
+      "rank": 300,
       "callsign": "VU2CDP",
       "160": 3,
       "80": 69,
@@ -121,7 +121,7 @@
     },
     {
       "sno": 4,
-      "rank": 314,
+      "rank": 315,
       "callsign": "VU2CPL",
       "160": 109,
       "80": 203,
@@ -145,7 +145,7 @@
     },
     {
       "sno": 5,
-      "rank": 343,
+      "rank": 344,
       "callsign": "VU2DCC",
       "160": 0,
       "80": 5,
@@ -169,7 +169,7 @@
     },
     {
       "sno": 6,
-      "rank": 382,
+      "rank": 383,
       "callsign": "VU2WJ",
       "160": 1,
       "80": 87,
@@ -193,7 +193,7 @@
     },
     {
       "sno": 7,
-      "rank": 384,
+      "rank": 385,
       "callsign": "VU2YYF",
       "160": 1,
       "80": 52,
@@ -217,7 +217,7 @@
     },
     {
       "sno": 8,
-      "rank": 408,
+      "rank": 409,
       "callsign": "VU24DX",
       "160": 3,
       "80": 155,
@@ -241,7 +241,7 @@
     },
     {
       "sno": 9,
-      "rank": 410,
+      "rank": 411,
       "callsign": "VU2LBW",
       "160": 0,
       "80": 102,
@@ -260,17 +260,12 @@
       "linked_count": 4,
       "is_linked": true,
       "op_name": "Lakshman Bijanki",
-      "changes": [
-        "30",
-        "12",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 10,
-      "rank": 416,
+      "rank": 417,
       "callsign": "VU2IBI",
       "160": 0,
       "80": 47,
@@ -294,7 +289,7 @@
     },
     {
       "sno": 11,
-      "rank": 459,
+      "rank": 460,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 130,
@@ -318,7 +313,7 @@
     },
     {
       "sno": 12,
-      "rank": 500,
+      "rank": 501,
       "callsign": "VU2DED",
       "160": 1,
       "80": 115,
@@ -444,7 +439,7 @@
       "80": 2,
       "60": 0,
       "40": 105,
-      "30": 67,
+      "30": 68,
       "20": 131,
       "17": 89,
       "15": 130,
@@ -452,12 +447,15 @@
       "10": 127,
       "6": 0,
       "total": 192,
-      "slots": 738,
+      "slots": 739,
       "years": "16 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [],
+      "changes": [
+        "30",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -505,17 +503,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Aishwarya Bijanki",
-      "changes": [
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -544,7 +532,7 @@
     },
     {
       "sno": 21,
-      "rank": 1153,
+      "rank": 1154,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -664,7 +652,7 @@
     },
     {
       "sno": 26,
-      "rank": 1611,
+      "rank": 1612,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -697,26 +685,25 @@
       "30": 0,
       "20": 44,
       "17": 0,
-      "15": 61,
+      "15": 62,
       "12": 0,
       "10": 80,
       "6": 0,
       "total": 102,
-      "slots": 188,
+      "slots": 189,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
         "15",
-        "total",
         "slots"
       ],
       "is_new": false
     },
     {
       "sno": 28,
-      "rank": 1805,
+      "rank": 1804,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -740,7 +727,7 @@
     },
     {
       "sno": 29,
-      "rank": 1846,
+      "rank": 1845,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
