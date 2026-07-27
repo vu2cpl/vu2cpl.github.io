@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "25 Jul 2026",
-  "previous_as_on": "24 Jul 2026",
-  "generated_at": "2026-07-25T05:26:03+00:00",
+  "as_on": "26 Jul 2026",
+  "previous_as_on": "25 Jul 2026",
+  "generated_at": "2026-07-26T05:43:18+00:00",
   "columns": [
     "160",
     "80",
@@ -104,19 +104,22 @@
       "60": 0,
       "40": 218,
       "30": 176,
-      "20": 272,
+      "20": 273,
       "17": 256,
       "15": 293,
       "12": 251,
       "10": 255,
       "6": 1,
       "total": 321,
-      "slots": 1794,
+      "slots": 1795,
       "years": "21 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [],
+      "changes": [
+        "20",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -409,7 +412,7 @@
     },
     {
       "sno": 16,
-      "rank": 732,
+      "rank": 733,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -433,7 +436,7 @@
     },
     {
       "sno": 17,
-      "rank": 1036,
+      "rank": 1037,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -457,7 +460,7 @@
     },
     {
       "sno": 18,
-      "rank": 1032,
+      "rank": 1033,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -481,7 +484,7 @@
     },
     {
       "sno": 19,
-      "rank": 1072,
+      "rank": 1073,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -505,7 +508,7 @@
     },
     {
       "sno": 20,
-      "rank": 1114,
+      "rank": 1115,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -529,7 +532,45 @@
     },
     {
       "sno": 21,
-      "rank": 1153,
+      "rank": 1126,
+      "callsign": "VU22DX",
+      "160": 1,
+      "80": 0,
+      "60": 0,
+      "40": 59,
+      "30": 31,
+      "20": 152,
+      "17": 28,
+      "15": 146,
+      "12": 11,
+      "10": 145,
+      "6": 4,
+      "total": 179,
+      "slots": 577,
+      "years": "3 yrs",
+      "linked_count": 2,
+      "is_linked": true,
+      "op_name": "Sandesh Bhat (Sandy)",
+      "changes": [
+        "160",
+        "80",
+        "60",
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "6",
+        "total",
+        "slots"
+      ],
+      "is_new": true
+    },
+    {
+      "sno": 22,
+      "rank": 1155,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -552,8 +593,8 @@
       "is_new": false
     },
     {
-      "sno": 22,
-      "rank": 1159,
+      "sno": 23,
+      "rank": 1161,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -576,8 +617,8 @@
       "is_new": false
     },
     {
-      "sno": 23,
-      "rank": 1387,
+      "sno": 24,
+      "rank": 1389,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -600,8 +641,8 @@
       "is_new": false
     },
     {
-      "sno": 24,
-      "rank": 1480,
+      "sno": 25,
+      "rank": 1482,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -624,8 +665,8 @@
       "is_new": false
     },
     {
-      "sno": 25,
-      "rank": 1616,
+      "sno": 26,
+      "rank": 1618,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -648,8 +689,8 @@
       "is_new": false
     },
     {
-      "sno": 26,
-      "rank": 1778,
+      "sno": 27,
+      "rank": 1780,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -672,8 +713,8 @@
       "is_new": false
     },
     {
-      "sno": 27,
-      "rank": 1807,
+      "sno": 28,
+      "rank": 1809,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -696,8 +737,8 @@
       "is_new": false
     },
     {
-      "sno": 28,
-      "rank": 1848,
+      "sno": 29,
+      "rank": 1851,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
