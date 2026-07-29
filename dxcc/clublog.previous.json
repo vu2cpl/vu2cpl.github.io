@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "27 Jul 2026",
-  "previous_as_on": "26 Jul 2026",
-  "generated_at": "2026-07-27T06:02:19+00:00",
+  "as_on": "28 Jul 2026",
+  "previous_as_on": "27 Jul 2026",
+  "generated_at": "2026-07-28T05:27:07+00:00",
   "columns": [
     "160",
     "80",
@@ -385,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 672,
+      "rank": 673,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 733,
+      "rank": 732,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -529,7 +529,45 @@
     },
     {
       "sno": 21,
-      "rank": 1155,
+      "rank": 1127,
+      "callsign": "VU22DX",
+      "160": 1,
+      "80": 0,
+      "60": 0,
+      "40": 59,
+      "30": 31,
+      "20": 152,
+      "17": 28,
+      "15": 146,
+      "12": 11,
+      "10": 145,
+      "6": 4,
+      "total": 179,
+      "slots": 577,
+      "years": "3 yrs",
+      "linked_count": 2,
+      "is_linked": true,
+      "op_name": "Sandesh Bhat (Sandy)",
+      "changes": [
+        "160",
+        "80",
+        "60",
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "6",
+        "total",
+        "slots"
+      ],
+      "is_new": true
+    },
+    {
+      "sno": 22,
+      "rank": 1156,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -552,8 +590,8 @@
       "is_new": false
     },
     {
-      "sno": 22,
-      "rank": 1161,
+      "sno": 23,
+      "rank": 1162,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -576,7 +614,7 @@
       "is_new": false
     },
     {
-      "sno": 23,
+      "sno": 24,
       "rank": 1387,
       "callsign": "VU2GHO",
       "160": 0,
@@ -600,7 +638,7 @@
       "is_new": false
     },
     {
-      "sno": 24,
+      "sno": 25,
       "rank": 1480,
       "callsign": "VU3SPD",
       "160": 0,
@@ -624,8 +662,8 @@
       "is_new": false
     },
     {
-      "sno": 25,
-      "rank": 1616,
+      "sno": 26,
+      "rank": 1617,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -648,7 +686,7 @@
       "is_new": false
     },
     {
-      "sno": 26,
+      "sno": 27,
       "rank": 1778,
       "callsign": "VU27MJ",
       "160": 0,
@@ -672,8 +710,8 @@
       "is_new": false
     },
     {
-      "sno": 27,
-      "rank": 1807,
+      "sno": 28,
+      "rank": 1805,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -696,8 +734,8 @@
       "is_new": false
     },
     {
-      "sno": 28,
-      "rank": 1849,
+      "sno": 29,
+      "rank": 1847,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
