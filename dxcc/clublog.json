@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "08 Aug 2026",
-  "previous_as_on": "07 Aug 2026",
-  "generated_at": "2026-08-08T03:48:18+00:00",
+  "as_on": "09 Aug 2026",
+  "previous_as_on": "08 Aug 2026",
+  "generated_at": "2026-08-09T03:55:35+00:00",
   "columns": [
     "160",
     "80",
@@ -524,13 +524,7 @@
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [
-        "20",
-        "15",
-        "10",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -687,13 +681,13 @@
       "40": 3,
       "30": 0,
       "20": 48,
-      "17": 2,
+      "17": 3,
       "15": 65,
       "12": 0,
       "10": 81,
       "6": 0,
       "total": 103,
-      "slots": 199,
+      "slots": 200,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
@@ -730,7 +724,7 @@
     },
     {
       "sno": 29,
-      "rank": 1843,
+      "rank": 1844,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
