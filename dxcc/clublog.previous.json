@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "09 Aug 2026",
-  "previous_as_on": "08 Aug 2026",
-  "generated_at": "2026-08-09T03:55:35+00:00",
+  "as_on": "10 Aug 2026",
+  "previous_as_on": "09 Aug 2026",
+  "generated_at": "2026-08-10T04:10:18+00:00",
   "columns": [
     "160",
     "80",
@@ -97,7 +97,7 @@
     },
     {
       "sno": 3,
-      "rank": 297,
+      "rank": 298,
       "callsign": "VU2CDP",
       "160": 3,
       "80": 69,
@@ -121,7 +121,7 @@
     },
     {
       "sno": 4,
-      "rank": 311,
+      "rank": 312,
       "callsign": "VU2CPL",
       "160": 109,
       "80": 203,
@@ -433,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 1035,
+      "rank": 1034,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -457,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1030,
+      "rank": 1029,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -481,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1073,
+      "rank": 1072,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -505,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1111,
+      "rank": 1110,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -529,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1113,
+      "rank": 1112,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -553,7 +553,7 @@
     },
     {
       "sno": 22,
-      "rank": 1152,
+      "rank": 1151,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -625,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1480,
+      "rank": 1481,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -692,10 +692,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -724,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1844,
+      "rank": 1843,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
