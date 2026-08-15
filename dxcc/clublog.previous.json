@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "13 Aug 2026",
-  "previous_as_on": "12 Aug 2026",
-  "generated_at": "2026-08-13T04:23:04+00:00",
+  "as_on": "14 Aug 2026",
+  "previous_as_on": "13 Aug 2026",
+  "generated_at": "2026-08-14T04:20:50+00:00",
   "columns": [
     "160",
     "80",
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 730,
+      "rank": 731,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -692,10 +692,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
