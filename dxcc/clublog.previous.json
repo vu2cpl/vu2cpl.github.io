@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "20 Aug 2026",
-  "previous_as_on": "19 Aug 2026",
-  "generated_at": "2026-08-20T03:14:29+00:00",
+  "as_on": "21 Aug 2026",
+  "previous_as_on": "20 Aug 2026",
+  "generated_at": "2026-08-21T03:26:17+00:00",
   "columns": [
     "160",
     "80",
@@ -428,12 +428,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "20",
-        "17",
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -678,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1762,
+      "rank": 1763,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -697,15 +692,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 28,
-      "rank": 1810,
+      "rank": 1811,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
