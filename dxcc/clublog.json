@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "24 Aug 2026",
-  "previous_as_on": "23 Aug 2026",
-  "generated_at": "2026-08-24T03:27:36+00:00",
+  "as_on": "25 Aug 2026",
+  "previous_as_on": "24 Aug 2026",
+  "generated_at": "2026-08-25T03:22:43+00:00",
   "columns": [
     "160",
     "80",
@@ -337,7 +337,7 @@
     },
     {
       "sno": 13,
-      "rank": 566,
+      "rank": 565,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -361,7 +361,7 @@
     },
     {
       "sno": 14,
-      "rank": 662,
+      "rank": 661,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 54,
@@ -385,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 672,
+      "rank": 671,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 734,
+      "rank": 733,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -428,15 +428,12 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 17,
-      "rank": 1030,
+      "rank": 1028,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -460,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1036,
+      "rank": 1034,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -484,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1076,
+      "rank": 1075,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -508,31 +505,34 @@
     },
     {
       "sno": 20,
-      "rank": 1110,
+      "rank": 1107,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
       "60": 0,
       "40": 59,
       "30": 31,
-      "20": 156,
+      "20": 155,
       "17": 28,
       "15": 148,
       "12": 11,
       "10": 147,
       "6": 4,
       "total": 181,
-      "slots": 585,
+      "slots": 584,
       "years": "3 yrs",
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [],
+      "changes": [
+        "20",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 21,
-      "rank": 1119,
+      "rank": 1116,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -556,7 +556,7 @@
     },
     {
       "sno": 22,
-      "rank": 1159,
+      "rank": 1156,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -580,7 +580,7 @@
     },
     {
       "sno": 23,
-      "rank": 1168,
+      "rank": 1165,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -604,7 +604,7 @@
     },
     {
       "sno": 24,
-      "rank": 1394,
+      "rank": 1391,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -628,7 +628,7 @@
     },
     {
       "sno": 25,
-      "rank": 1487,
+      "rank": 1485,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -652,7 +652,7 @@
     },
     {
       "sno": 26,
-      "rank": 1625,
+      "rank": 1622,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -676,26 +676,27 @@
     },
     {
       "sno": 27,
-      "rank": 1766,
+      "rank": 1763,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 51,
-      "17": 12,
+      "20": 52,
+      "17": 13,
       "15": 65,
       "12": 0,
       "10": 82,
       "6": 0,
       "total": 104,
-      "slots": 213,
+      "slots": 215,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
+        "20",
         "17",
         "slots"
       ],
@@ -703,7 +704,7 @@
     },
     {
       "sno": 28,
-      "rank": 1815,
+      "rank": 1812,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -727,7 +728,7 @@
     },
     {
       "sno": 29,
-      "rank": 1852,
+      "rank": 1849,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
