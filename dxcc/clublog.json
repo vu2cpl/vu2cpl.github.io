@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "26 Aug 2026",
-  "previous_as_on": "25 Aug 2026",
-  "generated_at": "2026-08-26T03:29:15+00:00",
+  "as_on": "27 Aug 2026",
+  "previous_as_on": "26 Aug 2026",
+  "generated_at": "2026-08-27T12:55:29+00:00",
   "columns": [
     "160",
     "80",
@@ -126,21 +126,27 @@
       "160": 109,
       "80": 203,
       "60": 75,
-      "40": 261,
-      "30": 254,
+      "40": 262,
+      "30": 255,
       "20": 311,
       "17": 299,
       "15": 296,
-      "12": 273,
-      "10": 274,
+      "12": 275,
+      "10": 275,
       "6": 117,
       "total": 319,
-      "slots": 2472,
+      "slots": 2477,
       "years": "33 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Manoj Ramawarrier",
-      "changes": [],
+      "changes": [
+        "40",
+        "30",
+        "12",
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -361,7 +367,7 @@
     },
     {
       "sno": 14,
-      "rank": 661,
+      "rank": 662,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 54,
@@ -385,7 +391,7 @@
     },
     {
       "sno": 15,
-      "rank": 671,
+      "rank": 672,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -409,7 +415,7 @@
     },
     {
       "sno": 16,
-      "rank": 732,
+      "rank": 734,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -433,7 +439,7 @@
     },
     {
       "sno": 17,
-      "rank": 1027,
+      "rank": 1028,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -457,7 +463,7 @@
     },
     {
       "sno": 18,
-      "rank": 1033,
+      "rank": 1034,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -481,7 +487,7 @@
     },
     {
       "sno": 19,
-      "rank": 1074,
+      "rank": 1075,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -505,7 +511,7 @@
     },
     {
       "sno": 20,
-      "rank": 1107,
+      "rank": 1108,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -529,7 +535,7 @@
     },
     {
       "sno": 21,
-      "rank": 1115,
+      "rank": 1116,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -553,7 +559,7 @@
     },
     {
       "sno": 22,
-      "rank": 1155,
+      "rank": 1157,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -577,7 +583,7 @@
     },
     {
       "sno": 23,
-      "rank": 1164,
+      "rank": 1166,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -601,7 +607,7 @@
     },
     {
       "sno": 24,
-      "rank": 1390,
+      "rank": 1393,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -625,7 +631,7 @@
     },
     {
       "sno": 25,
-      "rank": 1484,
+      "rank": 1487,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -649,7 +655,7 @@
     },
     {
       "sno": 26,
-      "rank": 1621,
+      "rank": 1624,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -668,39 +674,40 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Abie Alexander",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 27,
-      "rank": 1762,
+      "rank": 1765,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
       "60": 0,
       "40": 3,
       "30": 0,
-      "20": 52,
-      "17": 13,
+      "20": 53,
+      "17": 14,
       "15": 65,
       "12": 0,
       "10": 82,
       "6": 0,
       "total": 104,
-      "slots": 215,
+      "slots": 217,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "20",
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 28,
-      "rank": 1811,
+      "rank": 1814,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -724,7 +731,7 @@
     },
     {
       "sno": 29,
-      "rank": 1848,
+      "rank": 1851,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
