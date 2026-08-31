@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "29 Aug 2026",
-  "previous_as_on": "28 Aug 2026",
-  "generated_at": "2026-08-29T09:12:06+00:00",
+  "as_on": "30 Aug 2026",
+  "previous_as_on": "29 Aug 2026",
+  "generated_at": "2026-08-30T08:24:04+00:00",
   "columns": [
     "160",
     "80",
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 725,
+      "rank": 726,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -428,15 +428,12 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "17",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 17,
-      "rank": 1026,
+      "rank": 1029,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -460,7 +457,7 @@
     },
     {
       "sno": 18,
-      "rank": 1032,
+      "rank": 1035,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -484,7 +481,7 @@
     },
     {
       "sno": 19,
-      "rank": 1073,
+      "rank": 1076,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -508,7 +505,7 @@
     },
     {
       "sno": 20,
-      "rank": 1106,
+      "rank": 1108,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
@@ -532,7 +529,7 @@
     },
     {
       "sno": 21,
-      "rank": 1114,
+      "rank": 1117,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -556,7 +553,42 @@
     },
     {
       "sno": 22,
-      "rank": 1156,
+      "rank": 1112,
+      "callsign": "VU2KPH",
+      "160": 0,
+      "80": 0,
+      "60": 0,
+      "40": 100,
+      "30": 12,
+      "20": 173,
+      "17": 117,
+      "15": 124,
+      "12": 104,
+      "10": 120,
+      "6": 23,
+      "total": 180,
+      "slots": 773,
+      "years": "9 yrs",
+      "linked_count": 0,
+      "is_linked": false,
+      "op_name": "Krishna Pratap Rana",
+      "changes": [
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "6",
+        "total",
+        "slots"
+      ],
+      "is_new": false
+    },
+    {
+      "sno": 23,
+      "rank": 1159,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -579,8 +611,8 @@
       "is_new": false
     },
     {
-      "sno": 23,
-      "rank": 1164,
+      "sno": 24,
+      "rank": 1167,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -603,8 +635,8 @@
       "is_new": false
     },
     {
-      "sno": 24,
-      "rank": 1391,
+      "sno": 25,
+      "rank": 1394,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -627,8 +659,8 @@
       "is_new": false
     },
     {
-      "sno": 25,
-      "rank": 1485,
+      "sno": 26,
+      "rank": 1488,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -651,8 +683,8 @@
       "is_new": false
     },
     {
-      "sno": 26,
-      "rank": 1622,
+      "sno": 27,
+      "rank": 1625,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -667,7 +699,7 @@
       "6": 0,
       "total": 118,
       "slots": 254,
-      "years": "34 yrs",
+      "years": "35 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Abie Alexander",
@@ -675,8 +707,8 @@
       "is_new": false
     },
     {
-      "sno": 27,
-      "rank": 1762,
+      "sno": 28,
+      "rank": 1765,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -699,8 +731,8 @@
       "is_new": false
     },
     {
-      "sno": 28,
-      "rank": 1811,
+      "sno": 29,
+      "rank": 1814,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -719,30 +751,6 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jacob",
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 29,
-      "rank": 1847,
-      "callsign": "VU2KPH",
-      "160": 0,
-      "80": 0,
-      "60": 0,
-      "40": 41,
-      "30": 1,
-      "20": 80,
-      "17": 15,
-      "15": 32,
-      "12": 20,
-      "10": 44,
-      "6": 0,
-      "total": 95,
-      "slots": 233,
-      "years": "9 yrs",
-      "linked_count": 0,
-      "is_linked": false,
-      "op_name": "Krishna Pratap Rana",
       "changes": [],
       "is_new": false
     }
