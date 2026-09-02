@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "31 Aug 2026",
-  "previous_as_on": "30 Aug 2026",
-  "generated_at": "2026-08-31T08:44:54+00:00",
+  "as_on": "01 Sep 2026",
+  "previous_as_on": "31 Aug 2026",
+  "generated_at": "2026-09-01T07:53:35+00:00",
   "columns": [
     "160",
     "80",
@@ -140,11 +140,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Manoj Ramawarrier",
-      "changes": [
-        "80",
-        "10",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -179,20 +175,25 @@
       "80": 87,
       "60": 0,
       "40": 219,
-      "30": 195,
+      "30": 196,
       "20": 299,
-      "17": 248,
-      "15": 231,
+      "17": 249,
+      "15": 232,
       "12": 196,
       "10": 181,
       "6": 1,
       "total": 311,
-      "slots": 1658,
+      "slots": 1661,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [],
+      "changes": [
+        "30",
+        "17",
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -389,7 +390,7 @@
     },
     {
       "sno": 15,
-      "rank": 670,
+      "rank": 671,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -437,7 +438,7 @@
     },
     {
       "sno": 17,
-      "rank": 1028,
+      "rank": 1030,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -461,7 +462,7 @@
     },
     {
       "sno": 18,
-      "rank": 1034,
+      "rank": 1035,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -629,7 +630,7 @@
     },
     {
       "sno": 25,
-      "rank": 1393,
+      "rank": 1394,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
