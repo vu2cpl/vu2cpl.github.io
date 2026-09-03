@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "02 Sep 2026",
-  "previous_as_on": "01 Sep 2026",
-  "generated_at": "2026-09-02T07:10:37+00:00",
+  "as_on": "03 Sep 2026",
+  "previous_as_on": "02 Sep 2026",
+  "generated_at": "2026-09-03T07:15:39+00:00",
   "columns": [
     "160",
     "80",
@@ -140,11 +140,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Manoj Ramawarrier",
-      "changes": [
-        "80",
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -192,12 +188,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "SHAJI. P.B",
-      "changes": [
-        "30",
-        "17",
-        "10",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -442,7 +433,7 @@
     },
     {
       "sno": 17,
-      "rank": 1033,
+      "rank": 1034,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -682,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1625,
+      "rank": 1626,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -706,7 +697,7 @@
     },
     {
       "sno": 28,
-      "rank": 1765,
+      "rank": 1766,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -730,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1813,
+      "rank": 1816,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
