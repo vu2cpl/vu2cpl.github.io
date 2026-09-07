@@ -233,3 +233,26 @@
 .proj-body a { color: var(--accent); }
 .proj-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 2rem 0 1.5rem; }
 .proj-page .project-tags { margin-top: 1.75rem; }
+
+/* ── Project screenshots ────────────────────────────────────────────────────
+   Deliberately NOT .shack-gallery: that crops to 16/9 with object-fit:cover,
+   which is right for shack photos and wrong for UI captures, where the edges
+   of the window carry the information. These keep the image's own aspect
+   ratio and never crop. Add .two-up when the shots are narrow enough to
+   read at half width. */
+.proj-shots { margin: 2rem 0 0.5rem; display: grid; grid-template-columns: 1fr; gap: 14px; }
+.proj-shots.two-up { grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .proj-shots.two-up { grid-template-columns: 1fr; } }
+.proj-shots figure {
+  margin: 0; border-radius: 10px; overflow: hidden;
+  border: 0.5px solid var(--border); background: var(--card-bg);
+}
+.proj-shots img { width: 100%; height: auto; display: block; }
+.proj-shots figcaption {
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border);
+}
+.proj-shots-label {
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2.25rem;
+}
