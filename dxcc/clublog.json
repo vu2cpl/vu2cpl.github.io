@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "06 Sep 2026",
-  "previous_as_on": "05 Sep 2026",
-  "generated_at": "2026-09-06T07:11:54+00:00",
+  "as_on": "07 Sep 2026",
+  "previous_as_on": "06 Sep 2026",
+  "generated_at": "2026-09-07T07:24:39+00:00",
   "columns": [
     "160",
     "80",
@@ -337,7 +337,7 @@
     },
     {
       "sno": 13,
-      "rank": 565,
+      "rank": 566,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -409,26 +409,31 @@
     },
     {
       "sno": 16,
-      "rank": 727,
+      "rank": 719,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
       "60": 0,
       "40": 184,
       "30": 36,
-      "20": 180,
+      "20": 181,
       "17": 171,
       "15": 160,
-      "12": 122,
+      "12": 123,
       "10": 140,
       "6": 23,
-      "total": 246,
-      "slots": 1062,
+      "total": 247,
+      "slots": 1064,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "20",
+        "12",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -452,12 +457,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "30",
-        "20",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -630,7 +630,7 @@
     },
     {
       "sno": 25,
-      "rank": 1395,
+      "rank": 1394,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -654,7 +654,7 @@
     },
     {
       "sno": 26,
-      "rank": 1492,
+      "rank": 1491,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -678,7 +678,7 @@
     },
     {
       "sno": 27,
-      "rank": 1512,
+      "rank": 1511,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -702,7 +702,7 @@
     },
     {
       "sno": 28,
-      "rank": 1758,
+      "rank": 1757,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -721,12 +721,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "17",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
