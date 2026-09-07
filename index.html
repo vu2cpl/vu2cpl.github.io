@@ -4,228 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VU2CPL – Manoj Ramawarrier</title>
-<meta name="description" content="Amateur radio station VU2CPL – Manoj Ramawarrier, Bengaluru, India. Grid MK83TE. Licensed 1993. FLEX-6600, 9 BDXCC, DXpeditioner.">
+<meta name="description" content="Amateur radio station VU2CPL – Manoj Ramawarrier, Bengaluru, India. Grid MK83TE. Licensed 1993. FLEX-6600, 10 BDXCC, DXpeditioner.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --navy: #0a1628; --navy2: #132040; --accent: #1a6bdb; --accent2: #3b82f6;
-    --text: #0f172a; --muted: #64748b; --border: rgba(0,0,0,0.1);
-    --card-bg: #ffffff; --bg: #f8fafc;
-    --serif: 'DM Serif Display', serif;
-    --sans: 'DM Sans', sans-serif;
-    --mono: 'DM Mono', monospace;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--bg); color: var(--text); }
-  nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
-  .nav-logo { font-family: var(--mono); font-size: 18px; font-weight: 500; color: #fff; text-decoration: none; }
-  .nav-logo span { color: #60a5fa; }
-  .nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
-  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
-  .nav-links a:hover { color: #fff; }
-  .nav-links a.nav-live { color: #f87171; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
-  .nav-links a.nav-live::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block; animation: blink 1.4s infinite; }
-  .nav-links a.nav-live:hover { color: #fca5a5; }
-  .hero { background: var(--navy); padding: 5rem 2rem 4rem; }
-  .hero-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
-  .hero-left { flex: 1; min-width: 280px; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; font-weight: 500; color: #60a5fa; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
-  .hero-tag::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; display: inline-block; animation: blink 1.4s infinite; }
-  @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
-  .hero h1 { font-family: var(--serif); font-size: 52px; color: #fff; line-height: 1.08; margin-bottom: 0.5rem; }
-  .hero h1 em { font-style: italic; color: #93c5fd; }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 2rem; font-family: var(--mono); letter-spacing: 0.04em; }
-  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
-  .badge { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; font-family: var(--mono); border: 1px solid; }
-  .badge-blue  { background: rgba(59,130,246,0.15); border-color: rgba(96,165,250,0.4); color: #93c5fd; }
-  .badge-green { background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); color: #86efac; }
-  .badge-amber { background: rgba(217,119,6,0.15); border-color: rgba(251,191,36,0.3); color: #fcd34d; }
-  .badge-pink  { background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.3); color: #f9a8d4; }
-  .hero-stats { display: flex; gap: 1.25rem; flex-direction: column; align-items: flex-end; }
-  .stat-card { background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.85rem 1.25rem; min-width: 145px; text-align: right; }
-  .stat-val { font-family: var(--mono); font-size: 18px; color: #fff; font-weight: 500; }
-  .stat-lbl { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; }
-  .divider { border: none; border-top: 0.5px solid var(--border); }
-  section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
-  .section-label { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--accent2); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
-  h2 { font-family: var(--serif); font-size: 32px; color: var(--text); margin-bottom: 1.5rem; line-height: 1.15; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .about-text p { font-size: 15px; line-height: 1.8; color: #334155; margin-bottom: 1rem; }
-  .about-details { display: flex; flex-direction: column; }
-  .detail-row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 0.5px solid var(--border); gap: 8px; }
-  .detail-row:last-child { border-bottom: none; }
-  .detail-key { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); flex-shrink: 0; }
-  .detail-val { font-size: 13px; font-weight: 500; color: var(--text); font-family: var(--mono); text-align: right; }
-  .dxped-list { display: flex; flex-direction: column; gap: 10px; margin-top: 1.5rem; }
-  .dxped-item { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .dxped-call { font-family: var(--mono); font-weight: 500; font-size: 14px; color: var(--accent); }
-  .dxped-desc { font-size: 13px; color: #334155; flex: 1; }
-  .dxped-year { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
-  .awards-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5rem; }
-  .award-badge { background: #eff6ff; border: 0.5px solid #bfdbfe; border-radius: 6px; padding: 4px 12px; font-family: var(--mono); font-size: 12px; font-weight: 500; color: #1e40af; }
-  .shack-photo-wrap { margin-top: 1.5rem; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); }
-  .shack-photo-wrap img { width: 100%; display: block; max-height: 280px; object-fit: cover; object-position: center top; }
-  .shack-photo-cap { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border); }
-  .shack-gallery { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 720px) { .shack-gallery { grid-template-columns: 1fr; } }
-  .shack-gallery figure { margin: 0; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); background: var(--card-bg); }
-  a.shack-zoom { display: block; cursor: zoom-in; position: relative; }
-  a.shack-zoom::after {
-    content: "⤢";
-    position: absolute; top: 8px; right: 10px;
-    font-size: 14px; line-height: 1;
-    width: 26px; height: 26px;
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; background: rgba(10, 22, 40, 0.55);
-    border-radius: 50%;
-    opacity: 0; transition: opacity 0.15s;
-  }
-  a.shack-zoom:hover::after { opacity: 1; }
-  .shack-gallery img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
-  .shack-gallery figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border); }
-  .shack-credit { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; letter-spacing: 0.04em; }
-  .shack-credit a { color: var(--muted); text-decoration: none; border-bottom: 0.5px dotted var(--muted); }
-  .shack-credit a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-  .qsl-banner { margin: 1.25rem auto 2rem; max-width: 720px; border-radius: 10px; overflow: hidden; border: 0.5px solid var(--border); box-shadow: 0 1px 3px rgba(10,22,40,0.06); }
-  .qsl-banner img { width: 100%; display: block; }
-
-  /* Inline lightbox — single shared overlay, no external JS library */
-  .lightbox {
-    position: fixed; inset: 0;
-    background: rgba(10, 22, 40, 0.92);
-    display: none; align-items: center; justify-content: center;
-    z-index: 1000;
-    padding: 24px;
-    cursor: zoom-out;
-  }
-  .lightbox.open { display: flex; }
-  .lightbox img {
-    max-width: 100%; max-height: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  }
-  .lightbox-close {
-    position: absolute; top: 16px; right: 20px;
-    width: 36px; height: 36px;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(255, 255, 255, 0.12);
-    color: #fff; font-size: 22px; line-height: 1;
-    border: none; border-radius: 50%;
-    cursor: pointer;
-  }
-  .lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
-  .lightbox-caption {
-    position: absolute; bottom: 18px; left: 0; right: 0;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.75);
-    font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
-    pointer-events: none;
-  }
-  .station-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .equip-group { margin-bottom: 1.5rem; }
-  .equip-group-title { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 0.5px solid var(--border); }
-  .equip-item { padding: 7px 0; border-bottom: 0.5px solid var(--border); font-size: 14px; color: #334155; display: flex; align-items: flex-start; gap: 8px; }
-  .equip-item:last-child { border-bottom: none; }
-  .equip-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent2); flex-shrink: 0; margin-top: 6px; }
-  .log-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
-  .log-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .log-table thead th { text-align: left; font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; padding: 0 10px 10px 0; border-bottom: 0.5px solid var(--border); }
-  .log-table tbody tr { border-bottom: 0.5px solid var(--border); }
-  .log-table tbody tr:last-child { border-bottom: none; }
-  .log-table tbody tr:hover { background: #f1f5f9; }
-  .log-table tbody td { padding: 9px 10px 9px 0; font-family: var(--mono); color: #334155; }
-  .log-table tbody td:first-child { font-weight: 500; color: var(--accent); }
-  .band-pill { padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 500; }
-  .b15{background:#fce7f3;color:#9d174d} .b17{background:#fef3c7;color:#92400e} .b20{background:#dcfce7;color:#166534} .b40{background:#dbeafe;color:#1e40af}
-  .qsl-note { margin-top: 1rem; padding: 0.75rem 1rem; background: #f8fafc; border: 0.5px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--muted); line-height: 1.6; }
-  .qsl-note strong { color: var(--text); font-weight: 500; }
-  .clublog-wrap { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 10px; overflow: hidden; }
-  .clublog-header { padding: 10px 14px; background: #f8fafc; border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-  .clublog-title { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-  .clublog-live { display: flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #16a34a; }
-  .clublog-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #22c55e; display: inline-block; animation: blink 1.4s infinite; }
-  .clublog-wrap iframe { display: block; width: 100%; border: none; }
-  .project-list { display: flex; flex-direction: column; gap: 14px; }
-  .project-card { background: var(--card-bg); border: 0.5px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-  .project-name { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
-  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-  .proj-tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #f1f5f9; color: #475569; }
-  .status-badge { font-family: var(--mono); font-size: 11px; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
-  .status-active { background: #dcfce7; color: #166534; }
-  .status-wip { background: #fef3c7; color: #92400e; }
-  .status-planned { background: #e0e7ff; color: #3730a3; }
-  .repo-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    margin-top: 10px;
-    padding: 6px 12px;
-    font-family: var(--mono); font-size: 12px; font-weight: 500;
-    color: #fff; background: #0a1628;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.15s, transform 0.05s;
-  }
-  .repo-btn:hover { background: var(--accent); }
-  .repo-btn:active { transform: translateY(1px); }
-  .repo-btn svg { flex-shrink: 0; }
-  .yt-link { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #dc2626; margin-top: 6px; text-decoration: none; }
-  .yt-link:hover { text-decoration: underline; }
-
-  /* WRITINGS */
-  .writings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-  .writing-card { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 10px; padding: 1.25rem; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.15s; }
-  .writing-card:hover { border-color: var(--accent2); }
-  .writing-cat { font-family: var(--mono); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 4px; display: inline-block; width: fit-content; }
-  .cat-topband { background: #dbeafe; color: #1e40af; }
-  .cat-dxped   { background: #dcfce7; color: #166534; }
-  .cat-contest { background: #fef3c7; color: #92400e; }
-  .cat-tech    { background: #f3e8ff; color: #6b21a8; }
-  .writing-title { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.35; }
-  .writing-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
-  .writing-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
-  .writing-date { font-family: var(--mono); font-size: 11px; color: var(--muted); }
-  .writing-pdf { font-family: var(--mono); font-size: 11px; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 4px; }
-  .writing-pdf:hover { text-decoration: underline; }
-  .writing-stats { display: flex; gap: 12px; }
-  .wstat { font-family: var(--mono); font-size: 11px; color: var(--muted); }
-  .wstat strong { color: var(--text); }
-
-  /* CONTACT */
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
-  .contact-info { display: flex; flex-direction: column; gap: 14px; }
-  .contact-item { display: flex; align-items: flex-start; gap: 12px; }
-  .contact-icon { width: 36px; height: 36px; border-radius: 8px; background: #eff6ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .contact-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); }
-  .contact-val { font-size: 14px; font-weight: 500; color: var(--text); margin-top: 1px; }
-  .contact-val a { color: var(--accent); text-decoration: none; }
-  .contact-val a:hover { text-decoration: underline; }
-  .form-group { margin-bottom: 14px; }
-  .form-group label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; font-family: var(--mono); }
-  .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 9px 12px; font-size: 14px; border: 0.5px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); font-family: var(--sans); outline: none; transition: border-color 0.15s; }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-  .form-group textarea { resize: vertical; min-height: 90px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .btn-submit { background: var(--navy); color: #fff; border: none; border-radius: 8px; padding: 10px 24px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: var(--sans); transition: background 0.15s; }
-  .btn-submit:hover { background: var(--navy2); }
-  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-  .form-success { display: none; padding: 1rem; background: #f0fdf4; border: 0.5px solid #bbf7d0; border-radius: 8px; color: #166534; font-size: 14px; text-align: center; margin-top: 1rem; }
-  footer { background: var(--navy); padding: 2.5rem 2rem; text-align: center; font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.35); line-height: 2; }
-  footer span { color: rgba(255,255,255,0.6); }
-  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  footer a:hover { color: #fff; }
-  @media (max-width: 680px) {
-    .hero h1 { font-size: 36px; }
-    .hero-stats { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
-    .about-grid, .station-cols, .contact-grid, .log-cols { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .nav-links { gap: 0.75rem; }
-    .nav-links a { font-size: 10px; }
-  }
-</style>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
@@ -251,14 +34,14 @@
       <p class="hero-sub">MK83TE · Bengaluru, Karnataka · Licenced 1993</p>
       <div class="hero-badges">
         <span class="badge badge-blue">FLEX-6600 · RGO One · IC-705</span>
-        <span class="badge badge-green">9 BDXCC</span>
+        <span class="badge badge-green">10 BDXCC</span>
         <span class="badge badge-amber">DXpeditioner</span>
         <span class="badge badge-pink">Remote Ops</span>
       </div>
     </div>
     <div class="hero-stats">
       <div class="stat-card"><div class="stat-val">1.5 KFA</div><div class="stat-lbl">SPE Expert Amp</div></div>
-      <div class="stat-card"><div class="stat-val">9 BDXCC</div><div class="stat-lbl">Awards</div></div>
+      <div class="stat-card"><div class="stat-val">10 BDXCC</div><div class="stat-lbl">Awards</div></div>
       <div class="stat-card"><div class="stat-val">VU7T · AT5P</div><div class="stat-lbl">DXpeditions</div></div>
     </div>
   </div>
@@ -438,7 +221,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">Lightning Antenna Protector</div>
-        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km. Dual source: Open-Meteo CAPE + WMO weather-code polling (every 5 min — CAPE ≥ 800 J/kg or code ∈ {95,96,99} synthesises a strike distance) + AS3935 local sensor via MQTT. Distance-graded 3×3 disconnect matrix (AS3935 close/medium/far × Open-Meteo cold/lit/severe) so Open-Meteo only corroborates AS3935 hits in the medium and far zones; the &lt;10 km close zone still single-hit-fires. Vertical BYPASS switch on the dashboard suspends auto-disconnect for 120 min for planned TX (force-reconnects on activation, never survives a Node-RED restart). Strike events and connect/disconnect transitions persist to <code>nr_lightning_events.jsonl</code> so history survives Node-RED restarts. 20-min auto-reconnect timer once the storm passes. On disconnect it also sends a <code>transmit set inhibit=1</code> command to the FLEX-6600 over the SmartSDR API, so the rig can't key up into a disconnected antenna — SmartSDR shows a red TX-Inhibit indicator and a Telegram alert fires. The inhibit clears automatically on reconnect, manual override or bypass; the radio stays powered and RX-capable throughout.</div>
+        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km, from Open-Meteo CAPE and weather-code polling plus a local AS3935 sensor over MQTT, and inhibits TX on the FLEX-6600 so the rig cannot key up into a disconnected antenna. <a href="/projects/lightning-antenna-protector/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Open-Meteo</span><span class="proj-tag">Tasmota</span><span class="proj-tag">AS3935</span><span class="proj-tag">SmartSDR API</span><span class="proj-tag">TX inhibit</span><span class="proj-tag">Telegram</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -507,7 +290,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">spe-remote — SPE Expert remote control server</div>
-        <div class="project-desc">Modern Python 3 remote-control server for SPE Expert HF amplifiers (1.3K-FA / 1.5K-FA / 2K-FA). Runs on a Raspberry Pi over USB serial and serves both a built-in web dashboard and a WebSocket API. Implements the full SPE Application Programmer's Guide Rev 1.1 plus the undocumented RCU command set, so the amplifier's LCD can be mirrored frame-by-frame. Mixed-client broadcast — text JSON for browsers, binary RCU frames for the MacExpert companion app — over the same socket. Threaded reader + async writer survive the USB-serial poll glitches that crash naive serial_asyncio setups. Server-side ballistics: <code>p_out_avg</code> (EMA, ~1 s settle) and <code>p_out_peak</code> (peak-hold, 600 W/s decay) travel alongside raw <code>p_out</code>, so a RAW / AVG / PEAK pill toggle on the shack dashboards reads meaningful values at CW-swing speeds without every client rolling its own filter. Interactive <code>./configure.sh</code> lists the Pi's <code>/dev/serial/by-id/</code> aliases for menu pick, walks through the optional Flex block, and preserves saved settings across re-runs; <code>sudo ./install-service.sh --update</code> re-configures and restarts the live systemd unit with a diff preview. Optional <code>flex:</code> config opens a second connection to a FlexRadio 6000-series rig over the SmartSDR TCP API and orchestrates an SM5TOG-style ATU tune plus the full sub-band SWEEP; leave <code>flex.host</code> empty and the server auto-discovers the radio via SmartSDR's UDP broadcast on port 4992. All four UIs (MacExpert, the bundled dashboard, Node-RED <code>/ui</code>, Vue <code>/shack</code>) receive the same <code>tune_event</code> stream. Based on original work by OH2GEK, rewritten and extended.</div>
+        <div class="project-desc">Python 3 remote-control server for SPE Expert HF amplifiers, running on a Raspberry Pi over USB serial and serving both a built-in web dashboard and a WebSocket API — the full Application Programmer’s Guide Rev 1.1 plus the undocumented RCU command set. Based on original work by OH2GEK, rewritten and extended. <a href="/projects/spe-remote/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">Python 3</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU protocol</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">TUNE sweep</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/spe-remote" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -519,7 +302,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">MacExpert — native SPE Expert control app for macOS</div>
-        <div class="project-desc">Swift / SwiftUI macOS app that mirrors and controls SPE Expert HF amplifiers over either local USB serial or remote WebSocket (via spe-remote). Two-way live mirror of the amp's LCD using RCU 0x6A frames — every sub-menu (CAT, CONFIG, TEMP/FANS, RX ANT, TUN ANT &rarr; PORT, ALARMS LOG, MANUAL TUNE, ANTENNA matrix, YAESU / TEN-TEC pickers, STANDBY banner) tracked with cursor-accurate state. Auto-detects the model (1.3K / 1.5K / 2K) from the status frame, auto-scales the power display to the LOW/MID/HIGH level, and offers tap-to-cycle status chips for STATUS / BAND / ANT / IN / LEVEL / MODE / CAT. SWEEP panel drives spe-remote's <code>tune_band</code> orchestrator over WebSocket — band picker, progress bar, Stop — reading the shared <code>tune_event</code> phase stream. Amp-powered-off banner dims the panel and blanks status chips when the FTDI link stays up but the amp CPU is off. Auto-ranging QRP power meter (5 / 25 / 50 / 100 / 200 W) for STANDBY / TX-bypass drive readings. Universal binary (Apple Silicon + Intel), Developer-ID signed + Apple-notarised; the same release script also packages an ExtensionKit <code>.radioplugin</code> for Amateur Radio Suite. Named after and inspired by the original MacExpert by Georg Isenbürger DJ6GI/NZ1C; RCU protocol reverse-engineered from scratch by VU2CPL.</div>
+        <div class="project-desc">Swift / SwiftUI macOS app that mirrors and controls SPE Expert HF amplifiers over either local USB serial or remote WebSocket, with a two-way live mirror of the amplifier’s LCD. Named after and inspired by the original MacExpert by Georg Isenbürger DJ6GI/NZ1C; RCU protocol reverse-engineered from scratch by VU2CPL. <a href="/projects/macexpert/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU</span><span class="proj-tag">USB serial</span><span class="proj-tag">WebSocket</span><span class="proj-tag">SWEEP panel</span><span class="proj-tag">Apple-notarised</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/macexpert-spe" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -587,7 +370,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">DXCA — DX Cluster Aggregator 2.0</div>
-        <div class="project-desc">Ground-up Rust rewrite of the DX Cluster Aggregator that runs the whole aggregation stack headless on a Raspberry Pi (equally on macOS/Linux, and since v2.2.0 on Windows) behind a multi-user web GUI. Merges WSJT-X / JTDX / MSHV binary-UDP decoder sources and DX-cluster telnet nodes — honest three-state node status (proven-live vs connected-unproven), login/silence watchdog, reconnect backoff that only resets on proof — into one feed, re-served on a built-in telnet cluster server (port 7575), a UDP fan-out including a verbatim passthrough that keeps RUMlogNG's click-to-fill working, and MQTT publish (structured JSON plus the plain cluster line, on sibling topics) for panadapter overlays. Each account carries its own ClubLog matrix, so different operators see their own highlighting across <strong>seventeen alert levels</strong> — New DXCC / Band / Mode / Slot for never worked, the matching four for worked-but-unconfirmed, a New and a <code>?</code> pair each for <strong>IOTA, WAS, VUCC and WAZ</strong>, and the <strong>DX Marathon</strong> — and get their own Telegram alerts, with a history of what was actually sent, over the same shared spot stream. A match can be marked on the radio as well as sent to a phone: <strong>FlexRadio</strong> panadapters over SmartSDR and <strong>ExpertSDR3</strong> over TCI, several of each per account. DXCC Challenge points and band×mode slot totals per station, per-band and per-mode entity breakdowns, LoTW uploaders flagged from ARRL's list, and each account's ClubLog log plus the shared LoTW list re-downloaded on a schedule. Five awards beyond DXCC are <strong>opt-in per account</strong> and add nothing anywhere until ticked — <strong>IOTA</strong> from a spot's own comment, checked against the directory; <strong>WAS</strong> from the FCC licence database; <strong>VUCC</strong> grids on 50 MHz and up; <strong>WAZ</strong>'s forty zones; and the <strong>DX Marathon</strong>'s score for the current year — and which WAS or WAZ you are chasing (mixed, per band, or each mode) is itself a setting, because it changes what wakes you rather than only what is shown. Confirmations ride an optional LoTW QSL-report download, except zones, which score off the QSL flags ClubLog's export already carries. Where a cluster comment omits the mode, it is inferred from an IARU Region 3 band plan and <em>marked as inferred</em> rather than asserted — an unknown mode is never quietly filed as digital. Live WebSocket dashboard on a three-tab shell — Spots, Alerts, Stats — with everything you configure behind a gear: sources, nodes, destinations, MQTT, accounts and a server-wide call blacklist, all edited in the browser with hot-apply. Both spot tables share one fixed, measured column grid, so a column lands in the same place on every row while the stream runs, and each screen's narrowing sits in a collapsible rail that still reports how much it is holding back when folded. An optional <strong>band mask</strong> recedes bands the sun says are not workable from your Maidenhead square — dim or hide, around a tunable grey-line window, and New DXCC is never masked. Stats shows what the live feed is made of beside your own ClubLog totals, with Club Log's DX Dashboard embedded alongside them and an awards view — WAS endorsements per band and per mode with a Triple Play worklist, zones worked and confirmed, islands, grids and the Marathon year, each with a <em>still needed</em> list. Installs as a systemd service (Pi), a launchd agent (macOS) or — new in v2.2.0 — a boot-started scheduled task on Windows from a prebuilt <code>.exe</code> + installer shipped as a release asset, each through an installer that checks its own prerequisites and then verifies the result is genuinely serving; behavioural parity with the macOS app proven by golden tests against its own artifacts. Supersedes the <a href="https://github.com/vu2cpl/DXClusterAggregator-macOS" target="_blank" rel="noopener" style="color:var(--accent);">macOS DX Cluster Aggregator</a> (final feature release v1.8.4, maintained at v1.8.5, retained as fallback). Original concept and reference implementation by Vinod VU3ESV; the DX-cluster telnet engine and the web GUI's design system are derived from the Meridian project (joint work with Basil Thomas W6BT and Ram VU3RDD).</div>
+        <div class="project-desc">Rust rewrite of the DX Cluster Aggregator, running the whole aggregation stack headless on a Raspberry Pi behind a multi-user web GUI — WSJT-X / JTDX / MSHV decoder feeds and cluster telnet merged into one stream, per-account ClubLog matrices driving seventeen alert levels, Telegram alerts, and match marking on FlexRadio and ExpertSDR3 panadapters. Original concept and reference implementation by Vinod VU3ESV. <a href="/projects/dxca/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">Svelte</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">Windows</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">WSJT-X / JTDX</span><span class="proj-tag">Club Log</span><span class="proj-tag">Multi-user</span><span class="proj-tag">Telegram</span><span class="proj-tag">MQTT</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/dxca" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -599,7 +382,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">MSHV-Mac — native macOS port of LZ2HV/MSHV</div>
-        <div class="project-desc">Native macOS port of LZ2HV's MSHV multi-mode weak-signal program (FT8 / FT4 / Q65 / MSK144 / JT9 / JT65 etc.). Apple Silicon and Intel; verified end-to-end against a FlexRadio 6000-series via AetherSDR's TCI bridge for both RX and TX, with WSJT-X-compatible UDP broadcast feeding RUMlogNG's DXSpots window. Self-contained .app bundle: PortAudio audio backend with Float32/Int24/Int16 fallbacks, FlexRadio CommonRadioAudio + DAX support, real <code>host_processor_info</code> CPU sensor, dark theme, app icon, font defaults. User state lives under <code>~/Library/Application Support/MSHV/</code> — replace the bundle and callsign, QSOs, logs and WAVs stay put. Developer-ID signed + Apple-notarised, so Gatekeeper passes without the right-click dance. Patches sit on a <code>_MACOS_</code>-conditional <code>macos-port</code> branch on top of upstream <code>main</code>, so Linux and Windows builds remain untouched and new LZ2HV releases merge cleanly.</div>
+        <div class="project-desc">Native macOS port of LZ2HV’s MSHV multi-mode weak-signal program (FT8 / FT4 / Q65 / MSK144 / JT9 / JT65). Apple Silicon and Intel, Developer-ID signed and Apple-notarised, with patches on a macos-port branch so new LZ2HV releases merge cleanly. <a href="/projects/mshv-mac/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Qt5</span><span class="proj-tag">PortAudio</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">MSK144</span><span class="proj-tag">FlexRadio</span><span class="proj-tag">TCI</span><span class="proj-tag">WSJT-X UDP</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/mshv-macos-port" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -611,7 +394,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">Ulanzi D100H — hardware front panel for AetherSDR over TCI</div>
-        <div class="project-desc">A seven-key Bluetooth LE macro dial turned into a physical front panel for <a href="https://aethersdr.com/" target="_blank" rel="noopener" style="color:var(--accent);">AetherSDR</a>, driven over its TCI WebSocket. The knob tunes the transmit slice — snapping to the step grid, so an off-grid VFO from a band stack or a panadapter click lands back on a boundary rather than carrying its offset all session — and a press flips between fast and slow rates. The keys are split, PTT, ATU tune, mode cycle, mute and band up/down, with band stacking that remembers frequency <em>and</em> mode per band. Split parks the TX slice 1&nbsp;kHz up on CW and 5&nbsp;kHz on SSB, and mute masters every open receiver rather than just one. Runs on Nigel Fenton G0JKN's AetherSDR Controller plugin for Ulanzi Studio, with local patches carried on top and a bundle script that rebuilds the whole thing — patched plugin, dependencies and the operator profile — for a second machine. <strong>Doubles as the plugin's first-light hardware test.</strong> The plugin shipped as a pre-release scaffold that had never been run against a device, and putting it on a radio found five defects — reported upstream as <a href="https://github.com/nigelfenton/aethersdr-ulanzi-plugin/issues/3" target="_blank" rel="noopener" style="color:var(--accent);">issue&nbsp;#3</a> and fixed in <a href="https://github.com/nigelfenton/aethersdr-ulanzi-plugin/pull/4" target="_blank" rel="noopener" style="color:var(--accent);">PR&nbsp;#4</a>, both now closed with the fixes merged upstream: property-inspector settings that had never once persisted, a mode cycle pinned to its first entry by a case-sensitive comparison, and a TUNE button that could start an ATU cycle but never stop one, while keying the transmitter. Every fix verified on the air before submission — G0JKN has no D100H, so the hardware evidence behind the merge is from this station. Plugin by Nigel Fenton G0JKN — upstream at <a href="https://github.com/nigelfenton/aethersdr-ulanzi-plugin" target="_blank" rel="noopener" style="color:var(--accent);">nigelfenton/aethersdr-ulanzi-plugin</a>.</div>
+        <div class="project-desc">A seven-key Bluetooth LE macro dial turned into a physical front panel for AetherSDR over its TCI WebSocket — tuning with grid snapping, split, PTT, ATU tune, mode cycle, mute and band stacking. Doubles as the plugin’s first-light hardware test: five defects found on the air, all now merged upstream. Plugin by Nigel Fenton G0JKN. <a href="/projects/ulanzi-d100h/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Node.js</span><span class="proj-tag">Ulanzi Studio</span><span class="proj-tag">TCI</span><span class="proj-tag">AetherSDR</span><span class="proj-tag">Bluetooth LE</span><span class="proj-tag">WebSocket</span></div>
         <a class="repo-btn" href="https://github.com/vu2cpl/ulanzi-d100h-aethersdr" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -623,7 +406,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">Meridian — headless multi-platform SDR skimmer server</div>
-        <div class="project-desc">Headless SDR server in Rust with in-process digital-mode decoders in C (called via FFI) and Rust behind one registry — the successor to and ground-up rewrite of SkimServer Mac. Same station role, now on <strong>all four platforms</strong> (Linux x86-64, Linux ARM64 / Raspberry Pi, macOS, Windows), each built and tested locally via a fmt / clippy-deny-warnings / full-test / web-UI gate; no hosted CI. Ingests IQ directly from radios — HPSDR / Metis Protocol 1 (Red Pitaya multi-DDC, HermesLite), FlexRadio DAX, RX-888 direct USB — receive-only. Decoders: FT8, FT4, CW (multiple variants running in parallel per receiver — a faithful SkimSrv / kref STFT decoder and W6BT's NX1–NX14 bench decoders), RTTY, WSPR (via <code>wsprd</code>), and an NCDXF beacon watcher. Decoded spots flow through a per-mode refinery and a plugin-based gate to internal + external DX-cluster telnet feeds, PSKR + WSPRnet uploads, and a durable SQLite spot store; external-cluster spots relay back in through the same gate. <strong>Every configuration change is applied live across the system — no restarts.</strong> Three config layers: bootstrap TOML (bind addrs + which web UI to serve), a system-wide config.json (device / external-cluster / band-plan / calibration inventories), and switchable JSON profiles (operator identity, devices in use, decoders, gate policy, feeds). Ships with a Svelte 5 + TypeScript web UI on port 7374 (i18n en / de, light / dark). RBN upload is deliberately external — a separate rbclient app consumes the byte-stable Aggregator-dialect telnet feed. Deployed as the station daemon on a Raspberry Pi 5 driving the Red Pitaya as VU2CPL-9 (10 bands, 8 RX @ 192 kHz, greyline-masked), with idle release builds also running on Mac, Windows, and the UberSDR box. A joint project, built together with Basil Thomas W6BT (upstream repo owner), Vinod VU3ESV, and Ram VU3RDD.</div>
+        <div class="project-desc">Headless SDR skimmer server in Rust with in-process FT8 / FT4 / CW / RTTY / WSPR decoders behind one registry, running on Linux, Raspberry Pi, macOS and Windows. Deployed as the station daemon on a Pi 5 driving the Red Pitaya as VU2CPL-9. A joint project, built together with Basil Thomas W6BT, Vinod VU3ESV and Ram VU3RDD. <a href="/projects/meridian/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">C (FFI)</span><span class="proj-tag">Multi-platform</span><span class="proj-tag">Linux</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">HPSDR</span><span class="proj-tag">Red Pitaya</span><span class="proj-tag">HermesLite</span><span class="proj-tag">RX-888</span><span class="proj-tag">FlexRadio DAX</span><span class="proj-tag">CW skimmer</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">WSPR</span><span class="proj-tag">NCDXF beacon</span><span class="proj-tag">PSKR</span><span class="proj-tag">WSPRnet</span><span class="proj-tag">Svelte 5</span></div>
       </div>
       <span class="status-badge status-active">Active</span>
@@ -643,7 +426,7 @@
     <div class="project-card">
       <div>
         <div class="project-name">KST2Mac — native ON4KST chat client for macOS</div>
-        <div class="project-desc">Native macOS client for the ON4KST chats — the DX-liaison chats VHF, UHF and microwave operators keep open beside the radio during a lift or a contest. Any number of rooms at once, each pane holding its own login, room picker, station list and message box, and each able to be torn out into its own window without dropping its connection. Station list carries name, locator, and QRB/QTF worked from your own square, with away stations marked. Message traffic is coloured by what it is: a stable per-callsign hue that reads the same in the log and the table, and KST2Me's own highlight conventions for <code>/CQ</code>, preamble and watched callsigns, so an operator who knows one client can read the other. Grid squares and frequencies are picked out inside message text. Alert sounds fire whether or not the app is in front — the case a notification banner cannot cover — and mentions raise a banner when it is not. A built-in <strong>DX-cluster node</strong> re-serves the chat's spots on a LAN port, so DXCA or any cluster client dials it as one more node and receives them verbatim, unparsed. The whole telnet protocol was reverse-engineered from packet captures of the live service rather than from documentation, which turned out to be wrong about the room list, the timestamp format, the command rate limit and more; <code>docs/PROTOCOL.md</code> in the repo records what is captured versus what is still inferred. Universal binary (Apple Silicon + Intel), Developer-ID signed and Apple-notarised. Named after and modelled on KST2Me by Bo <strong>OZ2M</strong>, the long-standing Windows client; the protocol work here is original, but the interaction design and the highlight conventions follow OZ2M's manual.</div>
+        <div class="project-desc">Native macOS client for the ON4KST chats VHF, UHF and microwave operators keep open beside the radio — any number of rooms at once, each pane holding its own login, room picker and station list, and each able to be torn out into its own window. Named after and modelled on KST2Me by Bo OZ2M; the protocol work here is original. <a href="/projects/kst2mac/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">ON4KST</span><span class="proj-tag">VHF / UHF</span><span class="proj-tag">DX cluster</span><span class="proj-tag">telnet</span><span class="proj-tag">Notarised</span></div>
         <a class="yt-link" href="https://github.com/vu2cpl/kst2mac/releases/latest" target="_blank" rel="noopener" style="color:var(--accent);">Download v1.0.0 for macOS &rarr;</a>
         <a class="repo-btn" href="https://github.com/vu2cpl/kst2mac" target="_blank" rel="noopener">

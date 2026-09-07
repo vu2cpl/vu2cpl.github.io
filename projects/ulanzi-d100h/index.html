@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ulanzi D100H — hardware front panel for AetherSDR over TCI · VU2CPL</title>
+<meta name="description" content="A seven-key Bluetooth LE macro dial turned into a physical front panel for AetherSDR, driven over its TCI WebSocket. The knob tunes the transmit slice —…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span>VU2CPL</span> · Manoj</a>
+  <div class="nav-links">
+    <a href="/#about">About</a>
+    <a href="/#station">Station</a>
+    <a href="/#log">Log</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#writings">Writings</a>
+    <a href="/dxcc/">VU DXCC</a>
+    <a href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" class="nav-live" title="Listen live on VU2CPL's RX-888 + LZ1AQ active loop WebSDR">WebSDR</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="proj-page">
+  <a class="proj-back" href="/#projects">&larr; All projects</a>
+  <h1>Ulanzi D100H — hardware front panel for AetherSDR over TCI</h1>
+  <div class="proj-meta"><span class="status-badge status-active">Active</span></div>
+  <div class="proj-body">
+    <p>A seven-key Bluetooth LE macro dial turned into a physical front panel for <a href="https://aethersdr.com/" target="_blank" rel="noopener" style="color:var(--accent);">AetherSDR</a>, driven over its TCI WebSocket. The knob tunes the transmit slice — snapping to the step grid, so an off-grid VFO from a band stack or a panadapter click lands back on a boundary rather than carrying its offset all session — and a press flips between fast and slow rates.</p>
+    <p>The keys are split, PTT, ATU tune, mode cycle, mute and band up/down, with band stacking that remembers frequency <em>and</em> mode per band. Split parks the TX slice 1&nbsp;kHz up on CW and 5&nbsp;kHz on SSB, and mute masters every open receiver rather than just one.</p>
+    <p>Runs on Nigel Fenton G0JKN's AetherSDR Controller plugin for Ulanzi Studio, with local patches carried on top and a bundle script that rebuilds the whole thing — patched plugin, dependencies and the operator profile — for a second machine. <strong>Doubles as the plugin's first-light hardware test.</strong> The plugin shipped as a pre-release scaffold that had never been run against a device, and putting it on a radio found five defects — reported upstream as <a href="https://github.com/nigelfenton/aethersdr-ulanzi-plugin/issues/3" target="_blank" rel="noopener" style="color:var(--accent);">issue&nbsp;#3</a> and fixed in <a href="https://github.com/nigelfenton/aethersdr-ulanzi-plugin/pull/4" target="_blank" rel="noopener" style="color:var(--accent);">PR&nbsp;#4</a>, both now closed with the fixes merged upstream: property-inspector settings that had never once persisted, a mode cycle pinned to its first entry by a case-sensitive comparison, and a TUNE button that could start an ATU cycle but never stop one, while keying the transmitter. Every fix verified on the air before submission — G0JKN has no D100H, so the hardware evidence behind the merge is from this station.</p>
+    <p>Plugin by Nigel Fenton G0JKN — upstream at <a href="https://github.com/nigelfenton/aethersdr-ulanzi-plugin" target="_blank" rel="noopener" style="color:var(--accent);">nigelfenton/aethersdr-ulanzi-plugin</a>.</p>
+  </div>
+  <div class="proj-actions">
+        <a class="repo-btn" href="https://github.com/vu2cpl/ulanzi-d100h-aethersdr" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+  </div>
+  <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Node.js</span><span class="proj-tag">Ulanzi Studio</span><span class="proj-tag">TCI</span><span class="proj-tag">AetherSDR</span><span class="proj-tag">Bluetooth LE</span><span class="proj-tag">WebSocket</span></div>
+</main>
+
+<footer>
+  <span>VU2CPL · Manoj Ramawarrier</span> · Bengaluru, India · MK83TE<br>
+  Licenced 1993 &nbsp;·&nbsp;
+  <a href="https://www.qrz.com/db/VU2CPL">QRZ</a> &nbsp;·&nbsp;
+  <a href="https://clublog.org/logsearch/VU2CPL">Clublog</a> &nbsp;·&nbsp;
+  <a href="https://hamphotos.com">HamPhotos</a>
+  <br><br>73
+</footer>
+
+</body>
+</html>

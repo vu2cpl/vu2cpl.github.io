@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian — headless multi-platform SDR skimmer server · VU2CPL</title>
+<meta name="description" content="Headless SDR server in Rust with in-process digital-mode decoders in C (called via FFI) and Rust behind one registry — the successor to and ground-up…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span>VU2CPL</span> · Manoj</a>
+  <div class="nav-links">
+    <a href="/#about">About</a>
+    <a href="/#station">Station</a>
+    <a href="/#log">Log</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#writings">Writings</a>
+    <a href="/dxcc/">VU DXCC</a>
+    <a href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" class="nav-live" title="Listen live on VU2CPL's RX-888 + LZ1AQ active loop WebSDR">WebSDR</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="proj-page">
+  <a class="proj-back" href="/#projects">&larr; All projects</a>
+  <h1>Meridian — headless multi-platform SDR skimmer server</h1>
+  <div class="proj-meta"><span class="status-badge status-active">Active</span></div>
+  <div class="proj-body">
+    <p>Headless SDR server in Rust with in-process digital-mode decoders in C (called via FFI) and Rust behind one registry — the successor to and ground-up rewrite of SkimServer Mac. Same station role, now on <strong>all four platforms</strong> (Linux x86-64, Linux ARM64 / Raspberry Pi, macOS, Windows), each built and tested locally via a fmt / clippy-deny-warnings / full-test / web-UI gate; no hosted CI. Ingests IQ directly from radios — HPSDR / Metis Protocol 1 (Red Pitaya multi-DDC, HermesLite), FlexRadio DAX, RX-888 direct USB — receive-only.</p>
+    <p>Decoders: FT8, FT4, CW (multiple variants running in parallel per receiver — a faithful SkimSrv / kref STFT decoder and W6BT's NX1–NX14 bench decoders), RTTY, WSPR (via <code>wsprd</code>), and an NCDXF beacon watcher. Decoded spots flow through a per-mode refinery and a plugin-based gate to internal + external DX-cluster telnet feeds, PSKR + WSPRnet uploads, and a durable SQLite spot store; external-cluster spots relay back in through the same gate. <strong>Every configuration change is applied live across the system — no restarts.</strong> Three config layers: bootstrap TOML (bind addrs + which web UI to serve), a system-wide config.json (device / external-cluster / band-plan / calibration inventories), and switchable JSON profiles (operator identity, devices in use, decoders, gate policy, feeds).</p>
+    <p>Ships with a Svelte 5 + TypeScript web UI on port 7374 (i18n en / de, light / dark). RBN upload is deliberately external — a separate rbclient app consumes the byte-stable Aggregator-dialect telnet feed.</p>
+    <p>Deployed as the station daemon on a Raspberry Pi 5 driving the Red Pitaya as VU2CPL-9 (10 bands, 8 RX @ 192 kHz, greyline-masked), with idle release builds also running on Mac, Windows, and the UberSDR box. A joint project, built together with Basil Thomas W6BT (upstream repo owner), Vinod VU3ESV, and Ram VU3RDD.</p>
+  </div>
+  <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">C (FFI)</span><span class="proj-tag">Multi-platform</span><span class="proj-tag">Linux</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">HPSDR</span><span class="proj-tag">Red Pitaya</span><span class="proj-tag">HermesLite</span><span class="proj-tag">RX-888</span><span class="proj-tag">FlexRadio DAX</span><span class="proj-tag">CW skimmer</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">WSPR</span><span class="proj-tag">NCDXF beacon</span><span class="proj-tag">PSKR</span><span class="proj-tag">WSPRnet</span><span class="proj-tag">Svelte 5</span></div>
+</main>
+
+<footer>
+  <span>VU2CPL · Manoj Ramawarrier</span> · Bengaluru, India · MK83TE<br>
+  Licenced 1993 &nbsp;·&nbsp;
+  <a href="https://www.qrz.com/db/VU2CPL">QRZ</a> &nbsp;·&nbsp;
+  <a href="https://clublog.org/logsearch/VU2CPL">Clublog</a> &nbsp;·&nbsp;
+  <a href="https://hamphotos.com">HamPhotos</a>
+  <br><br>73
+</footer>
+
+</body>
+</html>
