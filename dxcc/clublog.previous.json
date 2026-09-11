@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "09 Sep 2026",
-  "previous_as_on": "08 Sep 2026",
-  "generated_at": "2026-09-09T07:27:40+00:00",
+  "as_on": "10 Sep 2026",
+  "previous_as_on": "09 Sep 2026",
+  "generated_at": "2026-09-10T07:23:22+00:00",
   "columns": [
     "160",
     "80",
@@ -132,15 +132,18 @@
       "17": 299,
       "15": 296,
       "12": 274,
-      "10": 275,
+      "10": 276,
       "6": 117,
       "total": 319,
-      "slots": 2476,
+      "slots": 2477,
       "years": "33 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Manoj Ramawarrier",
-      "changes": [],
+      "changes": [
+        "10",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -164,10 +167,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -388,7 +388,7 @@
     },
     {
       "sno": 15,
-      "rank": 675,
+      "rank": 676,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -431,11 +431,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "15",
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -512,26 +508,31 @@
     },
     {
       "sno": 20,
-      "rank": 1114,
+      "rank": 1108,
       "callsign": "VU22DX",
       "160": 1,
       "80": 0,
       "60": 0,
       "40": 59,
       "30": 31,
-      "20": 154,
+      "20": 156,
       "17": 28,
-      "15": 147,
+      "15": 149,
       "12": 11,
       "10": 147,
       "6": 4,
-      "total": 181,
-      "slots": 582,
+      "total": 182,
+      "slots": 586,
       "years": "3 yrs",
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [],
+      "changes": [
+        "20",
+        "15",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -545,17 +546,20 @@
       "30": 0,
       "20": 161,
       "17": 130,
-      "15": 137,
+      "15": 139,
       "12": 0,
       "10": 0,
       "6": 0,
       "total": 180,
-      "slots": 519,
+      "slots": 521,
       "years": "8 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [],
+      "changes": [
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -632,7 +636,7 @@
     },
     {
       "sno": 25,
-      "rank": 1395,
+      "rank": 1394,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -656,7 +660,7 @@
     },
     {
       "sno": 26,
-      "rank": 1492,
+      "rank": 1491,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -680,7 +684,7 @@
     },
     {
       "sno": 27,
-      "rank": 1512,
+      "rank": 1510,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -699,10 +703,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Abie Alexander",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
