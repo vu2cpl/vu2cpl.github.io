@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "11 Sep 2026",
-  "previous_as_on": "10 Sep 2026",
-  "generated_at": "2026-09-11T07:21:28+00:00",
+  "as_on": "12 Sep 2026",
+  "previous_as_on": "11 Sep 2026",
+  "generated_at": "2026-09-12T07:14:18+00:00",
   "columns": [
     "160",
     "80",
@@ -73,7 +73,7 @@
     },
     {
       "sno": 2,
-      "rank": 282,
+      "rank": 283,
       "callsign": "VU2NXO",
       "160": 40,
       "80": 42,
@@ -97,7 +97,7 @@
     },
     {
       "sno": 3,
-      "rank": 297,
+      "rank": 298,
       "callsign": "VU2CDP",
       "160": 3,
       "80": 69,
@@ -417,18 +417,21 @@
       "40": 184,
       "30": 36,
       "20": 181,
-      "17": 171,
+      "17": 172,
       "15": 161,
       "12": 124,
       "10": 140,
       "6": 23,
       "total": 247,
-      "slots": 1066,
+      "slots": 1067,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -625,7 +628,7 @@
     },
     {
       "sno": 25,
-      "rank": 1395,
+      "rank": 1396,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -716,10 +719,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
