@@ -18,6 +18,17 @@
   .nav-links a.nav-live { color: #f87171; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
   .nav-links a.nav-live::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block; animation: blink 1.4s infinite; }
   .nav-links a.nav-live:hover { color: #fca5a5; }
+  /* WebSDR HF/VHF dropdown (native <details>, no JS) */
+  .nav-dd { position: relative; }
+  .nav-dd > summary { list-style: none; cursor: pointer; color: #f87171; font-weight: 700; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
+  .nav-dd > summary::-webkit-details-marker { display: none; }
+  .nav-dd > summary::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block; animation: blink 1.4s infinite; }
+  .nav-dd > summary::after { content: '▾'; font-size: 9px; opacity: 0.85; }
+  .nav-dd[open] > summary::after { content: '▴'; }
+  .nav-dd > summary:hover { color: #fca5a5; }
+  .nav-dd-menu { position: absolute; top: calc(100% + 10px); left: 0; z-index: 200; display: flex; flex-direction: column; min-width: 190px; max-width: calc(100vw - 24px); background: var(--navy2); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 6px; box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
+  .nav-dd-menu a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 9px 11px; border-radius: 7px; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.15s, color 0.15s; }
+  .nav-dd-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
   .hero { background: var(--navy); padding: 5rem 2rem 4rem; }
   .hero-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
   .hero-left { flex: 1; min-width: 280px; }
