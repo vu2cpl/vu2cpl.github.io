@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "15 Sep 2026",
-  "previous_as_on": "14 Sep 2026",
-  "generated_at": "2026-09-15T07:53:41+00:00",
+  "as_on": "16 Sep 2026",
+  "previous_as_on": "15 Sep 2026",
+  "generated_at": "2026-09-16T07:46:38+00:00",
   "columns": [
     "160",
     "80",
@@ -164,10 +164,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -239,12 +236,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Adersh",
-      "changes": [
-        "80",
-        "17",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -369,7 +361,43 @@
     },
     {
       "sno": 14,
-      "rank": 662,
+      "rank": 620,
+      "callsign": "VU22DX",
+      "160": 10,
+      "80": 1,
+      "60": 0,
+      "40": 65,
+      "30": 37,
+      "20": 260,
+      "17": 38,
+      "15": 214,
+      "12": 13,
+      "10": 187,
+      "6": 4,
+      "total": 271,
+      "slots": 829,
+      "years": "6 yrs",
+      "linked_count": 2,
+      "is_linked": true,
+      "op_name": "Sandesh Bhat (Sandy)",
+      "changes": [
+        "160",
+        "80",
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "total",
+        "slots"
+      ],
+      "is_new": false
+    },
+    {
+      "sno": 15,
+      "rank": 663,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 54,
@@ -392,8 +420,8 @@
       "is_new": false
     },
     {
-      "sno": 15,
-      "rank": 675,
+      "sno": 16,
+      "rank": 676,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -416,8 +444,8 @@
       "is_new": false
     },
     {
-      "sno": 16,
-      "rank": 719,
+      "sno": 17,
+      "rank": 714,
       "callsign": "VU2OY",
       "160": 18,
       "80": 28,
@@ -425,23 +453,30 @@
       "40": 184,
       "30": 36,
       "20": 181,
-      "17": 172,
-      "15": 162,
-      "12": 124,
-      "10": 140,
+      "17": 174,
+      "15": 163,
+      "12": 125,
+      "10": 142,
       "6": 23,
-      "total": 247,
-      "slots": 1068,
+      "total": 248,
+      "slots": 1074,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "17",
+        "15",
+        "12",
+        "10",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
-      "sno": 17,
-      "rank": 1029,
+      "sno": 18,
+      "rank": 1030,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -460,18 +495,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Puneit Singh",
-      "changes": [
-        "40",
-        "15",
-        "12",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
-      "sno": 18,
-      "rank": 1038,
+      "sno": 19,
+      "rank": 1039,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -494,8 +523,8 @@
       "is_new": false
     },
     {
-      "sno": 19,
-      "rank": 1081,
+      "sno": 20,
+      "rank": 1082,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -514,30 +543,6 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Aishwarya Bijanki",
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 20,
-      "rank": 1109,
-      "callsign": "VU22DX",
-      "160": 1,
-      "80": 0,
-      "60": 0,
-      "40": 59,
-      "30": 31,
-      "20": 156,
-      "17": 28,
-      "15": 149,
-      "12": 11,
-      "10": 147,
-      "6": 4,
-      "total": 182,
-      "slots": 586,
-      "years": "3 yrs",
-      "linked_count": 2,
-      "is_linked": true,
-      "op_name": "Sandesh Bhat (Sandy)",
       "changes": [],
       "is_new": false
     },
@@ -562,10 +567,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -722,13 +724,13 @@
       "40": 3,
       "30": 1,
       "20": 55,
-      "17": 18,
+      "17": 19,
       "15": 67,
       "12": 1,
       "10": 83,
       "6": 0,
       "total": 106,
-      "slots": 228,
+      "slots": 229,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
