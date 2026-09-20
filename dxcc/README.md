@@ -14,7 +14,7 @@ Live at **[vu2cpl.com/dxcc/](https://vu2cpl.com/dxcc/)**.
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Sortable tabbed UI that fetches `data.json` (LoTW) or `clublog.json` (Clublog). Callsigns link to [qrz.com/db/](https://www.qrz.com/db/). |
+| `index.html` | Sortable tabbed UI that fetches `data.json` (LoTW) or `clublog.json` (Clublog). Callsigns link to [qrz.com/db/](https://www.qrz.com/db/). Also carries the site-wide Cloudflare Web Analytics beacon in `<head>` (see top-level `HANDOVER.md`); the refresh workflows never touch this file. |
 | `data.json` | Generated — current LoTW/ARRL data (one row per callsign) |
 | `data.previous.json` | Generated — prior LoTW snapshot for diffs |
 | `VUDXCC-latest.pdf` | Generated — printable LoTW PDF |
