@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "19 Sep 2026",
-  "previous_as_on": "18 Sep 2026",
-  "generated_at": "2026-09-19T07:25:15+00:00",
+  "as_on": "20 Sep 2026",
+  "previous_as_on": "19 Sep 2026",
+  "generated_at": "2026-09-20T07:48:23+00:00",
   "columns": [
     "160",
     "80",
@@ -380,15 +380,7 @@
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [
-        "160",
-        "40",
-        "20",
-        "15",
-        "10",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -460,12 +452,7 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [
-        "20",
-        "15",
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -638,7 +625,7 @@
     },
     {
       "sno": 25,
-      "rank": 1397,
+      "rank": 1398,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -662,7 +649,7 @@
     },
     {
       "sno": 26,
-      "rank": 1495,
+      "rank": 1496,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -686,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1516,
+      "rank": 1518,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
