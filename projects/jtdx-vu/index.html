@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JTDX-VU — JTDX for the VUCG community · VU2CPL</title>
+<meta name="description" content="JTDX-VU: a build of JTDX for the VUCG community — macOS, Windows and Raspberry Pi builds with Club Log DXCC status, needed-DXCC alerts and one-click band/mode buttons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb5c13644c834a9fb621de380f7e5597"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span>VU2CPL</span> · Manoj</a>
+  <div class="nav-links">
+    <a href="/#about">About</a>
+    <a href="/#station">Station</a>
+    <a href="/#log">Log</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#writings">Writings</a>
+    <a href="/dxcc/">VU DXCC</a>
+    <details class="nav-dd">
+      <summary title="Listen live on VU2CPL's WebSDR — HF and VHF">WebSDR</summary>
+      <div class="nav-dd-menu">
+        <a href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" title="HF WebSDR — RX-888 + LZ1AQ active loop, 0–30 MHz">HF — 0–30 MHz</a>
+        <a href="https://vu2cpl.ddns.net:8873/" target="_blank" rel="noopener" title="VHF WebSDR — 2 m / 70 cm / airband / FM, SDRplay RSP2 + MSi2500 (OpenWebRX+)">VHF — 2 m / 70 cm / air / FM</a>
+      </div>
+    </details>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="proj-page">
+  <a class="proj-back" href="/#projects">&larr; All projects</a>
+  <h1>JTDX-VU — JTDX for the VUCG community</h1>
+  <div class="proj-meta"><span class="status-badge status-active">Active</span></div>
+  <div class="proj-body">
+    <p>JTDX-VU is a build of JTDX 2.2.159 for the VUCG community, packaged natively for macOS (Apple Silicon and Intel), Windows x64 and Raspberry Pi / Linux (arm64 <code>.deb</code>). It installs next to a stock JTDX as its own app, with its own settings and data. On first launch it copies an existing JTDX setup across, so callsign, audio, rig and logs carry over.</p>
+    <p><strong>Club Log DXCC status.</strong> JTDX's New DXCC / New band / New band+mode colouring normally reflects only the QSOs JTDX itself logged. JTDX-VU can take the whole log from Club Log instead, so every contact made with any program counts. It can also count only QSOs confirmed by QSL, LoTW or eQSL, which keeps worked-but-unconfirmed entities showing as needed. The log is refreshed at start-up, and QSOs made since the last refresh still count, so a station just worked doesn't light up again.</p>
+    <p><strong>Needed-DXCC alerts.</strong> When a decoded station is an ATNO, a new band or a new band+mode, JTDX-VU raises a desktop notification and/or sends a Telegram message, with a per-station cooldown. <strong>Show only new</strong> trims the Band Activity pane down to stations still needed, while traffic with your own call and your QSO partner always shows.</p>
+    <p><strong>One-click band and mode buttons</strong> above the decode panes, after the MSHV switcher: the current band and mode light up green, and a band button tunes to the mode's standard frequency. Also a shorter title bar, a Settings dialog that no longer squashes on macOS, and no focus-stealing when a new DXCC decodes.</p>
+    <p>Based on <a href="https://github.com/jtdx-project/jtdx" target="_blank" rel="noopener">JTDX</a> by Igor Chernikov UA3DJY, Arvo Järve ES1JA and the HF community, itself derived from WSJT-X by Joe Taylor K1JT and the WSJT development team. GPL v3, with source on GitHub.</p>
+  </div>
+
+  <div class="proj-shots-label">Screenshots</div>
+  <div class="proj-shots">
+    <figure>
+      <a class="shack-zoom" href="main-window.png" data-caption="JTDX-VU on 20 m FT8 — band/mode buttons and the Show filter above the decode panes">
+        <img src="main-window.png" alt="JTDX-VU main window and Wide Graph decoding 20 m FT8, with the band and mode button row across the top" loading="lazy">
+      </a>
+      <figcaption>20 m FT8 — one-click mode and band buttons (current ones green) and the "Show:" filter above the decode panes</figcaption>
+    </figure>
+  </div>
+  <div class="proj-shots two-up">
+    <figure>
+      <a class="shack-zoom" href="clublog-alerts.png" data-caption="File › Club Log &amp; Alerts — Club Log worked-before source and needed-DXCC alerts">
+        <img src="clublog-alerts.png" alt="Club Log and Alerts settings dialog" loading="lazy">
+      </a>
+      <figcaption>File › Club Log &amp; Alerts — the whole Club Log log drives DXCC status; alerts to the desktop and Telegram</figcaption>
+    </figure>
+    <figure>
+      <a class="shack-zoom" href="band-mode-buttons.png" data-caption="View › Band &amp; Mode Buttons — choose which buttons appear">
+        <img src="band-mode-buttons.png" alt="Band and Mode Buttons settings dialog" loading="lazy">
+      </a>
+      <figcaption>View › Band &amp; Mode Buttons — choose which modes and bands get a button</figcaption>
+    </figure>
+  </div>
+
+  <div class="proj-actions">
+        <a class="repo-btn" href="https://github.com/vu2cpl/jtdx-vu/releases" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          Downloads (GitHub releases)
+        </a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/jtdx-vu" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+  </div>
+  <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">Qt5</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">Club Log</span><span class="proj-tag">Telegram</span></div>
+</main>
+
+<footer>
+  <span>VU2CPL · Manoj Ramawarrier</span> · Bengaluru, India · MK83TE<br>
+  Licenced 1993 &nbsp;·&nbsp;
+  <a href="https://www.qrz.com/db/VU2CPL">QRZ</a> &nbsp;·&nbsp;
+  <a href="https://clublog.org/logsearch/VU2CPL">Clublog</a> &nbsp;·&nbsp;
+  <a href="https://hamphotos.com">HamPhotos</a>
+  <br><br>73
+</footer>
+
+
+<!-- Lightbox: click any .shack-zoom anchor to open at full resolution -->
+<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" aria-label="Screenshot viewer">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img alt="">
+  <div class="lightbox-caption"></div>
+</div>
+<script src="/assets/lightbox.js"></script>
+
+</body>
+</html>
