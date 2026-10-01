@@ -1,8 +1,8 @@
 {
-  "as_on": "01 Aug 2026",
-  "previous_as_on": "05 Jul 2026",
-  "date_token": "20260801",
-  "generated_at": "2026-08-01T01:57:28+00:00",
+  "as_on": "01 Sep 2026",
+  "previous_as_on": "01 Aug 2026",
+  "date_token": "20260901",
+  "generated_at": "2026-09-01T02:42:32+00:00",
   "columns": [
     "Mix",
     "Ph",
