@@ -203,18 +203,6 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">FLEX-6600 State Monitor Dashboard</div>
-        <div class="project-desc">Real-time Node-RED flow tracking all four slice receivers via the FlexRadio TCP API, with dual SmartSDR client support (AetherSDR + iPad). Colour-coded active-slice indication — amber for RX, red for TX — now surfaced as the FlexRadio card in the Vue 3 shack dashboard above, and still on the legacy AngularJS <code>/ui</code> board.</div>
-        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">FlexRadio API</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">MQTT</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          View repo on GitHub
-        </a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
         <div class="project-name">DXCC Tracker &amp; DX Alert System</div>
         <div class="project-desc">Subscribes to four DX cluster telnet sources (VU2CPL, VU2OY, VE7CC, N2WQ) and pulls worked/confirmed DXCC data from Club Log via a nightly API call. Each incoming spot is prefix-resolved against cty.xml and classified against the confirmed grid — new DXCC entity (red), new band (blue), new mode fill (amber). Alerts fan out to the shack dashboard panel, MQTT, the FlexRadio slice, and a Telegram bot, with per-band / per-mode filtering.</div>
         <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Club Log API</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">Telnet</span><span class="proj-tag">cty.xml</span><span class="proj-tag">MQTT</span><span class="proj-tag">Telegram</span></div>
@@ -227,9 +215,22 @@
     </div>
     <div class="project-card">
       <div>
+        <div class="project-name">FLEX-6600 State Monitor Dashboard</div>
+        <div class="project-desc">Real-time Node-RED flow tracking all four slice receivers via the FlexRadio TCP API, with dual SmartSDR client support (AetherSDR + iPad). Colour-coded active-slice indication — amber for RX, red for TX — now surfaced as the FlexRadio card in the Vue 3 shack dashboard above, and still on the legacy AngularJS <code>/ui</code> board.</div>
+        <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">FlexRadio API</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">MQTT</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
         <div class="project-name">Lightning Antenna Protector</div>
-        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km, from Open-Meteo CAPE and weather-code polling plus a local AS3935 sensor over MQTT, and inhibits TX on the FLEX-6600 so the rig cannot key up into a disconnected antenna. <a href="/projects/lightning-antenna-protector/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
+        <div class="project-desc">Automatically disconnects antenna and radio when lightning is detected within 25 km, from Open-Meteo CAPE and weather-code polling plus a local AS3935 sensor over MQTT, and inhibits TX on the FLEX-6600 so the rig cannot key up into a disconnected antenna.</div>
         <div class="project-tags"><span class="proj-tag">Node-RED</span><span class="proj-tag">Open-Meteo</span><span class="proj-tag">Tasmota</span><span class="proj-tag">AS3935</span><span class="proj-tag">SmartSDR API</span><span class="proj-tag">TX inhibit</span><span class="proj-tag">Telegram</span></div>
+        <a class="read-more" href="/projects/lightning-antenna-protector/">Read more &rarr;</a>
         <a class="repo-btn" href="https://github.com/vu2cpl/vu2cpl-shack" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
@@ -256,10 +257,10 @@
   <div class="project-list" style="margin-bottom:2.5rem;">
     <div class="project-card">
       <div>
-        <div class="project-name">Pi GPS NTP Server — shack stratum-1 timeserver</div>
-        <div class="project-desc">Stratum-1 GPS-disciplined NTP server on a Raspberry Pi 3B with a u-blox NEO-M8N. Kernel <code>pps-gpio</code> + chrony pulls PPS error down to ±171 ns — well below anything a userland NTP implementation can match. Publishes chrony status, satellite count and fix quality over MQTT to the shack dashboard, with an LWT offline marker. Production timeserver for the LAN.</div>
-        <div class="project-tags"><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">GPS</span><span class="proj-tag">NTP</span><span class="proj-tag">chrony</span><span class="proj-tag">kernel PPS</span><span class="proj-tag">u-blox NEO-M8N</span><span class="proj-tag">MQTT</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/pi-gps-ntp-server" target="_blank" rel="noopener">
+        <div class="project-name">VUKEYER — WiFi CW keyer with FlexRadio network keying</div>
+        <div class="project-desc">WinKeyer-protocol compatible CW keyer on an ESP32. Loggers drive it with the standard K1EL WinKeyer protocol over USB serial or WiFi TCP, with the host protocol audited against a genuine K1EL WK3.1; elements are timed on the device, so the network adds no jitter to the CW. The paddle keys a FlexRadio over the network with no KEY or PTT wire (verified on a FLEX-6600), and the sidetone of memories is paced to the radio's measured CW timing so it stays in step with the air. Opto-isolated KEY/PTT/FSK outputs for any other rig. An OLED or LCD shows speed, backend and link state, and scrolls the CW being sent in large letters; settings live on a web page at <code>vukeyer.local</code> and survive power cycles. WinKeyer protocol by Steve K1EL; the K3NG keyer by Anthony Good K3NG was the behavioural reference — the implementation is original.</div>
+        <div class="project-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">PlatformIO</span><span class="proj-tag">CW</span><span class="proj-tag">WinKeyer protocol</span><span class="proj-tag">FlexRadio</span><span class="proj-tag">WiFi</span><span class="proj-tag">OLED</span><span class="proj-tag">MQTT</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/vukeyer" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -292,10 +293,10 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">VUKEYER — WiFi CW keyer with FlexRadio network keying</div>
-        <div class="project-desc">WinKeyer-protocol compatible CW keyer on an ESP32. Loggers drive it with the standard K1EL WinKeyer protocol over USB serial or WiFi TCP, with the host protocol audited against a genuine K1EL WK3.1; elements are timed on the device, so the network adds no jitter to the CW. The paddle keys a FlexRadio over the network with no KEY or PTT wire (verified on a FLEX-6600), and the sidetone of memories is paced to the radio's measured CW timing so it stays in step with the air. Opto-isolated KEY/PTT/FSK outputs for any other rig. An OLED or LCD shows speed, backend and link state, and scrolls the CW being sent in large letters; settings live on a web page at <code>vukeyer.local</code> and survive power cycles. WinKeyer protocol by Steve K1EL; the K3NG keyer by Anthony Good K3NG was the behavioural reference — the implementation is original.</div>
-        <div class="project-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">PlatformIO</span><span class="proj-tag">CW</span><span class="proj-tag">WinKeyer protocol</span><span class="proj-tag">FlexRadio</span><span class="proj-tag">WiFi</span><span class="proj-tag">OLED</span><span class="proj-tag">MQTT</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/vukeyer" target="_blank" rel="noopener">
+        <div class="project-name">Pi GPS NTP Server — shack stratum-1 timeserver</div>
+        <div class="project-desc">Stratum-1 GPS-disciplined NTP server on a Raspberry Pi 3B with a u-blox NEO-M8N. Kernel <code>pps-gpio</code> + chrony pulls PPS error down to ±171 ns — well below anything a userland NTP implementation can match. Publishes chrony status, satellite count and fix quality over MQTT to the shack dashboard, with an LWT offline marker. Production timeserver for the LAN.</div>
+        <div class="project-tags"><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">GPS</span><span class="proj-tag">NTP</span><span class="proj-tag">chrony</span><span class="proj-tag">kernel PPS</span><span class="proj-tag">u-blox NEO-M8N</span><span class="proj-tag">MQTT</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/pi-gps-ntp-server" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -308,10 +309,11 @@
   <div class="project-list">
     <div class="project-card">
       <div>
-        <div class="project-name">spe-remote — SPE Expert remote control server</div>
-        <div class="project-desc">Python 3 remote-control server for SPE Expert HF amplifiers, running on a Raspberry Pi over USB serial and serving both a built-in web dashboard and a WebSocket API — the full Application Programmer’s Guide Rev 1.1 plus the undocumented RCU command set. Based on original work by OH2GEK, rewritten and extended. <a href="/projects/spe-remote/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">Python 3</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU protocol</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">TUNE sweep</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/spe-remote" target="_blank" rel="noopener">
+        <div class="project-name">JTDX-VU — JTDX for the VUCG community</div>
+        <div class="project-desc">A build of JTDX for the VUCG community, with native releases for macOS (Apple Silicon and Intel), Windows and Raspberry Pi / Linux. Adds Club Log–driven DXCC status, so the New DXCC / band / mode colours follow the whole log, optionally counting only confirmed QSOs. Needed-DXCC alerts go to the desktop and Telegram, and one-click band and mode buttons are modelled on MSHV. <strong>Call Non-Stop</strong> (the Auto CQ button) keeps QSOs flowing hands-off, and a live “show only new” filter trims Band Activity to stations still needed. v0.3.0 adds <strong>JTTY</strong> (WSJT-X 3.2&rsquo;s keyboard mode, by K1JT and the WSJT-X team) and <strong>FT2</strong> (IU8LMC&rsquo;s double-speed FT4, as in MSHV). v0.4.0 adds JTTY <strong>Auto CQ</strong>, click-to-pick callsigns and a JTTY settings page with macro sets. Based on <a href="https://github.com/jtdx-project/jtdx" target="_blank" rel="noopener" style="color:var(--accent);">JTDX</a> by Igor UA3DJY, Arvo ES1JA and the HF community, itself derived from WSJT-X by Joe K1JT and team.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">Qt5</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">JTTY</span><span class="proj-tag">FT2</span><span class="proj-tag">Club Log</span><span class="proj-tag">Telegram</span></div>
+        <a class="read-more" href="/projects/jtdx-vu/">Read more &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/jtdx-vu" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -320,10 +322,20 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">MacExpert — native SPE Expert control app for macOS</div>
-        <div class="project-desc">Swift / SwiftUI macOS app that mirrors and controls SPE Expert HF amplifiers over either local USB serial or remote WebSocket, with a two-way live mirror of the amplifier’s LCD. Named after and inspired by the original MacExpert by Georg Isenbürger DJ6GI/NZ1C; RCU protocol reverse-engineered from scratch by VU2CPL. <a href="/projects/macexpert/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU</span><span class="proj-tag">USB serial</span><span class="proj-tag">WebSocket</span><span class="proj-tag">SWEEP panel</span><span class="proj-tag">Apple-notarised</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/macexpert-spe" target="_blank" rel="noopener">
+        <div class="project-name">VHF WebSDR — 2 m / 70 cm / airband / FM</div>
+        <div class="project-desc">A companion VHF receiver to the HF WebSDR — the same drag-tune waterfall in the browser, switch modes, zoom, and listen off-air with no install. <strong>Two receivers share the one instance:</strong> an <a href="https://www.sdrplay.com/products/rsp2/" target="_blank" rel="noopener" style="color:var(--accent);">SDRplay RSP2</a> covers the 2 m and 70 cm amateur bands and the VHF airband (118–134 MHz AM), while a second MSi2500 dongle on its own antenna covers the FM broadcast band — so someone listening to FM no longer pulls the amateur bands off the air. Bookmarks cover the local repeaters, Bengaluru airport and approach frequencies, and the Bengaluru FM stations. Served over HTTPS with a Let's Encrypt certificate, on a self-hosted <a href="https://github.com/luarvique/openwebrx" target="_blank" rel="noopener" style="color:var(--accent);">OpenWebRX+</a> instance. OpenWebRX+ by Marat Fayzullin, an extended fork of Jakob Ketterl DD5JFK's <a href="https://github.com/jketterl/openwebrx" target="_blank" rel="noopener" style="color:var(--accent);">OpenWebRX</a>.</div>
+        <div class="project-tags"><span class="proj-tag">VHF WebSDR</span><span class="proj-tag">SDRplay RSP2</span><span class="proj-tag">MSi2500</span><span class="proj-tag">OpenWebRX+</span><span class="proj-tag">2 m / 70 cm</span><span class="proj-tag">Airband</span><span class="proj-tag">FM broadcast</span><span class="proj-tag">Live receiver</span><span class="proj-tag">Self-hosted</span></div>
+        <a class="yt-link" href="https://vu2cpl.ddns.net:8873/" target="_blank" rel="noopener" style="color:var(--accent);">Open live VHF WebSDR →</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">Ulanzi D100H — hardware front panel for AetherSDR over TCI</div>
+        <div class="project-desc">A seven-key Bluetooth LE macro dial turned into a physical front panel for AetherSDR over its TCI WebSocket — tuning with grid snapping, split, PTT, ATU tune, mode cycle, mute and band stacking. Doubles as the plugin’s first-light hardware test: five defects found on the air, all now merged upstream. Plugin by Nigel Fenton G0JKN.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Node.js</span><span class="proj-tag">Ulanzi Studio</span><span class="proj-tag">TCI</span><span class="proj-tag">AetherSDR</span><span class="proj-tag">Bluetooth LE</span><span class="proj-tag">WebSocket</span></div>
+        <a class="read-more" href="/projects/ulanzi-d100h/">Read more &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/ulanzi-d100h-aethersdr" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -332,10 +344,12 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">LP-700-Server — Telepost LP-700 WebSocket bridge</div>
-        <div class="project-desc">Go WebSocket bridge for the Telepost LP-500 / LP-700 USB-HID power and SWR meter. Owns the meter's HID handle and fans live telemetry out to many concurrent clients — browsers, phones, logging PCs — while routing control verbs back. Cross-compiles to Linux (amd64 / arm64 / armv7), macOS (Apple Silicon + Intel) and Windows (amd64) via a tag-driven GitHub Actions release workflow; ships a systemd unit and udev rules for headless Raspberry Pi deployment. LAN-only, zero auth. Forked from and tracking the original <a href="https://github.com/VU3ESV/LP-700-Server" target="_blank" rel="noopener" style="color:var(--accent);">LP-700-Server</a> by Vinod VU3ESV.</div>
-        <div class="project-tags"><span class="proj-tag">Go</span><span class="proj-tag">WebSocket</span><span class="proj-tag">USB HID</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">LP-700</span><span class="proj-tag">Telepost</span><span class="proj-tag">systemd</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/LP-700-Server" target="_blank" rel="noopener">
+        <div class="project-name">KST2Mac — native ON4KST chat client for macOS</div>
+        <div class="project-desc">Native macOS client for the ON4KST chats VHF, UHF and microwave operators keep open beside the radio — any number of rooms at once, each pane holding its own login, room picker and station list, and each able to be torn out into its own window. Named after and modelled on KST2Me by Bo OZ2M; the protocol work here is original.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">ON4KST</span><span class="proj-tag">VHF / UHF</span><span class="proj-tag">DX cluster</span><span class="proj-tag">telnet</span><span class="proj-tag">Notarised</span></div>
+        <a class="read-more" href="/projects/kst2mac/">Read more &rarr;</a>
+        <a class="yt-link" href="https://github.com/vu2cpl/kst2mac/releases/latest" target="_blank" rel="noopener" style="color:var(--accent);">Download v1.0.0 for macOS &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/kst2mac" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -344,10 +358,41 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">LP-700-App — native macOS client for the LP-700</div>
-        <div class="project-desc">Native SwiftUI macOS client that talks to LP-700-Server over WebSocket. Live power / SWR / channel / alarm display, full control-verb support, settings persistence, a menu-bar glance-view, and macOS notifications for alarm states. Pairs with LP-700-Server so a single HID-attached meter drives operating positions, logging PCs and phones simultaneously. Forked from and tracking the original <a href="https://github.com/VU3ESV/LP-700-App" target="_blank" rel="noopener" style="color:var(--accent);">LP-700-App</a> by Vinod VU3ESV.</div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">WebSocket</span><span class="proj-tag">LP-700</span><span class="proj-tag">Telepost</span><span class="proj-tag">menu-bar</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/LP-700-App" target="_blank" rel="noopener">
+        <div class="project-name">DXCA — DX Cluster Aggregator 2.0</div>
+        <div class="project-desc">Rust rewrite of the DX Cluster Aggregator, running the whole aggregation stack headless on a Raspberry Pi behind a multi-user web GUI — WSJT-X / JTDX / MSHV decoder feeds and cluster telnet merged into one stream, per-account ClubLog matrices driving seventeen alert levels, Telegram alerts, and match marking on FlexRadio and ExpertSDR3 panadapters. Original concept and reference implementation by Vinod VU3ESV.</div>
+        <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">Svelte</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">Windows</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">WSJT-X / JTDX</span><span class="proj-tag">Club Log</span><span class="proj-tag">Multi-user</span><span class="proj-tag">Telegram</span><span class="proj-tag">MQTT</span></div>
+        <a class="read-more" href="/projects/dxca/">Read more &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/dxca" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">Meridian — headless multi-platform SDR skimmer server</div>
+        <div class="project-desc">Headless SDR skimmer server in Rust with in-process FT8 / FT4 / CW / RTTY / WSPR decoders behind one registry, running on Linux, Raspberry Pi, macOS and Windows. Deployed as the station daemon on a Pi 5 driving the Red Pitaya as VU2CPL-9. A joint project, built together with Basil Thomas W6BT, Vinod VU3ESV and Ram VU3RDD.</div>
+        <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">C (FFI)</span><span class="proj-tag">Multi-platform</span><span class="proj-tag">Linux</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">HPSDR</span><span class="proj-tag">Red Pitaya</span><span class="proj-tag">HermesLite</span><span class="proj-tag">RX-888</span><span class="proj-tag">FlexRadio DAX</span><span class="proj-tag">CW skimmer</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">WSPR</span><span class="proj-tag">NCDXF beacon</span><span class="proj-tag">PSKR</span><span class="proj-tag">WSPRnet</span><span class="proj-tag">Svelte 5</span></div>
+        <a class="read-more" href="/projects/meridian/">Read more &rarr;</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">WebSDR — live RX-888 receiver on an LZ1AQ active loop</div>
+        <div class="project-desc">Public web-based SDR receiver running on a self-hosted <a href="https://github.com/madpsy/ka9q_ubersdr" target="_blank" rel="noopener" style="color:var(--accent);">UberSDR</a> instance — drag-tune the HF spectrum waterfall in the browser, switch between LSB / USB / CW / AM / FM / digital modes, adjust the filter, zoom the waterfall, and listen to the off-air audio with no install. The default deep-link below opens at 7.150 MHz LSB so you land mid-40m phone band ready to listen. Hardware is an RX-888 MkII front-end fed by an LZ1AQ wideband active loop (0–30 MHz HF coverage); reachable via UberSDR's zero-config tunnel at <code>vu2cpl.tunnel.ubersdr.org</code>. UberSDR by M9PSY (madpsy), built on Phil Karn KA9Q's <a href="https://github.com/ka9q/ka9q-radio" target="_blank" rel="noopener" style="color:var(--accent);">ka9q-radio</a> engine; the receive antenna is Chavdar Levkov LZ1AQ's active loop design.</div>
+        <div class="project-tags"><span class="proj-tag">WebSDR</span><span class="proj-tag">RX-888 MkII</span><span class="proj-tag">LZ1AQ active loop</span><span class="proj-tag">UberSDR</span><span class="proj-tag">ka9q-radio</span><span class="proj-tag">HF 0–30 MHz</span><span class="proj-tag">Live receiver</span><span class="proj-tag">Self-hosted</span></div>
+        <a class="yt-link" href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" style="color:var(--accent);">Open live WebSDR →</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">rotator-remote — Rotor-EZ WebSocket gateway</div>
+        <div class="project-desc">Python WebSocket gateway that owns the Idiom Press Rotor-EZ (Hy-Gain DCU-1 compatible) FTDI serial port on the shack Raspberry Pi and fans azimuth out to any number of clients — Node-RED, a built-in web UI, future Mac apps. The third shack USB device lifted into a gateway service alongside spe-remote and LP-700-Server: same threaded-reader + asyncio-writer pattern, so the serial port has a single owner and clients no longer have to restart Node-RED to free it. Self-contained web UI on port 8090 — large heading readout, click-to-slew compass dial, preset bearings (N/NE/E/SE/S/SW/W/NW), prominent STOP, and LP/+180° long-path. JSON <code>state</code> + <code>heartbeat</code> events over <code>/ws</code>, <code>/healthz</code> endpoint, all writes serialised through one lock so poll queries and client commands never interleave on the wire.</div>
+        <div class="project-tags"><span class="proj-tag">Python</span><span class="proj-tag">Tornado</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">FTDI</span><span class="proj-tag">Rotor-EZ</span><span class="proj-tag">Hy-Gain DCU-1</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/rotator-remote" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
@@ -368,77 +413,9 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">rotator-remote — Rotor-EZ WebSocket gateway</div>
-        <div class="project-desc">Python WebSocket gateway that owns the Idiom Press Rotor-EZ (Hy-Gain DCU-1 compatible) FTDI serial port on the shack Raspberry Pi and fans azimuth out to any number of clients — Node-RED, a built-in web UI, future Mac apps. The third shack USB device lifted into a gateway service alongside spe-remote and LP-700-Server: same threaded-reader + asyncio-writer pattern, so the serial port has a single owner and clients no longer have to restart Node-RED to free it. Self-contained web UI on port 8090 — large heading readout, click-to-slew compass dial, preset bearings (N/NE/E/SE/S/SW/W/NW), prominent STOP, and LP/+180° long-path. JSON <code>state</code> + <code>heartbeat</code> events over <code>/ws</code>, <code>/healthz</code> endpoint, all writes serialised through one lock so poll queries and client commands never interleave on the wire.</div>
-        <div class="project-tags"><span class="proj-tag">Python</span><span class="proj-tag">Tornado</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">FTDI</span><span class="proj-tag">Rotor-EZ</span><span class="proj-tag">Hy-Gain DCU-1</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/rotator-remote" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          View repo on GitHub
-        </a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
         <div class="project-name">SO2R Box — macOS controller for the YCCC SO2R Box Plus</div>
         <div class="project-desc">Native macOS controller for the YCCC SO2R Box Plus contesting switch. USB-HID to the box; live front-panel mirror in the SwiftUI UI (TX/RX, footswitch, speed pot) using the YCCC HID protocol. Hosts OTRSP and Winkeyer TCP servers, so N1MM+, Win-Test, WriteLog and TR4W see it as a standard SO2R interface. Supports the default 2-radio SO2R mode and the 4-radio SO2R+ mode. Co-developed with Vinod VU3ESV (LB9KJ); the YCCC HID protocol was reverse-engineered from YCCC's own <code>SO2RBox.exe</code> and cross-checked against N4AF's TR4W <code>uYCCCSO2R.pas</code>.</div>
         <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">USB HID</span><span class="proj-tag">OTRSP</span><span class="proj-tag">Winkeyer</span><span class="proj-tag">YCCC</span><span class="proj-tag">SO2R</span><span class="proj-tag">Contesting</span></div>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-name">DXCA — DX Cluster Aggregator 2.0</div>
-        <div class="project-desc">Rust rewrite of the DX Cluster Aggregator, running the whole aggregation stack headless on a Raspberry Pi behind a multi-user web GUI — WSJT-X / JTDX / MSHV decoder feeds and cluster telnet merged into one stream, per-account ClubLog matrices driving seventeen alert levels, Telegram alerts, and match marking on FlexRadio and ExpertSDR3 panadapters. Original concept and reference implementation by Vinod VU3ESV. <a href="/projects/dxca/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">Svelte</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">Windows</span><span class="proj-tag">DX Cluster</span><span class="proj-tag">WSJT-X / JTDX</span><span class="proj-tag">Club Log</span><span class="proj-tag">Multi-user</span><span class="proj-tag">Telegram</span><span class="proj-tag">MQTT</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/dxca" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          View repo on GitHub
-        </a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-name">MSHV-Mac — native macOS port of LZ2HV/MSHV</div>
-        <div class="project-desc">Native macOS port of LZ2HV’s MSHV multi-mode weak-signal program (FT8 / FT4 / Q65 / MSK144 / JT9 / JT65). Apple Silicon and Intel, Developer-ID signed and Apple-notarised, with patches on a macos-port branch so new LZ2HV releases merge cleanly. <a href="/projects/mshv-mac/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Qt5</span><span class="proj-tag">PortAudio</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">MSK144</span><span class="proj-tag">FlexRadio</span><span class="proj-tag">TCI</span><span class="proj-tag">WSJT-X UDP</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/mshv-macos-port" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          View repo on GitHub
-        </a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-name">JTDX-VU — JTDX for the VUCG community</div>
-        <div class="project-desc">A build of JTDX for the VUCG community, with native releases for macOS (Apple Silicon and Intel), Windows and Raspberry Pi / Linux. Adds Club Log–driven DXCC status, so the New DXCC / band / mode colours follow the whole log, optionally counting only confirmed QSOs. Needed-DXCC alerts go to the desktop and Telegram, and one-click band and mode buttons are modelled on MSHV. <strong>Call Non-Stop</strong> (the Auto CQ button) keeps QSOs flowing hands-off, and a live “show only new” filter trims Band Activity to stations still needed. v0.3.0 adds <strong>JTTY</strong> (WSJT-X 3.2&rsquo;s keyboard mode, by K1JT and the WSJT-X team) and <strong>FT2</strong> (IU8LMC&rsquo;s double-speed FT4, as in MSHV). v0.4.0 adds JTTY <strong>Auto CQ</strong>, click-to-pick callsigns and a JTTY settings page with macro sets. Based on <a href="https://github.com/jtdx-project/jtdx" target="_blank" rel="noopener" style="color:var(--accent);">JTDX</a> by Igor UA3DJY, Arvo ES1JA and the HF community, itself derived from WSJT-X by Joe K1JT and team. <a href="/projects/jtdx-vu/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">Qt5</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">JTTY</span><span class="proj-tag">FT2</span><span class="proj-tag">Club Log</span><span class="proj-tag">Telegram</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/jtdx-vu" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          View repo on GitHub
-        </a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-name">Ulanzi D100H — hardware front panel for AetherSDR over TCI</div>
-        <div class="project-desc">A seven-key Bluetooth LE macro dial turned into a physical front panel for AetherSDR over its TCI WebSocket — tuning with grid snapping, split, PTT, ATU tune, mode cycle, mute and band stacking. Doubles as the plugin’s first-light hardware test: five defects found on the air, all now merged upstream. Plugin by Nigel Fenton G0JKN. <a href="/projects/ulanzi-d100h/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Node.js</span><span class="proj-tag">Ulanzi Studio</span><span class="proj-tag">TCI</span><span class="proj-tag">AetherSDR</span><span class="proj-tag">Bluetooth LE</span><span class="proj-tag">WebSocket</span></div>
-        <a class="repo-btn" href="https://github.com/vu2cpl/ulanzi-d100h-aethersdr" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          View repo on GitHub
-        </a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-name">Meridian — headless multi-platform SDR skimmer server</div>
-        <div class="project-desc">Headless SDR skimmer server in Rust with in-process FT8 / FT4 / CW / RTTY / WSPR decoders behind one registry, running on Linux, Raspberry Pi, macOS and Windows. Deployed as the station daemon on a Pi 5 driving the Red Pitaya as VU2CPL-9. A joint project, built together with Basil Thomas W6BT, Vinod VU3ESV and Ram VU3RDD. <a href="/projects/meridian/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">Rust</span><span class="proj-tag">C (FFI)</span><span class="proj-tag">Multi-platform</span><span class="proj-tag">Linux</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">macOS</span><span class="proj-tag">Windows</span><span class="proj-tag">HPSDR</span><span class="proj-tag">Red Pitaya</span><span class="proj-tag">HermesLite</span><span class="proj-tag">RX-888</span><span class="proj-tag">FlexRadio DAX</span><span class="proj-tag">CW skimmer</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">WSPR</span><span class="proj-tag">NCDXF beacon</span><span class="proj-tag">PSKR</span><span class="proj-tag">WSPRnet</span><span class="proj-tag">Svelte 5</span></div>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
@@ -456,18 +433,41 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">KST2Mac — native ON4KST chat client for macOS</div>
-        <div class="project-desc">Native macOS client for the ON4KST chats VHF, UHF and microwave operators keep open beside the radio — any number of rooms at once, each pane holding its own login, room picker and station list, and each able to be torn out into its own window. Named after and modelled on KST2Me by Bo OZ2M; the protocol work here is original. <a href="/projects/kst2mac/" style="color:var(--accent);white-space:nowrap;">Read more &rarr;</a></div>
-        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">ON4KST</span><span class="proj-tag">VHF / UHF</span><span class="proj-tag">DX cluster</span><span class="proj-tag">telnet</span><span class="proj-tag">Notarised</span></div>
-        <a class="yt-link" href="https://github.com/vu2cpl/kst2mac/releases/latest" target="_blank" rel="noopener" style="color:var(--accent);">Download v1.0.0 for macOS &rarr;</a>
-        <a class="repo-btn" href="https://github.com/vu2cpl/kst2mac" target="_blank" rel="noopener">
+        <div class="project-name">LP-700-App — native macOS client for the LP-700</div>
+        <div class="project-desc">Native SwiftUI macOS client that talks to LP-700-Server over WebSocket. Live power / SWR / channel / alarm display, full control-verb support, settings persistence, a menu-bar glance-view, and macOS notifications for alarm states. Pairs with LP-700-Server so a single HID-attached meter drives operating positions, logging PCs and phones simultaneously. Forked from and tracking the original <a href="https://github.com/VU3ESV/LP-700-App" target="_blank" rel="noopener" style="color:var(--accent);">LP-700-App</a> by Vinod VU3ESV.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">WebSocket</span><span class="proj-tag">LP-700</span><span class="proj-tag">Telepost</span><span class="proj-tag">menu-bar</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/LP-700-App" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           View repo on GitHub
         </a>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
-
+    <div class="project-card">
+      <div>
+        <div class="project-name">LP-700-Server — Telepost LP-700 WebSocket bridge</div>
+        <div class="project-desc">Go WebSocket bridge for the Telepost LP-500 / LP-700 USB-HID power and SWR meter. Owns the meter's HID handle and fans live telemetry out to many concurrent clients — browsers, phones, logging PCs — while routing control verbs back. Cross-compiles to Linux (amd64 / arm64 / armv7), macOS (Apple Silicon + Intel) and Windows (amd64) via a tag-driven GitHub Actions release workflow; ships a systemd unit and udev rules for headless Raspberry Pi deployment. LAN-only, zero auth. Forked from and tracking the original <a href="https://github.com/VU3ESV/LP-700-Server" target="_blank" rel="noopener" style="color:var(--accent);">LP-700-Server</a> by Vinod VU3ESV.</div>
+        <div class="project-tags"><span class="proj-tag">Go</span><span class="proj-tag">WebSocket</span><span class="proj-tag">USB HID</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">LP-700</span><span class="proj-tag">Telepost</span><span class="proj-tag">systemd</span></div>
+        <a class="repo-btn" href="https://github.com/vu2cpl/LP-700-Server" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">MSHV-Mac — native macOS port of LZ2HV/MSHV</div>
+        <div class="project-desc">Native macOS port of LZ2HV’s MSHV multi-mode weak-signal program (FT8 / FT4 / Q65 / MSK144 / JT9 / JT65). Apple Silicon and Intel, Developer-ID signed and Apple-notarised, with patches on a macos-port branch so new LZ2HV releases merge cleanly.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Qt5</span><span class="proj-tag">PortAudio</span><span class="proj-tag">FT8 / FT4</span><span class="proj-tag">MSK144</span><span class="proj-tag">FlexRadio</span><span class="proj-tag">TCI</span><span class="proj-tag">WSJT-X UDP</span></div>
+        <a class="read-more" href="/projects/mshv-mac/">Read more &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/mshv-macos-port" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
     <div class="project-card">
       <div>
         <div class="project-name">NanoVNASaver — packaged macOS .app</div>
@@ -482,28 +482,36 @@
     </div>
     <div class="project-card">
       <div>
-        <div class="project-name">WebSDR — live RX-888 receiver on an LZ1AQ active loop</div>
-        <div class="project-desc">Public web-based SDR receiver running on a self-hosted <a href="https://github.com/madpsy/ka9q_ubersdr" target="_blank" rel="noopener" style="color:var(--accent);">UberSDR</a> instance — drag-tune the HF spectrum waterfall in the browser, switch between LSB / USB / CW / AM / FM / digital modes, adjust the filter, zoom the waterfall, and listen to the off-air audio with no install. The default deep-link below opens at 7.150 MHz LSB so you land mid-40m phone band ready to listen. Hardware is an RX-888 MkII front-end fed by an LZ1AQ wideband active loop (0–30 MHz HF coverage); reachable via UberSDR's zero-config tunnel at <code>vu2cpl.tunnel.ubersdr.org</code>. UberSDR by M9PSY (madpsy), built on Phil Karn KA9Q's <a href="https://github.com/ka9q/ka9q-radio" target="_blank" rel="noopener" style="color:var(--accent);">ka9q-radio</a> engine; the receive antenna is Chavdar Levkov LZ1AQ's active loop design.</div>
-        <div class="project-tags"><span class="proj-tag">WebSDR</span><span class="proj-tag">RX-888 MkII</span><span class="proj-tag">LZ1AQ active loop</span><span class="proj-tag">UberSDR</span><span class="proj-tag">ka9q-radio</span><span class="proj-tag">HF 0–30 MHz</span><span class="proj-tag">Live receiver</span><span class="proj-tag">Self-hosted</span></div>
-        <a class="yt-link" href="https://vu2cpl.tunnel.ubersdr.org/?freq=7150000&amp;mode=lsb&amp;bwl=-2700&amp;bwh=-50&amp;zoom_freq=7150000&amp;zoom_bw=500.0" target="_blank" rel="noopener" style="color:var(--accent);">Open live WebSDR →</a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-name">VHF WebSDR — 2 m / 70 cm / airband / FM</div>
-        <div class="project-desc">A companion VHF receiver to the HF WebSDR above — the same drag-tune waterfall in the browser, switch modes, zoom, and listen off-air with no install. <strong>Two receivers share the one instance:</strong> an <a href="https://www.sdrplay.com/products/rsp2/" target="_blank" rel="noopener" style="color:var(--accent);">SDRplay RSP2</a> covers the 2 m and 70 cm amateur bands and the VHF airband (118–134 MHz AM), while a second MSi2500 dongle on its own antenna covers the FM broadcast band — so someone listening to FM no longer pulls the amateur bands off the air. Bookmarks cover the local repeaters, Bengaluru airport and approach frequencies, and the Bengaluru FM stations. Served over HTTPS with a Let's Encrypt certificate, on a self-hosted <a href="https://github.com/luarvique/openwebrx" target="_blank" rel="noopener" style="color:var(--accent);">OpenWebRX+</a> instance. OpenWebRX+ by Marat Fayzullin, an extended fork of Jakob Ketterl DD5JFK's <a href="https://github.com/jketterl/openwebrx" target="_blank" rel="noopener" style="color:var(--accent);">OpenWebRX</a>.</div>
-        <div class="project-tags"><span class="proj-tag">VHF WebSDR</span><span class="proj-tag">SDRplay RSP2</span><span class="proj-tag">MSi2500</span><span class="proj-tag">OpenWebRX+</span><span class="proj-tag">2 m / 70 cm</span><span class="proj-tag">Airband</span><span class="proj-tag">FM broadcast</span><span class="proj-tag">Live receiver</span><span class="proj-tag">Self-hosted</span></div>
-        <a class="yt-link" href="https://vu2cpl.ddns.net:8873/" target="_blank" rel="noopener" style="color:var(--accent);">Open live VHF WebSDR →</a>
-      </div>
-      <span class="status-badge status-active">Active</span>
-    </div>
-    <div class="project-card">
-      <div>
         <div class="project-name">VU DXCC Credits Tracker</div>
         <div class="project-desc">Live, sortable tables of DXCC standings for every Indian (VU / AT / AU) callsign, from two data sources on one page. The <strong>LoTW</strong> tab parses all 17 ARRL DXCC Standings PDFs each month — Mixed / Phone / CW / Digital / Satellite / bands 160 m to 6 m / Challenge / Honor Roll. The <strong>Clublog</strong> tab scrapes the Asia Top-2000 Confirmed league every day and pulls out Indian prefixes. Both tabs share the same layout: green highlight for column leaders, red for changes since the last snapshot, click-through to QRZ.com on every callsign. Table layout adapted from the original VU DXCC list template by VU2DCC.</div>
         <div class="project-tags"><span class="proj-tag">Python</span><span class="proj-tag">pdfplumber</span><span class="proj-tag">reportlab</span><span class="proj-tag">GitHub Actions</span><span class="proj-tag">ARRL DXCC</span><span class="proj-tag">Clublog</span></div>
         <a class="yt-link" href="/dxcc/" style="color:var(--accent);">View live page →</a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">MacExpert — native SPE Expert control app for macOS</div>
+        <div class="project-desc">Swift / SwiftUI macOS app that mirrors and controls SPE Expert HF amplifiers over either local USB serial or remote WebSocket, with a two-way live mirror of the amplifier’s LCD. Named after and inspired by the original MacExpert by Georg Isenbürger DJ6GI/NZ1C; RCU protocol reverse-engineered from scratch by VU2CPL.</div>
+        <div class="project-tags"><span class="proj-tag">macOS</span><span class="proj-tag">Swift</span><span class="proj-tag">SwiftUI</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU</span><span class="proj-tag">USB serial</span><span class="proj-tag">WebSocket</span><span class="proj-tag">SWEEP panel</span><span class="proj-tag">Apple-notarised</span></div>
+        <a class="read-more" href="/projects/macexpert/">Read more &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/macexpert-spe" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
+      </div>
+      <span class="status-badge status-active">Active</span>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-name">spe-remote — SPE Expert remote control server</div>
+        <div class="project-desc">Python 3 remote-control server for SPE Expert HF amplifiers, running on a Raspberry Pi over USB serial and serving both a built-in web dashboard and a WebSocket API — the full Application Programmer’s Guide Rev 1.1 plus the undocumented RCU command set. Based on original work by OH2GEK, rewritten and extended.</div>
+        <div class="project-tags"><span class="proj-tag">Python 3</span><span class="proj-tag">WebSocket</span><span class="proj-tag">Raspberry Pi</span><span class="proj-tag">USB serial</span><span class="proj-tag">SPE Expert</span><span class="proj-tag">RCU protocol</span><span class="proj-tag">SmartSDR</span><span class="proj-tag">TUNE sweep</span></div>
+        <a class="read-more" href="/projects/spe-remote/">Read more &rarr;</a>
+        <a class="repo-btn" href="https://github.com/vu2cpl/spe-remote" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View repo on GitHub
+        </a>
       </div>
       <span class="status-badge status-active">Active</span>
     </div>
@@ -519,37 +527,16 @@
   <div class="writings-grid">
 
     <div class="writing-card">
-      <span class="writing-cat cat-topband">Top Band</span>
-      <div class="writing-title">0–100 on 160m</div>
-      <div class="writing-desc">My journey exploring the Gentleman's band from scratch — inverted L antenna, hairpin matching, beverage antennas, and chasing 100 DXCC on 160m from Zone 22.</div>
+      <span class="writing-cat cat-contest">Contest Report</span>
+      <div class="writing-title">ARSI Hilltop Contest 2025</div>
+      <div class="writing-desc">Report from Vayalada Hills, Kozhikode (MK71WM). Smaller team, new location. 160m Inverted L and 90m reversible Beverage installed. Experimenting with 10m delta loop and CQ160 contest entries.</div>
       <div class="writing-stats">
-        <span class="wstat"><strong>102</strong> countries worked</span>
-        <span class="wstat"><strong>29</strong> CQ zones</span>
-        <span class="wstat"><strong>1,622</strong> QSOs</span>
+        <span class="wstat"><strong>763</strong> QSOs</span>
+        <span class="wstat"><strong>148</strong> DXCC</span>
       </div>
       <div class="writing-meta">
-        <span class="writing-date">Jan 2019</span>
-        <a class="writing-pdf" href="0-100_on_160m.pdf" target="_blank">↓ PDF</a>
-      </div>
-    </div>
-
-    <div class="writing-card">
-      <span class="writing-cat cat-dxped">DXpedition</span>
-      <div class="writing-title">VU7MS — Lakshadweep DXpedition</div>
-      <div class="writing-desc">Writeup of the VU7MS DXpedition to Kavaratti Island, Lakshadweep. Operations on HF with cubical quad and wire antennas from one of India's rarest DXCC entities.</div>
-      <div class="writing-meta">
-        <span class="writing-date">2016</span>
-        <a class="writing-pdf" href="vu7ms_writeup.pdf" target="_blank">↓ PDF</a>
-      </div>
-    </div>
-
-    <div class="writing-card">
-      <span class="writing-cat cat-dxped">DXpedition</span>
-      <div class="writing-title">VU7T — A Sequel to VU7MS</div>
-      <div class="writing-desc">The follow-up DXpedition to Kavaratti Island, Lakshadweep in October 2017. Expanded operations including first steps towards 160m activation from this rare entity.</div>
-      <div class="writing-meta">
-        <span class="writing-date">Oct 2017</span>
-        <a class="writing-pdf" href="vu7t_writeup.pdf" target="_blank">↓ PDF</a>
+        <span class="writing-date">Jan 2025</span>
+        <a class="writing-pdf" href="ARSI_Hilltop_2025.pdf" target="_blank">↓ PDF</a>
       </div>
     </div>
 
@@ -568,16 +555,37 @@
     </div>
 
     <div class="writing-card">
-      <span class="writing-cat cat-contest">Contest Report</span>
-      <div class="writing-title">ARSI Hilltop Contest 2025</div>
-      <div class="writing-desc">Report from Vayalada Hills, Kozhikode (MK71WM). Smaller team, new location. 160m Inverted L and 90m reversible Beverage installed. Experimenting with 10m delta loop and CQ160 contest entries.</div>
+      <span class="writing-cat cat-topband">Top Band</span>
+      <div class="writing-title">0–100 on 160m</div>
+      <div class="writing-desc">My journey exploring the Gentleman's band from scratch — inverted L antenna, hairpin matching, beverage antennas, and chasing 100 DXCC on 160m from Zone 22.</div>
       <div class="writing-stats">
-        <span class="wstat"><strong>763</strong> QSOs</span>
-        <span class="wstat"><strong>148</strong> DXCC</span>
+        <span class="wstat"><strong>102</strong> countries worked</span>
+        <span class="wstat"><strong>29</strong> CQ zones</span>
+        <span class="wstat"><strong>1,622</strong> QSOs</span>
       </div>
       <div class="writing-meta">
-        <span class="writing-date">Jan 2025</span>
-        <a class="writing-pdf" href="ARSI_Hilltop_2025.pdf" target="_blank">↓ PDF</a>
+        <span class="writing-date">Jan 2019</span>
+        <a class="writing-pdf" href="0-100_on_160m.pdf" target="_blank">↓ PDF</a>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-dxped">DXpedition</span>
+      <div class="writing-title">VU7T — A Sequel to VU7MS</div>
+      <div class="writing-desc">The follow-up DXpedition to Kavaratti Island, Lakshadweep in October 2017. Expanded operations including first steps towards 160m activation from this rare entity.</div>
+      <div class="writing-meta">
+        <span class="writing-date">Oct 2017</span>
+        <a class="writing-pdf" href="vu7t_writeup.pdf" target="_blank">↓ PDF</a>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <span class="writing-cat cat-dxped">DXpedition</span>
+      <div class="writing-title">VU7MS — Lakshadweep DXpedition</div>
+      <div class="writing-desc">Writeup of the VU7MS DXpedition to Kavaratti Island, Lakshadweep. Operations on HF with cubical quad and wire antennas from one of India's rarest DXCC entities.</div>
+      <div class="writing-meta">
+        <span class="writing-date">2016</span>
+        <a class="writing-pdf" href="vu7ms_writeup.pdf" target="_blank">↓ PDF</a>
       </div>
     </div>
 

@@ -152,7 +152,8 @@
   .project-list { display: flex; flex-direction: column; gap: 14px; }
   .project-card { background: var(--card-bg); border: 0.5px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
   .project-name { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
-  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+  .project-desc { font-size: 14px; color: #475569; line-height: 1.6; }
+  .project-desc a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .proj-tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #f1f5f9; color: #475569; }
   .status-badge { font-family: var(--mono); font-size: 11px; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
@@ -162,8 +163,8 @@
   .repo-btn {
     display: inline-flex; align-items: center; gap: 6px;
     margin-top: 10px;
-    padding: 6px 12px;
-    font-family: var(--mono); font-size: 12px; font-weight: 500;
+    min-height: 40px; padding: 8px 14px;
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
     color: #fff; background: #0a1628;
     border-radius: 6px;
     text-decoration: none;
@@ -172,7 +173,19 @@
   .repo-btn:hover { background: var(--accent); }
   .repo-btn:active { transform: translateY(1px); }
   .repo-btn svg { flex-shrink: 0; }
-  .yt-link { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 11px; color: #dc2626; margin-top: 6px; text-decoration: none; }
+  /* "Read more →" on cards with a /projects/<slug>/ page — a real button, not an inline word. */
+  .read-more {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 10px; margin-right: 4px;
+    min-height: 40px; padding: 8px 14px;
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
+    color: var(--accent); background: transparent;
+    border: 1px solid var(--accent); border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .read-more:hover { background: var(--accent); color: #fff; }
+  .yt-link { display: inline-flex; align-items: center; gap: 5px; min-height: 40px; padding: 8px 2px; font-family: var(--mono); font-size: 13px; font-weight: 500; color: #dc2626; margin-top: 4px; text-decoration: none; }
   .yt-link:hover { text-decoration: underline; }
 
   /* WRITINGS */
@@ -222,27 +235,54 @@
     .hero-stats { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
     .about-grid, .station-cols, .contact-grid, .log-cols { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .nav-links { gap: 0.75rem; }
-    .nav-links a { font-size: 10px; }
+    /* Phone nav: the 60px bar can't hold eight links, so wrap them under the
+       logo at a readable size with ~40px tap targets. Not sticky here — a
+       two-row bar would eat a fifth of the screen. The WebSDR menu anchors to
+       the link row so it can't run off the right edge. */
+    nav { position: static; height: auto; flex-direction: column; align-items: flex-start; gap: 4px; padding: 12px 16px 6px; }
+    .nav-logo { font-size: 16px; }
+    .nav-links { position: relative; gap: 0 2px; margin-left: -8px; }
+    .nav-links a, .nav-dd > summary { font-size: 13px; min-height: 40px; padding: 0 8px; display: inline-flex; align-items: center; }
+    .nav-dd { position: static; }
+    .nav-dd-menu { top: 100%; left: 8px; }
+    .nav-dd-menu a { font-size: 13px; padding: 12px 12px; }
   }
 
 /* ── Project detail pages (/projects/<slug>/) ───────────────────────────── */
-.proj-page { max-width: 820px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+.proj-page { max-width: 800px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
 .proj-back {
-  font-family: var(--mono); font-size: 11px; text-transform: uppercase;
-  letter-spacing: 0.08em; color: var(--muted); text-decoration: none;
-  display: inline-block; margin-bottom: 1.75rem;
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 40px; padding: 8px 14px; margin-bottom: 1.75rem;
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  color: var(--navy); background: var(--card-bg);
+  border: 1px solid var(--border); border-radius: 6px; text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
 }
-.proj-back:hover { color: var(--accent); }
+.proj-back:hover { color: var(--accent); border-color: var(--accent); }
+.proj-back-bottom { margin: 2.5rem 0 0; }
 .proj-page h1 {
   font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 2.6rem);
   line-height: 1.15; color: var(--navy); margin-bottom: 0.75rem;
 }
 .proj-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 1.5rem; }
-.proj-body { font-size: 1rem; line-height: 1.75; color: var(--text); }
-.proj-body p { margin-bottom: 1.15rem; }
-.proj-body a { color: var(--accent); }
-.proj-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 2rem 0 1.5rem; }
+.proj-body { font-size: 1.0625rem; line-height: 1.75; color: var(--text); }
+/* ~70 characters a line: long enough for the dense pages, short enough to track. */
+.proj-body p { margin-bottom: 1.25rem; max-width: 70ch; }
+.proj-body strong { color: var(--navy); font-weight: 600; }
+.proj-body a {
+  color: var(--accent); font-weight: 500;
+  text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px;
+}
+.proj-body a:hover { color: var(--navy); text-decoration-thickness: 2px; }
+/* Download filenames: a taller hit area than a bare inline word. */
+.dl-table a { display: inline-block; padding: 6px 0; font-size: 15px; }
+.proj-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 2rem 0 1.5rem; }
+.proj-page .repo-btn { min-height: 44px; padding: 10px 18px; font-size: 14px; margin-top: 0; }
+.proj-page .yt-link {
+  min-height: 44px; padding: 10px 16px; margin-top: 0; font-size: 14px;
+  border: 1px solid currentColor; border-radius: 6px;
+}
+.proj-page .yt-link:hover { text-decoration: none; background: rgba(220, 38, 38, 0.06); }
 .proj-page .project-tags { margin-top: 1.75rem; }
 
 /* ── Project screenshots ────────────────────────────────────────────────────
@@ -260,10 +300,10 @@
 }
 .proj-shots img { width: 100%; height: auto; display: block; }
 .proj-shots figcaption {
-  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  font-family: var(--mono); font-size: 13px; color: var(--muted);
   padding: 8px 12px; background: #f8fafc; border-top: 0.5px solid var(--border);
 }
 .proj-shots-label {
-  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
   text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2.25rem;
 }
