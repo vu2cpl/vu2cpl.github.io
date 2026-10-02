@@ -3,7 +3,8 @@
 Live VU DXCC standings page with two tabs:
 
 - **LoTW** — from the [ARRL DXCC Standings](https://www.arrl.org/dxcc-standings),
-  refreshed **monthly** (1st of each month).
+  refreshed **monthly** (1st of each month, 07:45 UTC / 13:15 IST —
+  just after ARRL publishes the new lists ~07:30 UTC).
 - **Clublog** — Indian callsigns (VU / AT / AU) found in the
   [Clublog Asia Top-2000 Confirmed league](https://clublog.org/league.php),
   refreshed **daily** (02:30 UTC / 08:00 IST).
@@ -64,8 +65,10 @@ callsigns, plus the previous snapshot's date, whenever a diff baseline exists.
 
 ### LoTW (monthly)
 
-`.github/workflows/refresh-vu-dxcc.yml` runs on the **1st of each month**
-(and on manual dispatch). It:
+`.github/workflows/refresh-vu-dxcc.yml` runs on the **1st of each month at
+07:45 UTC** (13:15 IST) and on manual dispatch. ARRL publishes the new
+standings PDFs around 07:30 UTC on the 1st, so any earlier run would
+re-fetch last month's lists. It:
 
 1. Copies the current `data.json` → `data.previous.json` for diff baseline.
 2. Downloads the 17 ARRL DXCC Standings PDFs (Mixed, Phone, CW, Digital,
