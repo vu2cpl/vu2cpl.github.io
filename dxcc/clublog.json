@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "02 Oct 2026",
-  "previous_as_on": "01 Oct 2026",
-  "generated_at": "2026-10-02T08:41:07+00:00",
+  "as_on": "03 Oct 2026",
+  "previous_as_on": "02 Oct 2026",
+  "generated_at": "2026-10-03T08:20:10+00:00",
   "columns": [
     "160",
     "80",
@@ -289,7 +289,7 @@
     },
     {
       "sno": 11,
-      "rank": 462,
+      "rank": 461,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 131,
@@ -337,7 +337,7 @@
     },
     {
       "sno": 13,
-      "rank": 571,
+      "rank": 570,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -361,7 +361,7 @@
     },
     {
       "sno": 14,
-      "rank": 623,
+      "rank": 622,
       "callsign": "VU22DX",
       "160": 13,
       "80": 1,
@@ -385,7 +385,7 @@
     },
     {
       "sno": 15,
-      "rank": 670,
+      "rank": 669,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 54,
@@ -409,7 +409,7 @@
     },
     {
       "sno": 16,
-      "rank": 683,
+      "rank": 682,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -442,22 +442,25 @@
       "30": 37,
       "20": 183,
       "17": 174,
-      "15": 165,
+      "15": 166,
       "12": 128,
       "10": 143,
       "6": 23,
       "total": 248,
-      "slots": 1083,
+      "slots": 1084,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 18,
-      "rank": 1036,
+      "rank": 1035,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -481,7 +484,7 @@
     },
     {
       "sno": 19,
-      "rank": 1045,
+      "rank": 1044,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -505,7 +508,7 @@
     },
     {
       "sno": 20,
-      "rank": 1085,
+      "rank": 1083,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -529,7 +532,7 @@
     },
     {
       "sno": 21,
-      "rank": 1130,
+      "rank": 1128,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -538,22 +541,25 @@
       "30": 0,
       "20": 161,
       "17": 130,
-      "15": 140,
+      "15": 141,
       "12": 0,
       "10": 0,
       "6": 0,
       "total": 180,
-      "slots": 522,
+      "slots": 523,
       "years": "8 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Jojith Mathew",
-      "changes": [],
+      "changes": [
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 22,
-      "rank": 1125,
+      "rank": 1123,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
@@ -577,7 +583,7 @@
     },
     {
       "sno": 23,
-      "rank": 1168,
+      "rank": 1167,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -601,7 +607,7 @@
     },
     {
       "sno": 24,
-      "rank": 1174,
+      "rank": 1173,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -625,7 +631,7 @@
     },
     {
       "sno": 25,
-      "rank": 1402,
+      "rank": 1401,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -649,7 +655,7 @@
     },
     {
       "sno": 26,
-      "rank": 1478,
+      "rank": 1477,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -673,7 +679,7 @@
     },
     {
       "sno": 27,
-      "rank": 1517,
+      "rank": 1516,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -697,7 +703,7 @@
     },
     {
       "sno": 28,
-      "rank": 1727,
+      "rank": 1726,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -721,7 +727,7 @@
     },
     {
       "sno": 29,
-      "rank": 1825,
+      "rank": 1824,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
