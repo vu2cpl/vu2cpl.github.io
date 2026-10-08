@@ -131,7 +131,7 @@ def _parse_callsign_cell(cell_html: str) -> tuple[str | None, int, str | None, b
 
 def parse_league_page(html: str) -> list[dict]:
     """Return a list of row dicts for this page. No filtering applied."""
-    m = re.search(r"<th>\s*Rank\s*</th>.*?</table>", html, re.DOTALL | re.IGNORECASE)
+    m = re.search(r"<th[^>]*>\s*Rank\s*</th>.*?</table>", html, re.DOTALL | re.IGNORECASE)
     if not m:
         return []
     chunk = m.group(0)

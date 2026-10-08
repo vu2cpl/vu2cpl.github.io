@@ -96,6 +96,12 @@ re-fetch last month's lists. It:
 5. Writes `clublog.json` + `VUDXCC-clublog-latest.pdf`.
 6. Commits back to the repo.
 
+If a Clublog run fails with `0 rows` on every page ("No Indian callsigns
+found — aborting"), Clublog has changed its league-table HTML. Adjust
+`parse_league_page` in `clublog.py` to match. The abort leaves the last
+good `clublog.json` in place. This last happened on 2026-10-08, when the
+`Rank` header gained a `style` attribute.
+
 Both workflows share a concurrency group (`dxcc-refresh`) so they never
 collide on the same push.
 
