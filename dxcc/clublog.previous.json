@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "11 Oct 2026",
-  "previous_as_on": "10 Oct 2026",
-  "generated_at": "2026-10-11T09:04:58+00:00",
+  "as_on": "12 Oct 2026",
+  "previous_as_on": "11 Oct 2026",
+  "generated_at": "2026-10-12T09:27:27+00:00",
   "columns": [
     "160",
     "80",
@@ -148,7 +148,7 @@
       "rank": 585,
       "callsign": "VU2DCC",
       "160": 0,
-      "80": 5,
+      "80": 6,
       "60": 0,
       "40": 207,
       "30": 196,
@@ -159,12 +159,15 @@
       "10": 276,
       "6": 119,
       "total": 318,
-      "slots": 1887,
+      "slots": 1888,
       "years": "43 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [],
+      "changes": [
+        "80",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -260,10 +263,7 @@
       "linked_count": 4,
       "is_linked": true,
       "op_name": "Lakshman Bijanki",
-      "changes": [
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -628,7 +628,7 @@
     },
     {
       "sno": 25,
-      "rank": 2651,
+      "rank": 2652,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -700,7 +700,7 @@
     },
     {
       "sno": 28,
-      "rank": 3222,
+      "rank": 3220,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -719,16 +719,12 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "20",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 29,
-      "rank": 3575,
+      "rank": 3574,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
