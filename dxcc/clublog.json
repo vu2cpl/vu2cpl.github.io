@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "13 Oct 2026",
-  "previous_as_on": "12 Oct 2026",
-  "generated_at": "2026-10-13T09:34:33+00:00",
+  "as_on": "14 Oct 2026",
+  "previous_as_on": "13 Oct 2026",
+  "generated_at": "2026-10-14T07:48:49+00:00",
   "columns": [
     "160",
     "80",
@@ -68,11 +68,7 @@
       "linked_count": 8,
       "is_linked": true,
       "op_name": "Prasad Rajagopal",
-      "changes": [
-        "17",
-        "15",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -255,16 +251,19 @@
       "20": 237,
       "17": 245,
       "15": 232,
-      "12": 206,
+      "12": 207,
       "10": 234,
       "6": 113,
       "total": 307,
-      "slots": 1750,
+      "slots": 1751,
       "years": "41 yrs",
       "linked_count": 4,
       "is_linked": true,
       "op_name": "Lakshman Bijanki",
-      "changes": [],
+      "changes": [
+        "12",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -365,26 +364,32 @@
     },
     {
       "sno": 14,
-      "rank": 1131,
+      "rank": 1141,
       "callsign": "VU22DX",
       "160": 13,
       "80": 1,
       "60": 0,
-      "40": 65,
+      "40": 64,
       "30": 37,
-      "20": 258,
+      "20": 256,
       "17": 38,
-      "15": 216,
+      "15": 214,
       "12": 13,
       "10": 188,
       "6": 4,
-      "total": 269,
-      "slots": 833,
+      "total": 267,
+      "slots": 828,
       "years": "6 yrs",
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [],
+      "changes": [
+        "40",
+        "20",
+        "15",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -629,7 +634,7 @@
     },
     {
       "sno": 25,
-      "rank": 2653,
+      "rank": 2654,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -711,21 +716,24 @@
       "20": 58,
       "17": 20,
       "15": 70,
-      "12": 7,
+      "12": 8,
       "10": 83,
       "6": 0,
       "total": 109,
-      "slots": 242,
+      "slots": 243,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "12",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 29,
-      "rank": 3575,
+      "rank": 3576,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
