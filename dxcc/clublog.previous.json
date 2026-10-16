@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "14 Oct 2026",
-  "previous_as_on": "13 Oct 2026",
-  "generated_at": "2026-10-14T07:48:49+00:00",
+  "as_on": "15 Oct 2026",
+  "previous_as_on": "14 Oct 2026",
+  "generated_at": "2026-10-15T07:34:50+00:00",
   "columns": [
     "160",
     "80",
@@ -73,7 +73,7 @@
     },
     {
       "sno": 2,
-      "rank": 537,
+      "rank": 538,
       "callsign": "VU2NXO",
       "160": 40,
       "80": 42,
@@ -97,7 +97,7 @@
     },
     {
       "sno": 3,
-      "rank": 544,
+      "rank": 545,
       "callsign": "VU2CDP",
       "160": 3,
       "80": 69,
@@ -121,7 +121,7 @@
     },
     {
       "sno": 4,
-      "rank": 559,
+      "rank": 560,
       "callsign": "VU2CPL",
       "160": 109,
       "80": 204,
@@ -260,10 +260,7 @@
       "linked_count": 4,
       "is_linked": true,
       "op_name": "Lakshman Bijanki",
-      "changes": [
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -316,31 +313,42 @@
     },
     {
       "sno": 12,
-      "rank": 1008,
+      "rank": 747,
       "callsign": "VU2DED",
       "160": 1,
-      "80": 115,
+      "80": 116,
       "60": 0,
-      "40": 217,
-      "30": 212,
-      "20": 258,
-      "17": 234,
-      "15": 243,
-      "12": 218,
-      "10": 232,
+      "40": 223,
+      "30": 221,
+      "20": 263,
+      "17": 240,
+      "15": 249,
+      "12": 222,
+      "10": 238,
       "6": 93,
-      "total": 292,
-      "slots": 1823,
-      "years": "13 yrs",
+      "total": 294,
+      "slots": 1866,
+      "years": "28 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "AJAYA GUPTA",
-      "changes": [],
+      "changes": [
+        "80",
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 13,
-      "rank": 1070,
+      "rank": 1071,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -383,13 +391,7 @@
       "linked_count": 2,
       "is_linked": true,
       "op_name": "Sandesh Bhat (Sandy)",
-      "changes": [
-        "40",
-        "20",
-        "15",
-        "total",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -418,7 +420,7 @@
     },
     {
       "sno": 16,
-      "rank": 1188,
+      "rank": 1181,
       "callsign": "VU2OY",
       "160": 18,
       "80": 29,
@@ -426,23 +428,27 @@
       "40": 198,
       "30": 39,
       "20": 203,
-      "17": 185,
+      "17": 187,
       "15": 180,
       "12": 142,
       "10": 153,
       "6": 32,
-      "total": 257,
-      "slots": 1179,
+      "total": 258,
+      "slots": 1181,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "17",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 17,
-      "rank": 1186,
+      "rank": 1187,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -562,7 +568,7 @@
     },
     {
       "sno": 22,
-      "rank": 2126,
+      "rank": 2127,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
@@ -586,7 +592,7 @@
     },
     {
       "sno": 23,
-      "rank": 2169,
+      "rank": 2168,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -610,7 +616,7 @@
     },
     {
       "sno": 24,
-      "rank": 2175,
+      "rank": 2174,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -634,7 +640,7 @@
     },
     {
       "sno": 25,
-      "rank": 2654,
+      "rank": 2653,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -682,7 +688,7 @@
     },
     {
       "sno": 27,
-      "rank": 3016,
+      "rank": 3015,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -725,10 +731,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
-      "changes": [
-        "12",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
