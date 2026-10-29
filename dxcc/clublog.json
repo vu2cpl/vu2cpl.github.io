@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "28 Oct 2026",
-  "previous_as_on": "27 Oct 2026",
-  "generated_at": "2026-10-28T08:44:48+00:00",
+  "as_on": "29 Oct 2026",
+  "previous_as_on": "28 Oct 2026",
+  "generated_at": "2026-10-29T08:41:01+00:00",
   "columns": [
     "160",
     "80",
@@ -673,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1480,
+      "rank": 1479,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -732,23 +732,23 @@
       "17": 20,
       "15": 70,
       "12": 13,
-      "10": 89,
+      "10": 91,
       "6": 0,
       "total": 113,
-      "slots": 256,
+      "slots": 258,
       "years": "0 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Manojit Nag",
       "changes": [
-        "20",
+        "10",
         "slots"
       ],
       "is_new": false
     },
     {
       "sno": 30,
-      "rank": 1832,
+      "rank": 1830,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
