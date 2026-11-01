@@ -1,8 +1,8 @@
 {
-  "as_on": "02 Oct 2026",
-  "previous_as_on": "01 Sep 2026",
-  "date_token": "20261002",
-  "generated_at": "2026-10-02T04:46:01+00:00",
+  "as_on": "01 Nov 2026",
+  "previous_as_on": "02 Oct 2026",
+  "date_token": "20261101",
+  "generated_at": "2026-11-01T14:34:46+00:00",
   "columns": [
     "Mix",
     "Ph",
@@ -125,20 +125,7 @@
       "6": 139,
       "Chal": 2511,
       "Hon": null,
-      "changes": [
-        "Ph",
-        "CW",
-        "Dig",
-        "80",
-        "40",
-        "30",
-        "17",
-        "15",
-        "12",
-        "10",
-        "6",
-        "Chal"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -161,19 +148,7 @@
       "6": null,
       "Chal": 1801,
       "Hon": null,
-      "changes": [
-        "Mix",
-        "Ph",
-        "CW",
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "Chal"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -196,22 +171,7 @@
       "6": 117,
       "Chal": 2415,
       "Hon": null,
-      "changes": [
-        "Mix",
-        "Ph",
-        "CW",
-        "Dig",
-        "80",
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "6",
-        "Chal"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -234,20 +194,7 @@
       "6": 119,
       "Chal": 1884,
       "Hon": null,
-      "changes": [
-        "Mix",
-        "Ph",
-        "CW",
-        "Dig",
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "Chal"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -385,19 +332,7 @@
       "6": 108,
       "Chal": 1856,
       "Hon": null,
-      "changes": [
-        "Mix",
-        "Dig",
-        "80",
-        "40",
-        "30",
-        "20",
-        "17",
-        "15",
-        "12",
-        "10",
-        "Chal"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -977,6 +912,31 @@
     },
     {
       "sno": 38,
+      "callsign": "VU2ORO",
+      "Mix": 170,
+      "Ph": null,
+      "CW": null,
+      "Dig": null,
+      "Sat": null,
+      "160": null,
+      "80": null,
+      "40": null,
+      "30": null,
+      "20": null,
+      "17": null,
+      "15": null,
+      "12": null,
+      "10": null,
+      "6": null,
+      "Chal": null,
+      "Hon": null,
+      "changes": [
+        "Mix"
+      ],
+      "is_new": false
+    },
+    {
+      "sno": 39,
       "callsign": "VU2TUM",
       "Mix": 169,
       "Ph": null,
@@ -999,7 +959,7 @@
       "is_new": false
     },
     {
-      "sno": 39,
+      "sno": 40,
       "callsign": "VU3GDS",
       "Mix": 166,
       "Ph": 118,
@@ -1022,7 +982,7 @@
       "is_new": false
     },
     {
-      "sno": 40,
+      "sno": 41,
       "callsign": "VU2RCT",
       "Mix": null,
       "Ph": 165,
@@ -1045,7 +1005,7 @@
       "is_new": false
     },
     {
-      "sno": 41,
+      "sno": 42,
       "callsign": "VU2RMS",
       "Mix": 160,
       "Ph": null,
@@ -1068,7 +1028,7 @@
       "is_new": false
     },
     {
-      "sno": 42,
+      "sno": 43,
       "callsign": "VU2YVK",
       "Mix": 155,
       "Ph": 155,
@@ -1091,7 +1051,7 @@
       "is_new": false
     },
     {
-      "sno": 43,
+      "sno": 44,
       "callsign": "VU2XO",
       "Mix": 150,
       "Ph": 108,
@@ -1114,7 +1074,7 @@
       "is_new": false
     },
     {
-      "sno": 44,
+      "sno": 45,
       "callsign": "VU2UR",
       "Mix": 147,
       "Ph": null,
@@ -1137,7 +1097,7 @@
       "is_new": false
     },
     {
-      "sno": 45,
+      "sno": 46,
       "callsign": "VU3SIO",
       "Mix": null,
       "Ph": 145,
@@ -1160,7 +1120,7 @@
       "is_new": false
     },
     {
-      "sno": 46,
+      "sno": 47,
       "callsign": "VU3TPW",
       "Mix": 143,
       "Ph": 134,
@@ -1172,29 +1132,6 @@
       "40": null,
       "30": null,
       "20": 132,
-      "17": null,
-      "15": null,
-      "12": null,
-      "10": null,
-      "6": null,
-      "Chal": null,
-      "Hon": null,
-      "changes": [],
-      "is_new": false
-    },
-    {
-      "sno": 47,
-      "callsign": "VU2ORO",
-      "Mix": 142,
-      "Ph": null,
-      "CW": null,
-      "Dig": null,
-      "Sat": null,
-      "160": null,
-      "80": null,
-      "40": null,
-      "30": null,
-      "20": null,
       "17": null,
       "15": null,
       "12": null,
