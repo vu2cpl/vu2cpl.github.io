@@ -160,6 +160,7 @@
   .status-active { background: #dcfce7; color: #166534; }
   .status-wip { background: #fef3c7; color: #92400e; }
   .status-planned { background: #e0e7ff; color: #3730a3; }
+  .status-retired { background: #f1f5f9; color: #475569; }
   .repo-btn {
     display: inline-flex; align-items: center; gap: 6px;
     margin-top: 10px;
