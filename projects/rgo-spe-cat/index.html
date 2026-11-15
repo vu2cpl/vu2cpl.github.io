@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RGO ONE + SPE box · VU2CPL</title>
+<meta name="description" content="One small ESP32-S3 box for RGO ONE CAT, USB audio and RTS PTT, with the SPE Expert amplifier following band changes.">
+<meta property="og:title" content="RGO ONE + SPE box — VU2CPL">
+<meta property="og:description" content="One small ESP32-S3 box for RGO ONE CAT, USB audio and RTS PTT, with the SPE Expert amplifier following band changes.">
+<meta property="og:image" content="https://vu2cpl.com/projects/rgo-spe-cat/front.jpg">
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb5c13644c834a9fb621de380f7e5597"}'></script><!-- End Cloudflare Web Analytics -->
+<style>
+:root{--bg:#ffffff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--card:#f6f8fa;--accent:#0f6e56;--warn-bg:#fff8e6;--warn-line:#e3b341}
+@media (prefers-color-scheme: dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--card:#161b22;--accent:#5dcaa5;--warn-bg:#2b2111;--warn-line:#9e6a03}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:28px;line-height:1.25;margin:0 0 6px}
+h2{font-size:20px;margin:40px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.by{color:var(--muted);margin:0 0 24px}
+figure{margin:20px 0}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+figcaption{color:var(--muted);font-size:14px;margin-top:6px}
+code{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--card)}
+.tip{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;margin:16px 0;border-radius:0 6px 6px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+a{color:var(--accent)}
+.back{display:inline-block;font-size:14px;margin-bottom:20px;text-decoration:none}
+ul{padding-left:22px}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="/#projects">&larr; vu2cpl.com projects</a>
+<h1>One box for RGO ONE CAT, audio and PTT, with the SPE Expert amp following</h1>
+<p class="by">Manoj VU2CPL · November 2026 · source: <a href="https://github.com/vu2cpl/rgo-spe-cat">github.com/vu2cpl/rgo-spe-cat</a></p>
+
+<p>The RGO ONE has one USB CAT port. I wanted three things on it at once: the SPE Expert 1.5K-FA following band changes, WSJT-X and the logger controlling the radio, and USB audio for FT8. This small 3D-printed box does all three. Below is how it works, and a few things about the RGO ONE I learned along the way that may help other owners.</p>
+
+<figure>
+<img loading="lazy" src="front.jpg" alt="The finished box, front panel">
+<figcaption>The finished box, 107 × 75 × 28 mm. Front panel, left to right: RIG (USB-C to the radio) and PWR (USB-C from a charger), the sound card's IN and OUT jacks, and AMP (2.5 mm jack to the SPE).</figcaption>
+</figure>
+
+<h2>What is in the box</h2>
+<ul>
+<li><b>ESP32-S3 (N16R8)</b> acting as USB <i>host</i> to the RGO ONE's USB-B port (an FTDI FT232R). It polls the radio with <code>IF;</code> every 150 ms.</li>
+<li><b>SPE output:</b> the S3 answers the amp's Kenwood <code>IF;</code> polls over 5 V TTL (via the amp's DB15 CAT socket), so the amp follows every band change. No band-data cable.</li>
+<li><b>CAT over Wi-Fi:</b> a Kenwood CAT server on TCP port 4533. WSJT-X, JTDX and loggers use Hamlib's <b>Kenwood TS-480</b> model with the box's address as the "serial port".</li>
+<li><b>CM108 USB sound card</b> for RX and TX audio, wired to the radio's ACC1 DB15. It plugs into the PC on its own USB cable.</li>
+<li><b>PTT:</b> the box turns WSJT-X's CAT <code>TX;</code>/<code>RX;</code> into the radio's USB <b>RTS</b> line (see the note below on why).</li>
+<li>Rig state is also published over MQTT, and the firmware updates over Wi-Fi.</li>
+</ul>
+
+<div class="grid">
+<figure><img loading="lazy" src="inside.jpg" alt="Inside the box, top view"><figcaption>Inside: the ESP32-S3 board on the right, held by corner fences and a finger on the lid; the sound card on the left, its jacks flush in a window in the front panel; the AMP jack wiring at far left.</figcaption></figure>
+<figure><img loading="lazy" src="inside-open.jpg" alt="Inside the box with the lid open"><figcaption>Lid open. The sound card's USB lead leaves straight out through a notch in the back wall to the PC.</figcaption></figure>
+</div>
+<figure style="max-width:320px"><img loading="lazy" src="dongle.jpg" alt="CM108 USB sound card"><figcaption>The sound card: a common CM108 "USB Audio Adapter" (pink mic in, green headphone out). It shows up as "USB Audio Device".</figcaption></figure>
+
+<h2>Enclosure</h2>
+<figure>
+<img loading="lazy" src="enclosure.png" alt="3D render of the enclosure with the lid lifted">
+<figcaption>The OpenSCAD model (in the repo), with the lid lifted: corner fences for the board, a back stop for the sound card, and the cable notch in the back wall. Printed in PLA with M3 heat-set inserts.</figcaption>
+</figure>
+
+<h2>Wiring</h2>
+<figure>
+<img loading="lazy" src="wiring.svg" alt="Wiring diagram: PC, CM108 dongle, ESP32-S3, radio ACC1, radio USB-B, SPE CAT DB15">
+<figcaption>As built. Both audio lines run direct, with no resistors. Not shown: the radio's RCA linear-amp socket to the SPE KEY IN (a normal separate lead), and the box's USB charger.</figcaption>
+</figure>
+
+<table>
+<tr><th>Radio ACC1 (DB15)</th><th>Goes to</th></tr>
+<tr><td>11 LINE OUT</td><td>Dongle mic input (pink), tip. Direct.</td></tr>
+<tr><td>10 LINE IN + (600 Ω)</td><td>Dongle headphone output, tip. Direct.</td></tr>
+<tr><td>9 LINE IN −</td><td>Joined to 15 in the plug hood (input driven unbalanced).</td></tr>
+<tr><td>15 Ground</td><td>Cable screen, both plug sleeves.</td></tr>
+<tr><td>1, 2, 12, 13, 14</td><td><b>Leave open</b> (13 V, VC, 8 V RX, 8 V TX, power-on).</td></tr>
+</table>
+
+<table>
+<tr><th>SPE CAT (DB15)</th><th>Goes to</th></tr>
+<tr><td>10 RX TTL</td><td>S3 GPIO17 through 220 Ω.</td></tr>
+<tr><td>3 TX TTL (5 V)</td><td>10 k to GPIO18, 20 k from GPIO18 to ground (the S3 is not 5 V tolerant).</td></tr>
+<tr><td>4 Ground, 11 KEN TTL</td><td>Ground. Pin 11 grounded selects the TTL Kenwood interface.</td></tr>
+<tr><td>8, 12</td><td><b>Leave open</b> (remote-on, relay).</td></tr>
+</table>
+<p>Amp setting: SET → CAT → KENWOOD, 9600 baud, then power-cycle it. The amp's TTL CAT idles low (inverted), which the firmware handles.</p>
+
+<h2>RGO ONE notes that may save you time</h2>
+
+<div class="tip"><b>CAT <code>TX;</code> does not really transmit.</b> Sent over CAT, <code>TX;</code> makes the display show TX, but there is no RF, the amp-key output does not switch, and ACC1 audio is not passed. Real PTT from a PC is the USB <b>RTS</b> line: set <b>menu 33 (RTS) = ON</b>. The hand-mic PTT and VOX also key it properly.</div>
+
+<div class="tip"><b>Menu 02 LINE IN must be ON</b> for transmit audio from ACC1. With it off, an RTS key-up transmits from the hand mic instead, and WSJT-X audio never gets in.</div>
+
+<ul>
+<li><b>CAT port:</b> FTDI FT232R, 19200 baud (menu 22), TS-480-style Kenwood. <code>FA;</code> and <code>IF;</code> work. <code>ID;</code> and <code>FW;</code> get no reply, and <code>MD;</code> comes back as a bare <code>MD;</code>. The box answers those itself so Hamlib doesn't time out.</li>
+<li><b>ACC1 LINE OUT is low.</b> It comes from a fixed-gain buffer on the IF/AF board, after the AGC and before the volume control, and there is no level trimmer (the trimmers on that board set the AGC). Wire it <b>straight</b> to the sound card's mic input, with no divider. Here it gives about 25 dB in WSJT-X with the preamp off and about 35 dB with the preamp on. RF gain up, preamp on and ATT off all raise it.</li>
+<li><b>ACC1 LINE IN (600 Ω):</b> straight from the CM108 headphone output, with the PC volume at max, gives ALC 1–2 dots. That's about right, but with no headroom to spare.</li>
+<li>Keep VOX off when you use RTS PTT. VOX works as a fallback (menu 10), but then any sound the PC sends to the dongle keys the transmitter.</li>
+</ul>
+
+<h2>Radio and WSJT-X settings</h2>
+<table>
+<tr><th>Where</th><th>Setting</th></tr>
+<tr><td>Radio menu 02</td><td>LINE IN: ON</td></tr>
+<tr><td>Radio menu 22</td><td>CAT port: 19200</td></tr>
+<tr><td>Radio menu 33</td><td>RTS signal (PTT): ON</td></tr>
+<tr><td>Radio menu 10</td><td>VOX: Off</td></tr>
+<tr><td>WSJT-X → Radio</td><td>Rig Kenwood TS-480 · Serial Port <code>&lt;box-ip&gt;:4533</code> · PTT Method CAT · Split "Fake It"</td></tr>
+<tr><td>WSJT-X → Audio</td><td>Input and Output: USB Audio Device</td></tr>
+</table>
+
+<div class="grid">
+<figure><img loading="lazy" src="wsjtx-radio.png" alt="WSJT-X Radio settings tab"><figcaption>WSJT-X Radio tab. Serial Port (blanked here) is the box's IP and port, e.g. <code>192.168.x.x:4533</code>.</figcaption></figure>
+<figure><img loading="lazy" src="wsjtx-audio.png" alt="WSJT-X Audio settings tab"><figcaption>WSJT-X Audio tab: the CM108 shows up as "USB Audio Device".</figcaption></figure>
+</div>
+
+<h2>Lessons from the build</h2>
+<ul>
+<li><b>Measure the audio levels before you close the cable.</b> My first cable had a 10 k / 1 k divider on RX "to bring line level down to mic level". On the RGO ONE that left WSJT-X at about 0 dB, and the hood had to come off again.</li>
+<li>Check the radio's menus before blaming the hardware. The "no TX audio" hunt ended at menu 02.</li>
+<li>Give the sound card jacks real clearance. In the first print, 1/8" plugs could not seat through a 2.5 mm wall, so the dongle now sits flush in a window in the panel.</li>
+</ul>
+
+<p>The firmware (PlatformIO, Arduino-ESP32), the OpenSCAD enclosure and the full build notes are all on GitHub: <a href="https://github.com/vu2cpl/rgo-spe-cat">github.com/vu2cpl/rgo-spe-cat</a>. Questions are welcome on the group.</p>
+<p>73, Manoj VU2CPL</p>
+<p><a class="back" href="/#projects">&larr; vu2cpl.com projects</a></p>
+</main>
+</body>
+</html>
