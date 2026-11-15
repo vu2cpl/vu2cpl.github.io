@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPE Expert following the RGO ONE · VU2CPL</title>
+<meta name="description" content="How an SPE Expert 1.5K-FA follows an RGO ONE over 5 V TTL Kenwood CAT, with a three-wire cable and a small ESP32-S3 box.">
+<meta property="og:title" content="SPE Expert following the RGO ONE — VU2CPL">
+<meta property="og:description" content="How an SPE Expert 1.5K-FA follows an RGO ONE over 5 V TTL Kenwood CAT, with a three-wire cable and a small ESP32-S3 box.">
+<meta property="og:image" content="https://vu2cpl.com/projects/rgo-spe-cat/front.jpg">
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb5c13644c834a9fb621de380f7e5597"}'></script><!-- End Cloudflare Web Analytics -->
+<style>
+:root{--bg:#ffffff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--card:#f6f8fa;--accent:#0f6e56;--warn-bg:#fff8e6;--warn-line:#e3b341}
+@media (prefers-color-scheme: dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--card:#161b22;--accent:#5dcaa5;--warn-bg:#2b2111;--warn-line:#9e6a03}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:28px;line-height:1.25;margin:0 0 6px}
+h2{font-size:20px;margin:40px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.by{color:var(--muted);margin:0 0 24px}
+figure{margin:20px 0}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+figcaption{color:var(--muted);font-size:14px;margin-top:6px}
+code{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--card)}
+.tip{background:var(--warn-bg);border-left:4px solid var(--warn-line);padding:12px 14px;margin:16px 0;border-radius:0 6px 6px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+a{color:var(--accent)}
+.back{display:inline-block;font-size:14px;margin-bottom:20px;text-decoration:none}
+ul{padding-left:22px}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="/#projects">&larr; vu2cpl.com projects</a>
+<h1>Making the SPE Expert follow an RGO ONE over TTL CAT</h1>
+<p class="by">Manoj VU2CPL · November 2026 · source: <a href="https://github.com/vu2cpl/rgo-spe-cat">github.com/vu2cpl/rgo-spe-cat</a></p>
+
+<p>My Expert 1.5K-FA sits next to an RGO ONE, a small Indian-made HF transceiver. The RGO ONE is not on the amp's list of supported radios, and it has only one USB CAT port. I wanted the amp to change band by itself, and I still wanted WSJT-X and the logger on that same CAT port. So I built a small box that sits between them. This page covers the amp side: the cable, the settings, and one thing about the amp's TTL CAT port that took some finding.</p>
+
+<div class="tip"><b>Tested on an Expert 1.5K-FA with the original RGO ONE.</b> The amp side uses the standard DB15 CAT socket, which the manual shows as the same on the 1K-FA, 1.3K-FA and 2K-FA, so it should carry over. I have only tested the 1.5K-FA. On the radio side it is for the original RGO ONE hardware only, not the V6.</div>
+
+<figure>
+<img loading="lazy" src="front.jpg" alt="The finished box, front panel">
+<figcaption>The box. The 2.5 mm jack on the right (AMP) goes to the SPE. The other sockets are for the radio's USB, power and a USB sound card for FT8.</figcaption>
+</figure>
+
+<h2>How it works</h2>
+<ul>
+<li>An <b>ESP32-S3</b> is the only thing on the RGO ONE's USB CAT port. It reads the frequency and mode every 150 ms.</li>
+<li>To the amp, the box looks like a <b>Kenwood TS-480</b>. The amp asks <code>IF;</code> about every 240 ms, and the box answers from the radio's latest state. It also answers <code>FA;</code> and <code>ID;</code>.</li>
+<li>If the radio stops answering, the box stops answering the amp too, so the amp never sits on an old band thinking it is current.</li>
+<li>The box runs from a USB charger, not from the PC. <b>The amp keeps following the radio with the PC switched off</b>.</li>
+<li>Over Wi-Fi it also gives CAT to WSJT-X and loggers, so the PC software and the amp share the one radio port with no conflict.</li>
+</ul>
+<p>Keying is a separate, normal lead: the radio's RCA linear-amp output to the SPE KEY IN. The CAT link only sets the band.</p>
+
+<figure>
+<img loading="lazy" src="wiring.svg" alt="Wiring diagram: PC, sound card, ESP32-S3, radio ACC1, radio USB-B, SPE CAT DB15">
+<figcaption>Whole box as built. The SPE part is bottom right: three wires.</figcaption>
+</figure>
+
+<h2>The amp cable</h2>
+<p>Only three wires are needed. I put a 2.5 mm stereo jack on the box (a different size from the audio jacks, so the cables can't be mixed up) and made a 2.5 mm plug to <b>DB15 male</b> cable. The amp's CAT socket takes a male plug.</p>
+<table>
+<tr><th>Box jack</th><th>Inside the box</th><th>Amp DB15 pin</th></tr>
+<tr><td>Tip</td><td>ESP32 GPIO17 (UART TX) through 220 Ω</td><td>10 RX TTL (data into the amp)</td></tr>
+<tr><td>Ring</td><td>10 k to GPIO18, 20 k from GPIO18 to ground</td><td>3 TX TTL, 5 V (the amp's polls)</td></tr>
+<tr><td>Sleeve</td><td>Ground</td><td>4 GND, with <b>11 KEN TTL</b> joined to 4 in the hood</td></tr>
+<tr><td colspan="2">Leave open</td><td>8 REMOTE ON, 12 RELAY, and all the rest</td></tr>
+</table>
+<ul>
+<li><b>Pin 11 to ground</b> selects the 5 V TTL Kenwood interface instead of RS-232 on pins 1 and 9. Without it the amp hears nothing on pin 10.</li>
+<li>Pin 3 is 5 V and the ESP32 is not 5 V tolerant, hence the 10 k / 20 k divider. The ESP32's 3.3 V output into pin 10 is read fine by the amp.</li>
+<li>The 220 Ω on the tip protects the ESP32 for the moment a jack shorts as the plug goes in. Plug and unplug it with the box off anyway.</li>
+<li>Keep pin 12 (RELAY) isolated. It is the amp's keying line.</li>
+</ul>
+
+<h2>Amp settings</h2>
+<table>
+<tr><th>Where</th><th>Setting</th></tr>
+<tr><td>SET → CAT</td><td>KENWOOD, 9600 baud, on the input the box is plugged into (IN 1 or IN 2)</td></tr>
+<tr><td>After any CAT change</td><td>Power-cycle the amp</td></tr>
+<tr><td>Check</td><td>SET → MANUAL TUNE shows the band and frequency it is getting</td></tr>
+</table>
+
+<h2>The catch: the SPE's TTL CAT is inverted</h2>
+<div class="tip"><b>If you build your own TTL interface to the SPE, invert the serial lines.</b> In Kenwood TTL mode the amp's line idles <b>low</b>, with the start bit high. That is RS-232 sense at TTL levels, the opposite of a normal microcontroller UART.</div>
+<p>With a plain UART, the amp's <code>IF;</code> polls arrived as junk (<code>62 5B 2E</code>, which prints as <code>b[.</code>), and the amp ignored everything I sent it. I put the ESP32 in a mode that times the edges on the input pin instead of decoding them. That showed 104 µs bits (9600 baud) with the line idling at 0. With both RX and TX inverted in the UART driver (one flag on the ESP32), the polls decode as <code>IF;</code> and the amp follows at once. An Arduino with a software serial, or a USB-TTL adapter, needs the same inversion, or a transistor inverter on each line.</p>
+<p>What I measured on the line, for anyone writing their own firmware:</p>
+<ul>
+<li>The amp polls <code>IF;</code> about every 240 ms at 9600 8N1, with about 3 ms between characters.</li>
+<li>A normal TS-480 <code>IF</code> reply works. I pass the radio's own <code>IF</code> frame through unchanged.</li>
+<li>The manual also describes a listen-only hookup (pin 10 and ground only). The firmware supports it by pushing <code>FA</code> on every change, but I have not tested it with the inversion.</li>
+</ul>
+
+<div class="grid">
+<figure><img loading="lazy" src="inside.jpg" alt="Inside the box"><figcaption>Inside. The amp jack wiring is at the far left; the ESP32-S3 board is on the right.</figcaption></figure>
+<figure><img loading="lazy" src="enclosure.png" alt="3D render of the enclosure"><figcaption>The 3D-printed enclosure (OpenSCAD, in the repo).</figcaption></figure>
+</div>
+
+<h2>Result</h2>
+<p>Keyed up with the amp in operate on three bands: the amp band matched each time, with no band-data cable and no PC needed. It now runs alongside WSJT-X on the same radio.</p>
+<p>The full build, including the RGO ONE audio and PTT side, is on <a href="./">the main project page</a>. Firmware, enclosure and build notes are on GitHub: <a href="https://github.com/vu2cpl/rgo-spe-cat">github.com/vu2cpl/rgo-spe-cat</a>. Questions are welcome.</p>
+<p>73, Manoj VU2CPL</p>
+<p><a class="back" href="/#projects">&larr; vu2cpl.com projects</a></p>
+</main>
+</body>
+</html>
