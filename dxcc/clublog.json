@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "22 Nov 2026",
-  "previous_as_on": "21 Nov 2026",
-  "generated_at": "2026-11-22T09:57:43+00:00",
+  "as_on": "23 Nov 2026",
+  "previous_as_on": "22 Nov 2026",
+  "generated_at": "2026-11-23T10:56:33+00:00",
   "columns": [
     "160",
     "80",
@@ -73,7 +73,7 @@
     },
     {
       "sno": 2,
-      "rank": 291,
+      "rank": 292,
       "callsign": "VU2NXO",
       "160": 40,
       "80": 42,
@@ -97,7 +97,7 @@
     },
     {
       "sno": 3,
-      "rank": 298,
+      "rank": 299,
       "callsign": "VU2CDP",
       "160": 3,
       "80": 69,
@@ -116,16 +116,12 @@
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Deepak Pathak",
-      "changes": [
-        "30",
-        "20",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
       "sno": 4,
-      "rank": 310,
+      "rank": 311,
       "callsign": "VU2CPL",
       "160": 109,
       "80": 204,
@@ -133,23 +129,26 @@
       "40": 266,
       "30": 256,
       "20": 311,
-      "17": 300,
+      "17": 301,
       "15": 297,
       "12": 275,
       "10": 277,
       "6": 117,
       "total": 320,
-      "slots": 2487,
+      "slots": 2488,
       "years": "33 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Manoj Ramawarrier",
-      "changes": [],
+      "changes": [
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 5,
-      "rank": 336,
+      "rank": 337,
       "callsign": "VU2DCC",
       "160": 0,
       "80": 6,
@@ -173,7 +172,7 @@
     },
     {
       "sno": 6,
-      "rank": 378,
+      "rank": 380,
       "callsign": "VU2YYF",
       "160": 1,
       "80": 52,
@@ -197,7 +196,7 @@
     },
     {
       "sno": 7,
-      "rank": 391,
+      "rank": 393,
       "callsign": "VU2WJ",
       "160": 1,
       "80": 89,
@@ -221,7 +220,7 @@
     },
     {
       "sno": 8,
-      "rank": 413,
+      "rank": 415,
       "callsign": "VU24DX",
       "160": 3,
       "80": 157,
@@ -245,7 +244,7 @@
     },
     {
       "sno": 9,
-      "rank": 414,
+      "rank": 416,
       "callsign": "VU2LBW",
       "160": 0,
       "80": 102,
@@ -269,7 +268,7 @@
     },
     {
       "sno": 10,
-      "rank": 419,
+      "rank": 421,
       "callsign": "VU2IBI",
       "160": 0,
       "80": 47,
@@ -293,7 +292,7 @@
     },
     {
       "sno": 11,
-      "rank": 453,
+      "rank": 455,
       "callsign": "VU2DED",
       "160": 1,
       "80": 121,
@@ -317,7 +316,7 @@
     },
     {
       "sno": 12,
-      "rank": 462,
+      "rank": 464,
       "callsign": "VU2MSA",
       "160": 1,
       "80": 131,
@@ -341,7 +340,7 @@
     },
     {
       "sno": 13,
-      "rank": 573,
+      "rank": 575,
       "callsign": "VU2MB",
       "160": 58,
       "80": 131,
@@ -365,31 +364,35 @@
     },
     {
       "sno": 14,
-      "rank": 644,
+      "rank": 646,
       "callsign": "VU2OY",
       "160": 18,
       "80": 29,
       "60": 0,
-      "40": 205,
+      "40": 206,
       "30": 39,
       "20": 213,
-      "17": 196,
+      "17": 197,
       "15": 189,
       "12": 156,
       "10": 167,
       "6": 32,
       "total": 266,
-      "slots": 1244,
+      "slots": 1246,
       "years": "14 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Ranjth Unnikrishnan",
-      "changes": [],
+      "changes": [
+        "40",
+        "17",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 15,
-      "rank": 649,
+      "rank": 651,
       "callsign": "VU22DX",
       "160": 13,
       "80": 1,
@@ -413,7 +416,7 @@
     },
     {
       "sno": 16,
-      "rank": 675,
+      "rank": 677,
       "callsign": "VU2TMP",
       "160": 2,
       "80": 54,
@@ -437,7 +440,7 @@
     },
     {
       "sno": 17,
-      "rank": 685,
+      "rank": 687,
       "callsign": "VU3RGB",
       "160": 0,
       "80": 74,
@@ -461,7 +464,7 @@
     },
     {
       "sno": 18,
-      "rank": 1033,
+      "rank": 1034,
       "callsign": "VU2TUM",
       "160": 0,
       "80": 2,
@@ -485,7 +488,7 @@
     },
     {
       "sno": 19,
-      "rank": 1043,
+      "rank": 1044,
       "callsign": "VU3CAU",
       "160": 1,
       "80": 47,
@@ -509,7 +512,7 @@
     },
     {
       "sno": 20,
-      "rank": 1084,
+      "rank": 1085,
       "callsign": "VU3WUA",
       "160": 0,
       "80": 0,
@@ -533,7 +536,7 @@
     },
     {
       "sno": 21,
-      "rank": 1112,
+      "rank": 1113,
       "callsign": "VU2JAW",
       "160": 0,
       "80": 0,
@@ -557,7 +560,7 @@
     },
     {
       "sno": 22,
-      "rank": 1130,
+      "rank": 1131,
       "callsign": "VU2KPH",
       "160": 0,
       "80": 0,
@@ -581,7 +584,7 @@
     },
     {
       "sno": 23,
-      "rank": 1168,
+      "rank": 1169,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
@@ -605,7 +608,7 @@
     },
     {
       "sno": 24,
-      "rank": 1176,
+      "rank": 1177,
       "callsign": "VU2EEI",
       "160": 0,
       "80": 4,
@@ -629,7 +632,7 @@
     },
     {
       "sno": 25,
-      "rank": 1205,
+      "rank": 1206,
       "callsign": "VU2ORO",
       "160": 0,
       "80": 1,
@@ -653,7 +656,7 @@
     },
     {
       "sno": 26,
-      "rank": 1405,
+      "rank": 1407,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -677,7 +680,7 @@
     },
     {
       "sno": 27,
-      "rank": 1477,
+      "rank": 1479,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -701,7 +704,7 @@
     },
     {
       "sno": 28,
-      "rank": 1504,
+      "rank": 1496,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -710,22 +713,26 @@
       "30": 0,
       "20": 65,
       "17": 0,
-      "15": 118,
+      "15": 119,
       "12": 8,
       "10": 94,
       "6": 0,
-      "total": 132,
-      "slots": 296,
+      "total": 133,
+      "slots": 297,
       "years": "35 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Abie Alexander",
-      "changes": [],
+      "changes": [
+        "15",
+        "total",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 29,
-      "rank": 1581,
+      "rank": 1583,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -734,22 +741,25 @@
       "30": 1,
       "20": 67,
       "17": 22,
-      "15": 77,
+      "15": 78,
       "12": 24,
       "10": 103,
       "6": 0,
       "total": 123,
-      "slots": 297,
+      "slots": 298,
       "years": "1 yrs",
       "linked_count": 1,
       "is_linked": true,
       "op_name": "Manojit Nag",
-      "changes": [],
+      "changes": [
+        "15",
+        "slots"
+      ],
       "is_new": false
     },
     {
       "sno": 30,
-      "rank": 1824,
+      "rank": 1797,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,
@@ -770,6 +780,44 @@
       "op_name": "Jacob",
       "changes": [],
       "is_new": false
+    },
+    {
+      "sno": 31,
+      "rank": 1939,
+      "callsign": "VU29AR",
+      "160": 0,
+      "80": 2,
+      "60": 0,
+      "40": 30,
+      "30": 0,
+      "20": 56,
+      "17": 9,
+      "15": 18,
+      "12": 0,
+      "10": 3,
+      "6": 0,
+      "total": 72,
+      "slots": 118,
+      "years": "6 yrs",
+      "linked_count": 1,
+      "is_linked": true,
+      "op_name": "RENJU GOPI",
+      "changes": [
+        "160",
+        "80",
+        "60",
+        "40",
+        "30",
+        "20",
+        "17",
+        "15",
+        "12",
+        "10",
+        "6",
+        "total",
+        "slots"
+      ],
+      "is_new": true
     }
   ]
 }
