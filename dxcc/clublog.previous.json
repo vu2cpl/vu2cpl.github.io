@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "26 Nov 2026",
-  "previous_as_on": "25 Nov 2026",
-  "generated_at": "2026-11-26T11:09:25+00:00",
+  "as_on": "27 Nov 2026",
+  "previous_as_on": "26 Nov 2026",
+  "generated_at": "2026-11-27T11:01:37+00:00",
   "columns": [
     "160",
     "80",
@@ -164,10 +164,7 @@
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [
-        "40",
-        "slots"
-      ],
+      "changes": [],
       "is_new": false
     },
     {
@@ -652,7 +649,7 @@
     },
     {
       "sno": 26,
-      "rank": 1411,
+      "rank": 1412,
       "callsign": "VU2GHO",
       "160": 0,
       "80": 4,
@@ -676,7 +673,7 @@
     },
     {
       "sno": 27,
-      "rank": 1483,
+      "rank": 1484,
       "callsign": "VU3SPD",
       "160": 0,
       "80": 3,
@@ -700,7 +697,7 @@
     },
     {
       "sno": 28,
-      "rank": 1500,
+      "rank": 1501,
       "callsign": "VU2ABE",
       "160": 0,
       "80": 0,
@@ -724,7 +721,7 @@
     },
     {
       "sno": 29,
-      "rank": 1588,
+      "rank": 1589,
       "callsign": "VU27MJ",
       "160": 0,
       "80": 0,
@@ -748,7 +745,7 @@
     },
     {
       "sno": 30,
-      "rank": 1828,
+      "rank": 1830,
       "callsign": "VU2ADV",
       "160": 0,
       "80": 0,

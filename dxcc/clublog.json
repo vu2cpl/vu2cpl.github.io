@@ -1,8 +1,8 @@
 {
   "source": "clublog",
-  "as_on": "27 Nov 2026",
-  "previous_as_on": "26 Nov 2026",
-  "generated_at": "2026-11-27T11:01:37+00:00",
+  "as_on": "28 Nov 2026",
+  "previous_as_on": "27 Nov 2026",
+  "generated_at": "2026-11-28T10:39:16+00:00",
   "columns": [
     "160",
     "80",
@@ -150,7 +150,7 @@
       "160": 0,
       "80": 6,
       "60": 0,
-      "40": 216,
+      "40": 217,
       "30": 199,
       "20": 298,
       "17": 249,
@@ -159,12 +159,15 @@
       "10": 276,
       "6": 119,
       "total": 318,
-      "slots": 1912,
+      "slots": 1913,
       "years": "43 yrs",
       "linked_count": 0,
       "is_linked": false,
       "op_name": "Mohan",
-      "changes": [],
+      "changes": [
+        "40",
+        "slots"
+      ],
       "is_new": false
     },
     {
@@ -577,7 +580,7 @@
     },
     {
       "sno": 23,
-      "rank": 1174,
+      "rank": 1175,
       "callsign": "VU25EE",
       "160": 0,
       "80": 0,
